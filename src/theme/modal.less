@@ -1,0 +1,132 @@
+@charset "utf-8";
+
+.ant-modal {
+    font-family: @all-family;
+}
+.ant-modal-wrap {
+    z-index: 1200 !important;
+}
+
+//m-modal
+.m-modal-mask{
+    background-color: rgba(0, 0, 0, 0.5)
+}
+
+.m-modal-wrap{
+
+    overflow: hidden;
+    top:4rem !important;
+    .border-radius(0.333rem);
+
+    .ant-modal-content {
+        .border-radius(0.333rem);
+        -webkit-box-shadow:none;
+        box-shadow: none;
+        .ant-modal-close,.m-modal-enlarge {
+
+            color: @view-color;
+            right:1.5rem;
+
+            .ant-modal-close-x {
+                width:auto;
+                height: 3.333rem;
+                line-height: 3.333rem;
+                .font-s16();
+
+            }
+
+        }
+        .m-modal-enlarge{
+
+            .ant-modal-close-x{
+
+                &:before {
+                    content: "\e71c";
+                    font-family: "iconfont" !important;
+                }
+            }
+        }
+
+        .ant-modal-header {
+            padding:0.666rem 1.25rem;
+            .border-radius(@radius:0rem);
+            background: #fff;
+            color: @font-color;
+            border-bottom: none;
+            height:3.333rem;
+            border-bottom: 1px solid @disabled-bg;
+
+            .ant-modal-title {
+                .font-s16();
+                line-height:1.833rem;
+                color: @font-color;
+            }
+
+        }
+
+        .ant-modal-body{
+            padding: 0;
+        }
+
+        .ant-modal-footer {
+            .tr();
+            padding: 1.166rem 1.666rem;
+        }
+
+
+    }
+
+}
+.scroll{
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 42rem;
+}
+
+.m-confirm{
+    .ant-btn-primary{
+        float: left;
+        margin-right: 8px
+    }
+}
+
+// m-modal-info
+.m-modal-info{
+    .ant-modal-confirm-body{
+        .ant-modal-confirm-title {
+            color: @table-td;
+            .font-s14();
+        }
+    }
+    &.ant-modal-confirm-info{
+        .ant-modal-confirm-body{
+            > .anticon {
+                color: @blue;
+                .font-s20();
+            }
+        }
+    }
+}
+
+.m-modal-confirm{
+    .ant-btn{
+        .border-radius(0.166rem);
+        color: @font-color;
+        border-color: @border-btn-color;
+        &:hover, &:active, &:focus{
+            border-color: @border-btn-color;
+            color: @font-color;
+            opacity: 0.8;
+        }
+    }
+    .ant-btn-primary{
+        background: @red;
+        border:1px solid @red;
+        color: #fff !important;
+        &:hover, &:active, &:focus{
+            background: @red;
+            border:1px solid @red;
+            opacity: 0.8;
+        }
+    }
+}

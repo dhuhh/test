@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+.m-steps{
+    line-height: 1.5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding:1rem 0;
+    list-style: none;
+    width: 100%;
+    .font-s14();
+    color: @title-color;
+    .m-steps-item {
+
+        vertical-align: top;
+        overflow: visible;
+        .pos(r);
+        .dib();
+        .fl();
+        .tc();
+
+        .m-steps-item-tail {
+
+            .pos(a);
+            width: 100%;
+            top: -0.833rem;
+            left: 0;
+            margin: 0 0 0 3.333rem;
+            padding: 0;
+
+            &:after {
+                content: '';
+                .dib();
+                height: 0;
+                border-top:1px dashed @title-icon;
+                border-radius: 1px;
+                width: 100%;
+                -webkit-transition: background .3s;
+                transition: background .3s;
+            }
+
+        }
+
+        &:last-child{
+            .m-steps-item-tail {
+                &:after {
+                    .dn();
+                }
+            }
+        }
+
+        .m-steps-item-icon {
+            width: 1rem;
+            height: 1rem;
+            line-height:1rem;
+            .tc();
+            .border-radius(1rem);
+            .font-s14();
+            margin: 0 auto;
+            background: @title-icon;
+            -webkit-transition: background-color 0.3s, border-color 0.3s;
+            transition: background-color 0.3s, border-color 0.3s;
+            z-index: 110;
+            border:3px solid @title-icon;
+            box-sizing: border-box;
+        }
+
+        &.m-steps-item-finish{
+
+            .m-steps-item-icon {
+                background: @pink;
+                border:3px solid @pink;
+            }
+
+        }
+
+        .m-steps-item-content{
+
+            line-height: 1.5;
+
+            .m-steps-item-title{
+              color: @title-color;
+              padding-top: 0.666rem;
+            }
+
+            .m-steps-item-description{
+              color:@view-color;
+              padding-top: 0.166rem;
+            }
+
+        }
+
+    }
+
+    &.m-steps-two{
+
+        .m-steps-item {
+            width: 50%;
+        }
+
+    }
+
+    &.m-steps-three{
+
+        .m-steps-item {
+            width: 33.33%;
+        }
+
+    }
+
+    &.m-steps-four{
+
+        .m-steps-item {
+            width: 25%;
+        }
+
+    }
+
+    &:after{
+			content: '';
+			clear: both;
+			visibility: hidden;
+			font-size: 0;
+			height: 0;
+			.db();
+		}
+
+}
+
+.m-steps-content{
+
+    padding: 1rem 0;
+    .font-s14();
+    .tl();
+
+    .m-steps-content-item{
+
+        padding-bottom:1rem;
+
+        .time{
+          color:@view-color;
+        }
+
+        .info{
+          color: @title-color;
+          padding-left: 2rem;
+        }
+
+    }
+
+}
+
+// m-steps-ant
+.m-steps-ant{
+    &.ant-steps{
+        .ant-steps-item{
+            .ant-steps-item-content{
+                .db();
+                .ant-steps-item-title{
+                    &::after{
+                        background-color: @disabled-bg;
+                        top:-1.333rem;
+                        left: 50%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+// m-steps-ant-spot 20200707
+.m-steps-ant-spot{
+    &.ant-steps-dot{
+        .ant-steps-item{
+            margin-top: 3rem !important;
+            width: 10rem;
+            .ant-steps-item-container{
+                float: left;
+                width: 10rem;
+                .ant-steps-item-tail{
+                    margin: 0 0 0 50%;
+                    padding: 1px;
+                    top: -2rem;
+                    width: 10rem;
+                    &::before{
+                        content: '';
+                        border:0.5rem solid #0099CC;
+                        border-top: 0.5rem solid transparent;
+                        border-bottom: 0.5rem solid transparent;
+                        border-right: 0.5rem solid transparent;
+                        position: absolute;
+                        right: 1.166rem;
+                        top: -.3rem;
+                    }
+                }
+                .ant-steps-item-icon{
+                    margin-left: calc(~"50%" - 1rem);
+                    width: 1.333rem;
+                    height: 1.333rem;
+                    > .ant-steps-icon {
+                        width: 2rem;
+                        height: 2rem;
+                        border: 1px solid #AAA3A3;
+                        display: inline-block;
+                        border-radius: 3rem;
+                        text-align: center;
+                        line-height: 1.833rem;
+                        top: -2.75rem;
+                        .font-s14();
+                        .ant-steps-icon-dot {
+                            background: rgba(255, 255, 255, 1);
+                            border: 0.25rem solid #dddddd;
+                        }
+                    }
+                }
+                .ant-steps-item-content{
+                    .pos(a);
+                    .tc();
+                    width: 100% !important;
+                    top: -0.5rem;
+                    text-align: center;
+                    .ant-steps-item-title{
+                        float: left;
+                        width: 10rem;
+                        color: #474747;
+                        .font-s14();
+                        line-height: 1.3;
+                    }
+                }
+                > .ant-steps-item-tail::after {
+                    background-color: #0099CC;
+                }
+                .ant-steps-item-tail::after,
+                .ant-steps-small .ant-steps-item-tail::after {
+                    .calc(3rem);
+                    height: 0.2rem !important;
+                    margin-left: 1.45rem;
+                }
+            }
+
+            &:last-child{
+                .flex();
+            }
+        }
+    }
+}
+.m-steps-ant-spot:after{
+    content: "";
+    display: auto;
+}
+
+
+// m-ant-steps  20200730
+.m-ant-steps{
+    &.ant-steps{
+        .ant-steps-item{
+            height: 5rem;
+            .ant-steps-item-container {
+                padding-top: 3rem;
+                .ant-steps-item-description {
+                    color: @font-color;
+                    font-size: 1.166rem;
+                    position: absolute;
+                    text-align: center;
+                    top: 0.5rem;
+                }
+            }
+        }
+    }
+    &.ant-steps-small {
+        .ant-steps-item-title{
+            padding-right: 0
+        }
+    }
+}

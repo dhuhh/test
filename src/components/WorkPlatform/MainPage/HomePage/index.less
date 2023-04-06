@@ -1,0 +1,29 @@
+.removeBtn {
+  :global(.react-grid-item) {
+    &:hover .remove {
+      display:inline-block;
+    };
+
+    // &:hover .react-resizable-handle {
+    //   visibility: visible;
+    // };
+  }
+  // :global(.react-resizable-handle) {
+  //   visibility: hidden;
+  // }
+}
+
+.remove{
+  position: absolute;
+  right: 7px;
+  top: 1px;
+  cursor: pointer;
+  z-index: 999;
+  display:none;
+}
+
+.selfRow{
+  :global(.ant-col){
+    max-width: none;
+  }
+}

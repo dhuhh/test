@@ -1,0 +1,345 @@
+@charset "utf-8";
+//新增主色调
+
+.m-color{
+	color: @head-bg !important;
+}
+.num-mcolor{
+	color: @num-bg;
+}
+.m-mcolor-link{
+	color: @head-bg !important;
+}
+//m-card
+.m-card{
+
+	&.m-cfcp-shadow{
+		&.ant-card-bordered {
+			border-color: @card-border;
+		}
+		&:hover {
+			border-color: @head-bg;
+			box-shadow: 0 3px 15px 0 @level7;
+			-webkit-box-shadow: 0 3px 15px 0 @level7;
+			-moz-box-shadow: 0 3px 15px 0 @level7;
+		}
+	}
+	&.m-cfcp-card{
+		&.ant-card-bordered{
+			background-image: url("../../assets/theme/@{path}/cp-card-bg.png");
+			background-repeat: no-repeat;
+            background-position: 100% 0;
+		}
+	}
+	.ant-card-body{
+		.ant-card-meta-detail{
+		    .m-view{
+		        .m-view-left{
+		           a.active{
+		             i {
+		               color:@head-bg;
+		             }
+		           }
+				}
+				.m-view-bottom{
+					a{
+					  i {
+						color:@head-bg;
+					  }
+					}
+				 }
+		    }
+
+
+		    .info{
+		        span{
+		          color:@head-bg;
+		        }
+		    }
+		}
+	}
+
+	&.m-card-sfcp{
+    .m-sfcp-text{
+			color: @num-bg;
+			text-shadow: 0 .416rem .833rem @num-bg-tm;
+    }
+	}
+
+	.m-card-icon-box{
+		a:hover{
+			color: @head-bg;
+		}
+	}
+
+	.m-product-card-cont{
+		.m-product-card-info{
+			.m-profit{
+				color: @num-bg;
+				text-shadow: 0 0.416rem 0.833rem @num-bg-tm;
+			}
+		}
+	}
+
+	.ant-card-extra {
+		a {
+		  &:hover{
+			color:@head-bg !important;
+			span{
+			   color:@head-bg !important;
+			}
+		  }
+		}
+	}
+
+}
+
+.default{
+	.m-link-btn{
+	  color:@hover !important;
+	  &:hover{
+		color:@head-bg;
+	  }
+    }
+}
+
+
+//default-bottom
+.card-theme{
+	 .ant-card-body{
+	   background: @head-bg;
+	 }
+}
+.card-theme-two{
+	.ant-card-body{
+	background: @blue-pink;
+	}
+}
+
+.theme-default{
+	.ant-card-head {
+	    background: @head-bg;
+	}
+}
+
+.theme-pink{					//2018.3.14
+	.ant-card-head {
+	    background: @blue-pink;
+	}
+}
+
+
+//m-rate-show
+.m-rate-show{
+	border:2px solid @head-bg;
+}
+
+.m-icon-box-big{
+
+	&.white-icon-bg{
+
+		i{
+
+			color: @blue-pink;
+		}
+
+	}
+}
+
+//.m-row-bg
+.m-row-bg{
+		background: @head-bg;
+}
+
+.m-phone-item{
+  color: @head-bg;
+}
+
+.m-task-icon-switch{
+  &:hover{
+    background: @head-bg;
+    border-color: @head-bg;
+  }
+}
+
+.m-hsts-bg{
+	background: @level9 !important;
+	td{
+		background: @level9 !important;
+		color:#fff !important
+	}
+}
+
+.m-top-link-mcolor{
+  color: @head-bg;
+  &:hover{
+    color: @head-bg;
+  }
+}
+.m-card-cjhkh{
+	.ant-card-body{
+		.m-cjhkh-actions{
+      li{
+        >a:hover{
+          color: @head-bg;
+        }
+      }
+    }
+	}
+}
+
+.m-card-cjhkh{
+	.ant-card-body{
+		.m-add-box{
+			.m-add-link:hover{
+				color: @head-bg;
+			}
+		}
+	}
+}
+
+.m-browse-box {
+  .m-link {
+    color: @head-bg;
+  }
+}
+.m-service-handle{
+  background-color: @tag-bg;
+}
+
+.m-record-list{
+	>li{
+		.m-cont:hover{
+			color: @head-bg;
+		}
+	}
+}
+
+.m-mot-head-bg {
+  &.m-fabu-head-bg{
+    background-image: url("../../assets/theme/@{path}/img1.png");
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.m-tc-btn-box{
+	.m-btn-link{
+		color: @head-bg;
+	}
+}
+
+//数字营销
+.m-top-bg{
+  &.m-bg-customerSearch{
+    background: url("../../assets/theme/@{path}/search_bg.jpg") center center no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+
+//m-row-noPadding
+.m-row-noPadding {
+
+  .theme-opr {
+    &.theme-oprOne {
+        .border-radius(@radius: 0rem);
+        span.theme-oprOne-icon {
+            background: @orange;
+        }
+        .number {
+            color: @orange;
+        }
+    }
+    &.theme-oprTwo {
+        .border-radius(@radius: 0rem);
+        span.theme-oprOne-icon {
+            background: @head-bg;
+        }
+        .number {
+            color: @head-bg;
+        }
+    }
+    &.theme-oprThree {
+        .border-radius(@radius: 0rem);
+        span.theme-oprOne-icon {
+            background: @orange;
+        }
+        .number {
+            color: @orange;
+        }
+    }
+    &.theme-oprFour {
+        .border-radius(@radius: 0rem);
+        span.theme-oprOne-icon {
+            background: @head-bg;
+        .number {
+            color: @head-bg;
+        }
+      }
+    }
+
+}
+}
+
+.ant-spin{
+  .ant-spin-dot-item{
+    background-color: @head-bg;
+  }
+}
+
+
+//服务产品-头部-轮播
+.m-service-carousel {
+	.m-card-list {
+	  .m-card {
+		.name{
+		  a{
+			  &:hover{
+				color: @head-bg;
+			  }
+		  }
+		}
+	  }
+	  .name{
+		a{
+			&:hover{
+			  color: @head-bg;
+			}
+		}
+	  }
+	}
+}
+
+  .m-card .m-product-card-cont .m-name {
+    &:hover{
+		color: @head-bg !important;
+	  }
+}
+
+// m-introduce
+.m-introduce{
+	border-bottom: 0.2rem solid @hover-bg;
+  }
+
+.m-home-set{
+	background: @level;
+}
+
+// title
+.m-title-child{
+    span{
+		background: @head-bg;
+		color:#fff;
+    }
+}
+
+.m-view{
+	a{
+		&:hover{
+			color:@head-bg;
+		}
+	}
+}

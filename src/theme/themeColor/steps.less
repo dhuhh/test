@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+/*m-steps-ant*/
+.m-steps-ant{
+      padding:1.666rem !important;
+      margin-bottom: 0.666rem;
+  .ant-steps-item-process {
+      .ant-steps-item-icon,.ant-steps-item-icon > .ant-steps-icon {
+        background: @head-bg !important;
+        border-color:  @head-bg !important;
+      }
+
+      .ant-steps-item-icon > .ant-steps-icon .ant-steps-icon-dot {
+          background: @head-bg !important;
+      }
+      .ant-steps-item-content > .ant-steps-item-title {
+          color: @head-bg !important;
+      }
+  }
+  .ant-steps-item-finish {
+    .ant-steps-item-icon {
+        background-color: #fff;
+        border-color: @head-bg;
+
+        > .ant-steps-icon{
+          color: @head-bg !important;
+        }
+    }
+    > .ant-steps-item-content > .ant-steps-item-title::after {
+        background-color:  @head-bg;
+    }
+  }
+  .ant-steps-item-finish > .ant-steps-item-container > .ant-steps-item-content > .ant-steps-item-title::after {
+    background-color: @head-bg;
+  }
+}
+
+
+// m-steps-ant-spot 20200707
+.m-steps-ant-spot{
+  &.ant-steps-dot{
+      .ant-steps-item{
+
+          &.ant-steps-item-finish{
+              > .ant-steps-item-container{
+                  > .ant-steps-item-tail::after {
+                    //   background-color:@menu-nav-font;
+                  }
+                  .ant-steps-item-content{
+                      .ant-steps-item-title{
+                          color:@menu-nav-font;
+                      }
+                  }
+              }
+              .ant-steps-item-icon{
+                  > .ant-steps-icon{
+                       border: 1px solid @menu-nav-font;
+                      .ant-steps-icon-dot {
+                        //   border:0.25rem solid @menu-nav-font;
+                      }
+                  }
+              }
+          }
+          &.ant-steps-item-process{
+            .ant-steps-item-tail::after {
+                // background-color:@head-bg;
+            }
+              .ant-steps-item-content{
+                  .ant-steps-item-title{
+                      color:@head-bg
+                  }
+              }
+              .ant-steps-item-icon{
+                  > .ant-steps-icon {
+                    border: 1px solid @head-bg;
+                    background: @head-bg;
+                      .ant-steps-icon-dot {
+                        //   border: 0.25rem solid @head-bg;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}

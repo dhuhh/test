@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="10px" height="13px" viewBox="0 0 10 13" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63 (92445) - https://sketch.com -->
+    <title>三角形</title>
+    <desc>Created with Sketch.</desc>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M5,2 L11,11 C8.34194953,9.63770657 6.34194953,8.95655986 5,8.95655986 C3.65805047,8.95655986 1.65805047,9.63770657 -1,11 L5,2 Z" id="三角形" fill="#FFFFFF" transform="translate(5.000000, 6.500000) rotate(-270.000000) translate(-5.000000, -6.500000) "></path>
+    </g>
+</svg>

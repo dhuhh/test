@@ -1,0 +1,45 @@
+.mg {
+  margin: 2rem;
+}
+.mycard{
+  :global(.ant-fullcalendar-header){
+    padding: 0rem 1.666rem 0.833rem 1.666rem !important;
+   }
+
+  >:global(.ant-card-body){
+    padding: 0 !important;
+   }
+}
+
+.mycards{
+
+  >:global(.ant-card-body){
+    padding: 20px 0 0 0 !important;
+   }
+}
+
+
+.overflow{
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space:nowrap;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  display: -moz-box;
+  display:block;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+}
+.header{
+  width:400px;
+  height:36px;
+  line-height:36px;
+  border:1px solid green;
+  text-align:center;
+}
+.line{
+    display:inline-block;
+    width:8.333rem;
+    border-top:1px solid #cccccc;
+    vertical-align:5px;
+}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+
+/*notice*/
+.notice {
+
+    .notice-right {
+
+        border-left: 1px solid @head-bg;
+        .m-border2 {
+            .triangle(left,@w:6px,@color:@head-bg);
+        }
+        .m-border3 {
+            .triangle(left,@w:6px,@color:#fff);
+        }
+
+        .slick-track{
+          a{
+            color:@head-bg;
+            &:hover{
+              color:@head-bg;
+            }
+          }
+        }
+    }
+}
+
+//m-position
+.m-position{
+
+    .set-box{
+      background:@head-bg;
+    }
+
+}
+
+//m-ul-fixed 2018.3.14
+.m-ul-fixed {
+    li {
+
+        &:hover{
+            &>.m-ul-icon {
+                border: @head-bg;
+                background: @head-bg;
+            }
+        }
+        .m-ul-icon-active {
+            background: @head-bg;
+        }
+    }
+}
+

@@ -1,0 +1,439 @@
+@charset "utf-8";
+
+//m-sider
+.m-sider {
+  background: @menu-bg-wrap;
+}
+
+.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
+  background: @menu-bg-wrap;
+  .ant-menu-item:hover{
+    background: @menu-nav-list;
+  }
+}
+
+.ant-menu-item:hover, .ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+  color: @head-bg;
+}
+
+.ant-layout-sider {
+  background: @menu-bg-wrap;
+}
+
+.m-menu {
+  &.ant-menu {
+    .ant-menu-item {
+      &:hover {
+        //color: @head-bg;
+      }
+
+      a:hover {
+        color: @menu-select-bg;
+        // .border-radius(0.333rem);
+      }
+
+      &.ant-menu-item-selected {
+        color: #fff;
+        font-weight: 500;
+        background: @menu-nav-list;
+        // width: 90%;
+      }
+    }
+    .ant-menu-submenu-active{
+      color: #fff !important;
+    }
+    >.ant-menu-submenu {
+      > .ant-menu-submenu-title {
+        &:hover {
+          color: @menu-select-bg;
+          background: @menu-hover-bg !important;
+
+          .ant-menu-submenu-arrow {
+            &:after,
+            &:before {
+
+              background: -webkit-gradient(linear, left top, right top, from(@menu-select-bg), to(@menu-select-bg));
+              background: -webkit-linear-gradient(left, @menu-select-bg, @menu-select-bg);
+              background: linear-gradient(to right, @menu-select-bg, @menu-select-bg);
+            }
+          }
+        }
+      }
+
+      // &.ant-menu-submenu-selected {
+      //   > .ant-menu-submenu-title {
+      //     color: #fff !important;
+      //     font-weight: 600;
+      //     &:hover{
+      //       color:#fff !important;
+      //     }
+      //   }
+      //   color: @menu-nav-font;
+      //   background-color: @menu-nav-list;
+      // }
+
+      .ant-menu-item {
+        &:hover {
+          color: @menu-select-bg;
+          // .border-radius(0.333rem);
+        }
+
+        &.ant-menu-item-selected {
+            color: #fff !important;
+            background-color:  @menu-nav-list;
+
+          a {
+            color: #fff !important;
+
+            &:hover {
+              color: #fff !important;
+            }
+          }
+        }
+      }
+
+      .ant-menu-submenu{
+        .ant-menu-submenu-title{
+          &:hover{
+            background: @menu-hover-bg;
+            color:#fff !important;
+          }
+        }
+          &.ant-menu-submenu-selected{
+            .ant-menu-submenu-title{
+              // background: @menu-nav-second;
+              // color:@menu-nav-font !important;
+              color: #fff !important;
+              font-weight: 500;
+              &:hover{
+                background: @menu-hover-bg;
+                color:#fff !important;
+              }
+            }
+          }
+      }
+    }
+  }
+
+  //ant-menu-dark
+  &.ant-menu-dark {
+    background: transparent;
+
+    > li.ant-menu-item:focus,
+    > li.ant-menu-item:hover {
+      background:@menu-hover-bg !important;
+      color:#fff !important;
+      // .border-radius(0.333rem);
+    }
+
+    .ant-menu-item.ant-menu-item-selected a {
+      color: #fff !important;
+      font-weight: 500;
+      &:hover{
+        color:#fff !important;
+        // .border-radius(0.333rem);
+      }
+    }
+
+    .ant-menu-submenu {
+      .ant-menu-sub {
+
+        background: @menu-bg;
+        padding: 1rem 0;
+
+        .ant-menu-item {
+          &:hover {
+            background: @menu-hover-bg;
+          }
+        }
+      }
+
+    }
+  }
+
+  //m-menu-default
+  &.m-menu-default {
+    &.ant-menu {
+      .ant-menu-item {
+        &:hover{
+          background: @menu-hover-bg;
+        }
+        &.ant-menu-item-selected {
+
+          border-left: 2px solid @menu-hover-bg;
+
+          > a {
+            color: @menu-select-bg !important;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  //m-menu-default-middle
+  &.m-menu-default-middle {
+    &.ant-menu {
+      .ant-menu-item {
+        &.ant-menu-item-selected {
+
+          border-left: 6px solid @menu-hover-bg;
+
+          > a {
+            color: @menu-select-bg !important;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  //m-menu-line
+  &.m-menu-line {
+    &.ant-menu {
+      .ant-menu-item {
+        .line {
+
+          background: @menu-hover-bg;
+
+        }
+
+      }
+
+      .ant-menu-submenu {
+        > .ant-menu-submenu-title {
+          .line {
+            background: @menu-hover-bg;
+          }
+
+        }
+
+        .ant-menu-item {
+          &.ant-menu-item-selected {
+            a {
+              color: #fff !important;
+              &:hover {
+                color: @menu-select-bg !important;
+              }
+            }
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  //m-menu-message
+  &.m-menu-message {
+    &.ant-menu {
+      .ant-menu-item {
+        i {
+          color: @menu-select-bg;
+        }
+
+        &.ant-menu-item-selected {
+
+          border-left: 2px solid @menu-hover-bg;
+
+          > a {
+            color: #fff !important;
+          }
+        }
+      }
+
+    }
+
+    .ant-menu-submenu {
+      .ant-menu-submenu-title {
+        &:hover {
+          color: @menu-select-bg !important;
+          background-color: @menu-hover-bg;
+        }
+
+        i {
+          color:@menu-select-bg;
+        }
+      }
+
+      &.ant-menu-submenu-selected {
+        .ant-menu-submenu-title {
+          &:hover {
+
+            color: @menu-select-bg !important;
+            background-color: @menu-hover-bg;
+
+            .ant-menu-submenu-arrow {
+              &:after,
+              &:before {
+                background: -webkit-gradient(linear, left top, right top, from(@menu-select-bg), to(@menu-select-bg)) !important;
+                background: -webkit-linear-gradient(left, @menu-select-bg, @menu-select-bg) !important;
+                background: linear-gradient(to right, @menu-select-bg, @menu-select-bg) !important;
+              }
+            }
+
+          }
+
+          i {
+            color: @menu-select-bg;
+          }
+        }
+      }
+    }
+
+  }
+
+}
+
+//m-menu-horizontal
+.m-menu-horizontal {
+  .ant-menu-line {
+    background: @menu-hover-bg;
+    border-bottom-color: @menu-hover-bg;
+  }
+  &.ant-menu-horizontal{
+    .ant-menu-item{
+        color: @headNavColor;
+        &:hover{
+            color: @topMeun;
+            border-bottom: none !important;
+        }
+
+        &.ant-menu-item-selected {
+            color: @topMeun;
+            // border-bottom: .333rem solid @topMeun;
+            border-bottom: none !important;
+        }
+    }
+  }
+}
+
+//m-tabs-menu
+.m-tabs-menu {
+  .m-tabs-menu-head {
+    .m-circular {
+
+      background: @menu-hover-bg;
+    }
+
+    .m-tabs-menu-title {
+
+      background: @menu-hover-bg;
+      border: 1px solid @menu-hover-bg;
+
+    }
+
+  }
+
+  .m-tabs-menu-body {
+    li {
+      :hover {
+        color: @menu-select-bg;
+      }
+    }
+  }
+
+}
+
+//m-sider360    2018.3.14
+.m-sider360 {
+  background: @menu-bg-wrap;
+}
+
+.m-xuanfu-handle {
+  .m-handle-item {
+    background:@head-bg-tm;
+    &:hover {
+      background:@head-bg-tm;
+    }
+  }
+}
+
+.m-handle-list {
+  li {
+    .m-handle-icon {
+      background: @head-bg-tm;
+    }
+    .m-handle-text {
+      background:@head-bg-tm;
+    }
+    &:hover {
+      & > .m-handle-icon {
+        background: @head-bg-tm;
+      }
+    }
+  }
+}
+
+
+// m-dropdown
+.m-dropdown-nav{
+  .current{
+    a{
+      background:  @hover-bg;
+      color:@head-bg !important;
+    }
+  }
+  .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
+    background-color: @hover-bg;
+}
+}
+
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
+  background-color: @menu-hover-bg;
+}
+
+//m-tree
+.m-tree{
+  &.ant-tree{
+    li{
+      .ant-tree-node-content-wrapper {
+          &.ant-tree-node-selected {
+              background-color: @hover-bg;
+              color: @hover;
+              .font-w500();
+          }
+          &:hover{
+            background-color: @hover-bg;
+            color: @hover;
+            .font-w500();
+          }
+      }
+    }
+  }
+}
+
+// m-anchor
+.m-anchor{
+  .ant-anchor{
+      .ant-anchor-link-active {
+          > .ant-anchor-link-title {
+              color: @head-bg;
+          }
+
+      }
+
+      .ant-anchor-link{
+        &:hover{
+          .ant-anchor-link-title{
+            color: @head-bg;
+          }
+        }
+      }
+
+
+      .ant-anchor-ink{
+          .ant-anchor-ink-ball{
+              border:2px solid @head-bg;
+          }
+      }
+  }
+}

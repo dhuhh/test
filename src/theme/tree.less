@@ -1,0 +1,68 @@
+@charset "utf-8";
+//m-tree-info
+.m-tree-info{
+	&.ant-tree{
+		font-family: @all-family;
+		.font-s14();
+		li{
+			overflow: hidden;
+			.ant-tree-node-content-wrapper{
+				color: @title-color;
+				height: 2rem;
+				line-height: 2rem;
+				padding: 0 .5rem;
+			}
+			ul{
+				padding-left:2rem;
+			}
+		}
+		&.ant-tree-show-line li{
+			padding: .25rem 0;
+			.ant-tree-switcher{
+			width: 2rem;
+			height: 2rem;
+			line-height: 2rem;
+				&.ant-tree-switcher_close:after,&.ant-tree-switcher_open:after{
+					.font-s16() !important;
+				}
+			}
+			&:not(:last-child):before{
+				border-left:0;
+			}
+			.ant-tree-switcher-noop{
+				display: none;
+			}
+		}
+	}
+}
+//m-tree style
+.m-tree{
+	&.ant-tree{
+		font-family: @all-family;
+		.font-s14();
+		li{
+			padding: .25rem 0;
+			overflow: hidden;
+			.ant-tree-node-content-wrapper{
+				color: @tag-color;
+			}
+		}
+	}
+
+}
+
+.ant-select-tree li .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
+    background-color: @hover-bg !important;
+	color: @hover !important;
+}
+.ant-select-tree li .ant-select-tree-node-content-wrapper:hover {
+    background-color: @hover-bg !important;
+	color: @hover !important;
+}
+
+
+
+
+
+
+

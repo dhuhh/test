@@ -1,0 +1,48 @@
+.table {
+  :global(.ant-table) {
+    overflow-x: auto;
+
+    td {
+      white-space: nowrap;
+    }
+  }
+
+  :global(.ant-table-column-sorters) {
+    &:before {
+      width: 0;
+    }
+  }
+  // HT整合 --------------------------------------------------------------------------------
+  &.affixedTable {
+    display: none !important;
+    height: 3.62rem !important;
+    height: 3.72rem\0\9 !important;
+    overflow: hidden !important;
+    &:global(.affixed) {
+      display: block !important;
+    }
+    &:global(.ant-table-body) {
+      overflow: hidden !important;
+    }
+    tbody {
+      display: none !important;
+    }
+  }
+
+  &.mainTable {
+    // :global(.ant-table-thead) {
+    //   height: 3.62rem;
+    //   transition:height 2s;
+    //   -moz-transition:height 2s; /* Firefox 4 */
+    //   -webkit-transition:height 2s; /* Safari and Chrome */
+    //   -o-transition:height 2s; /* Opera */
+    // }
+    &:global(.affixed) {
+      :global(.ant-table-thead) {
+        visibility: hidden !important;
+        // height: 0 !important;
+      }
+    }
+  }
+  // HT整合 --------------------------------------------------------------------------------
+}
