@@ -7,7 +7,6 @@ const { CheckableTag } = Tag;
 
 class TagPicker extends Component {
   state = {
-    expand: this.props.expand || false,
     isMulti: this.props.isMulti || false,
     allTagData: { show: true, key: '', showText: '全部', ...(this.props.allTagData || {}) },
     value: this.props.initialValue || [],
@@ -83,7 +82,7 @@ class TagPicker extends Component {
   }
 
   render() {
-    const { value: valueInstate, expand: expandInstate, allTagData: allTagDataInstate, displayTag } = this.state;
+    const { value: valueInstate, allTagData: allTagDataInstate, displayTag } = this.state;
     const { className, style, tagClassName = `${styles.tagSelect} m-tag-small`, allTagData = {}, rowKey = 'id', titleKey = 'name', label = '', dataSource = [], value = valueInstate, tagType } = this.props;
     // 处理样式
     const cls = classnames('m-tagbox', styles.tagSelect, className);

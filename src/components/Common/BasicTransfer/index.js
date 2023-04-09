@@ -216,7 +216,7 @@ class BasicTransfer extends Component {
       datas = targetItems;
     }
     // 根据搜索条件过滤数据
-    if (!sValue && sValue != 0) { // eslint-disable-line
+    if (sValue !== '0' && !sValue) { // eslint-disable-line
       return datas;
     } else if (searchType === 'key') {
       return datas.filter((item) => {

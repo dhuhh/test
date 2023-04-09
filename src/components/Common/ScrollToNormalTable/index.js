@@ -144,7 +144,7 @@ class ScrollToNormalTabl extends React.Component {
       tableHeight = tableHeight !== 0 ? scrollHeight : (window.innerHeight - 60 - 80 - 60 - 60 - 90); // 计算表格scroll高度
     }
     // const scrollFlag = scrollElement.clientWidth < (columns.length * 185) ? 1 : -1; // 是否需要x轴滚动条 1: 需要| 0:不需要
-    const tempColumn = [];
+    let tempColumn = [];
     if (column !== null) {
       tempColumn = column;
     }

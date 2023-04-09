@@ -522,10 +522,6 @@ class MainPageLayout extends React.PureComponent {
     } else {
       finalMenuData.push(...menuTree);
     }
-    const currentMenuData = finalMenuData.filter((item) => {
-      const tempKey = this.menuLangKey(item);
-      return tempKey === this.state.selectedMenuKeys[0];
-    });
     const cacheRoutes = this.packageRoutes(menuTree, routes); // 组装routes,获取路由是否需要缓存
     sessionStorage.setItem('cacheRoutes', JSON.stringify(cacheRoutes)); // routeConfig配置信息(包含isCache)
     let situation = 'pc';

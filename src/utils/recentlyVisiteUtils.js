@@ -35,7 +35,6 @@ const RecentlyVisiteUtils = {
     return menuName;
   },
   saveRecentlyVisiteUtils(plocPath, search, name = '') {
-    let tempName = name;
     // 保存最近访问的url
     const recentlyVisitedUrls = sessionStorage.getItem('recentlyVisited') ? sessionStorage.getItem('recentlyVisited').split(',') : [];
     const tempRecentUrl = `${plocPath + search}|${name}`;
@@ -45,7 +44,7 @@ const RecentlyVisiteUtils = {
     // 处理菜单路径的后缀
     const menuTree = JSON.parse(sessionStorage.getItem('menuTree')) || [];
     const tempObj = this.getNameAndUrl(`${plocPath + search}`, menuTree) || {};
-    tempName = lodash.get(tempObj, 'title[0].text', '');
+    const tempName = lodash.get(tempObj, 'title[0].text', '');
     if (tempName) {
       fetchRecordPageAccessLog({
         accessIp: '',

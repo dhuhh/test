@@ -229,7 +229,7 @@ export default class BasicDataTable extends React.Component {
     const finalColumns = [];
     // 如果是checkbox且需要支持"跨页全选"",那么就禁用默认的选择器,自定义checkbox选择器
     let confirmCrossPageSelect = false;// 判断是否是跨页全选
-    const { type = 'checkbox', crossPageSelect = false, fixed = '', width = 62, widthOperation = 185 } = rowSelection || {};
+    const { type = 'checkbox', crossPageSelect = false, fixed = '', width = 62 } = rowSelection || {};
     if (rowSelection && type === 'checkbox' && crossPageSelect && dataSource.length > 0) {
       confirmCrossPageSelect = true;
       const { selectAll = this.state.checkboxCache.selectAll, selectedRowKeys = this.state.checkboxCache.selectedRowKeys } = rowSelection;

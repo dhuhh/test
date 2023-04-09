@@ -28,7 +28,7 @@ class FlowList extends React.PureComponent {
     // 调用端口获取客户列表
     FetchUserTodoWorkflowNum({
     }).then((response) => {
-      const { records = [], total } = response || {};
+      const { records = [] } = response || {};
       this.setState({
         tableData: records[0],
       });

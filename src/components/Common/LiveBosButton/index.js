@@ -66,13 +66,11 @@ class LiveBosButton extends React.Component {
             closeFlag,
             cancelFlag,
           } = {},
-        } = data;
+        } = !data ? {} : data;
         if (cancelFlag || closeFlag) { // 取消事件，对应 LiveBOS `operateCancel`
           this.handleCancel();
         } else { // 操作完成事件，对应 LiveBOS `operateCallback`
-          if (data !== null) {
-            message.success(data?.message || '操作成功');
-          }
+          message.success(data?.message || '操作成功');
           this.props.onOk();
           this.handleCancel();
         }
@@ -88,14 +86,12 @@ class LiveBosButton extends React.Component {
         closeFlag,
         cancelFlag,
       } = {},
-    } = data;
+    } = !data ? {} : data;
     if (reload) {
       // 刷新数据
       this.props.onOk();
       this.handleCancel();
-      if (data !== null) {
-        message.success(data?.message);
-      }
+      message.success(data?.message);
     }
     if (closeFlag || cancelFlag) {
       this.handleCancel();

@@ -201,20 +201,18 @@ class BusinessWizard extends React.Component {
     const bridge = new Bridge(iframeRef.current.contentWindow);
     bridge.onReady(() => {
       bridge.on('operateCallback', (data) => {
-        if (data !== null) {
-          const {
-            callback: {
-              closeFlag,
-              cancelFlag,
-            } = {},
-          } = data;
-          if (cancelFlag || closeFlag) { // 取消事件，对应 LiveBOS `operateCancel`
-            this.handleCancel();
-          } else { // 操作完成事件，对应 LiveBOS `operateCallback`
-            message.success(data?.message || '操作成功');
-            this.props.onRefresh();
-            this.handleCancel();
-          }
+        const {
+          callback: {
+            closeFlag,
+            cancelFlag,
+          } = {},
+        } = !data ? {} : data;
+        if (cancelFlag || closeFlag) { // 取消事件，对应 LiveBOS `operateCancel`
+          this.handleCancel();
+        } else { // 操作完成事件，对应 LiveBOS `operateCallback`
+          message.success(data?.message || '操作成功');
+          this.props.onRefresh();
+          this.handleCancel();
         }
       });
     });

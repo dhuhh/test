@@ -77,7 +77,7 @@ export default {
       yield put({
         type: 'save',
         payload: {
-          menuTree: (data.menuTree && data.menuTree.menu && data.menuTree.menu.item ? data.menuTree.menu.item : []),
+          menuTree: (data !== null && data.menuTree && data.menuTree.menu && data.menuTree.menu.item ? data.menuTree.menu.item : []),
           menuTreeLoaded: true,
         },
       });

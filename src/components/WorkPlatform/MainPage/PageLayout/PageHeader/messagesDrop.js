@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-no-undef */
 import React from 'react';
-import { Badge, message } from 'antd';
+import { Badge } from 'antd';
 import { routerRedux, Link } from 'dva/router';
 import DropdownBox from '../../../../Common/DropdownBox';
 import BasicDataTable from '../../../../../components/Common/BasicDataTable'; // 引入公共表格处理组件

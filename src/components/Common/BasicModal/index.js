@@ -91,8 +91,8 @@ class BasicModal extends React.PureComponent {
     const { confirmDisabled = false, confirmLoading = false, onOk, onCancel } = this.props; // eslint-disable-line
     return (
       <div>
-        { onCancel && <Button className="m-btn-radius m-btn-gray" onClick={this.onCancelBtn}>取 消</Button>}
-        { onOk && <Button type="primary" className="m-btn-radius m-btn-theme" onClick={this.onOkBtn} loading={confirmLoading} disabled={confirmDisabled}>确 定</Button>}
+        {onCancel && <Button className="m-btn-radius m-btn-gray" onClick={this.onCancelBtn}>取 消</Button>}
+        {onOk && <Button type="primary" className="m-btn-radius m-btn-theme" onClick={this.onOkBtn} loading={confirmLoading} disabled={confirmDisabled}>确 定</Button>}
       </div>
     );
   }
@@ -108,7 +108,21 @@ class BasicModal extends React.PureComponent {
         destroyOnClose={destroyOnClose}
         getContainer={this.getContainer}
         footer={this.renderFooter()}
-        title={isAllWindow === 1 ? [title, <i key={Math.random()} className={`iconfont icon-${changeStyle === 'max' ? 'suoxiao' : 'fangda'}`} style={{ fontSize: '1.583rem', position: 'absolute', right: '3.5rem', cursor: 'pointer', height: '1.8rem', lineHeight: '1.7rem' }} onClick={this.allWindow.bind(this)} />] : title}
+        title={
+          isAllWindow === 1 ?
+            [title, <i
+              key={Math.random()}
+              className={`iconfont icon-${changeStyle === 'max' ? 'suoxiao' : 'fangda'}`}
+              style={{
+                fontSize: '1.583rem',
+                position: 'absolute',
+                right: '3.5rem',
+                cursor: 'pointer',
+                height: '1.8rem',
+                lineHeight: '1.7rem'
+              }}
+              onClick={this.allWindow} />] : title
+        }
         maskClosable={maskClosable}
         className={classnames('m-modal-wrap', className)}
         onCancel={this.onCancelEvent}
