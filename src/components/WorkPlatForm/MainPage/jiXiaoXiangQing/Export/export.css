@@ -1,0 +1,14 @@
+.exportIn{
+    width: 60px;
+    height: 32px;
+    background: #244FFF;
+    border-radius: 2px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,102 @@
+.card {
+  :global {
+    .ant-card-head {
+      padding: 0 16px !important;
+      margin: 0 !important;
+      min-height: 0 !important;
+    }
+    .ant-card-head-title {
+      padding: 16px 0 4px;
+    }
+  }
+}
+
+.basicInfoCol {
+  margin: 7px 0;
+  >:nth-child(1) {
+    color: #61698C;
+  }
+  >:nth-child(2) {
+    color: #1A2243;
+  }
+}
+
+.table {
+  :global(.ant-table-selection-column) {
+    text-align: center !important;
+  }
+  :global(.ant-table-thead>tr>th) {
+    height: 48px !important;
+    position: relative;
+    background: #F7F8FA !important;
+    &:not(:last-child) ::after {
+      display:block;
+      content: '';
+      width: 1px;
+      height: calc(100% - 26px);
+      background: #E0E2E8;
+      position: absolute;
+      right: 0;
+      top: 13px;
+    }
+  }
+  :global(.ant-table .ant-table-tbody > tr > td) {
+    height: 48px !important;
+    color: #4B516A;
+  }
+  :global(.ant-table-thead > tr > th) {
+    border-bottom: none !important;
+  }
+}
+
+.form {
+  :global {
+    .ant-form-item {
+      margin-bottom: 15px;
+    }
+  }
+}
+
+.pagination{
+  :global {
+    .ant-select-selection--single {
+      height: 24px !important;
+    }
+    .ant-select-selection__rendered {
+      line-height: 24px !important;
+    }
+  }
+  :global(.ant-pagination-item-active){
+    border: 1px solid #244FFF !important;
+    background: #FFF !important;
+    a {
+      color: #244FFF !important;
+    }
+  }
+  :global(.ant-pagination-item:hover:not(.ant-pagination-item-active)){
+    // border-color :#244fff !important;
+    a:hover{
+      color:#244fff !important;
+    }
+  }
+  :global(.ant-pagination-options){
+    :global(.ant-select-selection--single:hover){
+      border-color :#244fff !important;
+    }
+    :global(.ant-pagination-options-quick-jumper){
+       input:hover,input:focus{
+         border-color :#244fff !important;
+         box-shadow: none;
+       }
+    }
+    :global(.ant-select-selection--single:focus){
+      border-color :#244fff !important;
+      box-shadow: none;
+    }
+
+  }
+  :global(.ant-pagination-item-link:hover){
+      border-color :#244fff !important;
+      color:#244fff !important;
+  }
+}

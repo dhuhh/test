@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Input, Tag, Cascader } from 'antd';
+import { Input, Tag, Cascader, Popover } from 'antd';
 import styles from './index.less';
 
 class InputTagPicker extends Component {
@@ -11,18 +11,55 @@ class InputTagPicker extends Component {
   handleDisplayRender = () => {
     const { value = {}, closable = true } = this.props;
     const { keys = [], titles = [] } = value;
+    const ohterShareObj = [];
+    keys.forEach((key, index) => {
+      const title = titles[index] || '--';
+      let tempTittle = title;
+      if (tempTittle && tempTittle.length >= 4) {
+        tempTittle = `${tempTittle.substring(0, 3)}...`;
+      }
+      if (index >= 7) {
+        ohterShareObj.push((
+          <Tag className="m-tag-small m-tag-blue" style={{ background: '#54a9df' }} key={key}>
+            <span title={title} style={{ color: '#fff' }} >{tempTittle}</span>
+            {closable && <i className="iconfont icon-close-small" onClick={e => this.handleTagClose(e, key, index)} />}
+          </Tag>
+        ));
+      }
+    });
+    // eslint-disable-next-line array-callback-return
     return keys.map((key, index) => {
       const title = titles[index] || '--';
       let tempTittle = title;
-      if (tempTittle.length >= 4) {
+      if (tempTittle && tempTittle.length >= 4) {
         tempTittle = `${tempTittle.substring(0, 3)}...`;
       }
-      return (
-        <Tag className="m-tag-small m-tag-blue" key={key}>
-          <span title={title}>{tempTittle}</span>
-          {closable && <i className="iconfont icon-close-small" onClick={e => this.handleTagClose(e, key, index)} />}
-        </Tag>
+      const ohterShareObjCentext = (
+        <div>
+          {
+            ohterShareObj.map((item) => {
+              return item;
+            })
+          }
+        </div>
       );
+      if (index < 7) {
+        return (
+          <Tag className="m-tag-small m-tag-blue" key={key}>
+            <span title={title}>{tempTittle}</span>
+            {closable && <i className="iconfont icon-close-small" onClick={e => this.handleTagClose(e, key, index)} />}
+          </Tag>
+        );
+      }
+      if (keys.length >= 7 && (keys.length === index + 1)) {
+        return (
+          <Popover placement="right" content={ohterShareObjCentext}>
+            <Tag className="m-tag-small m-tag-blue">
+              <span title="...">......</span>
+            </Tag>
+          </Popover>
+        );
+      }
     });
   }
   handleTagClose = (e, key, index) => {
@@ -67,10 +104,11 @@ class InputTagPicker extends Component {
     return (
       <span id={id} className={clsSpan}>
         <Input.Group compact className={cls} style={style}>
-          {lable !== '' && <div className="ant-input-group-addon">{lable}{hasButton ? (<span className="m-set-handle"><i className="blue iconfont icon-set" onClick={this.handleManageClick} /><span /></span>) : '' }</div>}
+          {lable !== '' && <div className="ant-input-group-addon">{lable}{hasButton ? (<span className="m-set-handle"><i className="m-color iconfont icon-set" onClick={this.handleManageClick} /><span /></span>) : '' }</div>}
           <Cascader
             onClick={this.handleButtonClick}
-            className="m-cascader-picker"
+            className={`${styles.m_cascader} m-cascader-picker`}
+            // className="m-cascader-picker"
             style={{ width: '100%' }}
             allowClear={allowClear}
             popupVisible={false}

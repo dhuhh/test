@@ -58,21 +58,21 @@
         background-color: @hover-bg;
     }
     &.ant-tag-checkable-checked {
-        background-color: @hover-bg;
-        border-color: @head-bg;
+        // background-color: @hover-bg;
+        // border-color: @head-bg;
         color: @head-bg;
         // .box-shadow(@shadow: -1px 0 0 @head-bg);
-        z-index: 1;
-        &:first-child {
-            .box-shadow(none);
-        }
-        .m-badge{
-            &.ant-badge{
-                .ant-badge-count{
-                    color:@head-bg;
-                }
-            }
-        }
+        // z-index: 1;
+        // &:first-child {
+        //     .box-shadow(none);
+        // }
+        // .m-badge{
+        //     &.ant-badge{
+        //         .ant-badge-count{
+        //             color:@head-bg;
+        //         }
+        //     }
+        // }
     }
     &.m-tag-customer{
         &.ant-tag-checkable-checked {
@@ -89,14 +89,14 @@
 
     &.ant-tag-checkable-checked {
        color:@head-bg;
-       //border-bottom:2px solid @head-bg;
+       border-bottom:2px solid @head-bg;
     }
     &.ant-tag-checkable:not(.ant-tag-checkable-checked):hover {
         color:@head-bg;
     }
-    &:hover,&:focus{
+    &:hover,&:focus {
         color:@head-bg;
-        //border-bottom:2px solid @head-bg;
+        border-bottom:2px solid @head-bg;
     }
 
 }
@@ -132,7 +132,7 @@
     }
 }
 
-.m-risk-tag{  
+.m-risk-tag{
     &.tag-mcolor{
         background-color: @tag-bg;
     }
@@ -158,16 +158,60 @@
     }
 }
 
-.list-arrow:hover i {
-    color: @head-bg;
+.m-pay-tag{
+  &.ant-tag{
+      background-color: @hover-bg2;
+      border-color: @hover-bg2;
+      &.m-tag-add {
+          background-color: #fff;
+          border: 1px dashed @c-gray;
+          &:hover{
+              border-color: @head-bg;
+              color: @head-bg;
+          }
+      }
+  }
 }
 
-//m-product-sort  2018-03-14
-.m-product-sort{
+//新客户全景-20200609
+.m-tag-cus{
+    &.ant-tag{
+        &:hover{
+            color: @head-bg;
+            border-color: @head-bg;
+        }
+        &.ant-tag-checkable-checked{
+            background-color: @head-bg;
+            border-color: @head-bg;
+        }
+    }
+}
 
-    .m-porduct-item{
-        .m-porduct-item-head{
-            border-left:2px solid @head-bg;
+// H5活动页
+.m-tag-h5Active{
+    &>span{
+        display: inline-block;
+        width: max-content;
+        height: 2.5rem;
+        padding: 0 1rem;
+        border: 1px solid #ededed;
+        text-align: center;
+        line-height: 2.5rem;
+        margin: 2rem .5rem 0;
+        cursor: pointer;
+        border-radius: 2px;
+        &:hover{
+            color: @head-bg;
+            border-color: @head-bg;
+            // color: #fff;
+        }
+    }
+    .active{
+        background-color: @head-bg;
+        border-color: @head-bg;
+        color: #fff;
+        &:hover{
+            color: #fff;
         }
     }
 }

@@ -28,7 +28,7 @@ const ObjectUtils = {
       return false;
     }
     let isEqual = true;
-    aKeys.every((key) => {
+    isEqual = aKeys.every((key) => {
       const aValue = aObj[key];
       const bValue = bObj[key];
       if (aValue === bValue) {
@@ -45,7 +45,11 @@ const ObjectUtils = {
           }
           return false;
         }
-        isEqual = false;
+        //
+        const aValueTemp = aValue;
+        const bValueTemp = bValue;
+        // 如果两者都是NaN时,应该看作相等
+        isEqual = aValue !== aValueTemp && bValue !== bValueTemp;
       }
       return isEqual;
     });

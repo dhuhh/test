@@ -48,7 +48,7 @@ class SearchInput extends React.Component {
       <span className="m-input-search-form ant-input-search ant-input-search-enter-button ant-input-affix-wrapper">
         <Input type="text" onChange={this.handleChange} value={this.state.value} placeholder={placeholder} />
         {/* <span className="ant-input-suffix">
-          <button type="button" className="m-btn-radius m-btn-radius-small ant-btn m-btn-gray ant-input-search-button">
+          <button type="button" className="m-btn-radius m-btn-radius-small ant-btn m-btn-white ant-input-search-button">
             <i className="iconfont icon-search ant-input-search-icon" />
           </button>
         </span> */}

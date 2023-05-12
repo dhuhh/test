@@ -52,7 +52,7 @@ class DatePicker extends React.Component {
       <Input.Group className="m-input-group" compact>
         <span className="ant-input-group-addon">{labelName}</span>
         {this.renderDateInput(dataType)}
-        <button style={{ cursor: 'text' }} type="button" className={`${styles.m_button} m-btn-radius m-btn-radius-small ant-btn m-btn-gray`}>
+        <button style={{ cursor: 'text' }} type="button" className={`${styles.m_button} m-btn-radius m-btn-radius-small ant-btn m-btn-headColor`}>
           <i className="iconfont icon-calendar" />
         </button>
       </Input.Group>

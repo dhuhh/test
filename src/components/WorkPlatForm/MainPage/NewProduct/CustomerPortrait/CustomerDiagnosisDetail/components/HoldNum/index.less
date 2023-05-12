@@ -1,0 +1,175 @@
+// @color-1 强色类 一般用于按钮背景 强调文案等**********************************/
+@color-11:   #CCA663; //主色蓝
+
+@color-12:   #f7941d; //辅色橙
+
+@color-13:   #EF5A3C; //涨色红
+
+@color-14:   #029A01; //跌色绿
+
+@color-15:   #fff; //白色
+
+// 文案 *******************************************************/
+@color-rise: @color-13; //涨
+
+@color-fall: @color-14; //跌
+
+@color-success: @color-11; //成功
+
+@color-warn: @color-12; //告警
+
+@color-error: @color-13; //失败
+
+@px2rem: 75rem;
+
+@main-color: #333;
+
+@line-color: @color-04-1;            //线条灰颜色
+
+@focus-color: @color-11;           //突显金颜色
+
+@grey-color: @color-03;            //辅助色
+
+@main-color: @color-01;            //主文案色
+
+@second-color: @color-02;          //次文案色
+
+@active: #B1BBC5;
+
+@module-bg-color: @color-06;       //模块底色
+
+@golden-deep-color: @color-12-02;  //深橙色
+
+@color-01: #333333; //主文案
+
+@color-02: #666666; //辅助文案
+
+@color-03: #959CBA; //输入框说明文字
+
+@color-04: #e5e5e5; //灰色分割线
+
+@color-04-1: rgba(0, 0, 0, 0.1); //浅黑分割线
+
+@color-05: #F2F2F5; //背景色
+
+@color-06: #ffffff; //模块底色
+
+@color-12-02: #6A5218; //辅色橙-点击
+
+.opRectRate {
+  position: relative;
+  height: 150px;
+  margin-top: 30px;
+  padding-left: 10px;
+  margin-bottom: 70px;
+  font-size: 12px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    right: 0;
+    left: 30px;
+    border-top: 1px solid #ccc;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -40px;
+    right: 0;
+    left: 70px;
+    border-top: 1px dashed #ccc;
+  }
+
+  .opRectY {
+    position: absolute;
+    top: 27px;
+    color: @grey-color;
+  }
+
+  .opRectX {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    color: @grey-color;
+    white-space: nowrap;
+  }
+
+  & ul {
+    height: 100%;
+    display: flex;
+    display: -webkit-flex;
+    padding: 0 10px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 90px;
+      right: 0;
+      left: 70px;
+      border-top: 1px dashed #ccc;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 9px;
+      right: 0;
+      left: 70px;
+      border-top: 1px dashed #ccc;
+    }
+  }
+
+  & li {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    text-align: center;
+  }
+
+  & figure {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    z-index: 5;
+    width: 10px;
+    margin-left: -10px;
+    background-image: linear-gradient(0deg, #B2C5F3 0%, #7B93E3 100%);
+    border-radius: 0 0 10px 10px;
+  }
+
+  .opRectTip {
+    position: absolute;
+    bottom: -26px;
+    left: 50%;
+    padding: 1px 7px;
+    margin-left: -30px;
+    color: @main-color;
+  }
+
+  .opRectChoose {
+    .opRectTip {
+      background-image: linear-gradient(90deg, #6CB2F7 0%, #3A7BEC 100%);
+      border-radius: 16px;
+      font-size: 12px;
+      color: #FFF;
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: -3px;
+        left: 50%;
+        width: 6px;
+        height: 6px;
+        margin-left: -3px;
+        background: linear-gradient(90deg, #6CB2F7 0%, #3A7BEC 100%);
+        -webkit-transform: scaleX(0.9) rotate(-45deg);
+        transform: scaleX(0.9) rotate(-45deg);
+        z-index: -1;
+      }
+    }
+  }
+}

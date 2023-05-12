@@ -39,8 +39,8 @@ class CommonSearchTags extends React.Component {
     this.triggerChange(nextSelectedTags);
   }
   handleExpand = () => {
-    this.setState((prevState) => {
-      return { show: !prevState.show };
+    this.setState({
+      show: !this.state.show,
     });
   }
    // 向外层的form表单暴露的triggerChange函数(antd的form控件需求)

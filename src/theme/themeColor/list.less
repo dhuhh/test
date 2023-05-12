@@ -36,6 +36,37 @@
 }
 
 //m-list-tab-info
+// .m-list-tab-info{
+//     &.ant-list{
+//         .ant-list-item{
+//             &.active{
+//                 &:before{
+//                     border-left:4px solid @head-bg;
+//                 }
+//                 .ant-list-item-meta{
+//                     .ant-list-item-meta-title {
+//                         color: @head-bg;
+//                         a{
+//                             color: @head-bg !important;
+//                             .darkorange{
+//                                color: @head-bg !important;
+//                             }
+//                         }
+//                         .time{
+//                             color: @head-bg;
+//                         }
+//                     }
+//                     .ant-list-item-meta-description{
+//                         color: @head-bg;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+
+
+//m-list-tab-info
 .m-list-tab-info{
     &.ant-list{
         .ant-list-item{
@@ -56,7 +87,7 @@
   border-bottom: 0 !important;
 
   .ant-list-item-meta-title {
-    margin-bottom: 0;
+    margin-bottom: 0; 
   }
 
   &:hover {
@@ -89,37 +120,17 @@
   }
 }
 
-//m-list-info
 .m-list-info{
-  &.ant-list{
-    .ant-list-item{
-      &:hover,
-      &.active{
-              background:@hover-bg;
-              .ant-list-item-meta-title{
-                a{
-                  color:@hover;
-                  font-weight: 600 !important;
-                }
-              }
-              p.content{
-                color:@hover;
-                font-weight: 600 !important;
-              }
-      }
-    }
-  }
   &.m-list-gkfx{
     &.ant-list{
-      .ant-list-item{
-        &:before{
-          color: @head-bg;
-        }
-      }
+      .ant-list-item{         
+        &:before{           
+          color: @head-bg; 
+        }            
+      }    
     }
   }
 }
-
 
 .m-list-icon.ant-list .ant-list-item .ant-list-item-meta-avatar i {
   color: @head-bg;
@@ -133,14 +144,6 @@
             color: @head-bg;
         }
     }
-    &:hover{
-      background: @hover-bg;
-      .m-product-list-title{
-        a{
-          color: @head-bg;
-        }
-      }
-    }
   }
 }
 .m-list-border-spot{
@@ -153,62 +156,16 @@
         }
         .ant-list-item-content{
           >div{
-              color:@hover;
+              color:@head-bg;
           }
         }
         .ant-list-item-meta-title{
-          color: @hover;
+          color: @head-bg;
           a{
-            color: @hover;
-            font-weight: 600;
+            color: @head-bg;
           }
         }
       }
     }
   }
 }
-
-.m-home-set-list{
-  li{
-    i{
-      color: @head-bg;
-    }
-
-    .ant-switch-checked {
-      background-color: @head-bg;
-    }
-  }
-}
-
-// ant-select-dropdown-menu
-.ant-select-dropdown-menu{
-  .ant-select-dropdown-menu-item{
-    &.ant-select-dropdown-menu-item-selected{
-      a{
-        color:@head-bg !important;
-      }
-    }
-
-  }
-}
-
-
-  //20200707
-  .m-list-title{
-
-    h2{
-        span{
-            background: @head-bg;
-        }
-    }
-
-    .m-list-title-item{
-      &:hover{
-        a{
-          color:@head-bg;
-          text-decoration: underline;
-        }
-      }
-    }
-
-  }

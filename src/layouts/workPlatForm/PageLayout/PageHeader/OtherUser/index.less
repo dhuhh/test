@@ -1,0 +1,25 @@
+.input {
+  width: 100%;
+  :global(.ant-input) {
+    height: 34px !important;
+  }
+}
+
+.table {
+  :global(.ant-table-thead > tr > th){
+    height: 48px !important;
+  }
+  :global(.ant-spin-container) {
+    border: 1px solid #F0F0F4;
+  }
+}
+
+.headerBox {
+  :global(.ant-select-dropdown-menu) {
+    overflow: visible !important;
+  }
+  // 去掉OptGroup的label属性自带的高度
+  :global(.ant-select-dropdown-menu-item-group-title) {
+    height: 0 !important;
+  }
+}

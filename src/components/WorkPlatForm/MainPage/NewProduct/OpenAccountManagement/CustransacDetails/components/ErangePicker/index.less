@@ -1,0 +1,184 @@
+.eRangePicker {
+  :global(.ant-input) {
+    border-radius: 2px;
+    color: #1a2243;
+    border: 1px solid #d1d5e6;
+    width: 250px;
+    padding: 4px 10px;
+    height: 32px;
+  }
+  :global(.ant-input:hover) {
+    border-color: #244fff !important;
+  }
+  :global(.ant-input:focus) {
+    border-color: #244fff !important;
+    box-shadow: none;
+  }
+  :global(.ant-input-disabled) {
+    color: #c0c0c0;
+    &:hover {
+      border-color: #e2e2e4 !important;
+    }
+  }
+
+  &:hover {
+    :global(.ant-calendar-picker-input) {
+      &:not(.ant-input-undisabled) {
+        // border-color: #244fff !important;
+      }
+      &:not(.ant-input-disabled) {
+        // border-color: #e2e2e4 !important;
+      }
+    }
+  }
+  &:focus {
+    :global(.ant-calendar-picker-input) {
+      &:not(.ant-input-undisabled) {
+        border-color: #244fff !important;
+        box-shadow: none !important;
+      }
+      &:not(.ant-input-disabled) {
+        // border-color: #e2e2e4 !important;
+      }
+    }
+  }
+  :global(.ant-calendar-range-picker-separator) {
+    color: #1a2243;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+  :global(.ant-calendar-range-picker-input) {
+    text-align: left;
+    height: 100%;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    margin-top: -1px;
+    &::placeholder {
+      color: #959cba !important;
+      font-size: 14px;
+    }
+  }
+  :global(.ant-calendar-picker-clear) {
+    opacity: 1;
+    svg {
+      width: 16px;
+      height: 16px;
+      color: #f0f1f5;
+      &:hover {
+        color: #d1d5e6 !important;
+      }
+    }
+  }
+  :global(.ant-calendar) {
+    margin-top: 39px;
+    border-radius: 2px;
+  }
+  :global(.ant-calendar.ant-calendar-range
+      .ant-calendar-in-range-cell::before) {
+    background: #f7f8fc;
+  }
+  :global {
+    .ant-calendar-month-panel-cell,
+    .ant-calendar-year-panel-cell,
+    .ant-calendar-decade-panel-cell {
+      a:hover {
+        background: #f7f8fc;
+        color: #1a2243;
+      }
+    }
+  }
+  :global {
+    .ant-calendar-header {
+      .ant-calendar-ym-select {
+        a {
+          color: #1a2243 !important;
+        }
+      }
+      .ant-calendar-decade-panel-century {
+        color: #1a2243 !important;
+      }
+    }
+    .ant-calendar-year-panel-header,
+    .ant-calendar-month-panel-header {
+      .ant-calendar-year-panel-decade-select,
+      .ant-calendar-month-panel-year-select {
+        color: #1a2243 !important;
+      }
+    }
+    .ant-calendar-tbody {
+      .ant-calendar-date {
+        border-radius: 2px;
+        height: 28px;
+      }
+    }
+  }
+
+  :global(.ant-calendar-month-panel-selected-cell
+      .ant-calendar-month-panel-month) {
+    color: #fff;
+    border-radius: 2px;
+    width: 51px;
+    &:hover {
+      background: #244fff;
+      color: #fff;
+    }
+  }
+  :global(.ant-calendar-year-panel-selected-cell
+      .ant-calendar-year-panel-year) {
+    color: #fff;
+    border-radius: 2px;
+    width: 51px;
+    background: #244fff;
+    &:hover {
+      background: #244fff;
+      color: #fff;
+    }
+  }
+  :global(.ant-calendar-decade-panel-selected-cell
+      .ant-calendar-decade-panel-decade) {
+    background: #244fff;
+    color: #fff;
+    &:hover {
+      background: #244fff;
+      color: #fff;
+    }
+  }
+
+  :global {
+    .ant-calendar-prev-year-btn,
+    .ant-calendar-prev-month-btn,
+    .ant-calendar-next-month-btn,
+    .ant-calendar-next-year-btn,
+    .ant-calendar-month-panel-prev-year-btn,
+    .ant-calendar-month-panel-next-year-btn,
+    .ant-calendar-year-panel-next-decade-btn,
+    .ant-calendar-year-panel-prev-decade-btn,
+    .ant-calendar-decade-panel-next-century-btn,
+    .ant-calendar-decade-panel-prev-century-btn {
+      &:before {
+        width: 10px;
+        height: 10px;
+        border-color: #959cba;
+      }
+      &:after {
+        width: 10px;
+        height: 10px;
+        border-color: #959cba;
+      }
+    }
+  }
+  :global {
+    .ant-calendar-date-panel {
+      .ant-calendar-range-middle,
+      .ant-calendar-input-wrap {
+        display: none;
+      }
+    }
+  }
+}
+.eRangePickers {
+  :global(.ant-input) {
+    border-color: #244fff !important;
+  }
+}

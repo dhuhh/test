@@ -1,0 +1,137 @@
+.box {
+  min-height: 100vh;
+  display: flex;
+  padding: 24px 12px;
+  flex-flow: row wrap;
+  background-color: #ffffff;
+}
+
+.card {
+  position: relative;
+  min-width: 507px;
+  max-height: 550px;
+  padding: 24px 36px 60px;
+  margin-left: 12px;
+  margin-right: 12px;
+  margin-bottom: 24px;
+  background-color: #FCFDFF;
+  border: 1px solid #EBECF2;
+  border-radius: 2px;
+  @media screen and(max-width: 1280px) {
+    width: calc((100% - 48px) / 2);
+  }
+  @media screen and(min-width: 1280px) and(max-width: 1808px) {
+    width: calc((100% - 48px) / 2);
+  }
+  @media screen and(min-width: 1808px) {
+    width: calc((100% - 72px) / 3);
+  }
+}
+
+.title {
+  margin-bottom: 4px;
+  font-size: 20px;
+  color: #1A2243;
+}
+
+.content {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.leftWord {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 210px;
+  font-size: 14px;
+  color: #61698C;
+}
+
+.secondName {
+  width: 210px;
+  margin-top: 16px;
+  margin-bottom: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #1A2243;
+}
+
+.secondWord {
+  position: relative;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: row;
+  align-items: center;
+  width: 211px;
+  height: 28px;
+  margin-left: 8px;
+  padding: 4px 0;
+}
+
+.other {
+  border-left: 1px solid #61698C;
+}
+
+.oneItem {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 1px;
+    height: 10px;
+    border-left: 1px solid #61698C;
+  }
+}
+
+.first {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 1px;
+    height: 26px;
+    border-left: 1px solid #61698C;
+  }
+}
+
+.last {
+  &:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    height: 14px;
+    border-left: 1px solid #61698C;
+  }
+}
+
+.toDetail{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.widthLine {
+  box-sizing: border-box;
+  height: 1px;
+  width: 8px;
+  margin-left: -0.1px;
+  margin-right: 4px;
+  border-top: 1px solid #61698C;
+}

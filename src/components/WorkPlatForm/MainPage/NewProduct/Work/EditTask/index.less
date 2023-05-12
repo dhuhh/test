@@ -1,0 +1,84 @@
+.textStyle{
+  font-size: 16px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #244FFF;
+}
+.myFlex{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.minBody{
+  width: 100vw;
+  height: calc(100vh - 100px);
+  :global(.ant-input){
+    height: 32px;
+  }
+  :global(textarea.ant-input){
+    height: auto !important;
+  }
+  :global(.ant-upload-list-text){
+    display: none;
+  }
+  .basicMessage{
+    box-sizing: border-box;
+    padding: 24px;
+    //width: 1728px;
+    width: calc(100vw - 200px);
+    height: 38%;
+    background: white;
+    margin-bottom: 8px;
+    overflow-y: auto;
+  }
+  .keHulist{
+    width: calc(100vw - 200px);
+    height: 48%;
+    background: white;
+    margin-bottom: 8px;
+  }
+  .FunctionButton{
+    .myFlex();
+    width: calc(100vw - 200px);
+    height: 10%;
+    background: white;
+    margin-bottom: 8px;
+    button{
+      width: 112px;
+      height: 42px;
+      border-radius: 2px;
+      border: 1px solid #244FFF;
+      margin-right: 16px;
+      .textStyle();
+    }
+  }
+  .uploadBody{
+    display: flex;
+    .fileListItem{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      //background: #0a6aac;
+      padding-left: 16px;
+      padding-bottom: 5px;
+      .fileListItemText{
+        //background: #0d87dc;
+       //max-width: 340px;
+        margin-right: 20px;
+        margin-left: 6px;
+      }
+      .reUpload{
+        font-weight: 400;
+        color: #244FFF;
+      }
+      .del{
+        font-weight: 400;
+        color: #EC3A48;
+      }
+      div{
+        display: flex;
+        flex-wrap: nowrap;
+      }
+    }
+  }
+}

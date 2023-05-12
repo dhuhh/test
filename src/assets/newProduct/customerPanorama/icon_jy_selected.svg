@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_jy_selected</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360icon更新" transform="translate(-249.000000, -342.000000)">
+            <g id="编组-137备份-5" transform="translate(212.000000, 28.000000)">
+                <g id="icon_jy_selected" transform="translate(37.000000, 314.000000)">
+                    <g id="编组-13备份-9" opacity="0">
+                        <g id="编组">
+                            <rect id="矩形" fill="#D8D8D8" x="0" y="0" width="22" height="22"></rect>
+                            <rect id="矩形" stroke="#979797" stroke-width="0.5" x="3.25" y="3.25" width="15.5" height="15.5"></rect>
+                        </g>
+                    </g>
+                    <g id="编组-3" transform="translate(2.500000, 2.500000)">
+                        <circle id="椭圆形" fill="#1A2243" cx="8.5" cy="8.5" r="8.5"></circle>
+                        <path d="M7.49779075,4.5 L7.49779075,11.9934887 C7.49779075,12.3908421 7.06386916,12.6185228 6.74182767,12.4234666 L6.67473014,12.3751061 L3.70915819,9.86458253 L4.35527942,9.10134773 L6.497,10.914 L6.49779075,4.5 L7.49779075,4.5 Z" id="路径-6" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <path d="M13.286229,4.5 L13.286229,11.9934887 C13.286229,12.3908421 12.8523075,12.6185228 12.530266,12.4234666 L12.4631684,12.3751061 L9.49759649,9.86458253 L10.1437177,9.10134773 L12.2854383,10.914 L12.286229,4.5 L13.286229,4.5 Z" id="路径-6备份" fill="#FFFFFF" fill-rule="nonzero" transform="translate(11.391913, 8.497225) scale(-1, -1) translate(-11.391913, -8.497225) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

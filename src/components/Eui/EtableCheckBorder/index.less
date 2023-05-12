@@ -1,0 +1,48 @@
+.eTableCheckBorder {
+  :global(.ant-table-header) {
+    background: #f7f8fc;
+  }
+  :global(.ant-table-thead > tr > th) {
+    height: 48px !important;
+    padding: 2px 20px;
+    position: relative;
+    background: #f7f8fc !important;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1a2243 !important;
+    border-color: #eaecf2;
+  }
+  :global(.ant-table-thead > tr:first-child > th:first-child) {
+    text-align: center;
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    height: 48px !important;
+    padding: 2px 20px;
+    color: #61698c;
+    border-color: #eaecf2;
+    background: #fff;
+  }
+
+  :global(.ant-table-body) {
+    &::-webkit-scrollbar {
+      width: 6px !important;
+      height: 6px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(26, 34, 67, 0.5);
+      border-radius: 3px;
+    }
+  }
+  :global(.ant-table-tbody > tr:not(.ant-table-expanded-row) > td:hover) {
+    background: #eef1ff !important;
+  }
+  // :global(.ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td) {
+  //   background: #fff !important;
+  // }
+  :global(.ant-table-fixed .ant-table-row-hover > td) {
+    background: #fff !important;
+  }
+}

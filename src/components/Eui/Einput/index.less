@@ -1,0 +1,52 @@
+.eInput {
+  width: 250px !important;
+  caret-color: #244fff;
+  height: 32px;
+  border-radius: 2px;
+  :global {
+    .ant-input-affix-wrapper {
+      &:hover .ant-input:not(.ant-input-disabled) {
+        border-color: #244fff !important;
+      }
+    }
+  }
+
+  :global(.ant-input:not(.ant-input-disabled)) {
+    border-color: #d1d5e6;
+    background: #ffffff;
+    border-radius: 2px;
+    height: 32px !important;
+    &:hover {
+      border-color: #244fff !important;
+    }
+    &:focus {
+      border-color: #244fff !important;
+      box-shadow: none;
+    }
+  }
+  :global(.ant-input-disabled) {
+    background: #f7f7f7;
+    border: 1px solid #e2e2e4;
+    height: 32px !important;
+    color: #c0c0c0;
+  }
+  :global(.ant-input-suffix svg) {
+    width: 16px;
+    height: 16px;
+    color: #f0f1f5;
+    &:hover {
+      color: #d1d5e6;
+    }
+  }
+  :global {
+    .ant-tooltip-inner {
+      background-color: #474d64 !important;
+      border-radius: 2px;
+    }
+    .ant-tooltip-arrow {
+      &::before {
+        background-color: #474d64 !important;
+      }
+    }
+  }
+}

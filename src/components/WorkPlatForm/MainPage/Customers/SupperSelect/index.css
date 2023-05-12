@@ -1,0 +1,46 @@
+.dropInClassName .ant-select-selection {
+    height: 32px;
+}
+.dropInClassName .ant-select-selection ul>.ant-select-selection__choice {
+    height: 22px!important;
+    color: #1A2243;
+}
+.dropInClassName .ant-select-selection ul li:last-child div{
+   top:-4px
+}
+.dropInClassName .ant-select-selection ul>.ant-select-selection__choice:nth-child(4){
+    color: #FF6E30;
+    background: #fff;
+    border: none;
+    margin-left: -8px;
+    margin-right: 0;
+}
+.dropInClassName .ant-select-selection ul li>div,.dropInClassName .ant-select-selection ul li>span {
+    height: 100%;
+    line-height: 22px;
+}
+.hasMultiple ul li {
+    color:#1A2243
+}
+.hasMultiple ul li svg {
+    display: none;
+}
+.hasMultiple ul li i {
+    width:15px;
+    height: 15px;
+    border: 1px solid #959CBA;
+}
+
+.hasMultiple ul .ant-select-dropdown-menu-item-selected i {
+    width:16px;
+    height: 16px;
+    background-image: url('../../../../../assets/newProduct/checked.png');
+    background-size: 16px 16px;
+    background-position-x: -1px;
+}
+/* .hasMultiple ul .ant-select-dropdown-menu-item-selected {
+    color:#61698C;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+} */

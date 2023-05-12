@@ -1,0 +1,21 @@
+.Radio-button {
+    height: 32px!important;
+    line-height: 30px!important;
+    padding: 0 5px;
+    margin: 0 4px;
+    border-radius: 2px!important;    
+    font-weight: 400;
+    color: #1A2243;
+}
+#radioButton {
+    display: inline-block;
+}
+#radioButton .ant-radio-button-wrapper-checked {
+    border: 1px solid #244FFF!important;
+    background: #fff;
+}
+#radioButton .ant-radio-button-wrapper {
+    min-width: 40px;
+    text-align: center;
+    border: 1px solid #D1D5E6;
+}

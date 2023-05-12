@@ -1,0 +1,810 @@
+@font-face {
+  font-family: EssenceSansStd-Regular;//自定义字体名称
+  src: url(../../../../../../assets/fonts/EssenceSansStd-Regular.ttf)
+}
+h4,p{
+  margin: 0;
+}
+.ability{
+  // height: 473px;
+  background-color: #fff;
+  overflow: hidden;
+  &>.line{
+    height: 1px;
+    width: 100%;
+    background-color: #EAEEF2;
+  }
+  .content{
+    height: 400px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    .line{
+      width: 1px;
+      height: 300px;
+      background: #EAEEF2;
+    }
+    .left,.right{
+      flex: 1;
+      // width: 0;
+    }
+    .left{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      @px2rem: 75rem;
+      @second-color: #61698C;
+      .analycis_chart_tip {
+        width: 300px;
+        position: absolute;
+        left: 50%;
+        bottom: 30px;
+        transform: translate(-50%, 0);
+        font-size: 13px;
+        text-align: center;
+        color: @second-color;
+
+  & p {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 43px;
+
+    &:last-of-type {
+      margin-right: 0 !important;
+      margin-left: 43px;
+    }
+  }
+
+  & em {
+    // width: 20/@px2rem;
+    width: 16px;
+    // height: 9/@px2rem;
+    height: 9px;
+    margin-right: 8/@px2rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(../../../../../../assets/newProduct/customerPortrait/asset-icon.png);
+    background-repeat: no-repeat;
+    background-size: 512/@px2rem auto;
+
+    &.ac_tip_g2 {
+      width: 14px;
+      height: 5px;
+      background: linear-gradient(360deg, #FFE7B6 0%, #FFCF74 100%);
+      border: 1px solid #E9B552;
+    }
+
+    &.ac_tip_g1 {
+      width: 14px;
+      height: 5px;
+      background: linear-gradient(360deg, #1080FF 0%, #234FFF 100%);
+      border: 1px solid #234FFF;
+    }
+  }
+
+  & span {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 5px;
+  }
+}
+    }
+    .right{
+      div:nth-child(1){
+        font-size: 42px;
+        font-weight: 400;
+        color: #244FFF;
+        span{
+          font-size: 20px;
+        }
+      }
+      div:nth-child(2){
+        font-size: 14px;
+        font-weight: 400;
+        color: #1A2243;
+        margin-top: 8px;
+      }
+    }
+  }
+}
+.desc_tip{
+  :global(.ant-tooltip-inner){
+    text-align: center;
+    font-size: 14px;
+    color: #61698C;
+    font-weight: 400;
+    border: 1px solid #959CBA;
+    box-shadow: unset;
+    border-radius: 21px;
+    background-color: #fff !important;
+  }
+  :global(.ant-tooltip-arrow::before){
+    background-color: #fff;
+    border: 1px solid #959CBA;
+  }
+}
+
+.modal{
+  :global(.ant-modal-body ){
+    padding: 0 ;
+  }
+}
+// .select{
+//   width: 258px !important;
+// }
+.selectItem{
+  width: 258px !important;
+  :global(.ant-select-dropdown-menu-item-selected){
+    // font-weight: 500;
+  }
+}
+.customerInvestDetail {
+  background-color: #f2f2f5;
+  text-align: center;
+
+  /* .dash {
+    width: 100%;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+  } */
+
+  .customerSelectTimeBar {
+    background-color: #fff;
+    padding: 38px 30px 39px 40px;
+
+    .title {
+      font-size: 24px;
+      font-weight: 400;
+      color: #61698c;
+      line-height: 33px;
+    }
+  }
+
+  .investAbility {
+    padding: 22px;
+    background-color: #fff;
+
+    .investAbilityHeader {
+      background-color: rgba(240, 241, 245, 0.41);
+      border-radius: 12px 12px 0 0;
+      padding: 30px 0 20px 0;
+      margin-bottom: 40px;
+
+      .investAbilityHeaderMain {
+        font-size: 40px;
+        font-weight: 400;
+        color: #1a2243;
+        line-height: 40px;
+        margin-bottom: 20px;
+      }
+
+      .investAbilityHeaderTime {
+        font-size: 24px;
+        font-weight: 400;
+        color: #61698c;
+        line-height: 24px;
+      }
+    }
+
+    .customerInvestRadar {
+      min-height: 300px;
+    }
+  }
+
+  .profitAbilityMainContainer {
+    padding: 0 30px;
+
+    .riseColor {
+      color: #EF5A3C !important;
+    }
+    .downColor{
+      color: #029A01 !important;
+    }
+    .zeroColor {
+      color: #333 !important;
+    }
+    .profitAbilityMainContainerHeader {
+      margin-top: 30px;
+      font-size: 16px;
+      font-weight: 400;
+      color: #61698C;
+      line-height: 16px;
+      margin-bottom: 6px;
+    }
+
+    .profitAbilityNumber {
+      font-size: 26px !important;
+      font-weight: 400;
+      color: #029A01;
+      line-height: 26px;
+      margin-bottom: 18px;
+    }
+
+    .profitAbilityDescription {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #61698C;
+      // line-height: 14px;
+      padding-bottom: 21px;
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right:0;
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 1px;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+      }
+      img {
+        width: 14px;
+        height: 14px;
+        margin: 0 10px 0 4px;
+      }
+    }
+
+    .profitAbilityBarContainer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+
+      .profitAbilityBarContainerLeft {
+        width: 100%;
+
+        .profitAbilityBarContainerLeftRow {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          font-size: 26px;
+          font-weight: 400;
+          color: #61698C;
+          line-height: 37px;
+          white-space: nowrap;
+
+          img {
+            width: 28px;
+            height: 28px;
+            margin: 0 0 0 8px;
+          }
+
+          .profitAbilityBarContainerRate {
+            align-self: flex-end;
+            position: absolute;
+            right: 16px;
+            font-size: 30px;
+            font-weight: 400;
+            color: #029A01;
+            line-height: 36px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .customerInvestChart {
+    margin: 31px auto 30px   auto;
+  }
+
+  .riskControlCardContainer {
+    width: calc(100% - 48px);
+    padding: 0 0 40px 0;
+    margin: 0 auto;
+
+    .riskControlCardMain {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .riskControlCardMainBlock {
+        margin: 0 auto;
+
+        .riskControlCardMainBlockNumber {
+          font-size: 22px;
+          font-weight: 500;
+          color: #1A2243;
+          line-height: 20px;
+          margin-bottom: 8px;
+        }
+
+        .riskControlCardMainBlockSub {
+          font-size: 14px;
+          font-weight: 400;
+          color: #959CBA;
+          line-height: 16px;
+        }
+      }
+
+      .verticalLine {
+        width: 1px;
+        height: 16px;
+        background: rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    .riskControlCardContainerHalfRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+    }
+  }
+
+  .legendContainer {
+    padding: 12px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #61698C;
+    // line-height: 24px;
+
+    .legendContainerRow {
+      display: flex;
+
+      .legendBlock {
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+
+        .legend {
+          width: 16px;
+          height: 6px;
+          background: #3A7BEC;
+          margin-right: 8px;
+        }
+
+        .bottomAreaLegend {
+          width: 20px;
+          height: 16px;
+          background: linear-gradient(360deg, rgba(255, 3, 0, 0.15) 0%, rgba(239, 90, 60, 0.06) 100%);
+          margin-right: 10px;
+        }
+      }
+
+      .bottomAreaLegendBlock {
+        margin-right: 27px;
+      }
+    }
+
+    .tooltip {
+      /* display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      width: calc(100% - 160px); */
+      display: inline-block;
+      height: 40px;
+      background: #FFF;
+      box-shadow: 0px 2px 8px 0px rgba(29, 26, 26, 0.15);
+      opacity: 0.8;
+      border: 1px solid rgba(204, 166, 99, 0.3);
+      padding: 7px 10.5px;
+      margin: 0 auto 0 auto;
+      position: relative;
+      top: 10px;
+      div{
+        display: inline;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        right: 4%;
+        width: 8px;
+        height: 8px;
+        background: #fff;
+        border-bottom: 1px solid rgba(204, 166, 99, 0.3);
+        border-left: 1px solid rgba(204, 166, 99, 0.3);
+        transform: rotate(-45deg);
+      }
+
+      .tooltipDate {
+        font-size: 12px;
+        font-weight: 400;
+        color:#61698C;
+        // line-height: 22px;
+        white-space: nowrap;
+        margin-right: 15px;
+      }
+
+      .tooltipLabel {
+        font-size: 12px;
+        font-weight: 400;
+        color:#61698C;
+        // line-height: 22px;
+        white-space: nowrap;
+      }
+
+      .tooltipNumber {
+        font-size: 16px;
+        font-weight: 500;
+        color:#61698C;
+        // line-height: 26px;
+        white-space: nowrap;
+        margin-left: 5px;
+        margin-right: 15px;
+      }
+    }
+  }
+
+  .assetContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 15px;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right:26px;
+      background: rgba(0, 0, 0, 0.1);
+      width: 520px;
+      height: 1px;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+    .verticalLine {
+      width: 1px;
+      height: 21px;
+      background: rgba(0, 0, 0, 0.1);
+    }
+
+    .assetBlock {
+      width: 100%;
+      text-align: center;
+      font-size: 14px;
+      font-weight: 400;
+      color: #61698C;
+      // line-height: 26px;
+
+      .assetNumber {
+        margin-top: 9px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #029A01;
+        // line-height: 46px;
+      }
+      .riseColor {
+        margin-top: 9px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #EF5A3C !important;
+      }
+
+      .zeroColor {
+        margin-top: 9px;
+        font-size: 22px;
+        font-weight: 500;
+        color: #333 !important;
+      }
+    }
+  }
+/* 
+  .horizonLine {
+    width: 520px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    margin: 0 auto 30px auto;
+  } */
+
+  .blueBubble1 {
+    position: absolute;
+    z-index: 200;
+    width: 370px;
+    padding: 20px;
+    background: #E8F0FF;
+    box-shadow: 0px 15px 11px 0px rgba(17, 30, 61, 0.04);
+    border: 1px solid #7EB1FF;
+    top: 25px;
+    left: 90px;
+    text-align: left;
+    border-radius: 3px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      top: -4px;
+      left: 50%;
+      background: #E8F0FF;
+      border: 1px solid  #7EB1FF;
+      border-bottom: 0px solid  #959CBA;
+      border-right: 0px solid  #959CBA;
+    }
+  }
+
+  .buble1Top {
+    font-size: 14px;
+    // font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    line-height: 24px;
+    margin-bottom: 9px;
+  }
+
+  .buble1Bottom {
+    font-size: 14px;
+    // font-family: PingFangSC-Medium, PingFang SC;
+    color: #1A2243;
+    line-height: 24px;
+  }
+
+  .blueBubble2 {
+    position: absolute;
+    z-index: 200;
+    width: 370px;
+    padding: 20px;
+    background: #E8F0FF;
+    box-shadow: 0px 15px 11px 0px rgba(17, 30, 61, 0.04);
+    border: 1px solid #7EB1FF;
+    top: 25px;
+    left: 51px;
+    text-align: left;
+    border-radius: 3px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      top: -4px;
+      left: calc(50% - 130px);
+      background: #E8F0FF;
+      border: 1px solid  #7EB1FF;
+      border-bottom: 0px solid  #959CBA;
+      border-right: 0px solid  #959CBA;
+    }
+  }
+
+  .icon {
+    display: inline-block;
+    margin-right: 8px;
+    width: 11px;
+    height: 9px;
+    vertical-align: middle;
+    background-image: url(../../../../../../assets/newProduct/customerPortrait/asset-icon.png);
+    // background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, rgba(239, 90, 60, 0.5) 100%);
+    background-repeat: no-repeat;
+    background-size: 256px;
+  }
+
+  .icon1 {
+    width: 16px;
+    height: 6px;
+    background-position: -222px -144px;
+    position: relative;
+    /* border-top: 1px solid  rgba(239, 90, 60, 0.5);
+    &::before{
+      content: '';
+      position: absolute;
+      left: -50%;
+      margin-left: 5px;
+      margin-top: -1px;
+      width: 2px;
+      height: 2px;
+      border-radius: 2px;
+      background:rgba(239, 90, 60, 0.5);
+      border: 1px solid rgba(239, 90, 60, 0.4);
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      right: -50%;
+      margin-right: 5px;
+      margin-top: -1px;
+      width: 2px;
+      height: 2px;
+      border-radius: 2px;
+      background: rgba(239, 90, 60, 0.5);
+      border: 1px solid rgba(239, 90, 60, 0.4);
+    } */
+  }
+
+  .icon2 {
+    background-position: -5rem -6.10666667rem;
+  }
+
+  .icon3 {
+    background-position: -5.49333333rem -6.10666667rem;
+  }
+
+  .icon4 {
+    background-position: -5.98666667rem -6.10666667rem;
+  }
+
+  .icon5 {
+    background-position: -5.98666667rem -6.69333333rem;
+  }
+
+  .icon6 {
+    background-position: -5.50666667rem -6.69333333rem;
+  }
+
+  .icon7 {
+    background-position: -5rem -6.69333333rem;
+  }
+}
+
+.bottomDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .date {
+    font-size: 24px;
+    // font-family: SFUIDisplay-Regular, SFUIDisplay;
+    font-weight: 400;
+    color: #61698C;
+    line-height: 29px;
+  }
+}
+
+@px2rem: 75rem;
+
+@second-color: #666;
+
+@main-color: #333;
+
+@grey-color: #999;
+
+@color-fall: #029A01;
+
+.asset_total_graph {
+  // padding-left: 394/@px2rem;
+  padding-left: 50%;
+
+  & li {
+    position: relative;
+    // height: 40/@px2rem;
+    height: 22px;
+    // margin-bottom: 32/@px2rem;
+    margin-bottom: 17px;
+    background: #F9F9F9;
+
+    & i {
+      position: absolute;
+      display: block;
+      top: -39px;
+      bottom: 0;
+      width: 1px;
+      border-left: 1px dashed #D8D8D8;
+      left: 0;
+      z-index: 10;
+    }
+
+    &:first-of-type {
+      & i {
+        display: none;
+      }
+    }
+
+    & b {
+      display: inline-block;
+      padding: 0 4/@px2rem;
+      opacity: 0.5;
+    }
+  }
+
+  .p_item_number {
+    position: absolute;
+    top: 0;
+    // left: -394/@px2rem;
+    left: -255px;
+    // width: 368/@px2rem;
+    display: flex;
+    // display: -webkit-flex;
+    align-items: center;
+    width: 100%;
+
+    & h4 {
+      display: inline-block;
+      vertical-align: middle;
+      font-size: 26/@px2rem;
+      font-weight: normal;
+      color: @second-color;
+      margin-top: -22px;
+    }
+
+    & p {
+      flex: 1;
+      display: inline-block;
+      vertical-align: middle;
+      text-align: right;
+      font-size: 30/@px2rem;
+      line-height: 1;
+      color: @main-color;
+    }
+  }
+
+  .ess_question {
+    display: inline-block;
+    margin-left: 10/@px2rem;
+    margin-right: 20/@px2rem;
+    vertical-align: middle;
+    font-size: 32/@px2rem;
+    line-height: 1;
+    color: @grey-color;
+  }
+
+  & figure {
+    position: absolute;
+    top: 0/@px2rem;
+    z-index: 10;
+    // height: 40/@px2rem;
+    height: 22px;
+    width: 0%;
+    min-width: 6/@px2rem;
+    background-image: linear-gradient(180deg, #FF967E 0%, #FC7B5C 100%);
+  }
+
+  .pro_win {
+    & figure {
+      transform: rotate(180deg);
+    }
+  }
+
+  .pro_loss {
+    & figure {
+      background-image: linear-gradient(0deg, #96E184 0%, #3CD11C 100%);
+    }
+
+    .p_item_number {
+      & p {
+        color: @color-fall;
+      }
+    }
+  }
+}
+
+.profit_chart {
+  margin-top: 24px;
+
+  .asset_total_graph {
+    .p_item_number {
+      h4 {
+        // width: 182px;
+        // height: 37px;
+        font-size: 14px;
+        // font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #61698C;
+        line-height: 20px;
+      }
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin-left: 4px;
+        margin-top: -22px;
+      }
+
+      .number_stock {
+        // width: 81px;
+        max-width: 304px;
+        height: 36px;
+        font-size: 16px;
+        // font-family: SFUIDisplay-Regular, SFUIDisplay;
+        font-weight: 400;
+        color:  #333;
+        line-height: 20px;
+        margin-right: 14px;
+      }
+    }
+  }
+}

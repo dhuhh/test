@@ -1,0 +1,45 @@
+.list {
+  position: absolute;
+  max-height: 0;
+  overflow-y: hidden;
+  z-index: 20;
+
+  .item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 35px 30px;
+    border-top: 1px solid #DADBE0;
+    border-bottom: 1px solid #DADBE0;
+    position: relative;
+
+    .context {
+      font-size: 32px;
+      font-weight: 400;
+      color: #1A2243;
+      line-height: 32px;
+    }
+
+    img {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      right: 30px;
+    }
+  }
+}
+
+.expand {
+  max-height: 500px;
+}
+
+.cover {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.3);
+}

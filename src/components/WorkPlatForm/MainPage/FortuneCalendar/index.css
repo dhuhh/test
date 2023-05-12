@@ -1,0 +1,282 @@
+.force-calendar .events {
+      margin: 0 !important;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap-reverse;
+      align-content: flex-start;
+  }
+    .force-calendar .events2 {
+      margin: 0 !important;
+      padding: 0;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap-reverse;
+      justify-content: center;
+      align-content: flex-start;
+    }
+  .force-calendar .events_lyq {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 70%;
+    /* background-color: #FFA257; */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+    .force-calendar .events_lyq_son {
+      background-color: #959CBA;
+      height: 48%;
+    }
+  .force-calendar .events .ant-badge-status {
+    width: 100%;
+    overflow: hidden;
+    font-size: 12px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .force-calendar .notes-month {
+    font-size: 28px;
+    text-align: center;
+  }
+  .force-calendar .notes-month section {
+    font-size: 28px;
+  }
+  .force-calendar {
+    background: #fff;
+  }
+  .force-calendar .ant-fullcalendar-fullscreen .ant-fullcalendar-column-header {
+    padding: 0;
+    text-align: left;
+  }
+  .force-calendar thead tr {
+    background: #F7F8FC;
+  }
+  .force-calendar thead tr .ant-fullcalendar-column-header {
+    height: 48px;
+  }
+  .force-calendar thead tr .ant-fullcalendar-column-header-inner {
+    margin-left: 20px;
+    color: #959CBA;
+  }
+  .force-calendar .ant-fullcalendar-fullscreen .calendar-date {
+    height: 48px;
+    display: flex;
+    border-top: none;
+    text-align: left;
+    margin: 0;
+    justify-content:space-between;
+    align-items: center;
+    padding-left: 20px;
+  }
+  .force-calendar .ant-fullcalendar-fullscreen .ant-fullcalendar-date .ant-fullcalendar-content {
+    height: unset;
+  }
+  .force-calendar .ant-fullcalendar-fullscreen .ant-fullcalendar-date .ant-fullcalendar-value {
+      margin-left: 12px;
+      margin-right: 0;
+  }
+  .force-calendar .ant-fullcalendar td  {
+    /* border-right: 1px solid #EAECF2;
+    border-bottom: 1px solid #EAECF2; */
+    padding: 0;
+  }
+  /* .force-calendar .ant-fullcalendar-tbody tr:nth-child(6) {
+       display: none;
+  } */
+  .force-calendar .ant-fullcalendar-tbody {
+    border-top: 1px solid #EAECF2;
+    border-left: 1px solid #EAECF2;
+  }
+  .force-calendar .ant-fullcalendar-column-header {
+    border-right: 1px solid #EAECF2;
+  }
+  .force-calendar .ant-fullcalendar-table thead {
+    border-left: 1px solid #EAECF2;
+    border-top: 1px solid #EAECF2;
+  }
+  .ant-picker-calendar-full .ant-picker-panel .ant-picker-calendar-date-today {
+    background: yellow;
+  }
+  .calendarBox{
+    height: 292px;
+    width: 156px;
+    position: absolute;
+    left: 280px;
+    top: 32px;
+    z-index: 9;
+    background:#fff;
+    color: #1A2243;
+    overflow: hidden;
+  }
+  .calendarBox .timeItem{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 9px;
+  }
+  .calendarBox .timeItem:hover{
+    background: #F0F1F5;
+  }
+  .rangePicker-inbass .ant-calendar-picker-input{
+    height: 32px;
+    width: 250px;
+    border-radius: 2px;
+  }
+  .select-title {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    margin-right: 8px;
+  }
+  .align-select {
+    margin:16px 24px 24px 24px
+  }
+  .force-calendar .ant-fullcalendar-calendar-body {
+    padding: 8px 24px;
+  }
+  .align-select .ant-calendar-picker {
+    margin-right: 32px;
+  }
+  .force-calendar .isBorder {
+    border-right: 1px solid #EAECF2;
+    border-bottom: 1px solid #EAECF2;
+  }
+  .force-calendar .isToday {
+    background: #FFF1E5;
+    /* border: 1px solid #FFF1E5; */
+  }
+  .force-calendar #hasSelect {
+    background: rgba(36,79,255,0.1);
+    /* border: 1px solid #244FFF; */
+    border-right: 1px solid #EAECF2;
+    border-bottom: 1px solid #EAECF2;
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #244FFF;
+  }
+  .force-calendar .onlyOne {
+    border: 1px solid #244FFF!important;
+  }
+  .force-calendar .ant-fullcalendar-selected-day .ant-fullcalendar-date .ant-fullcalendar-value {
+    color: #244FFF;
+  }
+  .force-calendar .ant-fullcalendar-cell {
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 600;
+    color: #1A2243;
+  }
+  .force-calendar .ant-fullcalendar-cell:hover {
+    background: rgba(36,79,255,0.1);
+    /* border: 1px solid #244FFF; */
+    /* color: #244FFF; */
+  }
+  .ant-btn-calendar {
+    width: 60px;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #D1D5E6;
+    position: relative;
+    top: 2px;
+    margin-left: 8px;
+    padding: 0;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+  }
+  .ant-btn-calendar:hover,
+  .ant-btn-calendar:focus,
+  .ant-btn-calendar:active{
+    border: 1px solid #D1D5E6;
+    color: #1A2243;
+  }
+  .ant-submit-calendar {
+    background: #244FFF;
+    color: #FFFFFF;
+    border: none;
+  }
+  .ant-submit-calendar:active {
+    background: #244FFF;
+    color: #FFFFFF;
+  }
+  .ant-submit-calendar:hover {
+    background: #244FFF;
+    color: #FFFFFF;
+  }
+  .ant-submit-calendar:focus {
+    background: #244FFF;
+    color: #FFFFFF;
+  }
+  .force-calendar .isBlueItem {
+    padding-left: 6px;
+    padding-top: 1px;
+    padding-right: 6px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #00B7FF;
+  }
+  .force-calendar .isOrangeItem {
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 1px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFA257;
+  }
+    .force-calendar .isRedItem {
+    padding-right: 6px;
+    padding-left: 6px;
+    padding-top: 1px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FF1C0E;
+  }
+  .force-calendar .events {
+    margin-right: 20px;
+  }
+  .btn-hover {
+    cursor: pointer;
+  }
+  .calendar-date {
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    font-weight: 500;
+    color: #1A2243;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .calendar-otherDate {
+    height: 48px;
+    font-size: 14px;
+    font-family: PingFangSC-Semibold, PingFang SC;
+    /* font-weight: 500!important; */
+    color: #959CBA!important;
+    background: #fff!important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  /* .calendar-otherDate:hover {
+    cursor: not-allowed!important;
+  } */
+  .calendar-date,.calendar-otherDate>span {
+    margin-left: 20px;
+  }
+  .notHover:hover {
+    background: #fff!important;
+  }
+  .ant-select .ant-select-selection--multiple .ant-select-selection__choice {
+    color: #1A2243;
+  }

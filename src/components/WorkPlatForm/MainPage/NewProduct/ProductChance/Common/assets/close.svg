@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tongyong/_close1</title>
+    <g id="通用组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="弹窗" transform="translate(-1106.000000, -1043.000000)">
+            <g id="弹窗/对话框/有图标对话框" transform="translate(666.000000, 1024.000000)">
+                <g id="icon/tongyong/_close1" transform="translate(440.000000, 19.000000)">
+                    <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                    <line x1="8.50160356" y1="0.888888889" x2="7.82552139" y2="15.3175024" id="路径-4备份" stroke="#61698C" transform="translate(8.163562, 8.103196) scale(-1, 1) rotate(-45.000000) translate(-8.163562, -8.103196) "></line>
+                    <line x1="8.44915219" y1="0.888888889" x2="7.77307003" y2="15.3175024" id="路径-4备份-2" stroke="#61698C" transform="translate(8.111111, 8.103196) rotate(-45.000000) translate(-8.111111, -8.103196) "></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,66 @@
+.nomalBtn{
+  padding: 5px 16px;
+  background: #F2F3F7;
+  font-size: 14px;
+  color: #61698C;
+  border-radius: 1px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.activeBtn{
+  background: #E1E7FF;
+  color: #244FFF;
+}
+
+.gouzi{
+  :global{
+    border-radius: 2px !important;
+    margin-top: 2px !important;
+    .ant-input{
+
+      border-radius: 2px;
+    }
+    .ant-select-selection{
+      border-radius: 2px;
+    }
+    .ant-select-selection__choice{
+      margin: 3px !important;
+      border-radius: 2px !important;
+    }
+    .ant-select-selection--multiple > ul > li{
+      height: 23px !important;
+      line-height: 28px !important;
+      display: flex;
+      align-items: center;
+    }
+    .ant-select-selection--multiple > ul > li:nth-child(2){
+      height: 23px !important;
+      line-height: 28px !important;
+      display: flex;
+      flex-direction: row-reverse !important;
+      background-color: transparent !important;
+      border-color: transparent;
+      float: right;
+      box-sizing: border-box;
+      padding-right: 5px;
+    }
+    .ant-select-selection--multiple > ul > li:nth-child(2) span{
+      float: right;
+    }
+    .ant-select-selection__clear{
+      top: 16px !important;
+    }
+    .ant-select-search__field{
+      padding-bottom: 7px !important;
+    }
+
+  }
+}
+.maomao{
+  :global{
+    .ant-select-selection--single{
+      height: 32px !important;
+      margin-top: 2px !important;
+    }
+  }
+}

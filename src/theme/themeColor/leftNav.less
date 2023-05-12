@@ -3,20 +3,11 @@
 //m-sider
 .m-sider {
   background: @menu-bg-wrap;
-}
 
-.ant-menu-dark, .ant-menu-dark .ant-menu-sub {
-  background: @menu-bg-wrap;
-  .ant-menu-item:hover{
-    background: @menu-nav-list;
+  .m-sider-head {
+    background: @menu-bg-wrap;
   }
-}
 
-.ant-menu-item:hover, .ant-menu-item-active,
-.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
-.ant-menu-submenu-active,
-.ant-menu-submenu-title:hover {
-  color: @head-bg;
 }
 
 .ant-layout-sider {
@@ -30,119 +21,78 @@
         //color: @head-bg;
       }
 
-      a:hover {
-        color: @menu-select-bg;
-        // .border-radius(0.333rem);
-      }
+      // a:hover {
+      //   color: @head-bg;
+      // }
 
       &.ant-menu-item-selected {
-        color: #fff;
-        font-weight: 500;
-        background: @menu-nav-list;
-        // width: 90%;
+        background: rgba(36, 79, 255,0.03);
+        color: @head-bg;
+        a{
+          color: @head-bg;
+        }
       }
     }
-    .ant-menu-submenu-active{
-      color: #fff !important;
-    }
-    >.ant-menu-submenu {
+
+    .ant-menu-submenu {
       > .ant-menu-submenu-title {
         &:hover {
-          color: @menu-select-bg;
-          background: @menu-hover-bg !important;
+          color: @head-bg;
 
           .ant-menu-submenu-arrow {
             &:after,
             &:before {
 
-              background: -webkit-gradient(linear, left top, right top, from(@menu-select-bg), to(@menu-select-bg));
-              background: -webkit-linear-gradient(left, @menu-select-bg, @menu-select-bg);
-              background: linear-gradient(to right, @menu-select-bg, @menu-select-bg);
+              background: -webkit-gradient(linear, left top, right top, from(@head-bg), to(@head-bg));
+              background: -webkit-linear-gradient(left, @head-bg, @head-bg);
+              background: linear-gradient(to right, @head-bg, @head-bg);
             }
           }
         }
       }
 
-      // &.ant-menu-submenu-selected {
-      //   > .ant-menu-submenu-title {
-      //     color: #fff !important;
-      //     font-weight: 600;
-      //     &:hover{
-      //       color:#fff !important;
-      //     }
-      //   }
-      //   color: @menu-nav-font;
-      //   background-color: @menu-nav-list;
-      // }
+      &.ant-menu-submenu-selected {
+        // background: @head-bg;
+      }
 
       .ant-menu-item {
         &:hover {
-          color: @menu-select-bg;
-          // .border-radius(0.333rem);
+          color: @head-bg;
         }
 
         &.ant-menu-item-selected {
-            color: #fff !important;
-            background-color:  @menu-nav-list;
+          color: @head-bg;
+          background: @menu-hover-bg;
 
           a {
-            color: #fff !important;
+            color: @head-bg;
 
             &:hover {
-              color: #fff !important;
+              color: @head-bg;
             }
           }
         }
-      }
-
-      .ant-menu-submenu{
-        .ant-menu-submenu-title{
-          &:hover{
-            background: @menu-hover-bg;
-            color:#fff !important;
-          }
-        }
-          &.ant-menu-submenu-selected{
-            .ant-menu-submenu-title{
-              // background: @menu-nav-second;
-              // color:@menu-nav-font !important;
-              color: #fff !important;
-              font-weight: 500;
-              &:hover{
-                background: @menu-hover-bg;
-                color:#fff !important;
-              }
-            }
-          }
       }
     }
   }
 
   //ant-menu-dark
   &.ant-menu-dark {
-    background: transparent;
+    background: @menu-bg-wrap;
 
-    > li.ant-menu-item:focus,
-    > li.ant-menu-item:hover {
-      background:@menu-hover-bg !important;
-      color:#fff !important;
-      // .border-radius(0.333rem);
+    .m-menu > li:focus,
+    > li:hover {
+      background: @menu-hover-bg;
     }
 
-    .ant-menu-item.ant-menu-item-selected a {
-      color: #fff !important;
-      font-weight: 500;
-      &:hover{
-        color:#fff !important;
-        // .border-radius(0.333rem);
-      }
+    .ant-menu-item.ant-menu-item-selected{
+      border-right: 2px solid #244FFF;
     }
 
     .ant-menu-submenu {
       .ant-menu-sub {
 
         background: @menu-bg;
-        padding: 1rem 0;
 
         .ant-menu-item {
           &:hover {
@@ -159,14 +109,14 @@
     &.ant-menu {
       .ant-menu-item {
         &:hover{
-          background: @menu-hover-bg;
+          background: @hover-bg;
         }
         &.ant-menu-item-selected {
 
-          border-left: 2px solid @menu-hover-bg;
+          border-left: 2px solid @head-bg;
 
           > a {
-            color: @menu-select-bg !important;
+            color: @head-bg !important;
           }
         }
       }
@@ -181,10 +131,10 @@
       .ant-menu-item {
         &.ant-menu-item-selected {
 
-          border-left: 6px solid @menu-hover-bg;
+          border-left: 6px solid @head-bg;
 
           > a {
-            color: @menu-select-bg !important;
+            color: @head-bg !important;
           }
         }
       }
@@ -199,7 +149,7 @@
       .ant-menu-item {
         .line {
 
-          background: @menu-hover-bg;
+          background: @head-bg;
 
         }
 
@@ -208,7 +158,9 @@
       .ant-menu-submenu {
         > .ant-menu-submenu-title {
           .line {
-            background: @menu-hover-bg;
+
+            background: @head-bg;
+
           }
 
         }
@@ -216,9 +168,10 @@
         .ant-menu-item {
           &.ant-menu-item-selected {
             a {
-              color: #fff !important;
+              color: @head-bg;
+
               &:hover {
-                color: @menu-select-bg !important;
+                color: @head-bg !important;
               }
             }
           }
@@ -236,15 +189,15 @@
     &.ant-menu {
       .ant-menu-item {
         i {
-          color: @menu-select-bg;
+          color: @head-bg;
         }
 
         &.ant-menu-item-selected {
 
-          border-left: 2px solid @menu-hover-bg;
+          border-left: 2px solid @head-bg;
 
           > a {
-            color: #fff !important;
+            color: @head-bg !important;
           }
         }
       }
@@ -254,12 +207,11 @@
     .ant-menu-submenu {
       .ant-menu-submenu-title {
         &:hover {
-          color: @menu-select-bg !important;
-          background-color: @menu-hover-bg;
+          color: @head-bg !important;
         }
 
         i {
-          color:@menu-select-bg;
+          color: @head-bg;
         }
       }
 
@@ -267,22 +219,21 @@
         .ant-menu-submenu-title {
           &:hover {
 
-            color: @menu-select-bg !important;
-            background-color: @menu-hover-bg;
+            color: @head-bg !important;
 
             .ant-menu-submenu-arrow {
               &:after,
               &:before {
-                background: -webkit-gradient(linear, left top, right top, from(@menu-select-bg), to(@menu-select-bg)) !important;
-                background: -webkit-linear-gradient(left, @menu-select-bg, @menu-select-bg) !important;
-                background: linear-gradient(to right, @menu-select-bg, @menu-select-bg) !important;
+                background: -webkit-gradient(linear, left top, right top, from(@head-bg), to(@head-bg)) !important;
+                background: -webkit-linear-gradient(left, @head-bg, @head-bg) !important;
+                background: linear-gradient(to right, @head-bg, @head-bg) !important;
               }
             }
 
           }
 
           i {
-            color: @menu-select-bg;
+            color: @head-bg;
           }
         }
       }
@@ -295,23 +246,8 @@
 //m-menu-horizontal
 .m-menu-horizontal {
   .ant-menu-line {
-    background: @menu-hover-bg;
-    border-bottom-color: @menu-hover-bg;
-  }
-  &.ant-menu-horizontal{
-    .ant-menu-item{
-        color: @headNavColor;
-        &:hover{
-            color: @topMeun;
-            border-bottom: none !important;
-        }
-
-        &.ant-menu-item-selected {
-            color: @topMeun;
-            // border-bottom: .333rem solid @topMeun;
-            border-bottom: none !important;
-        }
-    }
+    background: @head-bg;
+    border-bottom-color: @head-bg;
   }
 }
 
@@ -320,13 +256,13 @@
   .m-tabs-menu-head {
     .m-circular {
 
-      background: @menu-hover-bg;
+      background: @head-bg;
     }
 
     .m-tabs-menu-title {
 
-      background: @menu-hover-bg;
-      border: 1px solid @menu-hover-bg;
+      background: @head-bg;
+      border: 1px solid @head-bg;
 
     }
 
@@ -335,7 +271,7 @@
   .m-tabs-menu-body {
     li {
       :hover {
-        color: @menu-select-bg;
+        color: @head-bg;
       }
     }
   }
@@ -345,13 +281,17 @@
 //m-sider360    2018.3.14
 .m-sider360 {
   background: @menu-bg-wrap;
+
+  .m-sider360-head {
+    background: @menu-bg;
+  }
 }
 
 .m-xuanfu-handle {
   .m-handle-item {
     background:@head-bg-tm;
     &:hover {
-      background:@head-bg-tm;
+      background:@head-bg;
     }
   }
 }
@@ -362,78 +302,59 @@
       background: @head-bg-tm;
     }
     .m-handle-text {
-      background:@head-bg-tm;
+      background: @head-bg;
     }
     &:hover {
       & > .m-handle-icon {
-        background: @head-bg-tm;
+        background: @head-bg;
       }
     }
   }
 }
 
-
-// m-dropdown
-.m-dropdown-nav{
-  .current{
-    a{
-      background:  @hover-bg;
-      color:@head-bg !important;
-    }
-  }
-  .ant-dropdown-menu-item:hover, .ant-dropdown-menu-submenu-title:hover {
-    background-color: @hover-bg;
+//新增主题色样式-200418
+.ant-menu-item > a:hover{
+  color: @head-bg;
 }
+.ant-menu-item-selected > a,
+.ant-menu-item-selected > a:hover{
+  color: @head-bg;
 }
-
-
-.ant-menu.ant-menu-dark .ant-menu-item-selected, .ant-menu-submenu-popup.ant-menu-dark .ant-menu-item-selected {
-  background-color: @menu-hover-bg;
+.ant-menu-item:active,
+.ant-menu-submenu-title:active{
+  background: @hover-bg2;
 }
-
-//m-tree
-.m-tree{
-  &.ant-tree{
-    li{
-      .ant-tree-node-content-wrapper {
-          &.ant-tree-node-selected {
-              background-color: @hover-bg;
-              color: @hover;
-              .font-w500();
-          }
-          &:hover{
-            background-color: @hover-bg;
-            color: @hover;
-            .font-w500();
-          }
-      }
-    }
-  }
+.ant-menu-item:hover,
+.ant-menu-item-active,
+.ant-menu:not(.ant-menu-inline) .ant-menu-submenu-open,
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover{
+  color: @head-bg;
 }
-
-// m-anchor
-.m-anchor{
-  .ant-anchor{
-      .ant-anchor-link-active {
-          > .ant-anchor-link-title {
-              color: @head-bg;
-          }
-
-      }
-
-      .ant-anchor-link{
-        &:hover{
-          .ant-anchor-link-title{
-            color: @head-bg;
-          }
-        }
-      }
-
-
-      .ant-anchor-ink{
-          .ant-anchor-ink-ball{
-              border:2px solid @head-bg;
-          }
-      }
-  }
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected{
+  background: @hover-bg2;
+  color: @head-bg;
+}
+.ant-menu-submenu-selected{
+  color: @head-bg;
+}
+.ant-menu-vertical .ant-menu-item::after,
+.ant-menu-vertical-left .ant-menu-item::after,
+.ant-menu-vertical-right .ant-menu-item::after,
+.ant-menu-inline .ant-menu-item::after{
+  border-color: @head-bg;
+}
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::after,
+.ant-menu-submenu-vertical > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-vertical-left > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-vertical-right > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before,
+.ant-menu-submenu-inline > .ant-menu-submenu-title:hover .ant-menu-submenu-arrow::before{
+  background: linear-gradient(to right, @head-bg, @head-bg) !important;
+}
+.ant-btn-dashed:hover, .ant-btn-dashed:focus {
+  color: @head-bg;
+  border-color: @head-bg;
 }

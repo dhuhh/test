@@ -1,0 +1,51 @@
+.select {
+  :global(.ant-select-arrow) {
+    &::after {
+      content: '' !important;
+    }
+    :global(.ant-select-arrow-icon) {
+      display: block !important;
+      position: relative;
+      top: -1px;
+      font-size: 16px;
+    }
+  }
+}
+.formItem {
+  display: flex;
+  div:nth-child(2){
+    width: 55%;
+  }
+  :global(label) {
+    color: #1a2243 !important;
+  }
+}
+.hoverOne {
+  color: #1a2243;
+  cursor: pointer;
+  &:hover {
+    color: #5779ff;
+  }
+}
+.hoverTwo {
+  color: #244FFF;
+  cursor: pointer;
+  &:hover {
+    color: #5779ff;
+  }
+}
+.aHover {
+  &:hover {
+    color: #45A5F3 !important;
+  }
+}
+.link {
+  display: inline-block;
+  width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  &:hover {
+    color: #5779ff !important;
+  }
+}

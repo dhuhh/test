@@ -34,7 +34,7 @@
             .ant-progress-inner {
                 border-radius: 0px;
             }
-            
+
         }
 
         &.ant-progress-status-exception{
@@ -56,6 +56,41 @@
         }
 
     }
+    //任务中心使用的红色处理中，蓝色处理完成的样式
+    .m-progress-taskCenter{
+      &.ant-progress{
+          line-height: 0;
+          .ant-progress-bg {
+              border-radius: 0px;
+              background-color: #ff7676;
+              position: relative;
+              height: 0.416rem !important
+          }
+          .ant-progress-inner {
+              border-radius: 0px;
+          }
+
+      }
+
+      &.ant-progress-status-exception{
+          .ant-progress-bg {
+              background-color: @green;
+          }
+      }
+      &.ant-progress-status-success{
+           .ant-progress-bg {
+              background-color: #4090f7;
+
+          }
+      }
+      &.ant-progress-status-orange{
+           .ant-progress-bg {
+              background-color: @orange;
+
+          }
+      }
+
+    }
 
     //新数字营销
     &.m-zxr-progress-warp{
@@ -69,7 +104,6 @@
             }
         }
     }
-
 }
 
 //m-progress-status-exception 2018-03-14
@@ -92,22 +126,15 @@
 
 }
 
-
-.m-progress-default{
-    .ant-progress-inner{
-        background: #E7E7E7;
-        .ant-progress-success-bg, .ant-progress-bg{
-            background: @blue;
-            height: 0.2rem !important;
+.m-xscp-progress{
+    &.ant-progress-show-info{
+        .ant-progress-outer {
+            margin-right: -5rem;
+            padding-right: 5rem;
         }
-        
-    }
-    &.ant-progress-status-success{
-        .ant-progress-bg {
-            background-color: @tag-blue-color;
-        }
-        .ant-progress-text{
-            color: @tag-blue-color;
-        }
+    } 
+    .ant-progress-text{
+        width: 4.25rem;
+        margin-left: .75rem
     }
 }

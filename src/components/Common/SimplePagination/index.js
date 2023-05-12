@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import React, { PureComponent } from 'react';
 import classnames from 'classnames';
 import { Button } from 'antd';
@@ -7,7 +6,7 @@ class SimplePagination extends PureComponent {
   handleLastPage = (e) => {
     const {
       current = 1,
-      pageSize = 8,
+      pageSize = 10,
       handleLastPage,
     } = this.props;
     if (handleLastPage) {
@@ -18,7 +17,7 @@ class SimplePagination extends PureComponent {
   handleNexPage = (e) => {
     const {
       current = 1,
-      pageSize = 8,
+      pageSize = 10,
       handleNexPage,
     } = this.props;
     if (handleNexPage) {
@@ -36,15 +35,18 @@ class SimplePagination extends PureComponent {
     const {
       className = '',
       style = {},
+      showSelectedCount = false,
+      selectedCountText = '',
       current = 1,
-      pageSize = 8,
+      pageSize = 10,
       total = 0,
     } = this.props;
     return (
       <div className={classnames('clearfix', className)} style={style}>
-        <span style={{ float: 'right', lineHeight: 1 }}>
-          { current > 1 && <Button className="m-btn m-btn-radius m-btn-blue m-btn-radius-small m-btn-headColor" style={{ marginRight: 10, borderRadius: '2rem' }} onClick={this.handleLastPage}><span>上一页</span></Button> }
-          { (current * pageSize < total) && <Button className="m-btn m-btn-radius m-btn-blue m-btn-radius-small m-btn-headColor" style={{ borderRadius: '2rem' }} onClick={this.handleNexPage}><span>下一页</span></Button> }
+        { showSelectedCount && selectedCountText }
+        <span style={{ float: 'right' }}>
+          { current > 1 && <Button className="m-btn m-btn-pink m-btn-headColor" style={{ marginRight: 10 }} onClick={this.handleLastPage}><span>上一页</span></Button> }
+          { (current * pageSize < total) && <Button className="m-btn m-btn-pink m-btn-headColor" onClick={this.handleNexPage}><span>下一页</span></Button> }
         </span>
       </div>
     );

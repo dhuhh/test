@@ -1,0 +1,222 @@
+.card {
+  :global(.ant-card-head) {
+    border: none;
+  }
+}
+
+.floatCard {
+  width: calc((100% - 20px - 20px) / 2);
+  margin: 10px;
+  padding: 14px 12px;
+  box-shadow: 0 2px 16px 0 rgba(11, 24, 77, 0.08);
+  border-radius: 6px;
+}
+
+.table {
+  :global(.ant-table-selection-column) {
+    text-align: center !important;
+  }
+  :global(.ant-table-thead>tr>th) {
+    height: 48px !important;
+    position: relative;
+    background: #F7F8FA !important;
+    &:not(:last-child) ::after {
+      display:block;
+      content: '';
+      width: 1px;
+      height: calc(100% - 26px);
+      background: #E0E2E8;
+      position: absolute;
+      right: 0;
+      top: 13px;
+    }
+  }
+  :global(.ant-table .ant-table-tbody > tr > td) {
+    height: 48px !important;
+    color: #4B516A;
+  }
+  :global(.ant-table-thead > tr > th) {
+    border-bottom: none !important;
+  }
+}
+
+.tabs{
+  height: 100%;
+  background: #FFF;
+  :global(.ant-tabs-nav) {
+    height: 42px;
+    font-size: 14px;
+    line-height: 3;
+    color: #61698c;
+    width: 100%;
+    div:first-child {
+      display: flex;
+      justify-content: space-around;
+      div {
+        margin: 0;
+      }
+    }
+  }
+  :global(.ant-tabs-tab:hover) {
+    color: #5779ff;
+  }
+  :global(.ant-tabs-ink-bar) {
+    // display: none !important;
+    background-color: #244FFF;
+    width: 0px !important;
+  }
+  :global(.ant-tabs-tab-active) {
+    color: #244FFF;
+    font-weight: 600;
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 2px;
+      background: #244FFF;
+      bottom: 1px;
+      left: calc(50% - 20px);
+    }
+  }
+  :global(.ant-tabs-tab) {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    height: 42px;
+  }
+}
+
+.button {
+  color: #244FFF !important;
+  border-color: #244FFF !important;
+  font-size: 12px;
+  margin: 12px 12px 0 0;
+  height: 24px;
+  padding: 0 8px;
+  cursor: default;
+}
+
+.noPrioritysTag {
+  margin: 12px 12px 0 0;
+  padding: 2px 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  color: #244FFF;
+  background: #E1E7FF;
+  cursor: default;
+}
+
+.productCard {
+  margin: 0 auto 24px;
+  padding: 12px;
+  width: 290px;
+  box-shadow: 0px 2px 16px 0px rgba(11, 24, 77, 0.08);
+  border-radius: 4px
+}
+
+.rate {
+  :global(.ant-rate-star:not(:last-child)) {
+    margin-right: 4px !important;
+  }
+}
+
+.radioGroup {
+  margin-bottom: 20px;
+  :global {
+    .ant-radio-button-wrapper {
+      width: 90px;
+      height: 24px !important;
+      padding: 0;
+      line-height: 22px !important;
+      font-size: 12px;
+      display: inline-flex;
+      justify-content: center;
+      &:not(.ant-radio-button-wrapper-checked) {
+        border-color: #959CBA !important;
+        color: #61698C !important;
+      }
+    }
+    .ant-radio-button-wrapper-checked {
+      border-color: #244FFF !important;
+      color: #244FFF !important;
+      background: #FFF !important;
+      &:not(.ant-radio-button-wrapper-disabled) {
+        &::before {
+          background-color: #244FFF !important;
+          opacity: 1;
+          content: '';
+          display: inline-block;
+          position: absolute;
+          left: -1px;
+          width: 1px;
+          height: 100%;
+        }
+      }
+    }
+  }
+}
+
+.timeLine {
+  :global {
+    .ant-timeline-item {
+      padding: 0 0 28px;
+    }
+    .ant-timeline-item-tail {
+      border-left: 1px solid #D1D5E6
+    }
+  }
+}
+
+.modal {
+  top: 50px;
+}
+
+.iframe {
+  border: none;
+  width: 100%;
+}
+.isShowPover {
+  :global{
+    .ant-popover-arrow {
+      border: #474D64;
+      background: #474D64;
+    }
+    .ant-popover-inner-content {   
+      width: 223px;
+      height: 100px;
+      background: #474D64;
+      box-shadow: 0px 0px 10px 0px rgba(5,14,28,0.12);
+      border-radius: 1px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 20px;
+    }
+  }
+
+}
+.proverStyle {
+  :global{
+    .ant-popover-arrow {
+      border: #474D64;
+      background: #474D64;
+    }
+    .ant-popover-inner-content {  
+      max-width: 235px; 
+      background: #474D64;
+      box-shadow: 0px 0px 10px 0px rgba(5,14,28,0.12);
+      border-radius: 1px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #FFFFFF;
+      line-height: 20px;
+    }
+  }
+}
+.pro_btn {
+  &:hover {
+    cursor: pointer!important;
+  }
+}

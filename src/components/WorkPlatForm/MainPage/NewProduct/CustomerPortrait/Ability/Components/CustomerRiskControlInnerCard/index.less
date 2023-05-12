@@ -1,0 +1,90 @@
+.card {
+  width: 100%;
+  background: #FFF;
+  box-shadow: 0px 4px 20px 0px rgba(153, 153, 153, 0.25);
+  border-radius: 6px;
+
+  .title {
+    position: relative;
+    width: 166px;
+    height: 30px;
+    margin: 0 auto;
+
+    .titleContext {
+      position: absolute;
+      z-index: 200;
+      font-size: 14px;
+      font-weight: 400;
+      color: #1A2243;
+      left: 50%;
+      top: 30%;
+      transform: translate(-50%, -50%);
+      white-space: nowrap;
+    }
+
+    img {
+      z-index: 0;
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      height: 30px;
+      width: 166px;
+    }
+  }
+
+  .main {
+    font-size: 22px;
+    font-weight: 500;
+    color: #333;
+    // line-height: 40px;
+    margin: 16px auto 0 auto;
+  }
+
+  .barContainers {
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+
+    .barContainer {
+      width: 100%;
+      display: inline-block;
+      padding: 30px 0 20px 0;
+
+      .bar {
+        width: 100%;
+        flex-basis: 100%;
+        height: 8px;
+        display: inline-block;
+        background-color: #f2f2f5;
+      }
+
+      .barContext {
+        font-size: 14px;
+        font-weight: 400;
+        color: #959CBA;
+        line-height: 14px;
+      }
+
+      .selectedContext {
+        color: #1A2243;
+      }
+
+      .left {
+        background-color: #3A7BEC;
+        border-radius: 0.10666667rem 0 0 0.10666667rem;
+      }
+
+      .center {
+        background-color: #FF9800;
+      }
+
+      .right {
+        background-color: #EF5A3C;
+        border-radius: 0 0.10666667rem 0.10666667rem 0;
+      }
+    }
+  }
+}

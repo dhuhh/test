@@ -1,0 +1,63 @@
+.userDrop {
+  float: right;
+  width: auto;
+  height: 54px !important;
+  // 在伪类中清楚浮动
+  zoom: 1;
+  &:before, &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+
+  :global(.ant-dropdown) {
+    width: 26rem !important;
+
+    :global(.ant-dropdown-menu-item) {
+      padding: 0;
+    }
+  }
+
+  :global(.m-dropdown-title) {
+    height: 54px !important;
+  }
+}
+
+.itemHover {
+  &:hover {
+    background-color: #244FFF !important;
+    color: #FFFFFF;
+    img {
+      content: url('../../../../assets/pageLayout/right_arrow_white.png');
+    }
+  }
+}
+
+.popover {
+  :global(.ant-popover-inner-content) {
+    padding: 0 !important;
+  }
+} 
+
+.userModal {
+  :global(.ant-modal-title) {
+    font-size: 16px !important;
+    font-weight: 600;
+  }
+}
+
+.switch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px; 
+  height: 19px; 
+  margin-left: 8px;
+  border-radius: 2px;
+  border: 1px solid #F6C34F;
+  color: #F6C34F;
+  font-size: 12px;
+}
+

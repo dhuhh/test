@@ -1,0 +1,10 @@
+.m-table{
+    z-index: 2;
+    height: 60px; //此处的60为表格头部的height
+    overflow-y: hidden;
+
+    :global(.ant-table-tbody){
+        visibility: hidden;
+        z-index: -99;
+    }
+}

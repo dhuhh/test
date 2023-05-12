@@ -5,12 +5,12 @@
     >.ant-tabs-bar{
         .ant-tabs-nav{
             .ant-tabs-tab {
-                    background:@head-bg;
-                }
+                background:@head-bg;
+            }
 
-                .ant-tabs-tab-active:after{
-                    .triangle(top,@w:8px,@color:@head-bg)
-                }
+            .ant-tabs-tab-active:after{
+                .triangle(top,@w:8px,@color:@head-bg)
+            }
 
         }
     }
@@ -35,9 +35,8 @@
             }
         }
         .ant-tabs-tab-active{
-            border-bottom:0.2rem solid @hover;
+            border-bottom:4px solid @head-bg;
             color:@head-bg;
-            font-weight: 600;
             a{
                 color:@head-bg;
             }
@@ -128,6 +127,42 @@
     }
 
 }
+.m-tabs-popup{
+    .ant-tabs-nav {
+        .ant-tabs-tab{
+            &:hover{
+                color:@head-bg;
+            }
+        }
+        .ant-tabs-ink-bar{
+            background-color: @head-bg;
+        }
+        .ant-tabs-tab-active{
+            color:@head-bg;
+            a{
+                color:@head-bg;
+            }
+        }
+    }
+}
+.m-tabs-underline-task{
+    .ant-tabs-nav {
+        .ant-tabs-tab{
+            &:hover{
+                color:@head-bg;
+            }
+        }
+        .ant-tabs-ink-bar{
+            background-color: @head-bg;
+        }
+        .ant-tabs-tab-active{
+            color:@head-bg;
+            a{
+                color:@head-bg;
+            }
+        }
+    }
+}
 
 //m-radio-group
 .m-radio-group{
@@ -156,23 +191,18 @@
 .m-product-radio-group{
     &.ant-radio-group{
         .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-focused{
-            color:#fff;
-            background:@head-bg;
-            border-color: @head-bg;
+            color:@head-bg;
         }
         .ant-radio-button-wrapper-checked{
-            border-color: @head-bg;
-            background:#eaf4fe;
             color:@head-bg;
-            box-shadow: -1px 0 0 0 @head-bg;
         }
-        .ant-radio-button-wrapper-checked:first-child {
-            border-color: @head-bg;
-            box-shadow: none !important;
-        }
-        .ant-radio-button-wrapper-checked::before{
-            background-color: @head-bg !important;
-        }
+    }
+}
+
+//m-radio-group
+.m-radio-group-mcolor{
+    .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-checked{
+        color:@head-bg;
     }
 }
 
@@ -186,6 +216,25 @@
     color: @head-bg;
     border-bottom-color: @head-bg;
 }
+
+.m-tabs-activity{
+    .ant-tabs-nav {
+        .ant-tabs-tab{
+            &:hover{
+                color:@head-bg;
+            }
+        }
+        .ant-tabs-ink-bar{
+            background-color: @head-bg;
+        }
+        .ant-tabs-tab-active{
+            color:@head-bg;
+            a{
+                color:@head-bg;
+            }
+        }
+    }
+  }
 
 .ant-tabs.ant-tabs-card > .ant-tabs-bar .ant-tabs-tab-active {
     color: @head-bg;
@@ -239,87 +288,194 @@
     }
 }
 
-// m-tab-box
-.m-tab-box{
-  .m-tab-box-item{
-    &.active{
-      border-bottom: 0.2rem solid @head-bg;
-      color:@hover;
+//m-tabs-screen2
+.m-tabs-screen2 {
+  .ant-tabs-bar {
+    border-bottom: 0;
+  }
+  .ant-tabs-nav {
+    .ant-tabs-tab {
+      padding: .5rem 1rem;
+      border-radius: .25rem;
+      margin-right: 2rem;
+      .font-s16();
+      line-height: 2rem;
+      transition: none;
+      -webkit-transition: none;
+
+    }
+
+    .ant-tabs-tab-active {
+    //   background: @head-bg;
+      border-bottom: none !important;
+    //   color: #fff !important;
     }
   }
 }
 
-
-// m-tabs-vertical
-.m-tabs-vertical{
-    &.ant-tabs{
-      .ant-tabs-tab-active{
-        background: @hover-bg;
-        color: @hover
+.m-tabs-sec2{
+  &.ant-tabs{
+    .ant-tabs-tab{
+      &:hover{
+        color: @head-bg;
       }
-      .ant-tabs-left-bar {
-        .ant-tabs-ink-bar {
-            background-color: @head-bg;
-            width:0.25rem;
-          }
-      }
-      .ant-tabs-right-bar {
-        .ant-tabs-ink-bar {
-            background-color: @head-bg;
-            width:0.25rem;
-          }
-      }
-
-    }
-  }
-
-  // m-tabs-img
-.m-tabs-img{
-    &.ant-tabs{
-      .ant-tabs-bar{
-        .ant-tabs-tab{
-          &.ant-tabs-tab-active{
-            .m-fund-name{
-              color: @hover;
-            }
-          }
-        }
+      &.ant-tabs-tab-active{
+        .font-wb();
+        color:  @head-bg;
       }
     }
   }
+}
 
-  //多菜单tabs切换
-.m-tabs-nav{
-    &.ant-tabs{
-      .ant-tabs-extra-content{
-        .m-tabs-nav-link{
-          &:hover{
+// 新建人群专用
+.m-radio-group-crowd{
+
+    &.ant-radio-group{
+         .ant-radio-button-wrapper {
+              margin-left: 1.333rem;
+              border-radius: 0.5rem;
+              height: 4rem;
+              width: 9rem;
+              text-align: center;
+              line-height: 50px;
+              border: 1px #dadada solid;
+          }
+         .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-focused{
+             color:@head-bg;
+         }
+         .ant-radio-button-wrapper-checked{
+             border-color: @head-bg;
+             color: @head-bg;
+             box-shadow: none !important;
+         }
+         .ant-radio-button-wrapper-checked:first-child {
+             border-color: @head-bg;
+         }
+         .ant-radio-button-wrapper-checked::before{
+             background-color: @head-bg !important;
+         }
+         .ant-radio-button-wrapper:not(:first-child)::before {
+             width: 0;
+         }
+     }
+  
+  }
+  
+  
+  // 新建人群专用
+  .m-radio-group-crowdBig{
+  
+    &.ant-radio-group{
+         .ant-radio-button-wrapper {
+              margin-left: 1.333rem;
+              border-radius: 0.3rem;
+              height: 6.5rem;
+              width: 15rem;
+              // text-align: center;
+              // line-height: 50px;
+              border: 1px #dadada solid;
+          }
+         .ant-radio-button-wrapper:hover, .ant-radio-button-wrapper-focused{
+             color:@head-bg;
+         }
+         .ant-radio-button-wrapper-checked{
+             border-color: @head-bg;
+             color: @head-bg;
+             box-shadow: none !important;
+         }
+         .ant-radio-button-wrapper-checked:first-child {
+             border-color: @head-bg;
+         }
+         .ant-radio-button-wrapper-checked::before{
+             background-color: @head-bg !important;
+         }
+         .ant-radio-button-wrapper:not(:first-child)::before {
+             width: 0;
+         }
+     }
+  
+  }
+  
+  .m-list-createCrowd  {
+    text-align: center;
+    font-weight: bold;
+    height: 6.5rem;
+    line-height: 85px;
+    width: 10rem;
+    border-right: 3px #dedcde solid;
+  }
+  
+  .m-list-createCrowd-active {
+    color: @head-bg;
+    text-align: center;
+    font-weight: bold;
+    height: 6.5rem;
+    line-height: 85px;
+    width: 10rem;
+    border-right: 3px @head-bg solid;
+  }
+  
+  // 标签圈人专用
+  .m-radio-group-LabelCircle{
+  
+    &.ant-radio-group{
+         .ant-radio-button-wrapper {
+              border-radius: 0;
+              width: 100%;
+              height: auto;
+              padding: 14px;
+              border: 1px #dadada solid;
+          }
+        .ant-radio-button-wrapper-focused{
+             border-color:@head-bg;
+             color: @view-color;
+         }
+         .ant-radio-button-wrapper-checked{
+             border-color: @head-bg;
+             color: @view-color;
+             box-shadow: none !important;
+         }
+         .ant-radio-button-wrapper-checked:first-child {
+             border-color: @head-bg;
+         }
+         .ant-radio-button-wrapper-checked::before{
+             background-color: @head-bg !important;
+         }
+         .ant-radio-button-wrapper:not(:first-child)::before {
+             width: 0;
+         }
+     }
+  
+  }
+  
+  .m-indexNumber {
+    width: 20px;
+    background-color: @head-bg;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 10px;
+  }
+  
+  .m-label-indexNumber {
+    width: 20px;
+    background-color: @head-bg;
+    height: 20px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 0.33rem;
+    line-height: 21px;
+    border-radius: 10px;
+  }
+
+//主题色tabs
+.m-tabs-theme{
+    .ant-tabs-nav{
+        .ant-tabs-tab:hover,.ant-tabs-tab-active{
             color: @head-bg;
-          }
         }
-      }
-
-      .ant-tabs-tab-prev.ant-tabs-tab-arrow-show,.ant-tabs-tab-next.ant-tabs-tab-arrow-show{
-        &:hover{
-          color: @head-bg;
-        }
-
-      }
-
-      .ant-tabs-nav{
-        .ant-tabs-tab{
-          &:hover{
-            color: @head-bg
-          }
-        }
-        .ant-tabs-tab-active{
-          background-color: @level10;
-          color: @head-bg;
-          a{
-              font-weight: 600;
-              color: @head-bg;
-          }
-        }
-      }
     }
-  }
+    .ant-tabs-ink-bar{
+        background-color: @head-bg;
+    }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>上传附件</title>
+    <g id="伴随服务价值管理" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon" transform="translate(-27.000000, -207.000000)">
+            <g id="上传附件" transform="translate(27.000000, 207.000000)">
+                <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                <g id="编组-13" transform="translate(2.000000, 2.000000)" stroke="#61698C">
+                    <polyline id="路径" points="12 6 12 11.5 0 11.5 0 6"></polyline>
+                    <polyline id="路径" transform="translate(5.998113, 3.600000) rotate(-315.000000) translate(-5.998113, -3.600000) " points="3.59811255 6 3.59811255 1.2 8.39811255 1.2"></polyline>
+                    <line x1="6" y1="0" x2="6" y2="9" id="路径-5"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

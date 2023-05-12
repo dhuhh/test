@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>默认头像</title>
+    <defs>
+        <linearGradient x1="19.0231063%" y1="10.3747562%" x2="76.7865765%" y2="91.1661715%" id="linearGradient-1">
+            <stop stop-color="#E8ECFF" offset="0%"></stop>
+            <stop stop-color="#CCD6FF" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="35" cy="35" r="35"></circle>
+        <linearGradient x1="50%" y1="12.8554289%" x2="50%" y2="45.4970925%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F1F3F8" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="中断客户360" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="默认头像-男">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="蒙版" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <path d="M67.8146879,65.1783676 L34.7842466,110.994197 L1.75380521,65.1783676 C10.3896977,52.3927892 21.6384293,46 35.5,46 C49.3615707,46 60.1331333,52.3927892 67.8146879,65.1783676 Z" id="路径" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+            <rect id="矩形" fill="#FFFDFE" mask="url(#mask-3)" x="20.2708333" y="10.9263699" width="30" height="30" rx="15"></rect>
+        </g>
+    </g>
+</svg>

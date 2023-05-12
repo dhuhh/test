@@ -1,0 +1,331 @@
+.essenceFont {
+    font-family: 'EssenceSansStd-Regular';
+  }
+  
+  .globalClass {
+    :global {
+      .ant-spin-blur::after {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .topSpin {
+    :global(.ant-spin-dot-spin) {
+      display: none;
+    }
+  }
+  
+  
+  .accountTab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    border: 1px solid #B0B5CC;
+    color: #74819E;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .activeAccountTab {
+    background-color: #244FFF;
+    color: #FFF !important;
+  }
+  
+  .disabledAccountTab {
+    color: #B9BED6 !important;
+    border-color: #D1D5E6 !important;
+  }
+  
+  .timeTab {
+    height: 30px;
+    padding: 0 35px;
+    border: 1px solid #B0B5CC;
+    color: #74819E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 12px;
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  .rangePicker {
+    :global {
+      .ant-calendar-picker-input {
+        height: 30px;
+        display: flex !important;
+      }
+      .ant-calendar-range-picker-separator {
+        color: #1A2243;
+      }
+      .ant-input {
+        border-color: #D1D5E6;
+      }
+      .ant-calendar-picker-icon {
+        width: 16px;
+        height: 16px;
+      }
+      .ant-input-disabled {
+        color: #B9BED6 !important;
+        border-color: #D1D5E6 !important;
+        &:hover {
+          color: #B9BED6 !important;
+          border-color: #D1D5E6 !important;
+        }
+      }
+    }
+    input::-webkit-input-placeholder {
+      color: #959CBA;
+      font-weight: normal;
+    }
+  }
+  
+  .rangePickerCol {
+    :global(.ant-calendar-picker:focus .ant-calendar-picker-input:not(.ant-input-disabled)) {
+      box-shadow: none;
+      border-color: #244FFF;
+    }
+  }
+  
+  .card {
+    :global(.ant-card-head) {
+      border: none;
+    }
+  }
+  
+  .aplhaTcard {
+    :global(.ant-card-head) {
+      border: none;
+      margin: 0px 0px !important;
+    }
+  }
+  .aplhaTcardTip{
+    font-size: 12px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #61698C;
+  }
+  
+  .alphaBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .alphaBoxItem{
+    width: 33%;
+    height: 125px;
+    border: 1px solid #EAECF2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 14px;
+    color: #61698C ;
+    font-size: 14px;
+    font-family: 'PingFangSC-Semibold, PingFang SC';
+    font-weight: 600;
+  }
+  .alphaBoxNum{
+    font-size: 40px;
+    color: #EC3A48;
+  }
+  
+  
+  .button {
+    color: #1A2243;
+    border-color: #D1D5E6;
+    &:hover {
+      color: #244FFF !important;
+      border-color: #244FFF !important;
+    }
+  }
+  
+  .activeButton {
+    color: #244FFF !important;
+    border-color: #244FFF !important;
+  }
+  
+  .disabledButton {
+    color: #B9BED6 !important;
+    border-color: #D1D5E6 !important;
+    &:hover {
+      color: #B9BED6 !important;
+      border-color: #D1D5E6 !important;
+    }
+    cursor: not-allowed;
+  }
+  
+  .hover {
+    cursor: pointer;
+    &:hover {
+      color: #244FFF;
+    }
+  }
+  
+  .table {
+    :global(.ant-table-selection-column) {
+      text-align: center !important;
+    }
+    :global(.ant-table-thead>tr>th){
+      height: 48px !important;
+      position: relative;
+      background: #F7F8FA !important;
+      &:not(:last-child) ::after {
+        display:block;
+        content: '';
+        width: 1px;
+        height: calc(100% - 26px);
+        background: #E0E2E8;
+        position: absolute;
+        right: 0;
+        top: 13px;
+      }
+    }
+    :global(.ant-table .ant-table-tbody > tr > td) {
+      height: 48px !important;
+      color: #4B516A;
+    }
+  }
+  
+  .tables {
+    display: none;
+  }
+  
+  .pagination{
+    :global {
+      .ant-select-selection--single {
+        height: 24px !important;
+      }
+      .ant-select-selection__rendered {
+        line-height: 24px !important;
+      }
+    }
+    :global(.ant-pagination-item-active){
+      border: 1px solid #244FFF !important;
+      background: #FFF !important;
+      a {
+        color: #244FFF !important;
+      }
+    }
+    :global(.ant-pagination-item:hover:not(.ant-pagination-item-active)){
+      // border-color :#244fff !important;
+      a:hover{
+        color:#244fff !important;
+      }
+    }
+    :global(.ant-pagination-options){
+      :global(.ant-select-selection--single:hover){
+        border-color :#244fff !important;
+      }
+      :global(.ant-pagination-options-quick-jumper){
+         input:hover,input:focus{
+           border-color :#244fff !important;
+           box-shadow: none;
+         }
+      }
+      :global(.ant-select-selection--single:focus){
+        border-color :#244fff !important;
+        box-shadow: none;
+      }
+  
+    }
+    :global(.ant-pagination-item-link:hover){
+        border-color :#244fff !important;
+        color:#244fff !important;
+    }
+  }
+  
+  .input {
+    :global {
+      input {
+        height: 100% !important;
+      }
+    }
+  }
+  
+  .options{
+    :global(.ant-checkbox-checked){
+      :global(.ant-checkbox-inner){
+        background-color: #244fff !important;
+      }
+      :global(.ant-checkbox-inner:hover){
+        border-color: #244fff !important;
+      }
+  
+    }
+    :global(.ant-checkbox-checked::after) {
+      border-color: #244fff !important;
+    }
+    :global(.ant-checkbox:hover){
+      color: #244fff !important;
+    }
+    :global(.ant-checkbox-input:hover) + :global(.ant-checkbox-inner),:global(.ant-checkbox-input:focus) + :global(.ant-checkbox-inner){
+      border-color: #244fff !important;
+    }
+  }
+  
+  .expandRows {
+    background-color: #F7F8FA;
+  }
+  
+  .hover {
+    &:hover {
+      color: #4e71ff;
+    }
+  }
+  
+  .datePickerInput {
+    :global(.ant-calendar-picker-input) {
+      width: 160px;
+      height: 30px;
+    }
+  }
+  .tooltip{
+    :global{
+      .ant-tooltip-inner{
+        padding: 5px 16px;
+        border-radius: 2px !important;
+      }
+    }
+  }
+  .detailModal{
+    :global{
+      .ant-modal-title{
+        font-weight: bold;
+      }
+      .ant-modal-body{
+        padding: 16px;
+      }
+    }
+  
+  }
+  .detailModals{
+    :global{
+      .ant-modal-header{
+        padding: 16px 16px;
+      }
+      .ant-modal-title{
+        font-weight: bold;
+      }
+      .ant-modal-body{
+        padding: 0px 16px 16px 16px;
+      }
+    }
+  
+  }
+  .alphatText{
+    display: flex;
+    margin-left: 16px ;
+    color: '#61698C';
+    font-size: 14px;
+    font-family: 'PingFangSC-Regular, PingFang SC'
+  }
+  
+  .alphatActive{
+    :global(.ant-switch-checked){
+      background-color: #244FFF;
+    }
+  }

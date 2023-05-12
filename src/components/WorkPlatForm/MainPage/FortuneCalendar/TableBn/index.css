@@ -1,0 +1,21 @@
+.shortCut {
+    height: 42px;
+    line-height: 42px;
+    width: 112px;
+    background: #244FFF;
+    border-radius: 2px;
+    border: none;
+    /* padding: 10px 24px; */
+    margin-left: 16px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+}
+.shortCut:hover {
+    cursor: pointer;
+}
+.modalPadding .ant-modal-body{
+   padding: 24px 0 0;
+}

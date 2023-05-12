@@ -1,0 +1,153 @@
+.tree-select {
+  :global {
+    .ant-select-tree {
+      padding: 0;
+
+      // ul li:nth-of-type(1) 
+      > li:nth-of-type(1) {
+        .ant-select-tree-node-content-wrapper {
+          &:hover {
+            background-color: #fff !important;
+          }
+        }
+      }
+    }
+
+    .ant-select-selection__choice {
+      color: #1A2243;
+    }
+    .ant-select-tree li .ant-select-tree-node-content-wrapper {
+      &:hover {
+        // background-color: #92A7FF;
+      }
+    }
+
+    .ant-select-switcher-icon {
+      font-size: 16px !important;
+    }
+
+    .ant-select-tree-treenode-checkbox-checked {
+      .ant-select-tree-checkbox-inner {
+        background-color: #244FFF;
+        border-color: #244FFF;
+
+        &::after {
+          // border-color: #92A7FF;
+        }
+      }
+    }
+
+    .ant-select-tree-treenode-checkbox-indeterminate .ant-select-tree-checkbox-indeterminate {
+      .ant-select-tree-checkbox-inner {
+        background-color: #92A7FF;
+        border-color: #92A7FF;
+
+        &::after {
+          position: absolute;
+          display: table;
+          top: 50%;
+          left: 22%;
+          width: 6px;
+          height: 9px;
+          border: 2px solid #fff;
+          border-top: 0;
+          border-left: 0;
+          background-color: #92A7FF;
+          transform: rotate(45deg) scale(1) translate(-50%, -50%);
+          opacity: 1;
+          transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+          content: ' ';
+        }
+      }
+
+    }
+  }
+}
+
+.all-select {
+  :global {
+    .ant-select-tree > li:nth-of-type(1) {
+          .ant-select-tree-checkbox-inner {
+            background-color: #244FFF;
+            border-color: #244FFF;
+            &::after {
+              position: absolute;
+              display: table;
+              top: 50%;
+              left: 22%;
+              width: 6px;
+              height: 9px;
+              border: 2px solid #fff;
+              border-top: 0;
+              border-left: 0;
+              background-color: #244FFF;
+              transform: rotate(45deg) scale(1) translate(-50%, -50%);
+              opacity: 1;
+              transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+              content: ' ';
+            }
+          // }
+      }
+      }
+
+  }
+}
+.half-select {
+  :global {
+    .ant-select-tree > li:nth-of-type(1) {
+          .ant-select-tree-checkbox-inner {
+            background-color: #92A7FF;
+            border-color: #92A7FF;
+            &::after {
+              position: absolute;
+              display: table;
+              top: 50%;
+              left: 22%;
+              width: 6px;
+              height: 9px;
+              border: 2px solid #fff;
+              border-top: 0;
+              border-left: 0;
+              background-color: #92A7FF;
+              transform: rotate(45deg) scale(1) translate(-50%, -50%);
+              opacity: 1;
+              transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+              content: ' ';
+            }
+          // }
+      }
+      }
+
+  }
+}
+
+//treeSelect
+.tree-container {
+  position: relative;
+  :global {
+    .ant-select-selection__rendered {
+      width: 215px;
+    }
+  }
+}
+
+.tree-suffix {
+  position: absolute;
+  left: 224px;
+  top: 6px !important;
+  width: 20px;
+  height: 20px;
+  background-color: red;
+}
+//treeSelect多选 后缀图标
+.tree-icon{
+   position: absolute;
+  left: 227px;
+  top: 11px;
+  font-size: 12px;
+  cursor: text;
+  color: rgba(0, 0, 0, 0.25) !important;
+  svg{
+    transition: transform 0.3s ease 0s;
+  }
+}

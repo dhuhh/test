@@ -1,0 +1,325 @@
+ul,p,h4{
+  margin: 0;
+}
+.dtBarTotalGraph {
+  padding: 5px 10px 10px 70px;
+  margin: 0;
+
+  & li {
+    position: relative;
+    height: 10px;
+    // margin: 0 20px;
+    max-width: 346px;
+    margin-bottom: 37px;
+    border-radius: 10px;
+    border: 1px solid #EEE;
+    background: #F5F5F8;
+    /* background-image: url('../../../../../../../../assets/newProduct/customerPortrait/grey_bg.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x; */
+    &::before {
+      left: -20px;
+    }
+
+    &::after {
+      right: -20px;
+    }
+
+    &:first-of-type {
+      & i {
+        top: 0;
+        height: 10px;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    & i {
+      position: absolute;
+      display: block;
+      top: -47px;
+      width: 2px;
+      height: 54px;
+      border-left: 1px dashed #D8D8D8;
+      left: -2px;
+    }
+
+    .tag-mark {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 160px;
+      margin-left: -80px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    & b {
+      display: inline-block;
+      padding: 0 4px;
+      opacity: 0.5;
+    }
+  }
+
+  .pItemNumber {
+    position: absolute;
+    top: -12px;
+    // right: 388px;
+    min-width: 100px;
+    max-width: 180px;
+    white-space: nowrap;
+    padding: 5px 10px;
+    text-align: right;
+
+    & h4 {
+      position: absolute;
+      left: -10px;
+      transform: translateX(-100%);
+      font-size: 10px;
+      font-weight: 400;
+      color: #959CBA;
+    }
+
+    & p {
+      position: absolute;
+      top: 10px;
+      left: 360%;
+      font-size: 12px;
+      color: #333;
+    }
+  }
+
+  & figure {
+    position: absolute;
+    // top: 0;
+    top: -1px;
+    z-index: 10;
+    height: 10px;
+    width: 0%;
+    border-radius: 10px 0 0 10px;
+    background-image: linear-gradient(180deg, #FFEDC7 0%, #F8D89B 100%);
+  }
+
+  .prWin {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .pItemNumber {
+      & p {
+        color:@color-rise;
+      }
+    }
+
+    & figure {
+      transform: rotate(180deg);
+    }
+  }
+
+  .dtLoss {
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    & figure {
+      background-image: linear-gradient(0deg, #D2AA66 0%, #E7C78D 100%);
+    }
+
+    .pItemNumber {
+      & p {
+        color: #029A01;
+      }
+    }
+  }
+}
+
+// @color-1 强色类 一般用于按钮背景 强调文案等**********************************/
+@color-11:   #CCA663; //主色蓝
+
+@color-12:   #f7941d; //辅色橙
+
+@color-13:   #EF5A3C; //涨色红
+
+@color-14:   #029A01; //跌色绿
+
+@color-15:   #fff; //白色
+
+// 文案 *******************************************************/
+@color-rise: @color-13; //涨
+
+@color-fall: @color-14; //跌
+
+@color-success: @color-11; //成功
+
+@color-warn: @color-12; //告警
+
+@color-error: @color-13; //失败
+
+@px2rem: 75rem;
+
+@main-color: #333;
+
+.barTotalGraph{
+  padding: 25px 10px 10px 75px;
+
+  & li {
+    position: relative;
+    height: 10px;
+    margin: 0 0 37px 0;
+    // margin: 0 20px;
+    // margin-bottom: 67px;
+    border-radius: 15px;
+    border: 1px solid #EEE;
+    background: #F5F5F8;
+    /* background-image: url('../../../../../../../../assets/newProduct/customerPortrait/grey_bg.png');
+    background-size: auto 100%;
+    background-repeat: repeat-x; */
+
+    &::before {
+      left: -20px;
+    }
+
+    &::after {
+      right: -20px;
+    }
+
+    &:first-of-type {
+      & i {
+        top: 0;
+        height: 10px;
+      }
+    }
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    & i {
+      position: absolute;
+      display: block;
+      top: -47px;
+      width: 2px;
+      height: 54px;
+      border-left: 1px dashed #D8D8D8;
+      left: -2px;
+    }
+
+    .tag-mark {
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      width: 160px;
+      margin-left: -80px;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    & b {
+      display: inline-block;
+      padding: 0 4px;
+      opacity: 0.5;
+    }
+  }
+
+  .pItemNumber {
+    position: absolute;
+    left: -8px;
+    transform: translateX(-100%);
+    white-space: nowrap;
+    padding: 5px 10px;
+    text-align: right;
+
+    & h4 {
+      font-size: 10px;
+      color: @main-color;
+    }
+
+    & p {
+      font-size: 12px;
+      color: @main-color;
+    }
+  }
+
+  & figure {
+    position: absolute;
+    // top: 0;
+    top: -1px;
+    z-index: 10;
+    height: 10px;
+    width: 0%;
+    border-radius: 10px 0 0 10px;
+    background-image: linear-gradient(180deg, #EF5A3C 0%, #F8936F 100%);
+  }
+
+  .prWin {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .pItemNumber {
+      & p {
+        color: @color-rise;
+      }
+    }
+
+    & figure {
+      transform: rotate(180deg);
+    }
+  }
+
+  .prLoss {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    & figure {
+      background-image: linear-gradient(0deg, #3CD11C 0%, #96E184 100%);
+    }
+
+    .pItemNumber {
+      & p {
+        color: @color-fall;
+      }
+    }
+  }
+
+  .prSpecial {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    .pItemNumber{
+      position: relative;
+      top: -2px;
+      border-radius: 8px;
+      background: linear-gradient(90deg, #6CB2F7 0%, #3A7BEC 100%);
+      box-shadow: 0px 4px 20px 0px rgba(99, 138, 204, 0.25);
+      font-size: 14px;
+      font-weight: 400;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 19px;
+        right: -2px;
+        width: 5px;
+        height: 5px;
+        // background: linear-gradient(90deg, #6CB2F7 0%, #3A7BEC 100%);
+        background-color: #3A7BEC;
+        box-shadow: 0px 4px 20px 0px rgba(99, 138, 204, 0.25);
+        -webkit-transform: scaleX(1.5) rotate(-135deg);
+        transform: scaleX(1.5) rotate(-135deg);
+      }
+
+      & p {
+        color: #FFF !important;
+      }
+
+      & h4 {
+        color: #FFF !important;
+      }
+    }
+  }
+}

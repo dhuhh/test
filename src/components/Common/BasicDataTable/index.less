@@ -14,14 +14,15 @@
   }
   // HT整合 --------------------------------------------------------------------------------
   &.affixedTable {
-    display: none !important;
-    height: 3.62rem !important;
-    height: 3.72rem\0\9 !important;
+    // display: none !important;
+    // height: 3.62rem !important;
+    height: 0 !important;
     overflow: hidden !important;
     &:global(.affixed) {
+      height: auto !important;
       display: block !important;
     }
-    &:global(.ant-table-body) {
+    :global(.ant-table-body) {
       overflow: hidden !important;
     }
     tbody {
@@ -30,13 +31,6 @@
   }
 
   &.mainTable {
-    // :global(.ant-table-thead) {
-    //   height: 3.62rem;
-    //   transition:height 2s;
-    //   -moz-transition:height 2s; /* Firefox 4 */
-    //   -webkit-transition:height 2s; /* Safari and Chrome */
-    //   -o-transition:height 2s; /* Opera */
-    // }
     &:global(.affixed) {
       :global(.ant-table-thead) {
         visibility: hidden !important;
@@ -46,3 +40,13 @@
   }
   // HT整合 --------------------------------------------------------------------------------
 }
+
+.customerDevelop {
+  :global(.ant-table){
+      margin: 0;
+      border-top: none;
+  }
+}
+.odd{
+  background-color: #fafafa ;
+ }

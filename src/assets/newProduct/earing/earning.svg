@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="36px" viewBox="0 0 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 14</title>
+    <g id="-360持仓页面-新" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360-持仓板块-历史持仓-信用账户-合并相同股票-展开状态" transform="translate(-24.000000, -356.000000)">
+            <g id="编组-42" transform="translate(24.000000, 294.000000)">
+                <g id="编组-30备份" transform="translate(0.000000, 53.000000)">
+                    <g id="编组-14" transform="translate(0.000000, 9.000000)">
+                        <rect id="矩形" x="0" y="0" width="36" height="36"></rect>
+                        <g id="编组-12" transform="translate(9.391304, 5.478261)" stroke="#61698C" stroke-linecap="round" stroke-width="2">
+                            <ellipse id="椭圆形" cx="8.60869565" cy="3.44347826" rx="8.60869565" ry="3.44347826"></ellipse>
+                            <path d="M0,9.35727788 C0,11.2590584 3.85424433,12.8007561 8.60869565,12.8007561 C13.363147,12.8007561 17.2173913,11.2590584 17.2173913,9.35727788" id="路径"></path>
+                            <path d="M0,15.2710775 C0,17.172858 3.85424433,18.7145558 8.60869565,18.7145558 C13.363147,18.7145558 17.2173913,17.172858 17.2173913,15.2710775" id="路径备份"></path>
+                            <path d="M0,21.1848771 C0,23.0866577 3.85424433,24.6283554 8.60869565,24.6283554 C13.363147,24.6283554 17.2173913,23.0866577 17.2173913,21.1848771" id="路径备份-2"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

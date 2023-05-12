@@ -1,0 +1,38 @@
+.rangePicker {
+  margin-left: 8px;
+  :global(.ant-input) {
+    border-color: #d1d5e6;
+    border-radius: 2px;
+    color: #1a2243;
+  }
+  :global(.ant-input:hover) {
+    border-color: #244fff !important;
+  }
+  :global(.ant-input:focus) {
+    border-color: #244fff !important;
+    box-shadow: none;
+  }
+  :global(.ant-calendar-picker-input) {
+    height: 32px;
+    display: flex !important;
+  }
+  &:focus {
+    :global(.ant-calendar-picker-input) {
+      &:not(.ant-input-disabled) {
+        box-shadow: none !important;
+        border-color: #244fff !important;
+      }
+    }
+  }
+  :global(.ant-calendar-range-picker-input) {
+    &::-webkit-input-placeholder {
+      color: #959cba;
+    }
+    input::-moz-input-placeholder {
+      color: #959cba;
+    }
+    input::-ms-input-placeholder {
+      color: #959cba;
+    }
+  }
+}

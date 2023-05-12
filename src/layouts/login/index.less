@@ -1,0 +1,45 @@
+.loginFormBottom {
+  padding-bottom: 0px !important
+}
+
+// 首页gif动画效果
+/* 定义一个动画（需要设置至少一个形参name） */
+.donghua(@DHname){
+    @keyframes @DHname {
+        0%{
+            opacity: 0;
+            font-size: 0;
+            transform: rotateY(0deg);
+            transform: rotateZ(0deg);
+            transform: rotateX(0deg);
+        }
+        100%{
+            opacity: 1;
+            font-size: 1.2rem;
+            transform: rotateY(360deg);
+            transform: rotateZ(360deg);
+            transform: rotateX(360deg);
+
+        }
+    }
+};
+
+/* 调用定义的动画（传入实参name）*/
+.donghua(myDongHua); // 名称
+
+/*
+1、定义动画属性 （动画有6条默认的属性，详情可访问https://www.w3school.com.cn/cssref/pr_animation.asp）
+2、@animation-name,@animation-duration,@animation-timing-function,@animation-delay,@play-state,@animation-iteration-count
+3、此处只需引入你需要的属性，不需要的不能引入，否则会报错
+*/
+.animation(@animation-name,@animation-duration,@animation-timing-function,@animation-iteration-count){
+    animation: @arguments;
+}
+/* 在样式中引入animation（注意参数即属性）*/
+.divBackGroud{
+    display: block;
+    opacity: 0;
+    // background-color:rgb(240, 225, 225);
+    .animation(myDongHua, 1s, ease-out, 1); // 1|动画名 2|动画时间 3|播放函数(比如：循环等)
+    animation-fill-mode: forwards;
+}

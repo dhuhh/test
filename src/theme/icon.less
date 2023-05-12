@@ -38,10 +38,9 @@
   background:@blue;
   .border-radius(@radius:8rem);
   line-height:4rem;
-  .db();
+  .dib();
   .tc();
   color:#fff;
-  margin:1rem auto;
   i{
     .font-s24();
   }
@@ -56,11 +55,12 @@
 //m-table-icon
 
 .m-table-icon{
-  .border-radius(@radius:4rem);
-  width: 2.333rem;
-  height: 2.333rem;
-  line-height: 2.333rem;
-  .font-s13();
+
+  .border-radius(@radius:3.333rem);
+  width: 3.166rem;
+  height: 3.166rem;
+  line-height: 3.166rem;
+  .font-s14();
   .dib();
   text-align: center;
   margin-right:0.666rem;
@@ -91,9 +91,7 @@
     }
 
   }
-  &:last-child{
-    margin-right: 0;
-  }
+
 }
 
 //m-right-icon
@@ -141,11 +139,10 @@
 //m-icon-gg
 .m-icon-gg{
   .pos(a);
-  top: -0.916rem;
-  width: 1.5rem;
-  height: 2.666rem;
+  top:-2rem;
+  width:2rem;
+  height:5rem;
   background: url(../assets/m-icon-gg.png)  no-repeat center center;
-  background-size: contain;
   z-index: 100;
   margin:0 auto;
   &.m-icon-gg-right{
@@ -185,68 +182,4 @@
   .font-s12();
   font-style: normal;
   .tc();
-}
-
-
-// m-application
-.m-application{
-  .tc();
-  margin: 0.666rem 0;
-  .dis-fx();
-  .alc();
-  .flex-direction();
-  cursor: pointer;
-  .m-application-icon{
-    width:3.5rem;
-    height: 3.5rem;
-    line-height:1;
-    .tc();
-    .border-radius(3.5rem);
-    background: #ddd;
-    border:1px solid #eee;
-    .dis-fx();
-    .alc();
-    color:#fff;
-    i{
-      .font-s20();
-    }
-    &.blue{
-        color:@tag-blue-color !important;
-        background-color: @btn-tag-blue;
-        border:1px solid @tag-blue-color;
-    }
-    &.violet{
-      color:@tag-violet-color;
-      background-color: @btn-tag-violet;
-      border:1px solid @tag-violet-color;
-    }
-    &.yellow{
-      color:@tag-yellow-color;
-      background-color: @btn-tag-yellow;
-      border:1px solid @tag-yellow-color;
-    }
-    &.orange{
-      color:@tag-orange-color !important;
-      background-color: @btn-tag-orange;
-      border:1px solid @tag-orange-color;
-    }
-    &.red{
-      color:@tag-red-color;
-      background-color: @btn-tag-red;
-      border:1px solid @tag-red-color;
-    }
-  }
-  .name{
-    .font-s13();
-    color:@font-color;
-    .db();
-    padding-top:0.416rem;
-  }
-
-  &.m-application-big{
-    .m-application-icon{
-      width:5rem;
-      height: 5rem;
-    }
-  }
 }

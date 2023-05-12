@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="70px" height="70px" viewBox="0 0 70 70" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>默认头像-男</title>
+    <defs>
+        <linearGradient x1="19.0231063%" y1="10.3747562%" x2="76.7865765%" y2="91.1661715%" id="linearGradient-1">
+            <stop stop-color="#E8ECFF" offset="0%"></stop>
+            <stop stop-color="#CCD6FF" offset="100%"></stop>
+        </linearGradient>
+        <circle id="path-2" cx="35" cy="35" r="35"></circle>
+        <linearGradient x1="50%" y1="22.1164358%" x2="50%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#F1F3F8" offset="100%"></stop>
+        </linearGradient>
+        <rect id="path-5" x="20.2708333" y="11.9263699" width="30.625" height="40.8333333" rx="15.3125"></rect>
+        <filter x="-93.1%" y="-47.8%" width="286.1%" height="239.6%" filterUnits="objectBoundingBox" id="filter-6">
+            <feOffset dx="0" dy="9" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="8" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.229279663   0 0 0 0 0.252400179   0 0 0 0 0.344882246  0 0 0 0.0989947552 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <linearGradient x1="42.3928355%" y1="8.85099852%" x2="59.932759%" y2="42.7607015%" id="linearGradient-7">
+            <stop stop-color="#D3DBFF" offset="0%"></stop>
+            <stop stop-color="#CAD2F5" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="37.180971%" y1="10.3736708%" x2="66.7379483%" y2="43.0285835%" id="linearGradient-8">
+            <stop stop-color="#D0D9FE" offset="0%"></stop>
+            <stop stop-color="#CBD2F5" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="中断客户360" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="默认头像-男">
+            <mask id="mask-3" fill="white">
+                <use xlink:href="#path-2"></use>
+            </mask>
+            <use id="蒙版" fill="url(#linearGradient-1)" xlink:href="#path-2"></use>
+            <path d="M46.0833333,46.6806507 L46.0831443,53.738969 C46.0830903,55.7532796 47.2917573,57.5709213 49.1493091,58.3499902 L67.8146879,66.1783676 L67.8146879,66.1783676 L34.7842466,111.994197 L1.75380521,66.1783676 L22.0170191,57.6796751 C23.8744601,56.9006367 25.0830927,55.0831416 25.0831504,53.068945 L25.0833333,46.6806507 L25.0833333,46.6806507 L46.0833333,46.6806507 Z" id="路径" fill="url(#linearGradient-4)" mask="url(#mask-3)"></path>
+            <g id="矩形" mask="url(#mask-3)">
+                <use fill="black" fill-opacity="1" filter="url(#filter-6)" xlink:href="#path-5"></use>
+                <use fill="#FFFDFE" fill-rule="evenodd" xlink:href="#path-5"></use>
+            </g>
+            <rect id="矩形" fill="#FFFDFE" mask="url(#mask-3)" x="18.0833333" y="28.5833333" width="3.5" height="9.91666667" rx="1.75"></rect>
+            <rect id="矩形备份-13" fill="#FFFDFE" mask="url(#mask-3)" x="49" y="28.5833333" width="3.5" height="9.91666667" rx="1.75"></rect>
+            <path d="M46.0833333,21.2916667 C49,24.2083333 49.5833333,30.9166667 49.5833333,31.5 C49.5833333,32.0833333 53.4441724,28.7750311 52.5,23.625 C51.9846044,20.8137515 51.5335589,18.3139691 50.1666667,16.3333333 C49.029498,14.6855685 47.010515,13.3631514 46.0833333,12.8333333 C44.0416667,11.6666667 39.0833333,11.9583333 39.0833333,12.8333333 C39.0833333,13.4166667 38.5972222,14.7777778 37.625,16.9166667 C39.2178285,16.8150265 40.0928285,16.8150265 40.25,16.9166667 C42.2156044,18.1877902 43.8890647,19.0973981 46.0833333,21.2916667 Z" id="路径-5" fill="url(#linearGradient-7)" mask="url(#mask-3)"></path>
+            <path d="M39.6666667,11.9583333 C41.2222222,13.7083333 41.6111111,15.2638889 40.8333333,16.625 C39.6666667,18.6666667 30.3333333,25.6666667 26.25,25.6666667 C23.5277778,25.6666667 21.3888889,28 19.8333333,32.6666667 C16.9166667,26.0555556 16.1388889,21.2916667 17.5,18.375 C20.5067704,11.9319205 27.3560277,8.75 30.9166667,8.75 C35.9722222,8.75 38.8888889,9.81944444 39.6666667,11.9583333 Z" id="路径-4" fill="url(#linearGradient-8)" mask="url(#mask-3)"></path>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+.options{
+  :global(.ant-checkbox-checked){
+    :global(.ant-checkbox-inner){
+      background-color: #244fff !important;
+    }
+    :global(.ant-checkbox-inner:hover){
+      border-color: #244fff !important;
+    }
+
+  }
+  :global(.ant-checkbox-checked::after) {
+    border-color: #244fff !important;
+  }
+  :global(.ant-checkbox:hover){
+    color: #244fff !important;
+  }
+  :global(.ant-checkbox-input:hover) + :global(.ant-checkbox-inner),:global(.ant-checkbox-input:focus) + :global(.ant-checkbox-inner){
+    border-color: #244fff !important;
+  }
+}

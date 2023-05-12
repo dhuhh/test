@@ -1,50 +1,79 @@
-/* eslint-disable no-undef */
 import request from '../../utils/request';
 import config from '../../utils/config';
 
 const { api } = config;
-const {
-  basicservices: {
-    cusServiceRecord,
-    fillInServiceRecord,
-    requirementTypeList,
-    recentRequirementType,
-    cusMessageSendList,
-    messageModList,
-    personalServiceRecord,
-    serviceCoverageRatio,
-    fillInServiceRecordSelectAll,
-    statisticalSendMessageChannel,
-    cusServicePlanOperate,
-    statisticalChannelDetail,
-    messageSndStaffChnlNum,
-    customerRequirement,
-    dataTime,
-    operationLog,
-    recordPageAccessLog,
-    messageSendTemplate,
-    phoneImport,
-    staffServicePlanHaveTodoNum,
-    rmndEventNum,
-    todoCenterList, // 待办
-    todoCenterClassList,
-    completedEventClass,
-    completedEventList, // 已办
-    workflowNotificationList, // 知会
-    userReadWorkflowNotification, // 知会未阅读
-    queryServiceRecord,
-    readRmndEvent,
-    deleteServiceRecord,
-    rmndEventList,
-    msgSndCusBlackList,
-    queryServiceCategoryBySceneType,
-    getOnlineUser,
-    onlineUserExport,
-  },
-  // customerbase: {
-  //   exportData,
-  // },
+const { basicservices: {
+  cusServiceRecord,
+  fillInServiceRecord,
+  requirementTypeList,
+  recentRequirementType,
+  cusMessageSendList,
+  messageModList,
+  personalServiceRecord,
+  serviceCoverageRatio,
+  fillInServiceRecordSelectAll,
+  statisticalSendMessageChannel,
+  cusServicePlanOperate,
+  statisticalChannelDetail,
+  messageSndStaffChnlNum,
+  customerRequirement,
+  dataTime,
+  operationLog,
+  messageSendTemplate,
+  phoneImport,
+  staffServicePlanHaveTodoNum,
+  rmndEventNum,
+  todoCenterList,
+  todoCenterClassList,
+  completedEventClass,
+  completedEventList,
+  queryServiceRecord,
+  readRmndEvent,
+  deleteServiceRecord,
+  rmndEventList,
+  msgSndCusBlackList,
+  queryServiceCategoryBySceneType,
+  getOnlineUser,
+  onlineUserExport,
+  getAttInfo,
+  serverRecordCheck,
+  serverRecordImportSure,
+  rmndEventConf,
+},
+customerbase: {
+  exportData,
+},
 } = api;
+
+// 服务记录导入确认
+export async function fetchServerRecordImportSure(payload) {
+  const option = {
+    url: serverRecordImportSure,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 服务记录校验
+export async function fetchServerRecordCheck(payload) {
+  const option = {
+    url: serverRecordCheck,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 获取附件信息
+export async function fetchGetAttInfo(payload) {
+  const option = {
+    url: getAttInfo,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
 
 // 获取客户服务记录(当日/历史)
 export async function FetchRmndEventNum(payload) {
@@ -225,16 +254,6 @@ export async function fetchOperationLog(payload) {
   return request(option);
 }
 
-// 页面访问日志
-export async function fetchRecordPageAccessLog(payload) {
-  const option = {
-    url: recordPageAccessLog,
-    method: 'post',
-    data: payload,
-  };
-  return request(option);
-}
-
 // 消息中心 获取发送模板
 export async function fetchMessageSendTemplate(payload) {
   const option = {
@@ -302,24 +321,6 @@ export async function fetchCompletedEventClass(payload) {
 export async function fetchCompletedEventList(payload) {
   const option = {
     url: completedEventList,
-    method: 'post',
-    data: payload,
-  };
-  return request(option);
-}
-// 知会数据列表
-export async function fetchNotifyProcessList(payload) {
-  const option = {
-    url: workflowNotificationList,
-    method: 'post',
-    data: payload,
-  };
-  return request(option);
-}
-// 阅读知会消息
-export async function fetchNotifyProcessReading(payload) {
-  const option = {
-    url: userReadWorkflowNotification,
     method: 'post',
     data: payload,
   };
@@ -407,3 +408,12 @@ export async function DoOnlineUserExport(payload) {
   return request(option);
 }
 
+// 查询小铃铛任务列表表头数据
+export async function fetchRmndEventConf(payload) {
+  const option = {
+    url: rmndEventConf,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}

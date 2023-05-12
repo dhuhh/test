@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tongyong/_arrow_2</title>
+    <g id="通用组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="选择器" transform="translate(-306.000000, -1110.000000)">
+            <g id="选择器/常规选择器/常规" transform="translate(82.000000, 1102.000000)">
+                <g id="icon/tongyong/_arrow_2" transform="translate(224.000000, 8.000000)">
+                    <g transform="translate(8.000000, 8.000000) scale(-1, 1) translate(-8.000000, -8.000000) ">
+                        <rect id="蒙版" x="0" y="0" width="16" height="16"></rect>
+                        <path d="M4.45818453,9.05069895 L4.47570085,2.06186387 C4.47583801,2.00663557 4.5207216,1.96197639 4.5759499,1.96211481 C4.57595032,1.96211481 4.57595075,1.96211482 4.57595116,1.96211608 L11.5292523,1.97963114 L11.5292523,1.97963114" id="路径" stroke="#61698C" transform="translate(7.993718, 5.506282) rotate(-135.000000) translate(-7.993718, -5.506282) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

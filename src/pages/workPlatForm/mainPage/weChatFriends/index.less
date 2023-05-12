@@ -1,0 +1,45 @@
+.tab{
+  :global{
+    .ant-tabs-tab{
+      padding: 16px 24px !important;
+      margin-right: 0 !important;
+      font-size: 14px;
+      color: #61698C;
+      &:hover{
+        color:#244FFF;
+      }
+    }
+    .ant-tabs-bar{
+      background: #FFFFFF;
+      border-radius: 1px;
+      border-bottom: 1px solid #EAECF2;
+      margin: 0 0 8px 0 !important;
+    }
+    .ant-tabs-tab-active{
+      color: #244FFF;
+      font-weight: bold;
+      position: relative;
+      &::after{
+        content: '';
+        background-color: #244FFF;
+        width: 40%;
+        height: 3px;
+        position: absolute;
+        bottom: -3px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+    .ant-tabs-ink-bar{
+      display: none !important;
+    }
+    .ant-tabs-top-content{
+      height: 100%;
+    }
+  }
+
+}
+
+.iframe {
+  border: 1px solid #D1D5E6;
+}

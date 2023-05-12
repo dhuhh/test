@@ -1,0 +1,300 @@
+.MyRowHeight{
+  height: calc(100vh-273px);
+}
+//左侧样式
+.left-bar {
+  //background-color: #244FFF;
+  display: flex;
+  align-items: center;
+  height: 5.33rem;
+  padding: 1.33rem 2rem;
+}
+.list {
+  //background-color: #b1bff5;
+  :global {
+    .ant-list-pagination{
+      background-color: #244FFF;
+      margin-top: 250px;
+    }
+    .ant-list-item {
+      padding: 0;
+      color: #1A2243;
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.listItem {
+  height: 3rem;
+  padding: 8px 2rem;
+  display: flex;
+}
+
+.listItem-active {
+  color: #244FFF !important;
+  background-color: #F7F8FC;
+  border-right: 2px solid #244FFF;
+}
+
+.listItem-one {
+  width: 100%;
+  height: 3.67rem;
+  padding-top: 1.33rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-image: url(../../../../../assets/item_bg.png);
+  border: 0;
+  border-radius: 0;
+}
+
+//右侧样式
+.right-container {
+  padding: 0 2rem;
+}
+
+.right-header {
+  display: flex;
+  height: 5.33rem;
+  border-bottom: 1px solid #EAEEF2;
+
+  div:first-child {
+    flex: 1;
+    font-size: 16px;
+    color: #1A2243;
+    font-weight: bold;
+    padding: 1.75rem 0;
+    height: 22px;
+    line-height: 22px;
+  }
+
+  div:last-child {
+    color: #1A2243;
+    padding: 1.33rem 0;
+
+  }
+}
+
+.ax-btn {
+  :global {
+    .ant-btn {
+      color: #244FFF;
+      border-radius: 2px;
+      border-color: #244FFF;
+    }
+
+  }
+}
+
+.content-detail {
+  color: #61698C;
+  margin-top: 1.33rem;
+
+  span:first-child {
+    color: #1A2243;
+    font-weight: bold;
+  }
+}
+
+.content-title {
+  height: 1.33rem;
+  line-height: 1.33rem;
+  font-size: 1.33rem;
+  font-weight: bold;
+  color: #1A2243;
+  text-indent: 4px;
+  margin-top: 4rem;
+  border-left: 4px solid #244FFF;
+}
+
+//弹窗
+.ax-modal {
+  :global {
+    .ant-modal-content {
+      color: #61698C;
+    }
+
+    .ant-modal-title {
+      font-size: 1.33rem;
+      font-weight: bold;
+      color: #1A2243;
+    }
+
+    .ant-btn {
+      color: #61698C;
+      border-radius: 2px;
+      border: 1px solid #D1D5E6;
+    }
+
+    .ant-btn-primary {
+      color: #fff;
+      background-color: #244FFF;
+    }
+  }
+}
+
+.ax-form {
+
+  :global {
+    .ant-form {
+      label {
+        color: #1A2243 !important;
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 1.33rem;
+    }
+
+    .ant-input {
+      color: #1A2243;
+      border-radius: 2px;
+      border: 1px solid #D1D5E6;
+
+      &:focus {
+        border-color: #244FFF;
+      }
+
+      &:hover {
+        border-color: #244FFF;
+      }
+    }
+
+    //select组件
+    .ant-select-selection--multiple {
+      white-space: nowrap;
+      width: 100%;
+      height: 32px;
+      overflow: hidden;
+    }
+
+    .ant-select-selection-selected-value {
+      color: #1A2243;
+    }
+
+    .ant-select-selection {
+      border-radius: 2px;
+
+      &:focus {
+        border-color: #244FFF !important;
+      }
+
+      &:hover {
+        border-color: #244FFF !important;
+      }
+    }
+
+    .ant-select-dropdown-menu-item {
+      // color: #244FFF;
+      &:hover {
+        background-color: #F0F1F5 !important;
+      }
+
+      &:focus {
+        background-color: #92A7FF;
+        border-color: #92A7FF;
+      }
+
+      &:hover {
+        background-color: #92A7FF;
+      }
+    }
+
+    .ant-select-dropdown-menu-item-active {
+      background-color: #92A7FF;
+    }
+
+    .ant-select-dropdown-menu-item-selected {
+      color: #244FFF  !important;
+    }
+
+    .ant-select-selection__rendered {
+      // ul {
+      //   display:block;
+      //   overflow:hidden;
+      //   white-space:nowrap;
+      // }
+      li:nth-child(2) {
+        // background-color: #fff;
+        // border: none;
+        // float: right;
+      }
+
+      .ant-select-selection__choice {
+        color: #1A2243;
+      }
+    }
+
+    //select 选项前的勾选框
+    .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item {
+      padding-left: 26px;
+      padding-right: 8px;
+
+      .ant-select-selected-icon {
+        // left: 8px;
+        right: 8px;
+        font-family: "iconfont" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #74819E;
+        transform: none;
+        text-shadow: none;
+
+        &::after {
+          content: "\e763";
+        }
+
+        svg {
+          display: none;
+        }
+      }
+
+      &.ant-select-dropdown-menu-item-selected {
+        .ant-select-selected-icon {
+          &::after {
+            color: #244FFF;
+            content: "\e762";
+          }
+        }
+      }
+    }
+
+    //checkBox
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner {
+      border-color: #244FFF !important;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      color: #fff;
+      background-color: #244FFF;
+    }
+
+    .ant-checkbox-wrapper {
+      padding-top: 1.33rem;
+    }
+
+    .ant-checkbox+span {
+      padding-right: 0;
+    }
+  }
+}
+
+//树型展示样式
+.tree-node {
+  font-size: 14px;
+  color: #61698C;
+  border-radius: 2px;
+  padding: 4px 6px !important;
+  background-color: #F7F8FC;
+
+}
+.ant-modal-confirm-btns .ant-btn{
+  height: 32px !important;
+}

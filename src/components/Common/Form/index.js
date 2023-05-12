@@ -230,9 +230,9 @@ class Form extends React.Component {
       const { className, action } = item;
       switch (action) {
         case 'Search':
-          return <button onClick={this.handleSearch} className={`${className || 'm-btn-radius m-btn-pink ant-btn'}`}>查询</button>;
+          return <button onClick={this.handleSearch} className={`${className || 'm-btn-radius m-btn-headColor ant-btn'}`}>查询</button>;
         case 'Save':
-          return <button onClick={this.handleSave} type="button" className="m-btn-radius m-btn-radius-small ant-btn m-btn-gray" style={{ marginLeft: '1rem' }}><i className="iconfont icon-preservation" /></button>;
+          return <button onClick={this.handleSave} type="button" className="m-btn-radius m-btn-radius-small ant-btn m-btn-headColor" style={{ marginLeft: '1rem' }}><i className="iconfont icon-preservation" /></button>;
         default:
           return null;
       }

@@ -43,7 +43,7 @@ export default class FetchDataTable extends React.Component {
   }
   // 获取table的数据
   fetchTableData = ({ pagination = this.state.pagination, fetch }) => {
-    const { isPagination = true } = this.props;
+    const { isPagination = true, handleDataSource } = this.props;
     const { type = 1, service, params = {} } = fetch; // type为请求数据的方式,默认为1请求service,以后可以新增其它方式
     if (service) {
       const finalParams = { ...params, ...isPagination ? { paging: 1, total: -1, ...pagination } : {} };
@@ -61,6 +61,10 @@ export default class FetchDataTable extends React.Component {
                 dataSource = res;
               }
             });
+          }
+          // 额外的数据处理方法
+          if (handleDataSource) {
+            dataSource = handleDataSource(dataSource);
           }
           const { current, pageSize } = finalParams;
           this.setState({ loading: false, dataSource, chosenRowKey: '', pagination: { ...pagination, current, pageSize, total } });
@@ -88,47 +92,15 @@ export default class FetchDataTable extends React.Component {
   }
   // 选择状态改变时的操作
   handleSelectChange = (currentSelectedRowKeys, selectedRows, currentSelectAll) => {
-    // 处理选则的回调
     const { rowSelection = {} } = this.props;
     const { onChange } = rowSelection;
-    const { rowKey = 'id' } = this.props;
-    const { dataSource = [] } = this.state;
-    const selectResult = [];
-    let selectAll = currentSelectAll;
-    // 生成选中数据
-    // 非全选的数据渲染
-    if (!currentSelectAll) {
-      currentSelectedRowKeys.forEach((item) => {
-        selectResult.push(item);
-      });
-    }
-    // 全选操作的数据
-    if (currentSelectAll && !currentSelectedRowKeys) {
-      dataSource.forEach((item) => {
-        selectResult.push(item[rowKey]);
-      });
-    }
-    // 全选中后点击单个取消时的操作
-    if (currentSelectAll && currentSelectedRowKeys) {
-      dataSource.forEach((item) => {
-        if (selectedRows.indexOf(item) === -1) {
-          selectResult.push(item[rowKey]);
-        }
-      });
-    }
-    // 判断组件是否全选
-    if (selectResult.length === dataSource.length) {
-      selectAll = true;
-    } else {
-      selectAll = false;
-    }
     if (onChange) {
-      onChange(currentSelectedRowKeys, selectResult, selectAll);
+      onChange(currentSelectedRowKeys, selectedRows, currentSelectAll);
     }
     // 处理当前的选择状态效果
     const { selectDatas } = this.state;
-    selectDatas.selectAll = selectAll;
-    selectDatas.selectedRowKeys = selectAll ? [] : selectResult;
+    selectDatas.selectAll = currentSelectAll;
+    selectDatas.selectedRowKeys = currentSelectedRowKeys;
     this.setState({ selectDatas });
   }
   handleRow = (record) => {
@@ -171,7 +143,7 @@ export default class FetchDataTable extends React.Component {
   }
   render() {
     const { rowClassName = true, chosenRowKey: chosenRowKeyInState, loading, pagination, selectDatas: selectDatasInstate, dataSource } = this.state;
-    const { rowKey = 'id', className = '', chosenRowKey = chosenRowKeyInState, rowSelection, isPagination = true, ...restProps } = this.props;
+    const { rowKey = 'id', className = '', chosenRowKey = chosenRowKeyInState, rowSelection, isPagination = true, pagerDefaultClassName = 0, ...restProps } = this.props; // pagerDefaultClassName 分页默认样式 0: 使用m-paging样式|1：使用蚂蚁默认样式
     const basicDataTableProps = {
       ...restProps,
       loading,
@@ -179,12 +151,12 @@ export default class FetchDataTable extends React.Component {
       className: classnames(className),
       dataSource,
       pagination: {
-        className: 'm-paging',
+        className: pagerDefaultClassName === 0 ? 'm-paging' : '',
         showTotal: total => `共${total}条`,
         showLessItems: true,
         showSizeChanger: true,
-        showQuickJumper: true,
-        showSinglePager: true,
+        showQuickJumper: false,
+        showSinglePager: false,
         ...pagination,
       },
       isPagination,

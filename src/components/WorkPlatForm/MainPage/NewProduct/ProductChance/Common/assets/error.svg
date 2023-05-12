@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tishi/_cuowu</title>
+    <g id="通用组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="通知" transform="translate(-664.000000, -455.000000)">
+            <g id="通知/提示通知/错误" transform="translate(640.000000, 440.000000)">
+                <g id="错误提示" transform="translate(24.000000, 15.000000)">
+                    <circle id="椭圆形" fill="#EC3A48" cx="8" cy="8" r="8"></circle>
+                    <g id="common_nav_icon_close" transform="translate(2.181818, 2.181818)">
+                        <rect id="矩形" x="0" y="0" width="11.6363636" height="11.6363636"></rect>
+                        <g id="编组-2" transform="translate(2.181818, 2.181818)" stroke="#FFFFFF" stroke-linecap="round" stroke-width="2">
+                            <line x1="3.94036579" y1="-0.673400673" x2="3.53061903" y2="8.07121358" id="路径-4备份" transform="translate(3.735492, 3.698906) scale(-1, 1) rotate(-45.000000) translate(-3.735492, -3.698906) "></line>
+                            <line x1="3.90857709" y1="-0.673400673" x2="3.49883032" y2="8.07121358" id="路径-4备份-2" transform="translate(3.703704, 3.698906) rotate(-45.000000) translate(-3.703704, -3.698906) "></line>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

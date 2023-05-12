@@ -1,0 +1,150 @@
+.edit-container {
+  display: flex;
+  margin-top: 8px;
+  position: relative;
+  :global {
+    .ant-spin-nested-loading {
+      flex: 1;
+    }
+  }
+}
+.left-container {
+  margin-right: .67rem;
+  height: 250px;
+  background-color: #F9FAFB;
+  border: 1px solid #D1D5E6;
+  :global {
+    .ant-input {
+      font-size: 12px;
+      height: 25px;
+      line-height: 25px;
+    }
+  }
+}
+
+.right-container {
+  //min-height: 100px !important;
+  // flex: 1;
+  width: 40%;
+  padding: 4px 8px 0 8px;
+  background-color: #F9FAFB;
+  border: 1px solid #D1D5E6;
+}
+
+.scroll-container {
+  height: 78% !important;
+
+  :global {
+    .ant-tree-switcher-icon {
+      font-size: 14px !important;
+      color: #1A2243;
+    }
+    .ant-tree-title{
+      font-size: 12px;
+    }
+
+    .ant-tree li .ant-tree-node-content-wrapper.ant-tree-node-selected {
+      background-color: #F3F4F7;
+    }
+    .ant-tree li .ant-tree-node-content-wrapper {
+      margin-left: -10px;
+      &:hover {
+        background-color: #F3F4F7;
+      }
+    }
+  }
+
+}
+
+.row-btn {
+  font-size: 16px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  height: 2.67rem;
+  width: 100%;
+  // text-indent: -2px;
+  // text-align: center;
+  margin-bottom: 5px;
+  box-shadow: inset 0px -2px 0px 0px rgba(219, 222, 233, 1) !important;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: 2px;
+
+  &:hover {
+    background-color: #E1E2E8 !important;
+    border-color: #E1E2E8 !important;
+    color: #61698C !important;
+  }
+}
+
+.MyeditDiv {
+  padding-top: 5px !important;
+  line-height: 25px !important;
+  :global{
+    .ant-tag{
+      height: 24px;
+      margin-right: 2px !important;
+      background: #F0F1F5;
+      border-radius: 1px;
+      border: 1px solid #F0F1F5;
+    }
+    .ant-tag:hover{
+      :global{
+        .anticon-close{
+          display: inline-block;
+        }
+      }
+    }
+    .anticon-close{
+      display: none;
+    }
+  }
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 70px;
+  min-width: 100%;
+  min-width: 40px;
+  border: 1px solid #D1D5E6;
+  border-radius: 2px;
+  // color: cadetblue;
+  
+  overflow-y: auto;
+
+  
+  &:focus {
+    border-color: red;
+    box-shadow: none;
+  }
+}
+.MyeditDiv:hover{
+  transition: .2s;
+  border: 1px solid #244FFF;
+}
+
+.editDiv {
+  height: 6rem;
+  color: #1A2243;
+  font-size: 14px;
+  overflow-y: auto;
+  border: 1px solid #D1D5E6;
+  border-radius: 2px;
+  line-height: 2rem;
+  padding: 8px;
+  &:focus {
+    outline: none;
+    border-color: #244ff2 !important;
+    border-right-width: 1px !important;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+  }
+  &:empty::before {
+      content: attr(placeholder);
+      font-size: 14px;
+      color: #CCC;
+      line-height: 2rem;
+      padding-top: 1.67rem;
+  }
+}
+.editDiv:empty::before{
+  color: #959CBA !important;
+}

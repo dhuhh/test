@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_zhfx_selected</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360icon更新" transform="translate(-249.000000, -242.000000)">
+            <g id="编组-137备份-5" transform="translate(212.000000, 28.000000)">
+                <g id="icon_zhfx_selected" transform="translate(37.000000, 214.000000)">
+                    <g id="编组-13备份-6" opacity="0">
+                        <g id="编组">
+                            <rect id="矩形" fill="#1A2243" x="0" y="0" width="22" height="22"></rect>
+                            <rect id="矩形" stroke="#979797" stroke-width="0.5" x="3.25" y="3.25" width="15.5" height="15.5"></rect>
+                        </g>
+                    </g>
+                    <g id="编组-3" transform="translate(2.500000, 1.484671)">
+                        <circle id="椭圆形" stroke="#1A2243" fill="#1A2243" cx="8.5" cy="9.51532897" r="8"></circle>
+                        <path d="M8.49943451,0 L8.49943451,9.01673311 C8.49943451,9.262193 8.67630967,9.46634148 8.90955888,9.50867744 L8.99943451,9.51673311 L17.8937155,9.51673311 L17.8937155,10.5167331 L8.99943451,10.5167331 C8.21973839,10.5167331 7.57898583,9.92184503 7.50630109,9.16119312 L7.49943451,9.01673311 L7.49943451,0 L8.49943451,0 Z" id="路径-26" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

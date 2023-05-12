@@ -1,0 +1,541 @@
+.aside {
+    // width: 275px;
+    background: #fff;
+    // height: calc(100vh - 169px);
+    // overflow-y: auto;
+    :global(.ant-tabs-bar ) {
+        margin: 0 24px;
+        border-bottom: 1px solid #EAECF2;
+    }
+    :global(.ant-tabs-ink-bar-animated) {
+        width: 36px!important;
+        margin-left: 15px!important;
+        background: #244FFF;
+        position: relative;
+        // top: 8px;
+    }
+    :global(.ant-tabs-nav-scroll) {
+        height: 50px;
+    }
+    :global(.ant-tabs-bar) {
+        margin-bottom: 0;
+    }
+    :global( .ant-tabs-tab) {
+        padding-left: 0;
+        font-size: 16px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        margin-right: 24px;
+        color: #1A2243;
+        &:hover {
+            color: #244FFF;
+        }
+        &:last-child {
+            // padding: 0;
+            // margin-left: 16px;
+            &:hover {
+                color: #1A2243;
+            }
+        }
+    }
+    :global(.ant-tabs-tab-active) {
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #244FFF;
+    }
+    :global(.rightInTag) {
+        display: inline-block;
+        width: calc(100% - 308px);
+        padding-left: 24px;
+        border-left: 1px solid #EAECF2;
+        :global(.topInTag) {
+            height: 64px;
+            line-height: 64px;
+            margin-top: -16px;
+            border-bottom: 1px solid #EAEEF2 ;
+            :global(.tagTitle) {
+                font-size: 16px;
+                font-family: PingFangSC-Medium, PingFang SC;
+                font-weight: 500;
+                color: #1A2243;
+                line-height: 22px;
+            }
+            :global(.tagButton) {
+                width: 88px;
+                height: 32px;
+                border-radius: 2px;
+                border: 1px solid #244FFF!important;
+                color: #244FFF!important;
+            }
+        }
+        :global(.contentTag) {
+            overflow-y: auto;
+            height: calc(100vh - 278px);
+            &::-webkit-scrollbar {
+                width: 6px;
+                height: 58px;
+                }
+              &::-webkit-scrollbar-thumb {
+                background-color: rgba(26,34,67,0.5);
+                border-radius: 10px;
+                -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+                }
+                &:hover::-webkit-scrollbar-thumb {
+                  background-color: rgba(0,0,0,.2);
+                  border-radius: 10px;
+                  -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+                  }
+                &::-webkit-scrollbar-thumb:hover {
+                  background-color: rgba(0,0,0,.4);
+                  -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+                  }
+                &::-webkit-scrollbar-track {
+                  border-radius: 10px;
+                  -webkit-box-shadow: inset006pxrgba(0,0,0,0);
+                  background-color: white;
+                  }
+                &::-webkit-scrollbar-track:hover {
+                  -webkit-box-shadow: inset006pxrgba(0,0,0,.4);
+                  background-color: rgba(0,0,0,.01);
+                  }
+            :global(.tagStrong) {
+                font-size: 14px;
+                font-family: PingFangSC-Medium, PingFang SC;
+                font-weight: 400;
+                color:  #61698C;
+                margin-top: 16px;
+                :global(.appliant) {
+                   :global(.adCarry) {
+                       position: relative;
+                   }
+                   :global(.adCarry>.tagTitle) {
+                       margin-bottom: 16px;
+                    &:last-child {
+                        margin-bottom: 0!important;
+                    }
+                }
+                   :global(.tagTitle>.adCarry>.tagTitle>.adCarry>.tagTitle){
+                    &:last-child {
+                        ul>li{
+                            margin-bottom: 0!important;
+                        }
+                    }
+                   }
+                   :global(.tagTitle>.adCarry>.tagTitle>.adCarry>.tagTitle>.adCarry>.tagTitle){
+                    &:nth-last-child(n+2) {
+                        ul>li{
+                            margin-bottom: -8px!important;
+                        }
+                    }
+                   }
+                   :global(.tagTitle>.adCarry>.tagTitle>.adCarry>.tagTitle>.adCarry>.tagTitle){
+                    &:nth-last-child(n+2) {
+                        ul{
+                            :global(.tagTitle){
+                               // margin-bottom: -8px!important;&:la
+                               &:last-child {
+                                ul>li {
+                                    margin-bottom: 0!important;
+                                }
+                               }
+                            }
+                            
+                        }
+                    }
+                   }
+                }
+            }
+            :global(.tagAppli) {
+                ul li{
+                    &:last-child {
+                        margin-bottom: 0!important;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+.content {
+  //background-color: #244FFF;
+    overflow-y: auto;
+    overflow-x: hidden;
+    //max-height: calc(100vh - 278px);
+    height: calc(100vh - 200px);
+    // :global(.ant-menu-inline .ant-menu-submenu-title) {
+    //     width:283px;
+    // }
+    :global(.ant-menu-submenu-title) {
+        color:#1A2243
+    }
+    :global(.ant-menu-item) {
+        color: #61698C;
+    }
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 58px;
+        }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(26,34,67,0.5);
+        border-radius: 10px;
+        -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+        }
+        &:hover::-webkit-scrollbar-thumb {
+          background-color: rgba(0,0,0,.2);
+          border-radius: 10px;
+          -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+          }
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(0,0,0,.4);
+          -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+          }
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          -webkit-box-shadow: inset006pxrgba(0,0,0,0);
+          background-color: white;
+          }
+        &::-webkit-scrollbar-track:hover {
+          -webkit-box-shadow: inset006pxrgba(0,0,0,.4);
+          background-color: rgba(0,0,0,.01);
+          }
+    :global(.ant-menu-item-active) {
+       &:hover {
+           img {
+              content: url('../../../../../assets/customer/isRightBlue1.png');
+           }
+       }
+    }
+    :global(.ant-menu-submenu-title) {
+        i {
+            display: none;
+        }
+    }
+}
+.fontSolid {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #61698C;
+    margin-left: 6px;
+}
+.originTag {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #61698C;
+    margin-top: 8px;
+}
+
+.treeSelectTag {
+    :global(.ant-select-search__field) {
+        max-width: 154px!important;
+    }
+    :global(.ant-select-selection) {
+        height:32px;
+        :global(.ant-select-selection__choice) {
+            height:22px;
+            line-height: 22px;
+            padding-left: 6px;
+            margin-right: 6px;
+            color: #1A2243;
+            &:nth-child(4) {
+                padding-right: 0;
+                background-color: #fff;
+                font-size: 14px;
+                font-family: PingFangSC-Regular, PingFang SC;
+                font-weight: 400;
+                color: #FF6E30;
+                border: none;
+            }
+            
+        }
+        :global(.ant-select-search--inline) {
+            margin-top: -1px;
+            margin-right: 4px;
+            :global(.ant-select-search__field__wrap) {
+
+            }
+        }
+    }
+}
+.dropInline {
+    :global(.ant-select-tree-switcher) {
+        svg {
+            fill: #D1D5E6!important;
+        }
+    }
+    :global(.ant-select-tree-treenode-switcher-close) {
+        margin: 4px 0 0 0!important;
+    }
+    :global(.ant-select-tree-treenode-switcher-open) {
+        margin: 4px 0 0 0!important;
+    }
+    :global(.ant-select-tree-checkbox-checked .ant-select-tree-checkbox-inner) {
+        background: #244FFF;
+    }
+    :global(.ant-select-tree-checkbox-indeterminate .ant-select-tree-checkbox-inner) {
+        background: #244FFF;
+        opacity: 0.5;
+        &::after {
+            top: 50%;
+            left: 22%;
+            width: 5.71428571px;
+            height: 9.14285714px;
+            background-color: #244fff;
+            position: absolute;
+            display: table;
+            border: 2px solid #fff!important;
+            border-top: 0!important;
+            border-left: 0!important;
+            transform: rotate(45deg) scale(1) translate(-50%,-50%)!important;
+            opacity: 1;
+            transition: all .2s cubic-bezier(.12,.4,.29,1.46) .1s;
+            content: " ";
+        }
+    }
+}
+.modal_tag {
+    input::input-placeholder{color:  #959CBA;} 
+    ::-webkit-input-placeholder { /* WebKit browsers */ 
+    color: #959CBA; 
+    } 
+    :-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    color: #959CBA; 
+    } 
+    ::-moz-placeholder { /* Mozilla Firefox 19  */ 
+    color: #959CBA; 
+    } 
+    :-ms-input-placeholder { /* Internet Explorer 10  */ 
+    color: #959CBA; 
+  }
+    :global(.ant-modal-header) {
+        border-bottom: 1px solid #EAEEF2;
+    }
+    :global(.ant-modal-footer .ant-btn) {
+        width: 60px;
+        height: 32px;
+        border-radius: 2px;
+        border: 1px solid #D1D5E6;
+        padding: 0;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #61698C;
+        &:last-child {
+            background: #244FFF;
+            color: #fff;
+        }
+    }
+    :global(.ant-select-selection-selected-value) {
+        color:#61698C
+    }
+    :global(.ant-select-selection) {
+        border-radius: 2px;
+    }
+    // :global(.ant-select-selection__choice) {
+    //     color:#1A2243
+    // }
+}
+.textarea_className {
+    &::-webkit-scrollbar {
+        width: 6px;
+        height: 58px;
+        }
+      &::-webkit-scrollbar-thumb {
+        background-color: rgba(26,34,67,0.5);
+        border-radius: 10px;
+        -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+        }
+        // &:hover::-webkit-scrollbar-thumb {
+        //   background-color: rgba(0,0,0,.2);
+        //   border-radius: 10px;
+        //   -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+        //   }
+        &::-webkit-scrollbar-thumb:hover {
+          background-color: rgba(0,0,0,.4);
+          -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+          }
+        &::-webkit-scrollbar-track {
+          border-radius: 10px;
+          -webkit-box-shadow: inset006pxrgba(0,0,0,0);
+          background-color: white;
+          }
+        &::-webkit-scrollbar-track:hover {
+          -webkit-box-shadow: inset006pxrgba(0,0,0,.4);
+          background-color: rgba(0,0,0,.01);
+          }
+}
+.subTitle {
+    // height: 36px;
+    :global(.ant-menu-submenu-title) {
+        height: 36px!important;
+        line-height: 36px!important;
+        margin: 0;
+    }
+    :global(.ant-menu-item) {
+        height: 36px!important;
+        line-height: 36px!important;
+        margin: 0!important;
+        padding-left: 56px!important;
+    }
+}
+.selectInpo {
+    :global(.ant-select-selection) {
+        border-radius: 2px;
+        color:#1A2243;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+    }
+}
+.tagTypeNewlist {
+    height: 36px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    line-height: 36px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: space-between;
+    &:hover {
+        background: #F7F8FC;
+        color: #244FFF;
+        :global(.isShowInItem) {
+            display: inline-block;
+        }
+    }
+    :global(.isShowInItem){
+        display: none;
+        :global(.btnInItem) {
+            margin-right: 16px;
+            font-size: 12px;
+            &:nth-child(2) {
+                color:#EC3A48;
+            }
+            &:hover {
+                cursor:pointer
+            }
+        }
+    }
+}
+.hasSelectItem {
+    background: #F7F8FC;
+    color: #244FFF;
+}
+.addBtn {
+    width: 48px;
+    height: 32px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    border: 1px solid #D1D5E6;
+    padding: 0;
+    margin-left: 8px;
+    &:hover {
+        border: 1px solid #244FFF;
+        color: #244FFF;
+    }
+    &:active {
+        border: 1px solid #244FFF;
+        color: #244FFF;
+    }
+    &:focus {
+        border: 1px solid #244FFF;
+        color: #244FFF;
+    }
+}
+.editModal {
+    :global(.ant-modal-close){
+        top:-2px
+    }
+    :global(.ant-modal-header .ant-modal-title){
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #1A2243;
+    }
+    :global(.ant-modal-body) {
+        span{
+            font-size: 14px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #1A2243;
+            margin-right: 8px;
+        }
+    }
+    :global(.ant-modal-body .ant-input) {
+        width: 250px;
+        height: 32px;
+        background: #FFFFFF;
+        border-radius: 2px;
+        border: 1px solid #D1D5E6;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    :global(.ant-modal-footer .ant-btn){
+        width: 60px;
+        height: 32px;
+        box-shadow: 0px 0px 18px 0px rgba(5,14,28,0.13);
+        border-radius: 2px;
+        border: 1px solid #D1D5E6;
+        padding: 0;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #61698C;
+        text-shadow: 0px 0px 18px rgba(5,14,28,0.13);
+        &:nth-child(2){
+            background: #244FFF;
+            box-shadow: 0px 0px 18px 0px rgba(5,14,28,0.13);
+            color: #FFFFFF;
+        }
+    }
+    :global(.ant-modal-body .errorModal) {
+        border:1px solid red
+    }
+}
+
+.modalInToo {
+    :global(.fontInTag) {
+      font-size: 16px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #1A2243;
+      text-shadow: 0px 0px 18px rgba(5,14,28,0.13);
+    }
+    :global(.ant-modal-close-x) {
+      display: none;
+    }
+    :global(.ant-btn) {
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #FFFFFF;
+      text-shadow: 0px 0px 18px rgba(5,14,28,0.13);
+      background: #FFFFFF;
+      // box-shadow: 0px 0px 18px 0px rgba(5,14,28,0.13);
+      border-radius: 2px;
+      box-shadow: none;
+      padding: 0;
+    }
+  
+    // :global(.ant-modal-content) {
+    //   width: 100%;
+    //   height: 100%;
+    // }
+    // :global(.ant-modal-body) {
+    //   width: 300px;
+    //   padding: 0;
+    // }
+  }
+  .del:hover {
+    cursor: pointer;
+  }
+  .checkoutlist {
+    :global(.ant-checkbox){
+      margin-top: -2px;
+    }
+  }
+  

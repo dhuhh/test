@@ -2,33 +2,94 @@ import request from '../../utils/request';
 import config from '../../utils/config';
 
 const { api } = config;
-const {
-  commonbase: {
-    userTodoWorkflowNum,
-    userMenuProject,
-    userProjectUpdate,
-    dynamicReminder,
-    queryInnerObject,
-    downloadFile,
-    queryProcessNavigation,
-    queryOtherUsers,
-    downloadAttachmentOfDocumentByZip,
-    uploadProto,
-  },
-} = api;
+const { commonbase: { userMenuProject,
+  userDefaultProject,
+  userNoticeList,
+  userNoticeDtl,
+  userMsgRmdList,
+  userReadMsgRmd,
+  userUnreadMsgNum,
+  getNotification,
+  userProjectUpdate,
+  userShortcutMenuConfig,
+  queryShortcutMenu,
+  updateShortcutMenu,
+  userSuggest,
+  achieveAuthCode,
+  resetPassword,
+  qryLoginPageConf,
+  userWorkflowList,
+  uploadProto,
+  queryOtherUsers,
+  monitorTopologyInfoForEdit,
+  monitorTopologyInfoForView,
+  saveMonitorTopologyInfo,
+  queryOnlineUserInfo,
+  webserviceFrontEndConfig,
+  tokenAESEncode,
+  encryptAES,
+  getUrlAccessControl,
+  QueryLoginPageConf,
+} } = api;
 
-// 首页 -- 未读消息提醒数
-export async function FetchUserTodoWorkflowNum(payload) {
+// 首页 -- 获取公司公告
+export async function FetchUserNoticeList(payload) {
   const option = {
-    url: userTodoWorkflowNum,
+    url: userNoticeList,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+// 首页 -- 获取公告详情
+export async function FetchUserNoticeDtl(payload) {
+  const option = {
+    url: userNoticeDtl,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+// 首页 -- 获取消息提醒
+export async function FetchUserMsgRmdList(payload) {
+  const option = {
+    url: userMsgRmdList,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+// 首页 -- 阅读消息提醒
+export async function FetchUserReadMsgRmd(payload) {
+  const option = {
+    url: userReadMsgRmd,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
+// 首页 -- 未读消息提醒数
+export async function FetchUserUnreadMsgNum(payload) {
+  const option = {
+    url: userUnreadMsgNum,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+// 首页 -- 获取铃铛状态
+export async function FetcBellNum(payload) {
+  const option = {
+    url: getNotification,
+    method: 'get',
+    data: payload,
+  };
+  return request(option);
+}
+
 // 首页 -- 获取菜单
-export async function FetchUserMenuProject(payload) {
+export async function FetcUserMenuProject(payload) {
   const option = {
     url: userMenuProject,
     method: 'post',
@@ -36,9 +97,18 @@ export async function FetchUserMenuProject(payload) {
   };
   return request(option);
 }
+// 首页 -- 获取默认菜单 -- 弃用
+export async function FetcUserDefaultProject(payload) {
+  const option = {
+    url: userDefaultProject,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
 
 // 首页 -- 记录用户选择的菜单
-export async function FetchUserProjectUpdate(payload) {
+export async function FetCuserProjectUpdate(payload) {
   const option = {
     url: userProjectUpdate,
     method: 'post',
@@ -47,67 +117,87 @@ export async function FetchUserProjectUpdate(payload) {
   return request(option);
 }
 
-// 首页 -- 动态提醒
-export async function FetchUserNoticeList(payload) {
+// 目录 获取用户的快捷菜单配置
+export async function FetchuserShortcutMenuConfig(payload) {
   const option = {
-    url: dynamicReminder,
+    url: userShortcutMenuConfig,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
-// 获取内部对象
-export async function FetchQueryInnerObject(payload) {
+// 快捷菜单 获取所有的快捷菜单
+export async function FetchqueryShortcutMenuConfig(payload) {
   const option = {
-    url: `/product${queryInnerObject}`,
+    url: queryShortcutMenu,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
-// livebos附件下载
-export async function FetchDownloadFile(payload) {
+// 快捷菜单 更新用户勾选的快捷菜单
+export async function FetchupdateShortcutMenuConfig(payload) {
   const option = {
-    url: downloadFile,
+    url: updateShortcutMenu,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
-// 流程导航查询
-export async function FetchQueryProcessNavigation(payload) {
+// 快捷菜单 用户反馈意见
+export async function FetchUserSuggest(payload) {
   const option = {
-    url: queryProcessNavigation,
+    url: userSuggest,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
-// 获取人员其他用户
-export async function FetchQueryOtherUsers(payload) {
+// 获取短信验证码
+export async function FetchAchieveAuthCode(payload) {
   const option = {
-    url: queryOtherUsers,
+    url: achieveAuthCode,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
-// 产品文档打包下载
-export async function FetchDownloadAttachmentOfDocumentByZip(payload) {
+// 重置登录密码
+export async function FetchResetPassword(payload) {
   const option = {
-    url: downloadAttachmentOfDocumentByZip,
+    url: resetPassword,
     method: 'post',
     data: payload,
   };
   return request(option);
 }
 
-// 人员头像图片上传入口
+// 查询登录页面配置
+export async function FetchQryLoginPageConf(payload) {
+  const option = {
+    url: qryLoginPageConf,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 查询已办流程
+export async function FetchUserWorkflowList(payload) {
+  const option = {
+    url: userWorkflowList,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 上传头像
 export async function FetchUploadProto(payload) {
   const option = {
     url: uploadProto,
@@ -117,55 +207,103 @@ export async function FetchUploadProto(payload) {
   return request(option);
 }
 
-// 获取流程类型
-export async function FetchSysCommonTable(payload) {
-  const data = {
-    records: [
-      { ID: '1', TpNm: '0-5%(含)' },
-      { ID: '2', TpNm: '5-8%(含)' },
-      { ID: '3', TpNm: '8%以上' },
-    ],
-    code: 1,
-    total: 5,
+// 查询其它用户
+export async function FetchQueryOtherUsers(payload) {
+  const option = {
+    url: queryOtherUsers,
+    method: 'post',
+    data: payload,
   };
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
+  return request(option);
 }
 
-// 获取首页权限数据
-export async function FetchTimeType(payload) {
-  const data = {
-    records: [
-      { id: 1, name: '日' },
-      { id: 2, name: '周' },
-      { id: 3, name: '月' },
-    ],
-    code: 1,
-    total: 1,
+// 监控-查询拓扑图详情--编辑界面
+export async function FetchMonitorTopologyInfoForEdit(payload) {
+  const option = {
+    url: monitorTopologyInfoForEdit,
+    method: 'post',
+    data: payload,
   };
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
+  return request(option);
 }
 
-// 获取首页权限数据
-export async function FetchTags(payload) {
-  const data = {
-    records: [
-      { id: 1, name: '系统标签' },
-      { id: 2, name: '手工标签' },
-    ],
-    code: 1,
-    total: 2,
+// 监控-查询拓扑图详情--视图界面
+export async function FetchMonitorTopologyInfoForView(payload) {
+  const option = {
+    url: monitorTopologyInfoForView,
+    method: 'post',
+    data: payload,
   };
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
+  return request(option);
 }
+
+// 监控-保存拓扑图信息
+export async function FetchSaveMonitorTopologyInfo(payload) {
+  const option = {
+    url: saveMonitorTopologyInfo,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 监控--在线用户数趋势图
+export async function FetchQueryOnlineUserInfo(payload) {
+  const option = {
+    url: queryOnlineUserInfo,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 微前端子服务信息
+export async function fetchWebserviceFrontEndConfig(payload) {
+  const option = {
+    url: webserviceFrontEndConfig,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// token的AES加密接口
+export async function FetchTokenAESEncode(payload) {
+  const option = {
+    url: tokenAESEncode ,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// AES加密
+export async function FetchEncryptAES(payload) {
+  const option = {
+    url: encryptAES ,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 返回菜单路由(用于判断是否有页面权限)
+export async function FetchUrlAccessControl(payload) {
+  const option = {
+    url: getUrlAccessControl ,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 返回菜单路由(用于判断是否有页面权限)
+export async function FetchLoginPageConf(payload) {
+  const option = {
+    url: QueryLoginPageConf ,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+

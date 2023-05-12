@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Row, Col, Tree, List, Checkbox, Input } from 'antd';
+import { Row, Col, Tree, List, Checkbox, Input, Tooltip, Icon } from 'antd';
 import { SortableContainer, SortableElement, arrayMove } from 'react-sortable-hoc';
 import TreeUtils from '../../../utils/treeUtils';
 import styles from './index.less';
 
 const { TreeNode } = Tree;
 
-const SortableItem = SortableElement(({ item, selectedKeys, render, onRowClick }) => {
+const SortableItem = SortableElement(({ item, selectedKeys, render, onRowClick, renderListItemTitle }) => {
   const { key, title, disabled = false } = item;
   return (
     <a className={styles.listItem} herf="#" onClick={e => onRowClick(e, key)}>
       <List.Item>
         <List.Item.Meta
           avatar={<Checkbox key={key} disabled={disabled} checked={selectedKeys.includes(key)} />}
-          description={render ? render(item) : title}
+          description={render ? render(item) : renderListItemTitle(key, title)}
         />
       </List.Item>
     </a>
@@ -28,7 +28,7 @@ const SortableList = SortableContainer(({ items, rightClassName, renderHeader, .
       itemLayout="horizontal"
       header={renderHeader()}
     >
-      <div style={{ height: '380px', overflowY: 'auto' }}>
+      <div id="sortContainer" style={{ height: '380px', overflowY: 'auto' }}>
         {items.map((item, index) => (
           <SortableItem key={item.key} index={index} item={item} {...itemParams} />
         ))}
@@ -75,6 +75,10 @@ class TreeItemTransfer extends Component {
     // 默认不改动 state
     return null;
   }
+  getContainer = () => {
+    const Content = document.getElementById('sortContainer');
+    return Content;
+  }
   // 搜索
   onSearchChange = (e) => {
     const { value } = e.target;
@@ -90,7 +94,7 @@ class TreeItemTransfer extends Component {
     const addKeys = checkedKeys.filter(key => !curSelKeys.includes(key) && this.isLeaf(key)); // 新增的项
     const currentSelectedKeys = selectedKeys.filter(key => !delKeys.includes(key));
     currentSelectedKeys.push(...addKeys);
-    const currentSelectedTitles = currentSelectedKeys.map(key => dataSource.find(item => item[keyName] === key)[titleName] || '');
+    const currentSelectedTitles = currentSelectedKeys.map(key => (dataSource.find(item => item[keyName] === key) || {})[titleName] || '');
     this.setState({ selectedKeys: currentSelectedKeys, selectedTitles: currentSelectedTitles });
     this.triggerChange({ selectedKeys: currentSelectedKeys, selectedTitles: currentSelectedTitles });
   }
@@ -171,11 +175,11 @@ class TreeItemTransfer extends Component {
       const { key, title, children } = node;
       // 叶子节点
       if (!children) {
-        return <TreeNode key={key} title={title} />;
+        return <TreeNode key={key} title={this.renderTitle(key, title)} />;
       }
       // 非叶子节点
       return (
-        <TreeNode key={key} title={title}>
+        <TreeNode key={key} title={this.renderTitle(key, title)}>
           {
             this.getTreeNode(children)
           }
@@ -183,6 +187,26 @@ class TreeItemTransfer extends Component {
       );
     });
   }
+
+  // 渲染口径说明(2020/7/17-新需求)
+  renderTitle = (key, title) => {
+    let node = title;
+    const { dataSource = [], keyName = 'jdid' } = this.props;
+    const data = dataSource.find(m => key === m[keyName]) || {};
+    const { kjsm = '' } = data;
+    if (kjsm) {
+      node = (
+        <React.Fragment>
+          <span>{title}</span>
+          <Tooltip placement="bottomLeft" title={<div dangerouslySetInnerHTML={{ __html: kjsm.replace(/(\r\n|\n|\r)/gm, "<br />") }} />}>
+            <Icon style={{ marginRight: '1.5rem', marginLeft: '0.333rem' }} type="question-circle" />
+          </Tooltip>
+        </React.Fragment>
+      )
+    }
+    return node;
+  }
+
   // 判断是否是叶子节点
   isLeaf = (key) => {
     const { pKeyName = 'pid', dataSource = [] } = this.props;
@@ -228,7 +252,7 @@ class TreeItemTransfer extends Component {
         <List.Item>
           <List.Item.Meta
             avatar={<Checkbox key={key} disabled={disabled} checked={selectedKeys.includes(key)} />}
-            description={render ? render(item) : title}
+            description={render ? render(item) : this.renderTitle(key, title)}
           />
         </List.Item>
       </a>
@@ -237,6 +261,7 @@ class TreeItemTransfer extends Component {
   render() {
     const { treeNodesData, selectedKeys, searchValue = '' } = this.state;
     const { className, leftClassName, rightClassName, defaultExpandAll = false, sortable = false, render, dataSource } = this.props;
+    const treeClass = 'm-tree';
     let treeDatas = [];
     let treeCheckedKeys = [];
     if (searchValue !== '') {
@@ -263,7 +288,7 @@ class TreeItemTransfer extends Component {
                   defaultExpandAll={searchValue !== '' ? true : defaultExpandAll}
                   defaultExpandedKeys={treeDatas[0] ? [treeDatas[0].key] : []}
                   // selectedKeys={selectedKeys}
-                  className={classnames(styles.tree, leftClassName)}
+                  className={classnames(styles.tree, leftClassName, treeClass)}
                   // onSelect={this.handleTreeSelect}
                 >
                   {
@@ -288,6 +313,8 @@ class TreeItemTransfer extends Component {
                   selectedKeys={selectedKeys}
                   render={render}
                   onRowClick={this.onRowClick}
+                  getContainer={this.getContainer}
+                  renderListItemTitle={this.renderTitle}
                 />
               </div>
             ) : (

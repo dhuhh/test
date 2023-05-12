@@ -1,0 +1,100 @@
+/* .allInLef>div>ul>li {
+    position: unset;
+} */
+.allInLef>div>ul>li>ul>li>.ant-select-tree-switcher-noop {
+    width: 2px;
+}
+.productIdList>div>ul>li>ul>li>.ant-select-tree-switcher-noop {
+    width: 24px;
+}
+.allInLef>div>ul>li>.ant-select-tree-checkbox {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.allTree>div>ul>li>.ant-select-tree-switcher{
+   visibility: hidden;
+}
+.newTreeSelect .ant-select-selection {
+    height: 32px;
+}
+.newTreeSelect .ant-select-selection__rendered {
+   margin: 0;
+}
+.newTreeSelect .ant-select-selection__clear {
+    top: 16px !important;
+}
+.speedToRig ul li {
+    position: relative;
+}
+.speedToRig ul li .ant-select-tree-checkbox {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+}
+.allInRig.speedToRig .ant-select-tree li .ant-select-tree-node-content-wrapper {
+   width: calc(100% - 64px)!important;
+   white-space:nowrap;
+   overflow:hidden;
+   text-overflow:ellipsis;
+} 
+.allSele.productIdList>span>ul>.ant-select-selection__choice {
+    padding-right: 8px;
+}
+.closePro:hover {
+   cursor: pointer;
+}
+ .newTreeSelect .ant-select-selection__choice{
+    height: 22px!important;
+    background: #F0F1F5;
+    border-radius: 1px!important;
+    padding-left: 6px!important;
+    margin: 5px 0px 5px 4px!important;
+}
+.newTreeSelect .ant-select-selection__choice__content,.ant-select-selection__choice__remove {
+    height: 20px!important;
+    line-height: 20px!important;
+    font-size: 14px!important;
+    font-weight: 400;
+    color: #1A2243;
+}
+.newTreeSelect .ant-select-selection__choice {
+    background: red;
+}
+.ant-select-selection__rendered .ant-select-selection__choice:nth-child(4){ 
+   border: none;
+   background-color: transparent;
+   padding-right: 0px;
+}
+.newTreeSelect .ant-select-search--inline {
+    margin-top: 6px!important;
+    margin-left: 10px!important;
+    margin-right: 2px!important;
+}
+.allInLef .ant-select-tree-checkbox-indeterminate  .ant-select-tree-checkbox-inner::after{
+    position: absolute;
+    display: table;
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(45deg) scale(1) translate(-50%, -50%);
+    opacity: 1;
+    background-color: #244FFF;
+    width: 5.71428571px;
+    height: 9.14285714px;
+    transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+    content: ' ';
+      top: 50%;
+      left: 22%;
+}
+.allInLef .ant-select-tree-checkbox-indeterminate  .ant-select-tree-checkbox-inner {
+    background: #244FFF;
+    box-shadow: 0px 0px 12px 0px rgba(5,14,28,0.26);
+    border-radius: 1px;
+    opacity: 0.5;
+}
+.cantProduct .ant-select-tree-node-content-wrapper-normal {
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}

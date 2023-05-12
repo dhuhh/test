@@ -12,9 +12,13 @@ class BetweenMonthPicker extends Component {
     super(props);
     let leftValue = '';
     let rightValue = '';
-    const { defaultValue = '', value = '' } = props;
-    if (value !== '' && typeof value === 'object') { // 受控
+    const { defaultValue = '', value = '', iniType = true } = props;
+    if (value === '' && defaultValue !== '' && typeof value === 'object') { // 非受控,传入默认值
       const { leftValue: sm = '', rightValue: em = '' } = defaultValue;
+      leftValue = sm;
+      rightValue = em;
+    } else if (value !== '' && typeof value === 'object') { // 受控
+      const { leftValue: sm = '', rightValue: em = '' } = value || {};
       leftValue = sm;
       rightValue = em;
     }
@@ -30,28 +34,20 @@ class BetweenMonthPicker extends Component {
       leftValue,
       rightValue,
     };
-    this.triggerChange({ leftValue, rightValue });
+    if (iniType) {
+      this.triggerChange({ leftValue, rightValue });
+    }
   }
-  static getDerivedStateFromProps(nextProps, prevState) {
+  componentWillReceiveProps(nextProps) {
     let { leftValue = '', rightValue = '' } = nextProps.value || {};
-    const { leftValue: leftValueInstate = '', rightValue: rightValueInstate = '' } = prevState || {};
+    const { leftValue: leftValueInstate = '', rightValue: rightValueInstate = '' } = this.state;
     // 开始月份
     if (leftValue !== '' && !moment.isMoment(leftValue)) { // 传入非moment对象,那么就解析一下
-      const m = moment(leftValue, ['YYYYMM', 'YYYY-MM', 'YYYY/MM', 'YYYY年MM月']);
-      if (m.isValid()) {
-        leftValue = m;
-      } else {
-        leftValue = '';
-      }
+      leftValue = this.normalizeValue(leftValue);
     }
     // 结束月份
     if (rightValue !== '' && !moment.isMoment(rightValue)) { // 传入非moment对象,那么就解析一下
-      const m = moment(rightValue, ['YYYYMM', 'YYYY-MM', 'YYYY/MM', 'YYYY年MM月']);
-      if (m.isValid()) {
-        rightValue = m;
-      } else {
-        rightValue = '';
-      }
+      rightValue = this.normalizeValue(rightValue);
     }
     let changed = false;
     if (moment.isMoment(leftValue) !== moment.isMoment(leftValueInstate) || moment.isMoment(rightValue) !== moment.isMoment(rightValueInstate)) {
@@ -62,13 +58,11 @@ class BetweenMonthPicker extends Component {
       changed = true;// 结束时间 如果都是moment对象,但是不是一样的,很显然发生了改变
     }
     if (changed) {
-      return {
+      this.setState({
         leftValue,
         rightValue,
-      };
+      });
     }
-    // 默认不改动 state
-    return null;
   }
   // 把日期格式化为moment格式,如果格式不正确,则设置为空字符串
   normalizeValue = (value) => {
@@ -117,20 +111,20 @@ class BetweenMonthPicker extends Component {
   }
   render() {
     const { leftValue = '', rightValue = '' } = this.state;
-    const { className, allowClear = true } = this.props;
+    const { className, allowClear = true, inputWidth = '48%', separatorWidth = '4%', separator = '-' } = this.props;
     return (
-      <InputGroup className={classnames(className)} compact>
+      <InputGroup style={{ lineHeight: '1rem' }} className={classnames(className)} >
         <MonthPicker
-          style={{ width: '48%' }}
+          style={{ width: inputWidth }}
           allowClear={allowClear}
           value={leftValue === '' ? null : leftValue}
           placeholder="开始月份"
           disabledDate={this.handleLeftDisabledDate}
           onChange={this.handleLeft}
         />
-        <span style={{ width: '4%', lineHeight: '2.5rem', textAlign: 'center' }}>-</span>
+        <span style={{ width: separatorWidth, display: 'inline-block', position: 'relative', bottom: '1.2rem', textAlign: 'center',  }}>{separator}</span>
         <MonthPicker
-          style={{ width: '48%' }}
+          style={{ width: inputWidth }}
           allowClear={allowClear}
           value={rightValue === '' ? null : rightValue}
           placeholder="结束月份"

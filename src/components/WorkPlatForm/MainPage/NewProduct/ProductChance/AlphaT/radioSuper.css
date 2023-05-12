@@ -1,0 +1,38 @@
+.active-btn {
+    color:#244fff;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #244FFF;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #244FFF;
+    padding: 6px;
+    line-height: 20px;
+    margin-left: 8px;
+    /* display: unset; */
+    min-width: 40px;
+    text-align: center;
+}
+.as-btn {
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #D1D5E6;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    padding: 6px;
+    line-height: 20px;
+    margin-left: 8px;
+    /* display: unset; */
+    min-width: 40px;
+    text-align: center;
+}
+.active-btn:hover,
+.as-btn:hover {
+    cursor: pointer;
+}
+.up-btn {
+    display: inline-flex;
+}

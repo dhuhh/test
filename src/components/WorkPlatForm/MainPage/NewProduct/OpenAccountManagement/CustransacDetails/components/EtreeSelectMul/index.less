@@ -1,0 +1,120 @@
+.eTreeSelectMul {
+  :global(.ant-select-search__field) {
+    color: #1a2243 !important;
+  }
+  :global(.ant-select-selection-selected-value) {
+    color: #1a2243 !important;
+  }
+
+  :global(.ant-select-selection__rendered) {
+    line-height: 30px;
+    height: 30px;
+    li {
+      height: 22px !important;
+      line-height: 20px !important;
+      margin: 0 !important;
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+      margin-right: 4px !important;
+    }
+  }
+
+  :global(.ant-select-selection__rendered) li ~ li {
+    background-color: #fff !important;
+    border: none;
+    padding: 0 10px 0 0;
+    float: right;
+  }
+
+  :global(.ant-select-selection__choice) {
+    padding: 1px 6px 1px 6px;
+    color: #1a2243 !important;
+    border: none;
+    .ant-select-selection__choice__content {
+      line-height: 20px !important;
+    }
+  }
+
+  :global(.ant-select-selection__choice .ant-select-selection__choice__remove) {
+    display: none;
+  }
+
+  :global(.ant-select-selection__clear) {
+    opacity: 1;
+    margin-top: -8px;
+    svg {
+      width: 16px;
+      height: 16px;
+      color: #f0f1f5;
+      &:hover {
+        color: #d1d5e6 !important;
+      }
+    }
+  }
+  :global {
+    .ant-select-selection--single,
+    .ant-select-selection--multiple {
+      height: 32px;
+      min-width: 250px;
+      border-radius: 2px;
+    }
+    .ant-select-switcher-icon svg {
+      width: 16px;
+      height: 16px;
+      color: #1a2243;
+    }
+    .ant-select-tree-checkbox-inner {
+      border-color: #74819e;
+      border-radius: 1px;
+    }
+    .ant-select-tree-checkbox-indeterminate {
+      .ant-select-tree-checkbox-inner {
+        background-color: #92a7ff;
+        border-color: #92a7ff;
+        &::after {
+          top: 50%;
+          left: 22%;
+          width: 5.71428571px;
+          height: 9.14285714px;
+          background-color: #92a7ff;
+          position: absolute;
+          display: table;
+          border: 2px solid #fff;
+          border-top: 0;
+          border-left: 0;
+          transform: rotate(45deg) scale(1) translate(-50%, -50%);
+          opacity: 1;
+          transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+          content: " ";
+        }
+      }
+    }
+    .ant-select-tree-checkbox-checked {
+      &::after {
+        border-color: #244fff;
+      }
+      .ant-select-tree-checkbox-inner {
+        background-color: #244fff;
+        border-color: #244fff;
+      }
+    }
+    .ant-select-tree-checkbox-checked:hover,
+    .ant-select-tree-checkbox:hover {
+      .ant-select-tree-checkbox-inner {
+        border-color: #244fff;
+      }
+    }
+  }
+  :global(.ant-select-tree li .ant-select-tree-node-content-wrapper) {
+    color: #1a2843;
+    &:hover {
+      background-color: #f7f8fc;
+    }
+  }
+  :global(.ant-select-tree
+      li
+      .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected) {
+    background-color: #fff !important;
+    color: #244fff !important;
+  }
+}

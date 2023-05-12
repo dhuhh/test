@@ -1,0 +1,356 @@
+.Epagination {
+  :global {
+    .ant-pagination-item {
+      border-radius: 2px;
+      margin-right: 10px;
+      height: 30px;
+      min-width: 30px;
+      border-color: #d1d5e6;
+      font-size: 16px;
+      a {
+        color: #61698c;
+      }
+      &:hover {
+        color: #244fff;
+        border-color: #244fff;
+        a {
+          color: #244fff;
+        }
+      }
+      &:focus {
+        color: #244fff;
+        border-color: #244fff;
+        a {
+          color: #244fff;
+        }
+      }
+    }
+    .ant-pagination-item-ellipsis {
+      color: #61698c !important;
+    }
+    .ant-pagination-disabled a {
+      color: #cacddc !important;
+    }
+    .ant-pagination-prev,
+    .ant-pagination-next {
+      height: 30px;
+      min-width: 30px;
+      line-height: 30px;
+      margin-right: 10px;
+      .ant-pagination-item-link {
+        border-radius: 2px;
+      }
+    }
+    .ant-pagination-item-active {
+      background: #244fff;
+      border: none;
+      a {
+        color: #fff !important;
+      }
+      &hover {
+        background: #244fff;
+        a {
+          color: #fff !important;
+        }
+      }
+      &focus {
+        background: #244fff;
+        a {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+  :global(.ant-pagination-options) {
+    margin-left: 10px;
+    height: 30px;
+  }
+
+  :global(.ant-pagination-options-size-changer) {
+    height: 30px;
+  }
+  :global(.ant-pagination-options .ant-select-arrow) {
+    margin-top: -4px;
+    right: 10px;
+  }
+  :global(.ant-pagination-options .ant-select-arrow svg) {
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #61698c;
+    border-left: 6px solid #fff;
+    border-right: 6px solid #fff;
+    border-bottom: 0px solid #fff;
+    transition: none !important;
+  }
+  :global(.ant-select-arrow .ant-select-arrow-icon svg) {
+    transform: none !important;
+  }
+  :global(.ant-select-open .ant-select-arrow-icon svg) {
+    transform: none !important;
+  }
+  :global(.ant-pagination-options-quick-jumper) {
+    line-height: 30px;
+    height: 30px;
+    color: #61698c;
+  }
+
+  :global(.ant-pagination-options-quick-jumper input) {
+    line-height: 30px;
+    height: 30px;
+    border-color: #d1d5e6;
+    border-radius: 2px;
+    caret-color: #244fff;
+  }
+  :global(.ant-select-dropdown-menu-item) {
+    color: #1a2243;
+  }
+  :global(.ant-pagination-options-quick-jumper input:hover) {
+    border-color: #244fff;
+    box-shadow: none;
+  }
+  :global(.ant-pagination-options-quick-jumper input:focus) {
+    border-color: #244fff;
+    box-shadow: none;
+  }
+  :global(.ant-select-selection) {
+    color: #61698c;
+    width: 103px;
+    font-size: 16px;
+  }
+  :global(.ant-select-selection:hover) {
+    border-color: #244fff;
+  }
+  :global(.ant-select-selection:focus) {
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-total-text) {
+    line-height: 30px !important;
+    height: 30px !important;
+    color: #61698c;
+  }
+  :global(.ant-select-selection__rendered) {
+    margin-left: 10px;
+    line-height: 28px;
+  }
+  :global(.ant-select-selection-selected-value) {
+    line-height: 28px;
+  }
+  :global(.ant-select-selection--single) {
+    height: 30px;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+  :global(.ant-pagination-next .ant-pagination-item-link:hover) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-next .ant-pagination-item-link:focus) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-prev .ant-pagination-item-link:hover) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-prev .ant-pagination-item-link:focus) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-prev:focus .ant-pagination-item-link) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-next:focus .ant-pagination-item-link) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-jump-next
+      .ant-pagination-item-container
+      .anticon
+      svg) {
+    color: #244fff;
+  }
+  :global(.ant-pagination-jump-prev
+      .ant-pagination-item-container
+      .anticon
+      svg) {
+    color: #244fff;
+  }
+  :global(.ant-select-dropdown .ant-select-dropdown-menu-item-selected) {
+    color: #244fff;
+  }
+  :global(.ant-select-dropdown .ant-select-dropdown-menu-item) {
+    &:hover {
+      background-color: #f7f8fc;
+    }
+  }
+}
+.EpaginationMini {
+  :global {
+    .ant-pagination-item {
+      border-radius: 2px;
+      height: 24px;
+      min-width: 24px;
+      border-color: #d1d5e6;
+      a {
+        color: #1a2243;
+        line-height: 24px;
+      }
+      &:hover {
+        color: #244fff;
+        border-color: #244fff;
+        a {
+          color: #244fff;
+        }
+      }
+      &:focus {
+        color: #244fff;
+        border-color: #244fff;
+        a {
+          color: #244fff;
+        }
+      }
+    }
+    .ant-pagination-item-ellipsis {
+      color: #1a2243 !important;
+    }
+    .ant-pagination-disabled a {
+      color: #cacddc !important;
+    }
+    .ant-pagination-prev,
+    .ant-pagination-next {
+      height: 24px;
+      min-width: 24px;
+      line-height: 24px;
+      .ant-pagination-item-link {
+        border-radius: 2px;
+      }
+    }
+    .ant-pagination-item-active {
+      background: #fff;
+      border-color: #244fff;
+      a {
+        color: #244fff !important;
+      }
+      &hover {
+        background: #fff;
+        a {
+          color: #244fff !important;
+        }
+      }
+      &focus {
+        background: #fff;
+        a {
+          color: #244fff !important;
+        }
+      }
+    }
+  }
+  :global(.ant-pagination-options-size-changer) {
+    height: 24px;
+  }
+  :global(.ant-pagination-options .ant-select-arrow) {
+    margin-top: -4px;
+  }
+  :global(.ant-pagination-options .ant-select-arrow svg) {
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid #61698c;
+    border-left: 6px solid #fff;
+    border-right: 6px solid #fff;
+    border-bottom: 5px solid #fff;
+    transition: none !important;
+  }
+  :global(.ant-select-arrow .ant-select-arrow-icon svg) {
+    transform: none !important;
+  }
+  :global(.ant-select-open .ant-select-arrow-icon svg) {
+    transform: none !important;
+  }
+  :global(.ant-pagination-options-quick-jumper) {
+    line-height: 24px;
+    height: 24px;
+    color: #61698c;
+  }
+  :global(.ant-pagination-options-quick-jumper input) {
+    line-height: 22px;
+    height: 22px;
+    border-color: #d1d5e6;
+    border-radius: 2px;
+    caret-color: #244fff;
+  }
+  :global(.ant-select-dropdown-menu-item) {
+    color: #1a2243;
+  }
+  :global(.ant-pagination-options-quick-jumper input:hover) {
+    border-color: #244fff;
+    box-shadow: none;
+  }
+  :global(.ant-pagination-options-quick-jumper input:focus) {
+    border-color: #244fff;
+    box-shadow: none;
+  }
+  :global(.ant-select-selection) {
+    color: #61698c;
+  }
+  :global(.ant-select-selection:hover) {
+    border-color: #244fff;
+  }
+  :global(.ant-select-selection:focus) {
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-total-text) {
+    line-height: 24px !important;
+    height: 24px !important;
+    color: #61698c;
+  }
+  :global(.ant-select-selection--single) {
+    height: 24px;
+    border-radius: 2px;
+    box-shadow: none;
+  }
+  :global(.ant-pagination-next .ant-pagination-item-link:hover) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-next .ant-pagination-item-link:focus) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-prev .ant-pagination-item-link:hover) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-prev .ant-pagination-item-link:focus) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-prev:focus .ant-pagination-item-link) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-next:focus .ant-pagination-item-link) {
+    color: #244fff;
+    border-color: #244fff;
+  }
+  :global(.ant-pagination-jump-next
+      .ant-pagination-item-container
+      .anticon
+      svg) {
+    color: #244fff;
+  }
+  :global(.ant-pagination-jump-prev
+      .ant-pagination-item-container
+      .anticon
+      svg) {
+    color: #244fff;
+  }
+  :global(.ant-select-dropdown .ant-select-dropdown-menu-item-selected) {
+    color: #244fff;
+  }
+  :global(.ant-select-dropdown .ant-select-dropdown-menu-item) {
+    &:hover {
+      background-color: #f7f8fc;
+    }
+  }
+}

@@ -17,16 +17,13 @@
       }
 
       > .ant-collapse-header {
-        font-size: 1.166rem;
-        padding: 1.166rem 1.25rem 1.166rem 2.5rem;
+
+        font-size: 18px;
+        padding-top: 16px;
+        padding-bottom: 16px;
         background: #fff;
         color: @title-color;
         .pos(r);
-        border-bottom: 1px solid @border-color;
-
-        .ant-collapse-arrow{
-          left: 0.666rem;
-        }
 
         .arrow {
           width: 2rem;
@@ -67,10 +64,10 @@
       .ant-collapse-content {
 
         border: none;
-        padding: 0.333rem 0rem;
+        padding: 0 2.083rem;
 
         > .ant-collapse-content-box {
-          padding: 0 0 0.666rem;
+          padding: 0 0 2rem;
         }
 
       }
@@ -171,52 +168,6 @@
     }
 
   }
-
-  &.m-collapse-transparent{
-    &.ant-collapse{
-      background-color: transparent !important;
-      margin-bottom: 0rem;
-      > .ant-collapse-item{
-          > .ant-collapse-header {
-            background: transparent;
-            border-bottom: 1px solid #e4e4e4;
-            font-size: 1.166rem;
-          padding: 1.166rem 1.25rem 1.166rem 3rem;
-
-          .ant-collapse-arrow{
-            left: 1rem;
-          }
-        }
-        .ant-collapse-content {
-          background-color: transparent;
-          padding: 0.333rem 1.5rem;
-        }
-      }
-    }
-  }
-
-  &.m-collapse-darg{
-    &.ant-collapse{
-      background-color: transparent !important;
-      margin-bottom: 0rem;
-      > .ant-collapse-item{
-          > .ant-collapse-header {
-            background: transparent;
-            border-bottom: 1px solid #e4e4e4;
-            font-size: 1.166rem;
-          padding: 1.166rem 1.25rem 1.166rem 3rem;
-
-          .ant-collapse-arrow{
-            left: 1rem;
-          }
-        }
-        .ant-collapse-content {
-          background-color: transparent;
-          padding: 1rem 0rem;
-        }
-      }
-    }
-  }
 }
 
 //m-collapse-cond
@@ -287,9 +238,11 @@
     > .ant-collapse-item {
       .border-radius(0);
       border: none;
+
       &:last-child {
         .border-radius(0);
       }
+
       > .ant-collapse-header {
         .font-s15();
         padding: .25rem 0 .75rem 4rem;
@@ -297,14 +250,17 @@
         line-height: 2rem;
         color: @title-color;
         .pos(r);
-        .arrow{
+
+        .arrow {
           line-height: 2.5rem;
           left: 2.5rem;
         }
       }
+
       .ant-collapse-content {
         border: none;
         padding: 0 0 0 6.25rem;
+
         > .ant-collapse-content-box {
           padding: 0 0 .75rem;
         }
@@ -316,36 +272,41 @@
 }
 
 //数字营销-20190416
-.m-collapse-kequn{
-  &.ant-collapse{
-    .ant-collapse-item{
-      background:#fafafa;
+.m-collapse-kequn {
+  &.ant-collapse {
+    .ant-collapse-item {
+      background: #fafafa;
       .border-radius(.333rem);
       margin-bottom: 1.666rem;
-      border: 0px;
+      border: 0;
       overflow: hidden;
-      .ant-collapse-header{
+
+      .ant-collapse-header {
         .font-s14();
         .font-wb();
         padding: 1rem 0 1rem 3rem;
       }
-      .ant-collapse-content-box{
+
+      .ant-collapse-content-box {
         padding: 0 1.333rem 1.166rem;
       }
     }
   }
 }
+
 //新数字营销
-.m-collapse-hd{
-  &.ant-collapse{
-    .ant-collapse-item{
+.m-collapse-hd {
+  &.ant-collapse {
+    .ant-collapse-item {
       border-bottom: 0;
-      .ant-collapse-header{
+
+      .ant-collapse-header {
         .font-s14();
         color: @title-color;
         .font-wb();
         line-height: 1.833rem;
         padding: 1rem 0 1rem 2.5rem;
+
         .ant-collapse-arrow {
           left: .166rem;
           .font-wn();
@@ -356,6 +317,7 @@
           background: @blue;
           .border-radius(1rem);
           margin-top: 0;
+
           &:before {
             content: '\e60b';
             font-family: "iconfont" !important;
@@ -365,45 +327,140 @@
           }
         }
       }
+
       &.ant-collapse-item-active {
         .ant-collapse-arrow {
           &:before {
             content: '\e610';
           }
-
         }
       }
     }
-    .ant-collapse-content-box{
+
+    .ant-collapse-content-box {
       padding: .333rem 1.666rem 1.5rem 3rem;
     }
   }
 }
 
-.m-history-list{
-  >li{
+.m-history-list {
+  > li {
     .font-s14();
     line-height: 1.833rem;
     padding-bottom: .833rem;
-    &:last-child{
+
+    &:last-child {
       padding-bottom: 0;
     }
-    .m-history-left{
+
+    .m-history-left {
       .fl();
       width: 12%;
     }
-    .m-history-right{
+
+    .m-history-right {
       .fl();
       width: 88%;
     }
-    .m-history-text{
+
+    .m-history-text {
       color: @title-color;
     }
-    .m-history-time{
-      padding-top: 0.166rem;
+
+    .m-history-time {
+      padding-top: .166rem;
       color: @light-gray;
     }
   }
 }
 
+// kyc collapse
+.m-collapse-kyc {
+  &.ant-collapse {
 
+    border: none;
+    margin-bottom: 1.666rem;
+    font-family: @all-family;
+
+    > .ant-collapse-item {
+      .border-radius(0);
+      border: none;
+
+      &:last-child {
+        .border-radius(0);
+      }
+
+      > .ant-collapse-header {
+
+        // font-size: 1.666rem;
+        padding: 2.683rem;
+        background: #fff;
+        color: @title-color;
+        .pos(r);
+
+        .ant-collapse-arrow {
+          font-size: 1.486rem;
+
+          &:before {
+            content: '\e6e2';
+            font-family: "iconfont" !important;
+          }
+
+        }
+
+        .ant-collapse-extra {
+          margin-top: -0.66rem;
+        }
+      }
+
+      &.ant-collapse-item-active {
+        .arrow {
+          transform: rotateX(180deg) !important;
+        }
+      }
+
+      .ant-collapse-content {
+
+        border: none;
+        padding: 0 2.083rem;
+
+        > .ant-collapse-content-box {
+          padding: 0;
+        }
+
+      }
+
+    }
+  }
+
+  &.m-collapse-border {
+    &.ant-collapse {
+
+      border-bottom: 1px solid @border-color;
+      margin-bottom: 0;
+
+      .ant-collapse-content {
+
+        border: none;
+        padding: 0 2.083rem;
+
+        > .ant-collapse-content-box {
+          padding: 0;
+        }
+
+      }
+
+    }
+  }
+
+}
+
+//安信
+.m-collapse-ax{
+  &.ant-collapse{
+    .border-radius(1px);
+    color: @title-color;
+    background-color: @ax-table-th;
+    border-color: @form-input-border;
+  }
+}

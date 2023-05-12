@@ -1,0 +1,167 @@
+#alphat-out {
+    /* margin-top: -16px; */
+    background: #fff;
+}
+
+#alphat-out .ant-tabs-bar{
+   padding-left: 24px !important;
+   border-bottom: none !important;
+   margin-bottom: 16px;
+}
+#alphat-out  .ant-tabs-tab {
+    padding: 16px !important;
+    font-size: 18px;
+    color: #1A2243;
+}
+#alphat-out  .ant-tabs-tab:hover {
+    color: #244FFF ;
+}
+
+#alphat-out  .ant-tabs-ink-bar{
+    display: block !important;
+  }
+
+ #alphat-out  .ant-tabs-tab-active {
+    color: #244FFF ;
+  }
+
+
+#alphat-out .ant-tabs-ink-bar-animated {
+  width: 36px !important;
+  margin-left: 26px;
+  color: #244fff;
+  background: #244fff;
+}
+#alphat-out .selectAreaInAt {
+  display: inline-block;
+  vertical-align: top;
+  line-height: 40px;
+  margin-right: 32px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-family: "PingFangSC-Medium, PingFang SC";
+  font-weight: 500;
+  color: #1A2243;
+}
+
+#alphat-out .selectAreaInAt .anInput .ant-input {
+  height: 32px;
+}
+#alphat-out .selectAreaInAt .antBtn {
+  width: 60px;
+  height: 32px;
+  border-radius: 2px;
+  border: 1px solid #d1d5e6;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #61698c;
+  margin-right: 16px;
+}
+#alphat-out .selectAreaInAt .antBtnBlue {
+  width: 60px;
+  height: 32px;
+  background: #244fff;
+  border-radius: 2px;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+}
+#alphat-out .font-at {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 500;
+  color: #1a2243;
+}
+.page-center {
+  margin-left: 24px;
+}
+.tableModal .ant-modal-content {
+  width: 614px;
+}
+.tableModal .ant-modal-header {
+  padding: 16px 20px !important;
+}
+.tableModal .ant-modal-body {
+  padding: 0 !important;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  margin: 0 24px;
+  justify-content: space-between;
+}
+.title .btn {
+  display: flex;
+}
+.title .btn div {
+  background: #f2f3f7;
+  border-radius: 2px;
+  padding: 10px 24px;
+  margin-left: 16px;
+  font-size: 16px;
+  color: #61698c;
+  cursor: pointer;
+}
+.title .btn .modalBtn {
+  font-size: 14px;
+  color: #fff;
+  background: linear-gradient(180deg, #6ac4ff 0%, #419eff 100%);
+  border-radius: 1px;
+  padding: 5px 16px;
+  display: flex;
+  align-items: center;
+  height: 42px;
+}
+.title .btn .modalBtn img {
+  width: 18px;
+  margin-right: 2px;
+}
+.isTitlePover {
+  width: 223px;
+  /* height: 140px; */
+  border-radius: 1px;
+  background-color: transparent;
+  vertical-align: middle;
+  /* :global(.ant-popover-arrow){
+      background: #474D64!important;
+      border: #474D64;
+      box-shadow: 0px 0px 10px 0px rgba(5,14,28,0.12)!important;
+    }
+    :global(.ant-popover-title) {
+      display: none;
+    }
+    :global(.ant-popover-inner-content){
+        box-shadow: 0px 0px 10px 0px rgba(5,14,28,0.12);
+        border-radius: 1px;
+        background: #474D64;
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #FFFFFF;
+        line-height: 20px;
+    } */
+}
+.isTitlePover .ant-popover-arrow {
+  background: #474d64 !important;
+  border: #474d64;
+  box-shadow: 0px 0px 10px 0px rgba(5, 14, 28, 0.12) !important;
+}
+.isTitlePover .ant-popover-title {
+  display: none;
+}
+.isTitlePover .ant-popover-inner-content {
+  box-shadow: 0px 0px 10px 0px rgba(5, 14, 28, 0.12);
+  border-radius: 1px;
+  background: #474d64;
+  font-size: 14px;
+  font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 20px;
+}
+.overInBase {
+  width: 90px !important;
+}

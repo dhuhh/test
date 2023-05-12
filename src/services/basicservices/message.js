@@ -2,23 +2,44 @@ import request from '../../utils/request';
 import config from '../../utils/config';
 
 const { api } = config;
-const {
-  basicservices: {
-    messageSendStrategy,
-    staffMessageQuota,
-    messageSendChannel,
-    cusMessageSendList,
-    messageBatchList,
-    messageBatchAdtBoxList,
-    messageBatchDtl,
-    messageBatchNum,
-    messageBatchAdtboxNum,
-    messageSndDtl,
-    messageSndDtlDSC,
-    messageBatchRvw,
-    draftSend,
-  },
-} = api;
+const { basicservices: {
+  messageSendStrategy,
+  staffMessageQuota,
+  messageSendChannel,
+  cusMessageSendList,
+  messageBatchList,
+  messageBatchAdtBoxList,
+  messageBatchDtl,
+  messageBatchNum,
+  messageBatchAdtboxNum,
+  messageSndDtl,
+  messageSndDtlDSC,
+  messageBatchRvw,
+  draftSend,
+  messageSndStandardDtl,
+  messageSndStandardNum,
+  queryShortMessageChannel,
+} } = api;
+
+// 获取各个场景人员各渠道发送明细
+export async function FetchMessageSndStandardDtl(payload) {
+  const option = {
+    url: messageSndStandardDtl,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 获取各个场景各个人员各渠道有效数
+export async function FetchMessageSndStandardNum(payload) {
+  const option = {
+    url: messageSndStandardNum,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
 
 // 消息中心 获取发送策略列表
 export async function getMessageSendStrategy(payload) {
@@ -156,6 +177,15 @@ export async function getMessageFile(url) {
 export async function MessageDraftSend(payload) {
   const option = {
     url: draftSend,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+// 消息中心  获取短信通道
+export async function QueryShortMessageChannel(payload) {
+  const option = {
+    url: queryShortMessageChannel,
     method: 'post',
     data: payload,
   };

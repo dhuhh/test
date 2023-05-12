@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tishi/_tishi</title>
+    <g id="通用组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="通知" transform="translate(-1224.000000, -455.000000)">
+            <g id="通知/提示通知/提示" transform="translate(1200.000000, 440.000000)">
+                <g id="信息提示" transform="translate(24.000000, 15.000000)">
+                    <circle id="椭圆形" fill="#389FFF" cx="8" cy="8" r="8"></circle>
+                    <polyline id="路径-6" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" points="6.54545455 6.54545455 8 6.54545455 8 11.6363636"></polyline>
+                    <circle id="椭圆形" fill="#FFFFFF" cx="7.75" cy="3.25" r="1.25"></circle>
+                    <line x1="6.54545455" y1="12" x2="9.45454545" y2="12" id="路径-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,92 @@
+.searchInput {
+  :global(.ant-select-selection) {
+    background-color: #FFFFFF;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    :global(.ant-select-selection__clear) {
+      background: transparent;
+      right: 0.4rem;
+    }
+  }
+
+  :global(.ant-input) {
+    border: none;
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
+
+.headerBox {
+  width: 100%;
+  position: relative;
+  // 改变搜索下拉列表的宽度和位置
+  :global(.ant-select-dropdown) {
+    position: absolute !important;
+    left: 0 !important;
+    width: 390px !important;
+  }
+  :global(.ant-select-dropdown-menu) {
+    overflow: visible !important;
+  }
+}
+
+.cusHeaderBox {
+  width: 100%;
+  position: relative;
+  :global(.ant-select-dropdown) {
+    position: absolute !important;
+    left: 0 !important;
+    width: 390px !important;
+  }
+  // 去掉OptGroup的label属性自带的高度
+  :global(.ant-select-dropdown-menu-item-group-title) {
+    height: 0 !important;
+  }
+}
+
+.selectType {
+  display: inline-block;
+  width: 64px; 
+  height: 32px; 
+  line-height: 32px;
+  background-color: #FFFFFF;
+  vertical-align: middle; 
+  text-align: center;
+  border-top-left-radius: 1px;
+  border-bottom-left-radius: 1px;
+  span {
+    margin-left: 9px;
+    font-size: 14px;
+    color: #1A2243;
+  }
+  i {
+    font-size: 1rem;
+    color: #61698C;
+    margin-left: 4px;
+  }
+  div {
+    display: inline-block;
+    width: 1px;
+    height: 16px;
+    margin-left: 9px;
+    vertical-align: middle;
+    background-color: #D1D5E6;
+  }
+}
+
+.linkContent {
+  &:hover {
+    background-color: #DCDCDC !important;
+  }
+}
+
+.tooltip {
+  :global(.ant-tooltip-inner){
+    background-color: #FFFFFF !important;
+    color: #000;
+  }
+  :global(.ant-tooltip-arrow::before){
+    background-color: #FFFFFF !important;
+  }
+}

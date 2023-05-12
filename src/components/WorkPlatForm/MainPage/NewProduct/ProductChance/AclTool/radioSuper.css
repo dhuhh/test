@@ -1,0 +1,42 @@
+.active-btns {
+    color:#244fff;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #244FFF;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #244FFF;
+    padding: 6px;
+    line-height: 20px;
+    margin-right: 8px;
+    min-width: 78px;
+    text-align: center;
+}
+.as-btns {
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #D1D5E6;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    padding: 6px;
+    line-height: 20px;
+    margin-right: 8px;
+    min-width: 78px;
+    text-align: center;
+    width: 78px;
+}
+.active-btns:hover,
+.as-btns:hover {
+    cursor: pointer;
+}
+.up-btns {
+    display: inline-flex;
+}
+.as-btns:hover{
+    background: #ffffff;
+    color: #5a7bff;
+    border: 1px solid #5a7bff;
+}

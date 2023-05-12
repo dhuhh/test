@@ -1,13 +1,15 @@
 const getAPIs = require('./api').default;
+const getFTQs = require('./ftq').default;
 
 module.exports = {
   name: 'C5',
-  APP_SECRET: 'apex.aas.pif.webapi',
+  APP_SECRET: 'apex.aas.app.webapi',
   CLIENTID: 'c5::pc',
   prefix: '',
   suffix: '',
-  ptlx: '产品中心',
+  ptlx: 'c5::pc',
   logo: '/logo.png',
-  footerText: '武汉顶点软件有限公司 © 2020',
+  footerText: '武汉顶点软件有限公司 © 2018',
   api: getAPIs && getAPIs(),
+  ftq: getFTQs && getFTQs(),
 };

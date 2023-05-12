@@ -1,0 +1,163 @@
+.aclTool{
+  .boxselect{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+    .layout{
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 8px 22px 8px 0px;
+      min-width: 376px;
+      .label{
+          padding-right: 8px;
+          width: 94px;
+          min-width: 94px;
+          text-align: end;
+          font-size: 14px;
+          font-family: PingFangSC-Regular, PingFang SC;
+          font-weight: 400;
+          color: #1A2243;
+        }
+    }
+  }
+  .titletip{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+  }
+  :global {
+    .ant-tooltip-inner {
+      background-color: #474d64 !important;
+      border-radius: 2px;
+    }
+    .ant-tooltip-arrow {
+      &::before {
+        background-color: #474d64 !important;
+      }
+    }
+    .ant-card-body{
+      border-radius: 1px;
+    }
+    .ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner{
+      color: #C0C4D4;
+      margin-left: 2px;
+      height: 23px;
+      line-height: 23px;
+      margin-top: 5px !important;
+    }
+  }
+    .rangeInput{
+      width: 96px;
+      height: 32px;
+      border-radius: 2px;
+      border: 1px solid #D1D5E6;
+      text-align: center;
+      margin-left: 0;
+      box-shadow: none !important;
+      &:hover,&:focus{
+        border: 1px solid #244FFF;
+        box-shadow: none !important;
+      }
+      &::-webkit-input-placeholder { /* WebKit browsers 适配谷歌 */
+        color: #959CBA;
+      }
+      &:-moz-placeholder { /* Mozilla Firefox 4 to 18 适配火狐 */
+        color: #959CBA;
+      }
+      &::-moz-placeholder { /* Mozilla Firefox 19+ 适配火狐 */
+        color: #959CBA;
+      }
+      &:-ms-input-placeholder { /* Internet Explorer 10+  适配ie*/
+        color: #959CBA;
+      }
+      :global{
+        .ant-input-number-handler-wrap{
+          display: none;
+        }
+        .ant-input-number-input{
+          text-align: center;
+          padding: 0;
+        }
+      }
+    }
+  .boxs{
+  .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    .label{
+      display: flex;
+      // align-items: center;
+      flex-direction: column;
+
+      .one{
+          height: 15px;
+          width: 4px;
+          background: #244FFF;
+          display: inline-block;
+          margin-right: 4px;
+          border-radius: 1px;
+      }
+      .two{
+          font-size: 16px;
+          color: #1A2243;
+          font-weight: bold
+      }
+      .ti{
+          font-size: 16px;
+          color: #1A2243;
+          font-weight: bolder;
+          padding-top: 16px;
+          display: flex;
+          align-items: center;
+          .tiname{
+            margin-left: 100px;
+          }
+          .name{
+              font-size: 14px;
+              font-family: PingFangSC-Medium, PingFang SC;
+              font-weight: 500;
+              color: #1A2243;
+          }
+          .con{
+              font-size: 14px;
+              font-family: PingFangSC-Regular, PingFang SC;
+              font-weight: 400;
+              color: #61698C;
+              margin-left: 8px;
+          }
+      }
+    }
+
+    .btn{
+      display: flex;
+      div{
+        background: #244fff;
+        border-radius: 2px;
+        padding: 8px 40px;
+        margin-left: 16px;
+        font-size: 16px;
+        color: #fff;
+        cursor: pointer;
+        &:hover{
+          background: #5a7bff;
+        }
+        &:focus{
+          background: #1e43d9;
+        }
+      }
+    }
+  }
+  }
+
+  .sinp{
+    width: 100%;
+    height: 8px;
+    background: #F3F4F7 ;
+  }
+}

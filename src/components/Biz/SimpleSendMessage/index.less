@@ -1,0 +1,34 @@
+.blackListTable {
+
+  :global(.ant-table) {
+
+    :global(.ant-table-thead) {
+      th {
+        background: unset;
+      }
+    }
+
+    :global(.ant-table-tbody) {
+      tr {
+        >td {
+          font-size: 1.166rem;
+        }
+      }
+    }
+
+    :global(.ant-pagination) {
+      padding: 1rem 0 0.166rem 0;
+    }
+  }
+}
+
+.blackListPopover {
+
+  :global(.ant-popover-content) {
+    min-width: 800px;
+  }
+
+  :global(.ant-popover-arrow) {
+    display: none;
+  }
+}

@@ -1,0 +1,138 @@
+.profile{
+  width: 540px;
+  height:355px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  img{
+    width: 70px;
+  }
+  .name{
+    height: 28px;
+    font-size: 20px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 600;
+    color: #1A2243;
+    line-height: 28px;
+    margin-top:11px;
+  }
+
+  .info{
+    margin-top:8px;
+    span{
+      height: 20px;
+      font-size: 14px;
+      font-family: PingFangSC-Regular, PingFang SC;
+      font-weight: 400;
+      color: #61698C;
+      line-height: 20px;
+      position: relative;
+      padding: 0 10px;
+    }
+    span:after{
+      content: "";
+      position: absolute;
+      width:1px;
+      background:#61698C;
+      right: 0;
+      top: 15%;
+      bottom: 15%;
+    }
+    span:last-child:after{
+      content: '';
+      width: 0;
+    }
+  }
+
+  .date{
+    height: 20px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #61698C;
+    line-height: 20px;
+    margin-top:11px;
+    span{
+      margin-right: 5px;
+    }
+  }
+  .time{
+    height: 20px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    line-height: 20px;
+    margin-top:10px;
+  }
+  .department{
+    height: 20px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #61698C;
+    line-height: 20px;
+    margin-top: 10px;
+    img{
+      width: 12px;
+      height: 14px;
+    }
+  }
+  .state{
+    width: 335px;
+    height: 41px;
+    background: #fff;
+    box-shadow: 0 0 20px 1px rgba(67, 72, 82, 0.1);
+    border-radius: 2px;
+    display: flex;
+    margin-top: 17px;
+    color:#1A2243;
+    span{
+      flex: 1;
+      color:#1A2243;
+      font-size:13px;
+      font-weight:600;
+      margin: 12px;
+      text-align: center;
+      line-height:17px;
+      i{
+        width:3px;
+        height:3px;
+        border-radius:50%;
+        background:#234FFF;
+        display:inline-block;
+        margin-bottom:3px;
+      }
+    }
+    div{
+      width: 47px;
+      height: 41px;
+      background: #234FFF;
+      border-radius: 2px;
+      line-height:41px;
+      text-align:center;
+      img{
+        width: 25px;
+      }
+    }
+  }
+  .line{
+    width: 480px;
+    height: 1px;
+    background: #EAEEF2;
+    margin-top: 27px;
+  }
+}
+.invalidPop{
+  :global(.ant-tooltip-arrow ){
+    width: 0 !important;
+  }
+  :global(.ant-tooltip-inner){
+    background-color:#fff !important;
+    color: #61698C;
+    width: 335px;
+    font-size: 12px;
+    border: 1px solid #61698C;
+  }
+}

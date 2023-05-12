@@ -1,38 +1,15 @@
-import { prefix } from '../../utils/config';
-
-const prefixUrl = `${prefix}/testPage`;
-export default [
+const prefix = "/testPage";
+exports.routes = [
   {
-    path: `${prefixUrl}/`,
-    component: () => import('../../components/TestPage/PageLayout'),
+    path: `${prefix}/tsClassDemo`,
+    component: "./testPage/tsClassDemo"
   },
   {
-    path: `${prefixUrl}/basicDataTable`,
-    component: () => import('../../routes/testPage/basicDataTable'),
+    path: `${prefix}/tsFnDemo`,
+    component: "./testPage/tsFnDemo"
   },
   {
-    path: `${prefixUrl}/dataTable`,
-    component: () => import('../../routes/testPage/dataTable'),
-  },
-  {
-    path: `${prefixUrl}/test2`,
-    component: () => import('../../routes/testPage/test2'),
-  },
-  {
-    path: `${prefixUrl}/memberSingleSelect`,
-    component: () => import('../../routes/testPage/memberSingleSelect'),
-  },
-  {
-    path: `${prefixUrl}/vTable`,
-    component: () => import('../../routes/testPage/vTable'),
-  },
-  {
-    path: `${prefixUrl}/test3`,
-    models: () => [import('../../models/testPage/test3')],
-    component: () => import('../../routes/testPage/test3'),
-  },
-  {
-    path: `${prefixUrl}/form`,
-    component: () => import('../../routes/testPage/form'),
-  },
+    path: `${prefix}/eUi`,
+    component: "./testPage/eUi"
+  }
 ];

@@ -1,65 +1,57 @@
-# jgcrm-react-web
+# Ant Design Pro
 
-机构 CRM 标准版 WEB 端，基于 liteC5（C5 纯净开发版）项目创建，采用 React 重写。
+This project is initialized with [Ant Design Pro](https://pro.ant.design). Follow is the quick guide for how to use.
 
-## 特性
+## Environment Prepare
 
-- 总体基于dva框架，使用antd组件
-
-## 目录结构
+Install `node_modules`:
 
 ```bash
-├── /dist/           # 项目输出目录
-├── /public/         # 公共文件，编译时copy至dist目录
-├── /src/            # 项目源码目录
-│ ├── /components/   # UI组件及UI相关方法
-│ ├── /routes/       # 路由组件
-│ ├── /models/       # 数据模型
-│ ├── /services/     # 数据接口
-│ ├── /themes/       # 项目样式
-│ ├── /utils/        # 工具函数
-│ │ ├── config.js    # 项目常规配置
-│ │ ├── request.js   # 异步请求函数
-│ ├── router.js      # 路由配置
-│ ├── index.js       # 入口文件
-│ └── index.ejs      # html模版文件
-├── package.json     # 项目信息
-├── .eslintrc        # Eslint配置
-└── .webpackrc       # roadhog配置
+npm install
 ```
 
-## 快速访问
+or
 
 ```bash
-$ git clone http://git.apexsoft.top/InstitutionProduct/institution_standard_c5/jgcrm-react-web.git
-$ cd jgcrm-react-web
-$ yarn install
-$ npm start          # 访问链接:http://localhost:8000
+yarn
 ```
 
-## 开发环境搭建
+## Provided Scripts
+
+Ant Design Pro provides some useful script to help you quick start and build with web project, code style check and test.
+
+Scripts provided in `package.json`. It's safe to modify or add additional script:
+
+### Start project
+
 ```bash
-$ git config --global core.ignorecase false # 区分文件名大小写（方便重命名记录）
-$ git config --global core.autocrlf input #（Linux Mac 操作系统设置为 input，windows 设置为 true）
-$ git config --global core.safecrlf true
-$ git config --global user.name 王XX
-$ git config --global user.email WXXXXXXX@apexsoft.com.cn # 使用公司邮箱(即用于登录公司git的邮箱)
-$ git clone http://git.apexsoft.top/InstitutionProduct/pledgeofshares/pos_frontend.git # (git config --global credential.helper store来保存git用户名密码了)
-$ cd jgcrm-react-web
-$ git checkout xxxxx(切换到对应分支)
-$ git pull
-$ yarn install # (需要先安装yarn, 可以使用npm命令安装 $ npm install -g yarn)
-$ npm start          # 访问链接:http://localhost:8000
+npm start
 ```
 
-## 兼容性
+### Build project
 
-现代浏览器及 IE11+。
+```bash
+npm run build
+```
 
-## 常见问题
-1. windows 下使用 yarn 安装 husky，git hooks 初始化失败  
- 先使用 yarn add husky -D 安装，然后执行 node ./node_modules/husky/lib/installer/bin install 初始化（mac 系统可跳过）。
-2. 目录名称大小写敏感
- git config core.ignorecase false 设置 Git 区分大小写，一般用于目录大小写变更失效时。
-3. 打包
- 依赖安装成功后，在项目根目录下执行 npm run build 生成 dist 包，一般用于服务器上部署前端代码。
+### Check code style
+
+```bash
+npm run lint
+```
+
+You can also use script to auto fix some lint error:
+
+```bash
+npm run lint:fix
+```
+
+### Test code
+
+```bash
+npm test
+```
+
+## More
+
+You can view full document on our [official website](https://pro.ant.design). And welcome any feedback in our [github](https://github.com/ant-design/ant-design-pro).

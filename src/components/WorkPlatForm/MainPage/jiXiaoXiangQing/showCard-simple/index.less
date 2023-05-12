@@ -1,0 +1,36 @@
+@font-face {
+  font-family: EssenceSansStd-Regular;//自定义字体名称
+  src: url(../../../../../assets/fonts/EssenceSansStd-Regular.ttf)
+}
+.cardItem{
+  font-family: PingFangSC-Regular, PingFang SC;
+  //margin-bottom: 16px;
+  width: 88%;
+  //flex: 1;
+  margin-top: 17px;
+  min-height: 124px;
+  border: 1px solid #EAECF2;
+  box-shadow: 0.2em 0.2em 1em rgba(0, 0, 0, 0.1);
+  &:last-of-type{
+    //margin-bottom: 16px
+  }
+}
+.indexDetail{
+  margin-bottom: 5px;
+  :global(.ant-popover-inner-content){
+    padding: 0;
+    margin-bottom: 5px !important;
+  }
+}
+.cardLeft{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+}
+.cardRight{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

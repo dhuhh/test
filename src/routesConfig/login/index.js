@@ -1,9 +1,8 @@
-import { prefix } from '../../utils/config';
-
-export default [
+const prefix = '';
+exports.routes = [
   {
     path: `${prefix}/login`,
-    models: () => [import('../../models/login')],
-    component: () => import('../../components/LoginPage/PageLayout'),
+    models: () => [import('../models/login')],
+    component: '../layouts/login',
   },
 ];

@@ -1,0 +1,20 @@
+.exportIn{
+    width: 112px;
+    height: 42px;
+    background: #244FFF;
+    border-radius: 2px;
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 42px;
+    transition-duration: .3s;
+}
+.exportIn:hover{
+    opacity: .8;
+}
+.exportIn span{
+    pointer-events: none;
+}
+

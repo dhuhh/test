@@ -72,6 +72,7 @@ class TransferWithTree extends Component {
   renderTree = () => {
     const { tree: { nodesData } } = this.state;
     const { tree: { treeClassName, defaultExpandAll, selectedKeys = [] } } = this.props;
+    const treeClass = 'm-tree';
     // 获取根节点
     const rootNode = nodesData[0] || [];
     // 渲染数据
@@ -81,7 +82,7 @@ class TransferWithTree extends Component {
         defaultExpandAll={defaultExpandAll}
         defaultExpandedKeys={rootNode.children[0] ? [rootNode.children[0].key.toString()] : []}
         selectedKeys={selectedKeys}
-        className={classnames(styles.tree, treeClassName)}
+        className={classnames(styles.tree, treeClassName, treeClass)}
         onSelect={this.handleTreeSelect}
       >
         {

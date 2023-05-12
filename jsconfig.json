@@ -1,35 +1,10 @@
 {
-    "compilerOptions": {
-     "baseUrl": ".",
-     "paths": {
-      "@/*": [
-       "src/*"
-      ],
-      "@components/*":[
-        "src/components/*"
-      ],
-      "@common/*": [
-        "src/components/Common/*"
-       ],
-       "@services/*":[
-         "src/services/*"
-       ],
-       "@utils/*":[
-        "src/utils/*"
-      ],
-      "@routes/*":[
-        "src/routes/*"
-      ]
-     },
-     "target": "es2020",
-     "module": "commonjs",
-     "allowSyntheticDefaultImports": true
-    },
-    "include": [
-     "src/**/*"
-    ],
-    "exclude": [
-     "node_modules",
-     "dist"
-    ]
-   }
+  "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

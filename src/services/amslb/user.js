@@ -3,7 +3,7 @@ import config from '../../utils/config';
 
 const { api } = config;
 const { amslb: {
-  access, auths, pwd, menu, link,
+  access, auths, pwd, menu, notifyCount, notifyNotices, notifyRead, link, todoCount, todo, info,
 } } = api;
 
 // 根据Livebos权限验证用户是否允许操作某功能
@@ -37,6 +37,16 @@ export async function FetchPwd(payload) {
 }
 
 // 获取系统提醒消息数目
+export async function FetchNotifyCount(payload) {
+  const option = {
+    url: notifyCount,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 获取登录用户的所有菜单项
 export async function FetchMenu(payload) {
   const option = {
     url: menu,
@@ -46,20 +56,24 @@ export async function FetchMenu(payload) {
   return request(option);
 }
 
-// 获取首页权限数据
-export async function FetchPageReveal(payload) {
-  const data = {
-    records: [
-      { id: 1, name: '总部领导首页' },
-    ],
-    code: 1,
-    total: 1,
+// 获取系统提醒未读消息列表
+export async function FetchNotifyNotices(payload) {
+  const option = {
+    url: notifyNotices,
+    method: 'post',
+    data: payload,
   };
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
+  return request(option);
+}
+
+// 系统提醒消息标为已读
+export async function DoNotifyRead(payload) {
+  const option = {
+    url: notifyRead,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
 }
 
 // livebos扩展
@@ -67,6 +81,36 @@ export async function FetchLivebosLink(payload) {
   const option = {
     url: link,
     method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 查询待办流程数目
+export async function FetchTodoCount(payload) {
+  const option = {
+    url: todoCount,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 查询待办流程
+export async function FetchTodo(payload) {
+  const option = {
+    url: todo,
+    method: 'post',
+    data: payload,
+  };
+  return request(option);
+}
+
+// 获取LiveBOS用户基础信息
+export async function FetchInfo(payload) {
+  const option = {
+    url: info,
+    method: 'get',
     data: payload,
   };
   return request(option);

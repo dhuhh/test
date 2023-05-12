@@ -1,0 +1,142 @@
+@px2rem: 75rem;
+@main-color: #333;
+
+.opChartRound {
+  min-height: 200px;
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  margin-top: 10px;
+
+  & img {
+    width: 100%;
+  }
+
+  .opChartRoundData{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: center;
+    align-items: center;
+    width: 98px;
+    height: 98px;
+    margin-top: -49px;
+    margin-left: -49px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+    color: @main-color;
+    background: #fff;
+    box-shadow: 0 0 20px 0 rgba(153, 153, 153, 0.25);
+    border-radius: 50%;
+    & span {
+      display: inline-block;
+      vertical-align: baseline;
+      font-size: 26px;
+    }
+
+    /* & em {
+      display: inline-block;
+      vertical-align: baseline;
+      font-size: 24px;
+    } */
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 42px;
+      width: 14px;
+      height: 14px;
+      transform: scale(0.57);
+      background-image: url('../../../../../../../../assets/newProduct/customerPortrait/asset-icon.png');
+      background-repeat: no-repeat;
+      background-size: 512px auto;
+    }
+
+    & p {
+      margin-left: 4px;
+      margin-bottom: 4px;
+      &::before {
+        content: '';
+        position: absolute;
+        top: -15px;
+        left: 50%;
+        width: 14px;
+        height: 14px;
+        transform: scale(0.57);
+        margin-left: -7px;
+        background-image: url('../../../../../../../../assets/newProduct/customerPortrait/asset-icon.png');
+        background-repeat: no-repeat;
+        background-size: 512px auto;
+        background-position: -444px -882px;
+      }
+    }
+
+    &::before {
+      left: -15px;
+      background-position: -423px -882px;
+    }
+
+    &::after {
+      right: -15px;
+      background-position: -465px -882px;
+    }
+  }
+}
+
+.opChartRoundWord {
+  position: relative;
+  width: 370px;
+  margin: 0 auto 56px auto;
+
+  .prolit {
+    font-size: 14px;
+    // font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #EF5A3C;
+    line-height: 24px;
+  }
+
+  & ul {
+    display: flex;
+    display: -webkit-flex;
+    align-items: center;
+    margin-top: -30px;
+    margin-bottom: -40px;
+
+    & li {
+      flex: 1;
+      text-align: center;
+      font-size: 24px;
+      line-height: 1;
+      color: @main-color;
+    }
+  }
+
+  & span {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    // font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1A2243;
+    line-height: 24px;
+  }
+
+  & .roundGood{
+    display: inline-block;
+    vertical-align: middle;
+    width: 26px;
+    height: 24px;
+    margin-bottom: 1px;
+    background-image: url('../../../../../../../../assets/newProduct/customerPortrait/asset-icon.png');
+    background-repeat: no-repeat;
+    background-size: 512px auto;
+    transform: scale(0.54);
+    background-position: -371px -813px;
+  }
+}

@@ -1,22 +1,26 @@
-import { suffix } from '../utils/config';
-import exceptionRoutes from './Exception';
-import ssoLoginRoutes from './ssoLogin';
-import loginRoutes from './login';
-import testPageRoutes from './testPage';
-import mainPageRoutes from './workPlatform/mainPage';
-import iconFontRoutes from './IconFont';
-import singlePageRoutes from './workPlatform/singlePage';
+const exceptionRoutes = require('./Exception');
+const exceptionRoutesConfig = exceptionRoutes.routes;
+const loginRoutes = require('./login');
+const loginRoutesConfig = loginRoutes.routes;
+const testPageRoutes = require('./testPage');
+const testPageRoutesConfig = testPageRoutes.routes;
+const mainPageRoutes = require('./workPlatForm/mainPage');
+const mainPageRoutesConfig = mainPageRoutes.routes;
+const singlePageRoutes = require('./workPlatForm/singlePage');
+const singlePageRoutesConfig = singlePageRoutes.routes;
+const IconFontRoutes = require('./IconFont');
+const IconFontRoutesConfig = IconFontRoutes.routes;
 
 const getRoutes = () => {
   const routes = {
-    exceptionRoutes, // 异常信息的相关路由信息
-    ssoLoginRoutes, // 单点登录
-    loginRoutes, // 登录页面相关路由信息
-    testPageRoutes, // 测试demo的相关路由信息
-    mainPageRoutes, // 主页面相关路由信息
-    iconFontRoutes, // 图标库路由信息
-    singlePageRoutes, // 单页面
+    exceptionRoutesConfig, // 异常信息的相关路由信息
+    loginRoutesConfig, // 登录页面相关路由信息
+    testPageRoutesConfig, //  测试demo的相关路由信息
+    mainPageRoutesConfig, // 主页面相关路由信息
+    IconFontRoutesConfig, // 图标库路由信息
+    singlePageRoutesConfig, // 单页面相关路由信息
   };
+  const suffix = '';
   const suffixWithDot = `${suffix ? `.${suffix}` : ''}`;
   if (suffixWithDot) {
     Object.keys(routes).forEach((key) => {
@@ -31,4 +35,4 @@ const getRoutes = () => {
   return routes;
 };
 
-export default getRoutes;
+exports.routes = getRoutes;

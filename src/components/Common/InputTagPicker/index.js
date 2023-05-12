@@ -89,7 +89,7 @@ class InputTagPicker extends Component {
             placeholder=""
           />
           {hasButton ? (
-            <Button className="m-btn-radius m-btn-radius-small m-btn-gray" onClick={this.handleButtonClick}>
+            <Button className="m-btn-radius m-btn-radius-small m-btn-headColor" onClick={this.handleButtonClick}>
               <i className={`iconfont ${buttonIcon || 'icon-customer-tag'}`} />
             </Button>
           ) : '' }

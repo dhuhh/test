@@ -2,34 +2,33 @@
 
 /*m-chartCard*/
 .m-chartCard{
-    margin: 1.666rem;
-    padding:0 0.5rem 0 0rem;
+    margin: 1.5rem 1rem;
+    padding:0 1rem;
     border-right: 1px solid #edf1f4;
-    .dis-fx();
     .m-chartLeft{
         .fl();
-        width: 5.333rem;
-        height: 4rem
+        width: 5rem;
+        height: 5rem
     }
     .m-chartCenter{
-        padding: 0.166rem 0 0 0;
-        margin: 0;
+        padding: 0.416rem 0 0 0;
+        margin: 0 6rem 2rem 6rem;
         .tl();
-        .flex();
         span {
-            .font-s16();
+            .font-s18();
             .font-w400();
             .dib();
-            margin-bottom: 0rem;
+            margin-bottom: 0.5rem;
             color:@title-color;
 
         }
     }
     .m-chartRight{
-        width: 8.666rem;
+        .fr();
+        width: 5rem;
         .tc();
         span{
-            .font-s24();
+            .font-s36();
             .font-w400();
             .dib();
             color:@title-color;
@@ -51,22 +50,19 @@
 //m-chartCard-rose
 .m-chartCard-rose{
      .pos(a);
-     bottom: 0.166rem;
-     left:33%;
-
+     bottom: 0.333rem;
+     left:40%;
      .m-chartCard-roseMain{
         .border-radius(@radius:1rem);
         background: #e5e8eb;
         padding:0 1rem;
-        height: 1.666rem;
-        line-height: 1;
      }
      span{
         .font-s10();
         color: #575757;
         margin-bottom:0;
         line-height: 0.833rem;
-        padding:0.25rem 0;
+        padding:0.416rem 0;
         .dib();
      }
     &::after{
@@ -208,7 +204,7 @@
     .alc();
     .flex();
     .m-chartLeft{
-        padding: 0 2rem 0 3rem;
+        padding: 0 1rem 0 3rem;
     }
     .m-chartRight{
         .flex();
@@ -288,7 +284,7 @@
     .m-chartTop{
         .tc();
         span{
-            .font-s18();
+            .font-s16();
             .font-w400();
             color:#7e8488;
         }
@@ -301,7 +297,7 @@
     .m-chartBottom{
         .tc();
         span {
-            .font-s40();
+            .font-s30();
             .font-w400();
             color:#464646;
         }
@@ -364,21 +360,18 @@
 
 /*m-chartCard-bg*/
 .m-chartCard-bg{
-    padding: 1.5rem 1rem;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    padding: 1.5rem 1.5rem 1.5rem 3rem;
     .m-chartTop{
-        .tc();
         span{
-            .font-s18();
-            .font-w400();
-            color:#fff;
+            .font-s16();
+            color:@title-color;
         }
     }
     .m-chartBottom{
-        .tc();
         span {
-            .font-s40();
-            .font-w400();
-            color:#fff;
+            .font-s48();
         }
     }
 }
@@ -463,14 +456,14 @@
 /*m-contentFixed*/
 .m-contentFixed{
     .pos(r);
-    height: 0.333rem;
+    height: 0.416rem;
     width: 100%;
     left: 0;
     bottom: -0.416rem;
     background: #e5e8eb;
     .m-progressWrap{
         .pos(a);
-        height: 0.333rem;
+        height: 0.416rem;
     }
 }
 
@@ -505,48 +498,77 @@
     }
 }
 
+//财富产品-20200712
+.m-cfcp-card{
+    &.ant-card-bordered{
+        background-repeat: no-repeat;
+        background-position: right top;
+    }
+}
+.m-cfcp-shadow{
+    &.ant-card-bordered{
+        border:1px solid;
+    }
+}
+.m-card-nodata{
+    &.ant-card-bordered{
+        border:1px solid;
+    }
+    .no-data-pt{
+        padding-top: 5.666rem;
+    }
+    .no-data-img{
+        width: 22.666rem;
+        height: 16rem;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+    }
+}
+.m-tag-hang{
+    padding-top: 1rem;
+}
+.m-cfcp-bottom{
+    margin-top: 2rem;
+    border-top: 1px dashed #eee;
+    overflow: hidden;
+    .m-cfcp-shuom{
+        .font-s14();
+        line-height: 21px;
+        color: @title-color;
+        .fl();
+        padding: .833rem 0;
+    }
+}
+.m-fxdj-label{
+    .pos(a);
+    left: -.5rem;
+    top: 2rem;
+    color: #fff;
+    .tc();
+    padding: 0 .833rem;
+    min-width: 5.834rem;
+    &.label-blue{
+        background: #54a9df;
+        box-shadow: 2px 0 10px rgba(84,169,223,0.5);
+    }
+    &.label-orange{
+        background: #f09d54;
+        box-shadow: 2px 0 10px rgba(240,157,84,.5);
+    }
+    &.label-red{
+        background: #ed5b41;
+        box-shadow: 2px 0 10px rgba(237,91,65,.5);
+    }
+    .m-label-data{
+        .font-s16();
+        line-height: 2rem;
+        .font-wb();
+        padding-bottom: .416rem;
+    }
+    .m-label-name{
+        .font-s12();
+        line-height: 1.334rem;
+        padding-top: .416rem;
+    }
+}
 
-// 20200806
-.m-echarts {
-    .ant-col{
-        .tc();
-        line-height: 5.333rem;
-    }
-}
-.m-row-echarts{
-    border-right:1px dashed #e2e2e2;
-    border-bottom:1px dashed #e2e2e2;
-    .ant-col{
-        .tc();
-        line-height: 5.333rem;
-        border-left:1px dashed #e2e2e2;
-        border-top:1px dashed #e2e2e2;
-        background: #f5f5f5;
-        .m-row-echarts-item{
-            height: 5.333rem;
-            .dis-fx();
-            .alc();
-            .flex-direction();
-            >div{
-                line-height: 1.5;
-                .dn();
-                .font-s14();
-                >div:first-child{
-                    .font-s16();
-                 }
-            }
-            &.active{
-                font-size: 0;
-                >div{
-                    .font-s14();
-                    .db();
-                    color:#fff;
-                }
-                >div:first-child{
-                    .font-s18();
-                 }
-                background: @orange;
-            }
-        }
-    }
-}

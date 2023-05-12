@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="28px" viewBox="0 0 31 28" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>执行策略</title>
+    <g id="中断客户360" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="中断客户360-执行策略-搜索软文" transform="translate(-1750.000000, -171.000000)">
+            <g id="编组-7" transform="translate(1724.000000, 160.000000)">
+                <g id="执行策略" transform="translate(26.000000, 10.000000)">
+                    <rect id="矩形" x="0" y="0" width="32" height="32"></rect>
+                    <path d="M15.5,25 C19.918278,25 23.5,20.1483154 23.5,15.826087 C23.5,11.5038585 19.918278,8 15.5,8 C11.081722,8 7.5,11.5038585 7.5,15.826087 C7.5,20.1483154 11.081722,25 15.5,25 Z" id="椭圆形" stroke="#244FFF" stroke-width="2"></path>
+                    <line x1="15.5" y1="23" x2="15.5" y2="18.5" id="路径-4" stroke="#91A7FF" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="15.5" y1="20" x2="15.5" y2="15.5" id="路径-4备份" stroke="#91A7FF" stroke-width="2" stroke-linecap="round" transform="translate(15.500000, 17.750000) rotate(270.000000) translate(-15.500000, -17.750000) "></line>
+                    <rect id="矩形" stroke="#244FFF" stroke-width="2" fill="#FFFFFF" x="11" y="24" width="9" height="4"></rect>
+                    <line x1="15.5" y1="2" x2="15.5" y2="4" id="路径-3" stroke="#91A7FF" stroke-width="2" stroke-linecap="round"></line>
+                    <line x1="28.5" y1="14" x2="28.5" y2="16" id="路径-3备份-3" stroke="#91A7FF" stroke-width="2" stroke-linecap="round" transform="translate(28.500000, 15.000000) rotate(90.000000) translate(-28.500000, -15.000000) "></line>
+                    <line x1="2.5" y1="14" x2="2.5" y2="16" id="路径-3备份-4" stroke="#91A7FF" stroke-width="2" stroke-linecap="round" transform="translate(2.500000, 15.000000) rotate(90.000000) translate(-2.500000, -15.000000) "></line>
+                    <line x1="24.5" y1="6" x2="24.5" y2="8" id="路径-3备份" stroke="#91A7FF" stroke-width="2" stroke-linecap="round" transform="translate(24.500000, 7.000000) rotate(-135.000000) translate(-24.500000, -7.000000) "></line>
+                    <line x1="6.5" y1="6" x2="6.5" y2="8" id="路径-3备份-2" stroke="#91A7FF" stroke-width="2" stroke-linecap="round" transform="translate(6.500000, 7.000000) scale(-1, 1) rotate(-135.000000) translate(-6.500000, -7.000000) "></line>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

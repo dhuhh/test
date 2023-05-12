@@ -1,0 +1,38 @@
+.tabsBox{
+  // padding: 0 24px;
+  background: #fff;
+  .tabs{
+    :global{
+      .ant-tabs-tab{
+        padding: 18px 20px !important;
+        margin-right: 0 !important;
+        font-size: 18px;
+        color: #1A2243;
+        &:hover{
+          color:#244FFF;
+        }
+      }
+      .ant-tabs-bar{
+        margin-bottom: 20px !important;
+      }
+      .ant-tabs-tab-active{
+        color: #244FFF;
+        // font-weight: bold;
+        position: relative;
+        &::after{
+          content: '';
+          background-color: #244FFF;
+          width: calc(50% - 20px);
+          height: 2px;
+          position: absolute;
+          bottom: 1px;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+      .ant-tabs-ink-bar{
+        display: none !important;
+      }
+    }
+  }
+}

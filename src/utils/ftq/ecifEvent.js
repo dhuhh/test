@@ -1,0 +1,20 @@
+export default [ 
+  { code: '', key: 'queryEcifEventDetailCusList', url: '/work/v1/queryWorkEventList', dis: 'ECIF事件详情客户列表' },
+  { code: '', key: 'queryEventCustomerInfoList', url: '/work/v1/queryEventCustomerInfoList', dis: 'ECIF事件列表客户信息' },
+  { code: '', key: 'queryRelEventList', url: '/work/v1/queryRelEventList', dis: 'ECIF事件--待处理事件列表(关联事件)' },
+  { code: '', key: 'queryEventTreatmentRecordList', url: '/work/v1/queryEventTreatmentRecordList', dis: 'ECIF事件--处理记录' },
+  { code: '', key: 'saveEventTreatment', url: '/work/v1/saveEventTreatment', dis: 'ECIF事件--保存事件' },
+  { code: '', key: 'queryTaskManageList', url: '/work/v1/queryTaskManageList', dis: '检核任务管理' },
+  { code: '', key: 'queryAuditingManageList', url: '/work/v1/queryAuditingManageList', dis: '检核审核管理' },
+  { code: '', key: 'queryTreatmentPeopleList', url: '/work/v1/queryTreatmentPeopleList', dis: '执行人列表' },
+  { code: '', key: 'taskDistribution', url: '/work/v1/taskDistribution', dis: '任务分配/调整' },
+  { code: '', key: 'queryEventInfo', url: '/work/v1/queryEventInfo', dis: '审核任务管理页头--未办数/客户数' },
+  { code: '', key: 'queryAuditingRecordCustInfo', url: '/work/v1/queryAuditingRecordCustInfo', dis: '客户审核详情' },
+  { code: '', key: 'queryAuditingRecordList', url: '/work/v1/queryAuditingRecordList', dis: '客户审核详情列表' },
+  { code: '', key: 'queryIsZb', url: '/work/v1/queryIsZb', dis: '总部权限' },
+  { code: '', key: 'batchAuditing', url: '/work/v1/batchAuditing', dis: '批量审核' },
+  { code: '', key: 'uploadFile', url: '/work/v1/uploadFile', dis: '附件上传' },
+  { code: '', key: 'queryEventDetail', url: '/workingCalendar/v1/queryEventDetail', dis: '首页日历--事件--事件表头--个人' },
+  { code: '', key: 'queryCustomerEventDatas', url: '/workingCalendar/v1/queryCustomerEventDatas', dis: '首页日历--事件--事件列表--个人' },
+
+];

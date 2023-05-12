@@ -1,0 +1,337 @@
+@font-face {
+  font-family: EssenceSansStd-Regular;//自定义字体名称
+  src: url(../../../../assets/fonts/EssenceSansStd-Regular.ttf)
+}
+.font_color {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 400;
+  color: #61698C;
+  margin-right: 8px;
+  min-width: 20px;
+}
+.font_weight_color {
+  font-size: 14px;
+  font-family: PingFangSC-Medium, PingFang SC;
+  font-weight: 600;
+  color: #1A2243;
+  margin-right: 8px;
+  display: inline-block;
+  min-width: 20px;
+  max-width: 100%;
+}
+.basicInfo{
+  background: #ffffff;
+  margin-bottom: 8px;
+  width: 100%;
+  display: flex;
+  border-radius: 1px;
+  border: 1px solid #EAECF2;
+  position: relative;
+  .basicInfo_fanhuiButton{
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .basicInfo_left{
+    :global{
+      .ant-calendar-input-wrap{
+        display:none;
+      }
+      .ant-calendar-picker-container-placement-bottomLeft{
+        top:63px !important;
+      }
+      .ant-calendar{
+        width:250px !important;
+      }
+    }
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: 30px;
+    .basicInfo_left_select{
+      background-color: blue;
+    }
+    .basicInfo_left_text{
+    
+      //background-color: rgb(89, 89, 165);
+    }
+  }
+  .basicInfo_right{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .basicInfo_right_circle{
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(180deg, #00B7FF 0%, #5FD2FF 0%, #00B2FF 100%);
+      box-shadow: 0px 2px 13px 0px rgba(8,180,255,0.23);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 6px;
+      .basicInfo_right_circle_num{
+        padding-top: 15px;
+        padding-bottom: 3px;
+        font-size: 40px;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 13px rgba(8,180,255,0.23);
+        font-family: EssenceSansStd-Regular, EssenceSansStd;
+      }
+      .basicInfo_right_circle_text{
+        font-size: 14px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #FFFFFF;
+        text-shadow: 0px 2px 13px rgba(8,180,255,0.23);
+      }
+    }
+  }
+}
+.basicInfo_sec{
+  background: #ffffff;
+  margin-bottom: 8px;
+  width: 100%;
+  border-radius: 1px;
+  border: 1px solid #EAECF2;
+  position:relative;
+  //height: 600px;
+  .basicInfo_sec_top{
+    :global{
+      .ant-select-selection-selected-value{
+        color: #1A2243 !important;
+        font-size: 14px;
+      }
+    }
+    border-bottom:1px solid #EAECF2;
+    position:absolute;
+    left:0;
+    top:0;
+    z-index:20;
+    min-height: 64px !important;
+    width: 389px;
+    background: #ffffff;
+    //border-bottom: 1px solid #EAECF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .basicInfo_sec_top_titleSpan{
+
+      white-space: noWrap;
+      font-size: 14px;
+      font-family: PingFangSC-Medium, PingFang SC;
+      font-weight: 600;
+      color: #1A2243;
+      margin-right: 8px;
+      margin-left: 24px;
+    }
+  }
+  
+  .basicInfo_sec_buttom{
+    //background-color: #00B2FF;
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: #F2F3F7;
+    .basicInfo_sec_buttom_left_out{
+      position: relative;
+      height: 600px;
+      .basicInfo_sec_buttom_left{
+        background-color: #FFFFFF;
+        margin-right: 8px;
+        min-width: 389px;
+        //width: 365px;
+        //padding: 16px;
+        height: 600px;
+        box-sizing: border-box;
+        padding-bottom: 130px;
+        padding-top: 65px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto;
+        overflow-x: hidden;
+        .basicInfo_sec_buttom_left_bottom{
+          border-top:1px solid #EAECF2;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 40px;
+          background:#FFFFFF;
+          z-index: 20;
+          width: 389px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        .basicInfo_sec_buttom_left_shadow{
+          position: absolute;
+          left: 0;
+          top: 0;
+          //background-color: #00B2FF;
+          background: linear-gradient(#E5ECF7, rgba(255,255,255,0));
+          width:100%;
+          height: 25px;
+        }
+        
+        .basicInfo_sec_buttom_left_title{
+          height: 25px;
+          width: 100%;
+          //background-color: #d0edfa;
+          display: flex;
+          align-items: center;
+          padding-left: 24px;
+          padding-top: 24px;
+          padding-bottom: 10px;
+          
+        }
+      }
+    }
+    
+    .basicInfo_sec_buttom_right{
+      padding: 0 24px;
+      height: 600px;
+      overflow: auto;
+      background-color: #FFFFFF;
+      //background-color: #00B7FF;
+      width: 100%;
+      min-width: 714px;
+      border-left:1px solid #EAECF2;
+      .basicInfo_sec_buttom_right_title{
+        font-size: 16px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #1A2243;
+        margin-top: 17px;
+      }
+      .basicInfo_sec_buttom_right_miaoShu{
+        font-size: 14px;
+        font-family: PingFangSC-Medium, PingFang SC;
+        font-weight: 500;
+        color: #1A2243;
+        
+      }
+      .basicInfo_sec_buttom_right_miaoShu li{
+        padding-bottom: 16px;
+      }
+      .basicInfo_sec_buttom_right_titles{
+        width: 100%;
+        
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height:16px;
+        padding-right: 16px;
+        margin-top: 10px;
+      }
+      
+      .basicInfo_sec_buttom_right_table{
+        margin-top: 24px;
+        :global{
+        .ant-table-thead>tr>th{
+          background: #F7F8FC !important;
+          color: #1A2243 !important;
+          font-weight: 400 !important;
+          font-family: PingFangSC-Medium, PingFang SC !important;
+        }
+        }
+      }
+      //background-color: aqua;
+    }
+  }
+}
+.modalTable{
+  :global{
+    .ant-table-pagination{
+      padding-bottom:0px !important;
+    }
+    .ant-table-thead>tr>th{
+      background: #F7F8FC !important;
+      color: #1A2243 ;
+      font-weight: 400 !important;
+      font-family: PingFangSC-Medium, PingFang SC !important;
+    }
+    .ant-table-tbody{
+      color: #61698C !important;
+    }
+    .ant-table-content th{
+      //border: 1px solid #EAEEF2 !important;
+      border-color: #EAEEF2 !important;
+    }
+    .ant-table-content td{
+      //border: 1px solid #EAEEF2 !important;
+      border-color: #EAEEF2 !important;
+    }
+    .ant-table-content table{
+      border-color: #EAEEF2 !important;
+    }
+    }
+}
+.MyrowClassName{
+  color: #4B516A !important;
+  border-color: #EAECF2 !important;
+}
+.basicInfo_sec_buttom_left::-webkit-scrollbar{
+  height: 12px;
+  width: 6px;
+  overflow-y: auto;
+}
+.basicInfo_sec_buttom_left::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background: rgba(26, 34, 67, 0.24);
+}
+.basicInfo_sec_buttom_left::-webkit-scrollbar-track{
+  -webkit-box-shadow:0;
+  border-radius: 0;
+  background: #ffffff;
+}
+.mySearchInput{
+  :global(.ant-input-sm){
+    border-radius: 2px;
+    height: 32px;
+  }
+}
+.dateapaker{
+  position: relative;
+  :global{
+    .ant-input{
+      height: 32px !important;
+      width: 250px;
+      
+    }
+  }
+}
+.dropdownClassName{
+  :global{
+    .ant-calendar-year-panel-selected-cell .ant-calendar-year-panel-year{
+      background-color: #244FFF;
+      border-radius: 2px;
+      color: #FFFFFF;
+    }
+  }
+ 
+}
+.myDriver{
+  width: 100%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.inputTitle{
+  font-size: 14px;
+font-family: PingFangSC-Medium, PingFang SC;
+font-weight: 600;
+color: #1A2243;
+}
+.indexDetail{
+  :global(.ant-popover-inner-content){
+    padding: 0;
+  }
+}

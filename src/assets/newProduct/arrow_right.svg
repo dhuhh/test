@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>切片</title>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="14" height="14"></rect>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="工作-待办-任务-已开启日历模式1" transform="translate(-912.000000, -278.000000)">
+            <g id="日历栏" transform="translate(227.000000, 263.000000)">
+                <g id="ICON/通用/common_arrow_upper_line_grey备份-3" transform="translate(692.000000, 22.000000) rotate(-90.000000) translate(-692.000000, -22.000000) translate(685.000000, 15.000000)">
+                    <g id="编组-9" transform="translate(7.000000, 7.000000) scale(-1, 1) translate(-7.000000, -7.000000) ">
+                        <mask id="mask-2" fill="white">
+                            <use xlink:href="#path-1"></use>
+                        </mask>
+                        <g id="蒙版"></g>
+                        <path d="M3.45818453,8.05069895 L3.47570085,1.06186387 C3.47583801,1.00663557 3.5207216,0.961976393 3.5759499,0.962114813 C3.57595032,0.962114814 3.57595075,0.962114815 3.57595116,0.962116079 L10.5292523,0.979631137 L10.5292523,0.979631137" id="路径" stroke="#61698C" mask="url(#mask-2)" transform="translate(6.993718, 4.506282) rotate(-135.000000) translate(-6.993718, -4.506282) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

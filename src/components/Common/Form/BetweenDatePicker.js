@@ -14,12 +14,17 @@ class BetweenDatePicker extends React.Component {
     const { type = 1, defaultValue = '', value = '' } = this.props; // type: 0|没有radio选择;1|时间段选择(近一周近一月近三月);2|时间量选择(一周/一个月/三个月)
     if (value === '' && defaultValue !== '') { // 没有传入value 但是有传入defaultValue时
       let { leftValue = '', rightValue = '' } = defaultValue || {};
-      if (type === 1) {
-        leftValue = this.getTypedDate('oneWeekAgo');
-        rightValue = moment();
-      } else if (type === 2) {
-        leftValue = moment();
-        rightValue = this.getTypedDate('oneWeekLater');
+      if (typeof value !== 'object' || (typeof value === 'object' && Object.keys(value).length === 0)) {
+        if (type === 1 || type === 3) {
+          leftValue = this.getTypedDate('oneWeekAgo');
+          rightValue = moment();
+        } else if (type === 2) {
+          leftValue = moment();
+          rightValue = this.getTypedDate('oneWeekLater');
+        }
+      }
+      if (moment().isSame(leftValue, 'day')){
+        leftValue = moment().subtract(1, 'weeks').add(1, 'day');
       }
       this.state = {
         leftValue, // 左输入框的值
@@ -36,6 +41,9 @@ class BetweenDatePicker extends React.Component {
           leftValue = moment();
           rightValue = this.getTypedDate('oneWeekLater');
         }
+      }
+      if (moment().isSame(leftValue, 'day')){
+        leftValue = moment().subtract(1, 'weeks').add(1, 'day');
       }
       this.state = {
         leftValue, // 左输入框的值
@@ -104,9 +112,9 @@ class BetweenDatePicker extends React.Component {
   }
   handleRadioChange = (e) => {
     const { type = 1 } = this.props;
-    const { value = type === 1 ? 'oneWeekAgo' : 'oneWeekLater' } = e.target;
-    const leftValue = type === 1 ? this.getTypedDate(value) : moment();
-    const rightValue = type === 1 ? moment() : this.getTypedDate(value);
+    const { value } = e.target;
+    const leftValue = (type === 1 || type === 3) ? this.getTypedDate(value) : moment();
+    const rightValue = (type === 1 || type === 3) ? moment() : this.getTypedDate(value);
     this.setState({
       leftValue,
       rightValue,
@@ -132,7 +140,7 @@ class BetweenDatePicker extends React.Component {
   }
   render() {
     const { leftValue, rightValue } = this.state;
-    const { type = 1, allowClear = true, disabled = false } = this.props;
+    const { type = 1, allowClear = true, disabled = false, format = '', middle = '-', middleStyle = '' } = this.props;
     let radioValue = '';
     // 如果开始日期结束日期都是moment对象,而且结束日期就是今天,那么就判断开始日期是否和"近一周/近一月/近三月"这三个间的日期相同
     if (type === 1 && moment.isMoment(leftValue) && moment.isMoment(rightValue) && moment().isSame(rightValue, 'd')) {
@@ -152,9 +160,18 @@ class BetweenDatePicker extends React.Component {
       } else if (moment(this.getTypedDate('threeMonthLater')).isSame(rightValue, 'd')) {
         radioValue = 'threeMonthLater';
       }
+    } else if (type === 3 && moment.isMoment(leftValue) && moment.isMoment(rightValue) && moment().isSame(rightValue, 'd')) {
+      // 如果开始日期结束日期都是moment对象,而且开始日期就是今天,那么就判断结束日期是否和"一周/一个月/三个月"这三个间的日期相同
+      if (moment(this.getTypedDate('oneWeekAgo')).isSame(leftValue, 'd')) {
+        radioValue = 'oneWeekAgo';
+      } else if (moment(this.getTypedDate('oneMonthAgo')).isSame(leftValue, 'd')) {
+        radioValue = 'oneMonthAgo';
+      } else if (moment(this.getTypedDate('threeMonthAgo')).isSame(leftValue, 'd')) {
+        radioValue = 'threeMonthAgo';
+      }
     }
     return (
-      <span className="clearfix" style={{ display: 'inline-block', width: '100%', minWidth: '25rem' }}>
+      <span className="clearfix" style={{ display: 'inline-block', width: '100%' }}>
         {type !== 0 && (
           <RadioGroup className="m-product-radio-group" style={{ width: '18rem', float: 'left' }} disabled={disabled} onChange={this.handleRadioChange} value={radioValue}>
             {type === 1 && (
@@ -171,12 +188,18 @@ class BetweenDatePicker extends React.Component {
                 <RadioButton value="threeMonthLater">三个月</RadioButton>
               </Fragment>
             )}
+            {type === 3 && (
+              <Fragment>
+                <RadioButton value="oneWeekAgo">最近7天</RadioButton>
+                <RadioButton value="oneMonthAgo">最近30天</RadioButton>
+              </Fragment>
+            )}
           </RadioGroup>
         )}
         <span style={{ display: 'block', marginLeft: type === 0 ? '' : '19rem', fontSize: '1rem' }}>
-          <DatePicker style={{ width: '42.5%' }} allowClear={allowClear} disabled={disabled} value={!leftValue ? null : leftValue} disabledDate={this.handleLeftDisabledDate} onChange={this.handleLeft} format="YYYY/MM/DD" className={`${styles.m_Input}`} placeholder="开始日期" />
-          <span style={{ width: '5%', display: 'inline-block', textAlign: 'center' }}>-</span>
-          <DatePicker style={{ width: '42.5%' }} allowClear={allowClear} disabled={disabled} value={!rightValue ? null : rightValue} disabledDate={this.handleRightDisabledDate} onChange={this.handleRight} format="YYYY/MM/DD" className={`${styles.m_Input}`} placeholder="结束日期" />
+          <DatePicker style={{ width: '45%' }} allowClear={allowClear} disabled={disabled} value={!leftValue ? null : leftValue} disabledDate={this.handleLeftDisabledDate} onChange={this.handleLeft} format={format || 'YYYY/MM/DD'} className={`${styles.m_Input}`} placeholder="开始日期" />
+          <span style={{ ...middleStyle, width: '10%', display: 'inline-block', textAlign: 'center' }}>{middle}</span>
+          <DatePicker style={{ width: '45%' }} allowClear={allowClear} disabled={disabled} value={!rightValue ? null : rightValue} disabledDate={this.handleRightDisabledDate} onChange={this.handleRight} format={format || 'YYYY/MM/DD'} className={`${styles.m_Input}`} placeholder="结束日期" />
         </span>
       </span>
     );

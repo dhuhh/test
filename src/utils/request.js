@@ -1,15 +1,19 @@
-/* eslint-disable no-debugger */
 /* global window */
 import C5axios from 'axios';
+// import qs from 'qs';
+// import jsonp from 'jsonp';
 import lodash from 'lodash';
 import pathToRegexp from 'path-to-regexp';
 import { message } from 'antd';
-import { history } from '../router';
+import { history as router } from 'umi';
+// import { CORS } from './config';
 
 const getApis = require('./api').default;
+const getFTQs = require('./ftq').default;
 
+const ftq = getFTQs && getFTQs();
 const api = getApis && getApis();
-
+Object.assign(api,ftq);
 const getApi = () => {
   const obj = {};
   Object.keys(api).forEach((key) => {
@@ -18,14 +22,13 @@ const getApi = () => {
   return obj;
 };
 const objApi = getApi();
-
 // 获取url版本号
 export const getVersion = (originUrl) => {
   const str = originUrl.slice(originUrl.lastIndexOf('/') + 1);
   return objApi[`${str}version`] || 'v5.0.0.1';
 };
 
-const fetch = (options, config = {}) => {
+const fetch = (options, config = {}) => {0
   const {
     method = 'get',
     data,
@@ -43,15 +46,15 @@ const fetch = (options, config = {}) => {
   const dataTemp = Object.assign({}, data);
 
   let cloneData = lodash.cloneDeep(dataTemp);
-  if (method !== 'get' && data instanceof FormData) {
+  if (method !== 'get' && (data instanceof FormData || data instanceof Array)) {
     cloneData = data;
   }
 
   try {
     let domin = '';
     // 如果url前面有协议，域名和端口号，则去掉拿后面的第一个/为开头的部分
-    if (url.match(/[a-zA-Z]+:\/\/[^/]*/)) {
-      [domin] = url.match(/[a-zA-Z]+:\/\/[^/]*/);
+    if (url.match(/[a-zA-z]+:\/\/[^/]*/)) {
+      [domin] = url.match(/[a-zA-z]+:\/\/[^/]*/);
       url = url.slice(domin.length);
     }
     /*
@@ -71,6 +74,22 @@ const fetch = (options, config = {}) => {
   } catch (e) {
     message.error(e.message);
   }
+
+  // if (fetchType === 'JSONP') {
+  //   return new Promise((resolve, reject) => {
+  //     jsonp(url, {
+  //       param: `${qs.stringify(data)}&callback`,
+  //       name: `jsonp_${new Date().getTime()}`,
+  //       timeout: 20000,
+  //     }, (error, result) => {
+  //       console.log(888, error, result);
+  //       if (error) {
+  //         reject(error);
+  //       }
+  //       resolve({ statusText: 'OK', status: 200, data: result });
+  //     });
+  //   });
+  // }
 
   switch (method.toLowerCase()) {
     case 'get':
@@ -96,6 +115,17 @@ const fetch = (options, config = {}) => {
 
 export default function request(options, config = {}) {
   const newOptions = { ...options };
+  // if (newOptions.url && newOptions.url.indexOf('//') > -1) {
+  //   // origin为前面的域名
+  //   const origin = `${newOptions.url.split('//')[0]}//${newOptions.url.split('//')[1].split('/')[0]}`;
+  //   if (window.location.origin !== origin) {
+  //     if (CORS && CORS.indexOf(origin) > -1) {
+  //       newOptions.fetchType = 'CORS';
+  //     } else {
+  //       newOptions.fetchType = 'JSONP';
+  //     }
+  //   }
+  // }
   return fetch(newOptions, config).then((response) => {
     const { statusText, status } = response;
     let { data } = response;
@@ -143,12 +173,9 @@ export default function request(options, config = {}) {
       }
       sessionStorage.setItem('user', null); // 清空会话
       window.sessionStorage.setItem('loginStatus', '-1'); // 登录状态为未登录
-      if (window.location.href.indexOf('/ssoLogin') === -1) {
-        // 重定向
-        const beforeSsoLoginUrl = window.location.hash || '';
-        console.log(beforeSsoLoginUrl);
-        window.sessionStorage.setItem('beforeSsoLoginUrl', window.location.href);
-        history.push(`/ssoLogin?targetPath=${beforeSsoLoginUrl}`);
+      if (window.location.href.indexOf('/login') === -1) {
+        localStorage.setItem('oldURl', document.URL.split('#/')[1]);
+        router.push('/login');
       }
     }
     return Promise.reject({ success: false, statusCode, message: msg }); // eslint-disable-line
@@ -159,4 +186,3 @@ export default function request(options, config = {}) {
 export const poster = (url) => (data, options) => (
   request({ url, data, method: 'post', ...options })
 );
-

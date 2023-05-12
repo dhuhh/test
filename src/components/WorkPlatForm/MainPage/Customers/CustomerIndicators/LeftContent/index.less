@@ -1,0 +1,303 @@
+//左侧样式
+.left-bar {
+  display: flex;
+  align-items: center;
+  height: 5.33rem;
+  padding: 1.33rem 2rem;
+}
+.ax-form {
+
+  :global {
+    .ant-form {
+      label {
+        color: #1A2243 !important;
+      }
+    }
+
+    .ant-form-item {
+      margin-bottom: 1.33rem;
+    }
+
+    .ant-input {
+      color: #1A2243;
+      border-radius: 2px;
+      border: 1px solid #D1D5E6;
+
+      &:focus {
+        border-color: #244FFF;
+      }
+
+      &:hover {
+        border-color: #244FFF;
+      }
+    }
+
+    //select组件
+    .ant-select-selection--multiple {
+      white-space: nowrap;
+      width: 100%;
+      height: 32px;
+      overflow: hidden;
+    }
+
+    .ant-select-selection-selected-value {
+      color: #1A2243;
+    }
+
+    .ant-select-selection {
+      border-radius: 2px;
+
+      &:focus {
+        border-color: #244FFF !important;
+      }
+
+      &:hover {
+        border-color: #244FFF !important;
+      }
+    }
+
+    .ant-select-dropdown-menu-item {
+      // color: #244FFF;
+      &:hover {
+        background-color: #F0F1F5 !important;
+      }
+
+      &:focus {
+        background-color: #92A7FF;
+        border-color: #92A7FF;
+      }
+
+      &:hover {
+        background-color: #92A7FF;
+      }
+    }
+
+    .ant-select-dropdown-menu-item-active {
+      background-color: #92A7FF;
+    }
+
+    .ant-select-dropdown-menu-item-selected {
+      color: #244FFF  !important;
+    }
+
+    .ant-select-selection__rendered {
+      // ul {
+      //   display:block;
+      //   overflow:hidden;
+      //   white-space:nowrap;
+      // }
+      li:nth-child(2) {
+        // background-color: #fff;
+        // border: none;
+        // float: right;
+      }
+
+      .ant-select-selection__choice {
+        //color: #1A2243;
+      }
+    }
+
+    //select 选项前的勾选框
+    .ant-select-dropdown.ant-select-dropdown--multiple .ant-select-dropdown-menu-item {
+      padding-left: 26px;
+      padding-right: 8px;
+
+      .ant-select-selected-icon {
+        // left: 8px;
+        right: 8px;
+        font-family: "iconfont" !important;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #74819E;
+        transform: none;
+        text-shadow: none;
+
+        &::after {
+          content: "\e763";
+        }
+
+        svg {
+          display: none;
+        }
+      }
+      &.ant-select-dropdown-menu-item-selected {
+        background-color: #1A2243;
+        .ant-select-selected-icon {
+          &::after {
+            color: #244FFF;
+            content: "\e762";
+          }
+        }
+      }
+    }
+
+    //checkBox
+    .ant-checkbox-wrapper:hover .ant-checkbox-inner {
+      border-color: #244FFF !important;
+    }
+
+    .ant-checkbox-checked .ant-checkbox-inner {
+      color: #fff;
+      background-color: #244FFF;
+    }
+
+    .ant-checkbox-wrapper {
+      padding-top: 1.33rem;
+    }
+
+    .ant-checkbox+span {
+      padding-right: 0;
+    }
+  }
+}
+.ax-btn {
+  :global {
+    .ant-btn {
+      color: #244FFF;
+      border-radius: 2px;
+      border-color: #244FFF;
+    }
+
+  }
+}
+.content {
+  position: relative;
+  padding-left: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100vh);
+  :global{
+    li{
+      padding:1px 0px !important;
+      
+    }
+    .ant-tree {
+      color: #1A2243 !important;
+    }
+    .ant-tree-treenode-selected{
+      width: 100% !important;
+      background-color: #F7F8FC !important;
+      border-right: 2px solid #244FFF;
+      z-index: 100;
+    }
+    .ant-tree-node-content-wrapper{
+      color:#1A2243 !important;
+      border-radius: 0px !important;
+      height: 36px !important;
+      line-height: 36px !important;
+      position: relative;
+    }
+    .ant-tree-node-selected{
+      background-color: transparent !important;
+      color: #244FFF !important;
+    }
+   
+    li span.ant-tree-switcher, .ant-tree li span.ant-tree-iconEle{
+      line-height: 36px !important;
+      
+    }
+    .ant-tree-switcher-icon{
+     
+      font-size: 17px !important;
+    }
+    
+  }
+  // height: calc(100vh - 280px);
+  // :global(.ant-menu-inline .ant-menu-submenu-title) {
+  //     width:283px;
+  // }
+  /* :global(.ant-tree-treenode-switcher-close){
+    height: 36px !important;
+  } */
+  /* :global(.ant-tree-treenode-selected){
+    position: relative;
+    height: 36px!important;
+    background-color: #F7F8FC !important;
+  } */
+ 
+  /* :global(.ant-tree-treenode-selected span){
+    background-color: #F7F8FC !important;
+    
+  } */
+  :global(.ant-menu-submenu-title) {
+      color:#1A2243
+  }
+  :global(.ant-menu-item) {
+      color: #61698C;
+  }
+  &::-webkit-scrollbar {
+      width: 6px;
+      height: 58px;
+      }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(26,34,67,0.5);
+      border-radius: 10px;
+      -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+      }
+      &:hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0,0,0,.2);
+        border-radius: 10px;
+        -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+        }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(0,0,0,.4);
+        -webkit-box-shadow: inset1px1px0rgba(0,0,0,.1);
+        }
+      &::-webkit-scrollbar-track {
+        border-radius: 10px;
+        -webkit-box-shadow: inset006pxrgba(0,0,0,0);
+        background-color: white;
+        }
+      &::-webkit-scrollbar-track:hover {
+        -webkit-box-shadow: inset006pxrgba(0,0,0,.4);
+        background-color: rgba(0,0,0,.01);
+        }
+  :global(.ant-menu-item-active) {
+    &:hover {
+        img {
+            content: url('../../../../../../assets/customer/isRightBlue1.png');
+        }
+    }
+  }
+  :global(.ant-menu-submenu-title) {
+      i {
+          display: none;
+      }
+  }
+}
+.contentUp {
+  position: absolute;
+  left: 0;
+  right:0;
+  width: 100%;
+  height: 25px;
+  background: linear-gradient(360deg, rgba(255, 255, 255, 0) 0%, rgb(229, 236, 247) 100%);
+
+}
+.subTitle {
+  width: 100% !important;
+  // height: 36px;
+  :global(.ant-menu-submenu-title) {
+      height: 36px!important;
+      line-height: 36px!important;
+      margin: 0;
+  }
+  :global(.ant-menu-item) {
+      height: 36px!important;
+      line-height: 36px!important;
+      margin: 0!important;
+      //padding-left: 56px!important;
+  }
+}
+.myTreeNode {
+  :global{
+    .ant-tree-switcher-icon{
+      color: #959CBA !important;
+    }
+  }
+}
+
+.treeNodeMain {
+  color: #1A2243;
+}

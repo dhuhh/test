@@ -8,8 +8,9 @@
     height: 38px;
     font-size: 1.166rem;
     color: #484747;
-    border-top-right-radius:4px !important;
-    border-bottom-right-radius:4px !important;
+    border-radius:.333rem !important;
+    // border-top-right-radius:4px !important;
+    // border-bottom-right-radius:4px !important;
   }
   &.hideDropBoxAndArrow {
     :global(.ant-cascader-picker-arrow) {
@@ -38,4 +39,10 @@
     color: rgba(0, 0, 0, 0.65);
   }
   // font-size: 1.3rem;
+}
+
+.m_cascader{
+  :global(.ant-cascader-picker-label){
+    z-index: auto !important;
+  }
 }

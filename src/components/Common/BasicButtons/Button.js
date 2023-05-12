@@ -1,7 +1,7 @@
-import React from 'react';
-import { Button as AntdButton } from 'antd';
-import BasicModal from '../BasicModal';
-import Form from '../Form/index';
+import React from "react";
+import { Button as AntdButton } from "antd";
+import BasicModal from "../BasicModal";
+import Form from "../Form/index";
 
 class Button extends React.Component {
   constructor(props) {
@@ -11,14 +11,14 @@ class Button extends React.Component {
       name,
       title,
       forms,
-      visible: false,
+      visible: false
     };
   }
   componentWillReceiveProps(nextProps) {
     const { forms } = nextProps;
     if (forms) {
       this.setState({
-        forms,
+        forms
       });
     }
   }
@@ -30,9 +30,9 @@ class Button extends React.Component {
     }
     // 然后propsWillRecive
     this.setState({
-      visible: true,
+      visible: true
     });
-  }
+  };
   handleOk = () => {
     // ok按钮的操作
     if (this.myForm) {
@@ -44,16 +44,16 @@ class Button extends React.Component {
         }
         if (!err) {
           this.setState({
-            visible: false,
+            visible: false
           });
         }
       });
     } else {
       this.setState({
-        visible: false,
+        visible: false
       });
     }
-  }
+  };
   handleCancel = () => {
     // 取消按钮的操作
     const { cancel } = this.props;
@@ -62,15 +62,25 @@ class Button extends React.Component {
       // this.myForm.resetFields();
     }
     this.setState({
-      visible: false,
+      visible: false
     });
-  }
+  };
   render() {
-    const { dispatch, setFieldsValue, color = 'blue', content, ModalStyle = {} } = this.props;
+    const {
+      dispatch,
+      setFieldsValue,
+      color = "blue",
+      content,
+      ModalStyle = {}
+    } = this.props;
 
     return (
       <span>
-        <AntdButton className={`fcbtn m-btn-border m-btn-border-${color} ant-btn btn-1c`} onClick={this.showModal}>{this.state.name}
+        <AntdButton
+          className={`fcbtn m-btn-border m-btn-border-${color} ant-btn btn-1c`}
+          onClick={this.showModal}
+        >
+          {this.state.name}
         </AntdButton>
         <BasicModal
           {...ModalStyle}
@@ -81,7 +91,18 @@ class Button extends React.Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-          {this.state.forms ? <Form setFieldsValue={setFieldsValue} dispatch={dispatch} ref={(c) => { this.myForm = c; }} forms={this.state.forms} /> : (content || <span>功能待开发</span>) }
+          {this.state.forms ? (
+            <Form
+              setFieldsValue={setFieldsValue}
+              dispatch={dispatch}
+              ref={c => {
+                this.myForm = c;
+              }}
+              forms={this.state.forms}
+            />
+          ) : (
+            content || <span>功能待开发</span>
+          )}
         </BasicModal>
       </span>
     );

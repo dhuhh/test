@@ -1,0 +1,77 @@
+.title {
+  height: 30px; 
+  width: 100%; 
+  font-size: 12px; 
+  background: rgb(243,244,247); 
+  line-height: 30px;
+  padding-left: 10px;
+  font-weight: 600;
+}
+
+.button {
+  margin-left: 5px;
+  background: rgb(238,238,238);
+  &:hover {
+    background: #244FFF;
+    color: #fff;
+  }
+}
+
+.leftBox {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  border-right: 1px solid rgb(212,215,218);
+  border-bottom: 1px solid rgb(212,215,218);
+  :global {
+    .ant-table-tbody > tr > td:nth-child(3) {
+      border-right: 0;
+    }
+  }
+}
+
+.rightBox {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  // width: 400px;
+  border-left: 1px solid rgb(212,215,218);
+  border-bottom: 1px solid rgb(212,215,218);
+}
+
+.arrowBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+}
+
+.rightArrow {
+  width: 54px;
+  height: 48px;
+  margin-left: 31px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.leftArrow {
+  width: 54px;
+  height: 48px;
+  margin-top: -22px;
+  margin-right: 31px;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.inquireButton {
+  display: flex;
+  height: 32px;
+  margin: 20px 0px 0px auto;
+  justify-content: center;
+  align-items: center;
+}

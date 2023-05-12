@@ -8,7 +8,7 @@ export default [
   {
     code: '',
     key: 'direct',
-    url: '/commonbase/v1/queryInnerObject',
+    url: '/dbfast/direct',
     dis: '通用对象数据查询接口',
   },
 ];

@@ -1,4 +1,3 @@
-/* eslint-disable no-debugger */
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Dropdown, Menu } from 'antd';
@@ -16,7 +15,6 @@ class DropdownBox extends Component {
       onVisibleChange(visible);
     }
   }
-
   render() {
     const { id, visible: visibleInstate } = this.state;
     const { className, title, dropbox, style, visible = visibleInstate, closeOnClickMenu = false } = this.props;

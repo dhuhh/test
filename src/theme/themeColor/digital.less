@@ -1,0 +1,249 @@
+// 洞察分析tab样式
+.m-tabs-sec2{
+  &.ant-tabs{
+    .ant-tabs-bar{
+      margin: .666rem 0;
+      border-bottom: 0;
+    }
+    .ant-tabs-nav-container{
+      margin-bottom: 0;
+    }
+    .ant-tabs-tab{
+      .font-s15();
+      line-height: 1.833rem !important;
+      color: @view-color;
+      margin: 0;
+      padding: 0 2rem;
+      border-left: 1px solid @border-btn-color;
+      &:first-child{
+        border-left: 0;
+        padding-left: 0;
+      }
+      &:hover{
+        color: @head-bg;
+      }
+      &.ant-tabs-tab-active{
+        .font-wb();
+        border-bottom: 0 !important;
+        color: @head-bg;
+      }
+    }
+    .ant-tabs-ink-bar {
+      visibility: hidden;
+    }
+    .ant-tabs-extra-content {
+      line-height: 0 !important;
+    }
+  }
+}
+
+// 标签圈人专用
+.m-labelCircle-list {
+  cursor: pointer;
+  padding: 30px;
+}
+
+.m-labelCircle-list-checked {
+  padding: 30px;
+  cursor: pointer;
+  border: 1px solid @head-bg;
+}
+
+.m-indexNumber {
+  width: 20px;
+  background-color: @head-bg;
+  height: 20px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.m-label-indexNumber {
+  width: 20px;
+  background-color: @head-bg;
+  height: 20px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 0.33rem;
+  line-height: 21px;
+  border-radius: 10px;
+}
+
+// 价值分析专用
+.m-worth-tag {
+  margin-top: 0.5rem;
+  line-height: 2.5;
+  border-radius: 2rem;
+  background-color: #f0f6fb;
+  color: @head-bg;
+  text-align: center;
+}
+
+// 洞察分析专用
+.m-cradTitle{
+  width: 100%;
+  .font-s18();
+  font-weight: bold;
+  color: @title-color;
+  padding-left: 12px;
+  position: relative;
+  &::before{
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -8px;
+    width: 5px;
+    height: 16px;
+    background-color: @head-bg;
+    .border-radius(1px);
+  }
+}
+
+// 活动编排新增分支按钮
+.m-hdbp-addBranch {
+  border: 1px dashed @head-bg;
+  color: @head-bg;
+  width: 100%;
+  &:hover, &:focus {
+    border: 1px dashed @head-bg;
+    color: @head-bg;
+  }
+}
+
+// 活动编排 活动名称input框
+.m-actnm-input {
+  width: 60%;
+  background-color: @head-bg;
+  border-bottom: 1px solid white !important;
+  border-radius: 0;
+  border: 0;
+  font-size: 22px !important;
+  color: white;
+}
+
+// 活动编排 选择产品代码
+.m-proCode-select {
+  display: inline-block;
+  padding: 0 3px 5px 5px;
+  width: 100%;
+  border-radius: 5px;
+  border: 1px solid;
+  border-color: #d9d9d9;
+  margin-top: 5px;
+  cursor: pointer;
+  &:hover {
+    border-color: @head-bg;
+  }
+}
+
+// 活动编排 产品代码选择项
+.m-proCode-select-option {
+  border-bottom: 0 !important;
+  position: relative;
+  display: block;
+  padding: 5px 12px;
+  // color: rgba(0, 0, 0, 0.65);
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  cursor: pointer;
+  // transition: background 0.3s ease;
+  &:hover {
+    background-color: @hover-bg2;
+  }
+}
+
+.m-proCode-select-option-active {
+  font-weight: 600;
+  background-color: #fafafa
+}
+
+.m-proCode-select-label {
+  overflow: hidden;
+  display: inline-block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 16rem;
+}
+
+.m-proCode-select-icon {
+  position: absolute;
+  top: 25%;
+  right: 10px;
+  font-size: 18px;
+  color: @head-bg;;
+}
+
+// 华龙软文相关样式
+// title输入框
+.m-adv-title-input {
+  background-color: #fff;
+  border-bottom: 1px solid #e8eaed !important;
+  border-radius: 0;
+  border: 0;
+  font-size: 22px !important;
+  // color: white;
+}
+
+// 软文生产添加符号
+.m-adv-add-row {
+  padding: 8px 0;
+  color: @head-bg;
+  text-align: center;
+}
+
+// 编辑区域最高节点
+.m-adv-ancestor-div {
+  // 给可编辑div加上placeholder样式
+  *[contenteditable="true"]:empty:before{
+    content:attr(placeholder);
+    color: #A9A9A9;
+  }
+}
+
+// 可编辑div
+.m-adv-edit-div {
+  width: 100%;
+  height: auto;
+  min-height: 3rem;
+  outline: none;
+  border: 1px #edf1f4 solid;
+  border-radius: 2px;
+  padding: 10px;
+  p {
+    margin-bottom: 0 !important;
+  }
+}
+
+// 可编辑div 被选中样式
+.m-adv-edit-div-active {
+  border: 1px @head-bg dashed;
+}
+
+// 弹窗框内的dvi
+.m-adv-pop-div {
+  cursor: pointer;
+  margin: 0.666rem;
+  &:hover {
+   color: @head-bg,
+  }
+}
+
+// 菜单栏
+.m-adv-menu-Icon {
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    color: @head-bg,
+  }
+  .active {
+    color: @head-bg,
+  }
+}
+
+.m-adv-highlight{
+  &:hover{
+    color: @rili-bg;
+  }
+}

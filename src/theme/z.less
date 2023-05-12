@@ -34,39 +34,43 @@
 }
 
 //body-bg
-@body-bg:#edf1f4;
+//@body-bg:#f9fafc;
+@body-bg:#F0F1F5;
 @cont-bg:#f7fafd;
 
 //
-@font-color:#444;
-@title-color:#222;
+@font-color:#1A2243;
+@title-color:#1A2243;
 @title-moreC:#d9dce1;
-@view-color:#888888;
+@view-color:#61698C;
+@tag-color:#61698C;
+@btn-tag:#4d5467;
 @btn-gray:#bfbfbf;
 @btn-lightGray:#f6f6f7;
-@table-font:#444444;
-@blue:#54a9df;
-@reminblue:#81b8f5;
-@blueDark:#6C7AB2;
+
+@blue:#244FFF;
+@blueDark:#1F44DB;
 @pink:#ff7676;
-@orange:#F8C55C;
+//@orange:#ffc36d;
+@orange:#f7b432;
 @darkorange:#fa8a13;
 @orangePink:#f9966a;
 @voilet:#707cd2;
 @lightGray:#aaa;
 @darkgray:#747474;
-@red:#d03321;
-@lightred:#DB4247;
+@red:#E81818;
 @lightPink:#f6ddde;
 @violet:#6e7dd4;
 @deepViolet:#8a51c5;
-@green:#3BAB64;
+@green:#52e79d;
 @arrow-box-bg:#e4e7ea;
 @pernnel:#8d9ea7;
 @silvery:#b3b4b4;
 @lightBlue:#a7dcff;
 @lightPink2:#fca0a5;
-@darkPink:#A3292D;
+@darkPink:#c7343c;
+@redBlack: #864343;
+@deepBlack: #000000;
 
 //hover-color
 @pink-hover:#ffe9e8;
@@ -74,63 +78,36 @@
 @orange-hover:#fff4e5;
 @voilet-hover:#eff1ff;
 
-// tag
-@tag-color:#777777;
-@btn-tag:#EEEEEE;
-@btn-tag-border: #CCCCCC;
 
-@tag-violet-color:#8B9BE1;
-@btn-tag-violet:#ECEFFF;
-@btn-tag-border-violet: #B4BDE5;
-
-@tag-blue-color:#81B8F5;
-@btn-tag-blue:#EEF6FF;
-@btn-tag-border-blue: #A9CCED;
-
-@tag-yellow-color:#E4B657;
-@btn-tag-yellow:#FFF8E9;
-@btn-tag-border-yellow: #F3D290;
-
-@tag-orange-color:#F79370;
-@btn-tag-orange:#FFEAE3;
-@btn-tag-border-orange: #F2AF97;
-
-@tag-red-color:#F16767;
-@btn-tag-red:#FFEBEB;
-@btn-tag-border-red: #F19E9E;
 
 //border-color
-@border-color:#ecedee;
-@border-btn-color:#D8D8D8;
+@border-color:#EAECF2;
+@border-btn-color:#D1D5E6;
 @hover-border:#7e8488;
 
 //form
 @form-input-bg:#f6f6f8;
-@form-input-border:#D8D8D8;
+@form-input-border:#D1D5E6;
 @form-title:#7e8488;
 
 //input
-@input-placeholder:#adadad;
+@input-placeholder:#959CBA;
 @label-color:#a5a9ae;
 @dialog:#def3fd;
 @textarea:#f8fafc;
 @textarea2:#eee;
 
 //table
-@table-hover:#f8f8f8;
-@table-border:#eff0f2;
-@table-th:#eff0f2;
+@table-hover:#e6f7ff;
+@table-border:#f4f4f4;
+@table-th:#484747;
 @table-td:#666;
 @table-tr:#f6fafd;
 @table-border-tr:#f0f2f4;
 
 
 //tag
-@tag-default:#666;
-
-// tabs
-@tab-border:#e9eef7;
-@tab-font:#444444;
+@tag-default:#61698C;
 
 //menuBg
 @menu-two-bg:#f6fafd;
@@ -146,7 +123,7 @@
 
 //login
 @loginBg:#22252f;
-@login-border:#d9d9d9;
+@login-border:#D1D5E6;
 
 //@disabled
 @disabled-bg:#e7e7e7;
@@ -156,8 +133,24 @@
 //m-steps
 @title-icon:#dbe0e5;
 
-//@all-family:"PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,SimSun,sans-serif !important;
-@all-family:Rubik,"Monospaced Number","Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Microsoft YaHei","PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif !important;
+//安信的颜色
+@ax-hover:#F0F1F5;
+@ax-hover2: #E1E7FF;
+@ax-checkb-bd:#74819E;
+@ax-lgray:#959CBA;
+@ax-table-th:#F9FAFC;
+@ax-lbue-hover: #F2F5FF;
+@ax-red:#E81919;
+@ax-bg-tm: rgba(36,79,255,0.5);
+@ax-border: #EAEEF2;
+@ax-divide:#dadfe3;
+@ax-table-th2:#F3F4F7;
+@ax-blue2: #2047E6;
+@ax-blue3: #1F44DB;
+@ax-tag-hover:#D1D5E6;
+
+@all-family:"Microsoft YaHei","PingFang SC","Helvetica Neue",Helvetica,"Hiragino Sans GB",Arial,SimSun,sans-serif !important;
+//@all-family:Rubik,"Monospaced Number","Chinese Quote",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Microsoft YaHei","PingFang SC","Helvetica Neue",Helvetica,Arial,sans-serif !important;
 // @all-family:Rubik,sans-serif;
 
 .reset-c5(){
@@ -175,29 +168,10 @@
   textarea { resize:none; }
   input,textarea{background: none; border: none;}
   table { border-collapse:collapse; }
-  body { color:#333; font:1.166rem/1.666rem @all-family !important; background:@body-bg;}
-  a { color:#666; text-decoration:none !important; }
-  a:visited { color:#666; }
-  a:hover, a:active, a:focus { text-decoration:underline; }
-  ::-webkit-scrollbar, ::-webkit-scrollbar-track {
-    background-color: initial;
-    cursor: pointer;
-  }
-  ::-webkit-scrollbar {
-      width: 0.666rem;
-      height: .666rem;
-      cursor: pointer;
-  }
-  ::-webkit-scrollbar-thumb {
-      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-      -o-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-      -moz-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-      -ms-box-shadow: inset 0 0 6px rgba(0,0,0,.2);
-      background-color: rgba(0,0,0,.2);
-      border-radius: 10px;
-      background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, .2) 75%, transparent 75%, transparent);
-  }
-  .clear{ clear: both;}
+  body { color:#1A2243; font:1.166rem/1.666rem @all-family !important; background:@body-bg;}
+  a { color:#61698C; text-decoration:none; }
+  a:visited { color:#61698C; }
+  a:hover, a:active, a:focus { text-decoration:none; }
 }
 //去除a和label的虚线
 .remove_dotted(){
@@ -260,9 +234,6 @@
 .font-w700(){
   font-weight: 700;
 }
-.font-w500(){
-  font-weight: 500;
-}
 .font-wb(){
   font-weight: bold;
 }
@@ -288,13 +259,13 @@
 .font-s9(){font-size: .75rem;}
 .font-s10(){font-size: .833rem;}
 .font-s11(){font-size: .916rem;}
-.font-s12(){font-size: 1rem;}
-.font-s13(){font-size: 1.083rem;}
-.font-s14(){font-size: 1.166rem;}
-.font-s15(){font-size: 1.25rem;}
-.font-s16(){font-size: 1.333rem;}
+.font-s12(){font-size: 12px;}
+.font-s13(){font-size: 13px;}
+.font-s14(){font-size: 14px;}
+.font-s15(){font-size: 15px;}
+.font-s16(){font-size: 16px;}
 .font-s17(){font-size: 1.416rem;}
-.font-s18(){font-size: 1.5rem;}
+.font-s18(){font-size: 18px;}
 .font-s19(){font-size: 1.583rem;}
 .font-s20(){font-size: 1.666rem;}
 .font-s21(){font-size: 1.75rem;}
@@ -780,19 +751,7 @@
   -moz-box-shadow: 1px 4px 10px 2px #CCC;
 }
 
-.calc(@calc:0rem){
-  width:-webkit-calc(~"100%" - @calc);
-  width:-moz-calc(~"100%" - @calc);
-  width:calc(~"100%" - @calc);
-}
-
-.calcH(@calc:0rem){
-  height:-webkit-calc(~"100vh" - @calc);
-  height:-moz-calc(~"100vh" - @calc);
-  height:calc(~"100vh" - @calc);
-}
-
 //新增颜色
 @x-border-color:#e7e9ef;
-@light-gray:#999;
+@light-gray:#959CBA;
 @c-gray:#ccc;

@@ -1,0 +1,54 @@
+.popTag>span {
+  height: 43px;
+  padding: 8px 25px;         // 左右内边距为10px
+  border-radius: 21px;      // 设置边框的圆角
+  font-size: 14px;
+  color: #61698C;
+  font-weight: normal;
+  border: 1px solid #959CBA;
+  display: inline-block;
+  line-height: 25px;
+  margin-top: 13px;
+  position: relative;
+  // 该部分是个三角形的效果，实现原理，将一个框的宽度高度设置为0出现四个三角形，设置边框为6px,设置颜色和线条，将不需要显示三边设置为白色，用四个方向设置绝对位置，即可实现。
+  &::before{
+    box-sizing: content-box;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -8px;;
+    left: 50%;
+    margin-left: -5px;
+    padding:0;
+    border-bottom:4px solid#FFFFFF;
+    border-top:4px solid transparent;
+    border-left:4px solid transparent;
+    border-right:4px solid transparent;
+    display: block;
+    content:'';
+    z-index: 12;
+}
+  &::after{
+    box-sizing: content-box;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    top: -10px;;
+    left: 50%;
+    margin-left: -6px;
+    padding:0;
+    border-bottom:5px solid #959CBA;
+    border-top:5px solid transparent;
+    border-left:5px solid transparent;
+    border-right:5px solid transparent;
+    display: block;
+    content:'';
+    z-index:10
+}
+  span{
+    color: #E81818;
+  }
+}
+.popTag{
+  white-space: nowrap;
+}

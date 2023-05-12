@@ -1,14 +1,6 @@
-/*
- * @Author: your name
- * @Date: 2021-07-16 11:40:38
- * @LastEditTime: 2021-07-16 11:40:38
- * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
- * @FilePath: \product-react-web\src\utils\recentlyVisiteUtils.js
- */
-/* eslint-disable no-debugger */
 import lodash from 'lodash';
-import { fetchRecordPageAccessLog } from '../services/basicservices';
+import { fetchOperationLog } from '../services/basicservices';
+import { ptlx } from './config';
 /**
  * Object对象相关的自定义处理函数
  */
@@ -35,30 +27,30 @@ const RecentlyVisiteUtils = {
     return menuName;
   },
   saveRecentlyVisiteUtils(plocPath, search, name = '') {
+    let tempName = name;
+    let tempCode = '';
     // 保存最近访问的url
     const recentlyVisitedUrls = sessionStorage.getItem('recentlyVisited') ? sessionStorage.getItem('recentlyVisited').split(',') : [];
     const tempRecentUrl = `${plocPath + search}|${name}`;
     const tempIndex = recentlyVisitedUrls.findIndex((item) => { return item.substring(0, item.indexOf('|')) === tempRecentUrl.substring(0, tempRecentUrl.indexOf('|')); });
-    // const tempIndexName = RecentlyVisiteUtils.mapUrls.findIndex((tempItem) => { return tempItem.url === plocPath + search; });
-    // tempName = tempIndexName >= 0 ? RecentlyVisiteUtils.mapUrls[tempIndexName].name : '';
+    const tempIndexName = RecentlyVisiteUtils.mapUrls.findIndex((tempItem) => { return tempItem.url === plocPath + search; });
+    tempName = tempIndexName >= 0 ? RecentlyVisiteUtils.mapUrls[tempIndexName].name : '';
     // 处理菜单路径的后缀
     const menuTree = JSON.parse(sessionStorage.getItem('menuTree')) || [];
     const tempObj = this.getNameAndUrl(`${plocPath + search}`, menuTree) || {};
-    const tempName = lodash.get(tempObj, 'title[0].text', '');
+    tempName = lodash.get(tempObj, 'title[0].text', '');
+    tempCode = lodash.get(tempObj, 'describe[0].text', '');
+    tempCode = tempCode.indexOf('|') !== -1 ? lodash.get(tempCode.split('|'), '[0]') : tempCode;
+    const ip = localStorage.getItem('userIP') ? localStorage.getItem('userIP') : '';
     if (tempName) {
-      fetchRecordPageAccessLog({
-        accessIp: '',
-        accessParam: '',
-        browserVerson: '',
-        menuPrj: '',
-        oprModule: '',
-        pageCode: '',
-        pageName: tempName,
-        reqType: '',
-        spentTime: '',
-        srvSts: '',
-        terminal: 0,
-        url: `进入：${tempName}|${tempRecentUrl}`,
+      fetchOperationLog({
+        czdx: tempCode,
+        czff: '',
+        czjl: 0,
+        czkm: '9003',
+        czsm: `进入：${tempName}|${tempRecentUrl}`,
+        ip,
+        ptlx,
       });
     }
     if (tempIndex >= 0) {
@@ -71,6 +63,9 @@ const RecentlyVisiteUtils = {
       return;
     }
     recentlyVisitedUrls.push(tempRecentUrl);
+    /* if (recentlyVisitedUrls.length > 8) {
+      recentlyVisitedUrls.splice(0, 1);
+    } */
     sessionStorage.setItem('recentlyVisited', recentlyVisitedUrls.join(','));
   },
   cleanRecentlyVisiteUtils() {

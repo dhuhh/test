@@ -1,0 +1,388 @@
+.searchBox {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.selectBox {
+  padding-top: 0;
+  margin-top: 16px;
+}
+
+.commonItemObj {
+  margin-right:36px;
+  // margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  .label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1A2243;
+  }
+}
+
+.commonDivObj {
+  border-radius: 2px;
+  border: 1px solid #D1D5E6;
+  padding:0 6px;
+  display: flex;
+  align-items: center;
+  height: 32px;
+  margin-left: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #1A2243;
+  &:hover{
+    border-color: #244FFF;
+    color: #244FFF;
+  }
+}
+
+.datePicker {
+  :global(.ant-calendar-picker-input.ant-input){
+    height: 32px !important;
+    display: flex !important;
+  }
+}
+
+// .datePickerItem:extend(.commonItemObj all) {
+//   display: flex;
+//   flex-direction: row;
+//   align-items: center;
+//   // &>div:extend(.commonDivObj all){
+//   //   visibility: visible;
+//   // }
+// }
+
+.datePickerItem{
+  margin-right:36px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  .label{
+    font-size: 14px;
+    font-weight: 400;
+    color: #1A2243;
+  }
+  &>div{
+    border-radius: 2px;
+    border: 1px solid #D1D5E6;
+    padding:0 6px;
+    display: flex;
+    align-items: center;
+    height: 32px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #1A2243;
+    &:hover{
+      border-color: #244FFF;
+      color: #244FFF;
+    }
+  }
+  .activeButton {
+    color: #244FFF !important;
+    border-color: #244FFF !important;
+  }
+  .rangeInput{
+    width: 86px;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #D1D5E6;
+    text-align: center;
+    margin-left: 0;
+    &:first-of-type{
+      margin-left: 8px;
+    }
+    &:hover,&:focus{
+      border: 1px solid #244FFF;
+    }
+    &::-webkit-input-placeholder { /* WebKit browsers 适配谷歌 */
+      color: #BDCADA;
+    }
+    &:-moz-placeholder { /* Mozilla Firefox 4 to 18 适配火狐 */
+      color: #BDCADA;
+    }
+    &::-moz-placeholder { /* Mozilla Firefox 19+ 适配火狐 */
+      color: #BDCADA;
+    }
+    &:-ms-input-placeholder { /* Internet Explorer 10+  适配ie*/
+      color: #BDCADA;
+    }
+    :global{
+      .ant-input-number-handler-wrap{
+        display: none;
+      }
+      .ant-input-number-input{
+        text-align: center;
+        padding: 0;
+      }
+    }
+  }
+  
+  .rangePicker {
+    margin-left: 8px;
+    :global(.ant-input){
+      border-color: #D1D5E6;
+      border-radius: 2px;
+      color: #1A2243;
+    }
+    :global(.ant-input:hover){
+      border-color :#244fff !important;
+    }
+    :global(.ant-input:focus){
+        border-color :#244fff !important;
+        box-shadow: none;
+    }
+    :global(.ant-calendar-picker-input){
+      height: 32px;
+      display: flex !important;
+    }
+    &:focus{
+      :global(.ant-calendar-picker-input){
+        &:not(.ant-input-disabled){
+          box-shadow: none !important;
+          border-color: #244fff !important;
+        }
+    }
+  }
+  :global(.ant-calendar-range-picker-input){
+    &::-webkit-input-placeholder {
+      color: #959CBA;
+    }
+    input::-moz-input-placeholder {
+      color: #959CBA;
+    }
+    input::-ms-input-placeholder {
+      color: #959CBA;
+    }
+  }
+  }
+}
+
+.searchItem:extend(.commonItemObj all) {
+  &>div:extend(.commonDivObj all){
+    visibility: visible;
+  }
+}
+
+.searchSelectItem:extend(.commonItemObj all) {
+  &>div>div:extend(.commonDivObj all){
+    :global(.ant-select-arrow) {
+      color: rgb(120, 125, 156);
+    }
+  }
+}
+
+.rangeInput{
+  width: 86px;
+  height: 32px;
+  border-radius: 2px;
+  border: 1px solid #D1D5E6;
+  text-align: center;
+  margin-left: 0;
+  &:first-of-type{
+    margin-left: 8px;
+  }
+  &:hover,&:focus{
+    border: 1px solid #244FFF;
+  }
+  &::-webkit-input-placeholder { /* WebKit browsers 适配谷歌 */
+    color: #BDCADA;
+  }
+  &:-moz-placeholder { /* Mozilla Firefox 4 to 18 适配火狐 */
+    color: #BDCADA;
+  }
+  &::-moz-placeholder { /* Mozilla Firefox 19+ 适配火狐 */
+    color: #BDCADA;
+  }
+  &:-ms-input-placeholder { /* Internet Explorer 10+  适配ie*/
+    color: #BDCADA;
+  }
+  :global{
+    .ant-input-number-handler-wrap{
+      display: none;
+    }
+    .ant-input-number-input{
+      text-align: center;
+      padding: 0;
+    }
+  }
+}
+
+.datePickerBox {
+  display: flex;
+  flex-direction: column;
+  margin-top: 16px;
+  .describeContent {
+    margin-top: -10px;
+    font-size: 12px;
+    color: #FF6E30;
+  }
+}
+
+.treeSelect{
+  :global(.ant-select-search__field){
+    margin-top: -5px;
+  }
+  :global(.ant-select-selection--multiple){
+    height: 30px;
+    min-width: 250px;
+    border-radius: 2px;
+  }
+  :global(.ant-select-selection__rendered){
+    line-height: 30px;
+    height: 30px;
+    li{
+      height: 22px !important;
+      line-height: 22px !important;
+      margin: 0 !important;
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+      margin-right: 4px !important;
+      color: #1A2243 !important;
+    }
+  }
+  :global(.ant-select-selection__choice){
+    /* border: 0 !important;
+    background: #FFF !important;
+    margin: 0 !important; */
+    padding-left: 3px !important;
+  }
+}
+
+.modal {
+  :global(.ant-modal-close-x) {
+    width: 30px !important;
+    height: 30px !important;
+    line-height: 30px !important;
+  }
+  :global(.ant-modal-body){
+    padding: 0;
+    padding-top: 24px;
+  }
+}
+
+.select {
+  :global(.ant-select-selection--single) {
+    height: 30px !important;
+  }
+  :global(.ant-select-selection__rendered) {
+    line-height: 30px !important;
+  }
+}
+
+.iframe {
+  border: 1px solid #D1D5E6;
+}
+
+.inputSpan {
+  color: '#959CBA';
+  margin-left: 8px;
+}
+
+.zqdmSelect {
+  :global(.ant-select-search__field){
+    margin-top: -5px;
+  }
+  :global(.ant-select-selection--multiple){
+    height: 30px;
+    min-width: 250px;
+    border-radius: 2px;
+  }
+  :global(.ant-select-selection__rendered){
+    line-height: 30px;
+    height: 30px;
+    li{
+      height: 22px !important;
+      line-height: 22px !important;
+      margin: 0 !important;
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+      margin-right: 4px !important;
+      color: #1A2243 !important;
+    }
+  }
+  :global(.ant-select-selection__choice){
+    /* border: 0 !important;
+    background: #FFF !important;
+    margin: 0 !important; */
+    padding-left: 3px !important;
+  }
+}
+
+// .zqdmSelect {
+//   // :global(.ant-select-selection__rendered) {
+//   //   display: visible;
+//   // }
+//   :global(.ant-select-selection) {
+//     border-color: #D1D5E6 !important;
+//   }
+// }
+
+.mulSelect {
+  :global(.ant-select-search__field){
+    margin-top: -5px;
+  }
+  :global(.ant-select-selection--multiple){
+    height: 30px;
+    min-width: 250px;
+    border-radius: 2px;
+  }
+  :global(.ant-select-selection__rendered){
+    line-height: 30px;
+    height: 30px;
+    li{
+      height: 22px !important;
+      line-height: 22px !important;
+      margin: 0 !important;
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+      margin-right: 4px !important;
+      color: #1A2243 !important;
+    }
+  }
+  :global(.ant-select-selection__choice){
+    /* border: 0 !important;
+    background: #FFF !important;
+    margin: 0 !important; */
+    padding-left: 3px !important;
+  }
+}
+
+.codeModal {
+  :global {
+    .ant-modal-close-x {
+      width: 30px !important;
+      height: 30px !important;
+      line-height: 30px !important;
+    }
+    .ant-modal-body {
+      padding: 0;
+    }
+    .ant-modal-title {
+      font-size: 16px !important;
+      font-weight: 600;
+    }
+    .ant-modal-close {
+      top: 12px !important;
+      right: 5px !important;
+    }
+    .ant-modal-footer {
+      border-top: 0;
+    }
+    .ant-table-tbody > tr > td {
+      height: 45px !important;
+    }
+    .ant-table-thead > tr > th {
+      height: 45px !important;
+    }
+  }
+}
+
+.calendar {
+  :global(.ant-calendar-footer-btn) {
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+  }
+}

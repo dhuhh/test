@@ -1,8 +1,7 @@
-import { prefix } from '../../utils/config';
-
-export default [
+const prefix = '';
+exports.routes = [
   {
     path: `${prefix}/iconFont`,
-    component: () => import('../../components/Common/IconFont'),
+    component: '../components/Common/IconFont',
   },
 ];

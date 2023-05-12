@@ -1,0 +1,86 @@
+@import "./theme/index.less";
+
+html, body, :global(#root) {
+  height: 100%;
+}
+
+.globalSpin {
+  width: 100%;
+  margin: 40px 0 !important;
+}
+
+:global(.echarts-for-react) {
+  &>object {
+    visibility: hidden\0;
+  }
+}
+
+:global(.ant-tooltip) {
+  :global(.ant-tooltip-inner) {
+    background-color: rgba(0 ,8, 39, 0.7) !important;
+  }
+}
+
+:global(.ant-empty-description) {
+  color: #959CBA;
+}
+
+:global(.ant-select-dropdown-menu-item-selected:not(.ant-select-dropdown-menu-item-active)) {
+  background-color: #fff !important;
+  box-shadow: none !important;
+}
+
+:global(.ant-select-open .ant-select-selection) {
+  border-color: #244FFF !important;
+  box-shadow: none !important;
+}
+
+:global(.ant-select-focused .ant-select-selection) {
+  border-color: #244FFF !important;
+  box-shadow: none !important;
+}
+
+:global(.ant-select-selection) {
+  &:hover {
+    border-color: #244FFF !important;
+    box-shadow: none !important;
+  }
+}
+
+:global {
+  .ant-table-filter-dropdown {
+    .ant-checkbox-checked {
+      .ant-checkbox-inner {
+        background-color: #244FFF;
+        border-color: #244FFF;
+      }
+      &::after {
+        border: 1px solid #244FFF;
+      }
+    }
+    .ant-dropdown-menu-item-selected {
+      color: #244FFF;
+    }
+    .ant-table-filter-dropdown-btns {
+      .ant-table-filter-dropdown-link {
+        color: #244FFF;
+      }
+    }
+    .ant-dropdown-menu-item {
+      &>span:last-child {
+        word-break: break-all;
+        white-space: break-spaces;
+      }
+    }
+    .ant-dropdown-menu {
+      max-width: 250px;
+      max-height: 400px !important;
+    }
+  }
+}
+
+:global {
+  .ant-menu-inline-collapsed > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-item, .ant-menu-inline-collapsed > .ant-menu-item-group > .ant-menu-item-group-list > .ant-menu-submenu > .ant-menu-submenu-title, .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding: 0 28px !important;
+  }
+}

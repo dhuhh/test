@@ -1,0 +1,389 @@
+.iconSure:hover {
+    cursor: pointer;
+}
+
+.iconSure {
+    position: absolute;
+    top: -12px;
+    left: 12px;
+    margin-right: 4px;
+}
+
+.selectArea {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 40px;
+    margin-right: 32px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: "PingFangSC-Medium, PingFang SC";
+    font-weight: 500;
+    color: "#1A2243";
+}
+
+.NewSelectArea {
+    display: inline-block;
+    vertical-align: top;
+    line-height: 40px;
+    margin-right: 32px;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-family: "PingFangSC-Medium, PingFang SC";
+    font-weight: 500;
+    color: "#1A2243";
+}
+
+.isShowPover {
+    /*
+    box-shadow: 0px 0px 10px 0px rgba(5,14,28,0.1200);
+     */
+    width: 223px;
+    /* height: 140px; */
+    border-radius: 1px;
+    background-color: transparent;
+    vertical-align: middle;
+    top: 8px !important;
+}
+.isShowPover3 {
+    /*
+    box-shadow: 0px 0px 10px 0px rgba(5,14,28,0.1200);
+     */
+    width: 223px;
+    /* height: 140px; */
+    border-radius: 1px;
+    background-color: transparent;
+    vertical-align: middle;
+    top: 34px !important;
+}
+.isShowPover2 {
+    margin-bottom: 5px;
+}
+
+.isShowPover2 .ant-popover-inner-content {
+    padding: 0;
+    margin-bottom: 5px !important;
+}
+.isShowPover3 .ant-popover-arrow {
+    background: #474d64 !important;
+    border: #474d64;
+    box-shadow: 0px 0px 10px 0px rgba(5, 14, 28, 0.12) !important;
+}
+
+.isShowPover .ant-popover-arrow {
+    background: #474d64 !important;
+    border: #474d64;
+    box-shadow: 0px 0px 10px 0px rgba(5, 14, 28, 0.12) !important;
+}
+
+.iscommissionContractContribute {
+    width: 223px;
+    /* height: 140px; */
+    border-radius: 1px;
+    background-color: transparent;
+    vertical-align: middle;
+    top: 18px !important;
+}
+
+.iscommissionContractContribute .ant-popover-arrow {
+    top: -4px !important;
+}
+
+#table-selectAll .ant-checkbox-indeterminate .ant-checkbox-inner {
+    /* background: #1890ff!important; */
+    background-color: #92a7ff !important;
+}
+
+.modal-table .ant-spin-nested-loading {
+    position: unset;
+}
+
+.modal-table .ant-spin-container {
+    position: unset;
+}
+
+.modal-table .ant-table-pagination {
+    position: absolute;
+    width: 100%;
+    bottom: -48px;
+    background: #fff;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 25px;
+    /* padding-left: 276px; */
+}
+
+.scrollBar-table::-webkit-scrollbar {
+    width: 4px;
+}
+
+/* 滚动槽 */
+.scrollBar-table::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+}
+
+/* 滚动条滑块 */
+.scrollBar-table::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+
+.scrollBar-table::-webkit-scrollbar-thumb:window-inactive {
+    background: #d9d9d9;
+}
+
+.iscommissionContractContribute {
+    padding-top: 0;
+}
+
+.iscommissionContractContribute .ant-tooltip-arrow {
+    margin-top: -8px;
+}
+
+.isShowPover .ant-popover-inner-content {
+    box-shadow: 0px 0px 10px 0px rgba(5, 14, 28, 0.12);
+    border-radius: 1px;
+    background: #474d64;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 20px;
+}
+.isShowPover3 .ant-popover-inner-content {
+    box-shadow: 0px 0px 10px 0px rgba(5, 14, 28, 0.12);
+    border-radius: 1px;
+    background: #474d64;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ffffff;
+    line-height: 20px;
+}
+#table-selectAll .ant-modal-title {
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #1a2243;
+    line-height: 22px;
+}
+
+.modal-table .ant-table-column-title {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1a2243;
+    line-height: 20px;
+}
+
+.modal-table .ant-table-row {
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #4b516a;
+    line-height: 20px;
+}
+
+.modal-table .ant-pagination-item-active {
+    color: #244fff;
+    background: #ffffff;
+    border-radius: 1px;
+    border: 1px solid #244fff;
+}
+
+.modal-table .ant-pagination-item-active a {
+    color: #244fff;
+}
+
+.ant-pagination-item:hover a {
+    color: #244fff;
+}
+
+/* .ant-pagination-item:active a{
+    color: #244FFF;
+} */
+.ant-pagination-next:hover .ant-pagination-item-link {
+    color: #244fff;
+}
+
+.ant-pagination-prev:hover .ant-pagination-item-link {
+    color: #244fff;
+}
+
+.ant-pagination-prev:focus .ant-pagination-item-link,
+.ant-pagination-next:focus .ant-pagination-item-link,
+.ant-pagination-prev:hover .ant-pagination-item-link,
+.ant-pagination-next:hover .ant-pagination-item-link {
+    color: #244fff;
+}
+
+#resetPro:hover {
+    color: #244fff !important;
+}
+
+.scrollBar-table .ant-table-thead th {
+    background: #f3f4f7;
+}
+
+.modalLink .ant-modal-header {
+    border-bottom: 1px solid #eaecf2;
+}
+
+.modalLink .ant-table-tbody>tr>td {
+    border-bottom: 1px solid #eaecf2;
+    border-right: 1px solid #eaecf2;
+}
+
+.modalLink .ant-table-row-cell-break-word {
+    text-align: center;
+}
+
+.stockPoolTop {
+    width: 320px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.stockPoolTop2 {
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+}
+.maxStockPoolTop{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.stockPoolTopBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 32px;
+    border-radius: 2px;
+    border: 1px solid #d1d5e6;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1a2243;
+    transition: 0.3s;
+}
+
+.stockPoolTopBtn:hover {
+    border-color: #244fff;
+    color: #244fff;
+}
+
+.MySelectArea .ant-select-selection {
+    height: 32px;
+}
+
+.MySelectArea .ant-select-search__field {
+    margin-top: -8px;
+}
+
+.MySelectArea .ant-select-selection__choice {
+    height: 22px !important;
+    line-height: 22px !important;
+    margin: 4px 6px 4px 0 !important;
+}
+
+.MySelectArea .ant-select-selection__choice:nth-child(2) {
+    /* background: #fff !important; */
+    background-color: transparent !important;
+    border: none;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #ff6e30;
+    padding: 0;
+}
+
+.MySelectArea .ant-select-selection__choice__remove {
+    display: none !important;
+}
+
+.stockPoolTop .ant-input-affix-wrapper .ant-input {
+    height: 32px;
+    border-radius: 2px;
+}
+
+.stockPoolTop .ant-input-affix-wrapper .ant-input:hover {
+    border-color: #244fff !important;
+}
+
+.stockPoolTop .ant-input-affix-wrapper .ant-input:focus {
+    border-color: #244fff !important;
+    box-shadow: none;
+}
+
+.stockPoolTop.ant-calendar-range-picker-input ::-webkit-input-placeholder {
+    color: #959cba;
+}
+
+.stockPoolTop.ant-calendar-range-picker-input input::-moz-input-placeholder {
+    color: #959cba;
+}
+
+.stockPoolTop.ant-calendar-range-picker-input input::-ms-input-placeholder {
+    color: #959cba;
+}
+
+.stockPoolModalTable .ant-table-fixed-header .ant-table-scroll .ant-table-header {
+    margin-right: -20px !important;
+}
+
+.stockPoolModalTable .ant-table-thead>tr>th {
+    background: #f7f8fc !important;
+    color: #1a2243;
+    font-weight: 400 !important;
+    font-family: PingFangSC-Medium, PingFang SC !important;
+}
+
+.stockPoolModalTable .ant-table-tbody {
+    color: #61698c !important;
+}
+
+.stockPoolModalTable .ant-table-content th {
+    border-color: #eaeef2 !important;
+}
+
+.stockPoolModalTable .ant-table-content td {
+    border-color: #eaeef2 !important;
+}
+
+.stockPoolModalTable .ant-table-content table {
+    border-color: #eaeef2 !important;
+}
+
+.stockPoolModalTitle {
+    font-size: 16px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #1A2243;
+}
+
+.zhiBiaoModal .ant-modal-body {
+    padding: 16px !important;
+    padding-bottom: 0 !important;
+}
+.zhiBiaoModal .ant-checkbox-disabled .ant-checkbox-inner{
+    background-color: #f5f5f5 !important;
+}
+.zhiBiaoModal .ant-checkbox-checked .ant-checkbox-inner{
+    background-color: #244fff ;
+}
+.zhiBiaoModal .ant-pagination-item a{
+    color: #1A2243 ;
+}
+.zhiBiaoModal .ant-pagination-item-active a{
+    color: #244fff !important;
+}
+.odd{
+    background-color: #fafafa ;
+}

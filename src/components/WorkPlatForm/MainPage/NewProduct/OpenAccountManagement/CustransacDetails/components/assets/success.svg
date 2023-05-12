@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tishi/_chenggong</title>
+    <g id="通用组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="通知" transform="translate(-104.000000, -455.000000)">
+            <g id="通知/提示通知/完成" transform="translate(80.000000, 440.000000)">
+                <g id="成功提示" transform="translate(24.000000, 15.000000)">
+                    <circle id="椭圆形" fill="#01A86F" cx="8" cy="8" r="8"></circle>
+                    <g id="common_icon_close" transform="translate(4.363636, 3.636364)" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <g id="common_nav_icon_close">
+                            <polyline id="路径" transform="translate(3.636364, 3.636364) rotate(-315.000000) translate(-3.636364, -3.636364) " points="5.09090909 0.727272727 5.09090909 6.54545455 2.18181818 6.54545455"></polyline>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

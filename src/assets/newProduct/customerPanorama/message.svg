@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>编组 109</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360首页-客户权益3" transform="translate(-354.000000, -247.000000)">
+            <path d="M1280.5,41.5 L1280.5,1624.5 L-0.5,1624.5 L-0.5,41.5 L1280.5,41.5 Z" id="矩形备份" stroke="#EAECF2" fill="#F2F3F7"></path>
+            <g id="编组-67" transform="translate(188.000000, 112.000000)">
+                <polygon id="矩形" fill="#FFFFFF" points="0 0 744 0 744 271 0 271"></polygon>
+                <g id="编组-56" transform="translate(29.000000, 57.000000)" opacity="0.550000012" stroke="#244FFF">
+                    <g id="编组-2" transform="translate(0.000000, 74.000000)">
+                        <g id="编组-84" transform="translate(137.000000, 4.000000)">
+                            <g id="编组-3" transform="translate(1.000000, 1.000000)">
+                                <path d="M13,0.5 L13.5,9 L1,9.5 L0.5,1 L13,0.5 Z" id="矩形"></path>
+                                <path d="M0.434127757,1.96481216 L6.6324915,4.42686485 C6.86860201,4.52065033 7.13155715,4.5210528 7.36795363,4.42799052 L13.6249115,1.96481216 L13.6249115,1.96481216" id="路径-8"></path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

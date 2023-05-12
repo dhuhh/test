@@ -1,168 +1,16 @@
 @charset "utf-8";
 
-
-//m-table-blue
-.m-table-blue{
-
-  padding:0;
-  .ant-radio-wrapper,.ant-checkbox-wrapper{
-        border-collapse: collapse;
-        border-collapse: separate\0\9;
+//新增去掉圆角
+.ant-table{
+  table,.ant-table-header table,.ant-table-placeholder{
+    .border-radius(0) !important;
   }
-
-  //table中 form表单的重置
-  .ant-form-item-control{
-    &:before,&:after{
-        display: block;
-    }
+  .ant-table-thead > tr > th{
+    .border-radius(0) !important;
   }
-
-  .ant-table {
-    overflow: inherit;
-    font-family: @all-family;
-    table{
-        border-collapse: separate;
-        border-spacing:0 0.833rem;
-        overflow: inherit;
-    }
-
-    .ant-table-thead>tr>th {
-        background: transparent;
-        text-align: left;
-        border-bottom: none;
-        color:@table-th;
-        padding: 1rem;
-        .font-s16();
-        // .font-wb();
-        white-space: nowrap;
-
-        i.icon-diwn-solid-arrow{
-          .font-s14();
-        }
-
-        i.icon-mark{
-          display: inline;
-          color: @blue;
-          .font-s20();
-        }
-
-    }
-    .ant-table-tbody>tr{
-
-        border:2px solid #d8dcdf;
-        white-space: nowrap;
-
-
-
-    }
-    .ant-table-tbody>tr>td {
-
-        border-top:2px solid #d8dcdf;
-        border-bottom:2px solid #d8dcdf;
-        white-space: nowrap;
-
-        &:first-child{
-          border-left:2px solid #d8dcdf;
-        }
-        &:last-child{
-          border-right:2px solid #d8dcdf;
-        }
-
-        padding:1rem;
-        // background:#fff;
-        .font-s14();
-        color: @table-td;
-        height:64px;
-        text-align: left;
-        a{
-          display:inline-block;
-        }
-        >td{
-          color:#666666;
-        }
-    }
-
+  .ant-table-header{
+    background: @ax-table-th2;
   }
-  &.index{
-
-    .ant-table{
-
-      font-family: @all-family;
-
-      .ant-table-tbody>tr{
-
-        &.active{
-
-          td:last-child{
-
-            div{
-
-              .pos(r);
-              &:before{
-                .triangle(left,@w:5px 9px 5px 9px,@color:#fff);
-                content: '';
-                .pos(a);
-                top: 50%;
-                right:-29px;
-                transform:translateY(-50%);
-                overflow: hidden;
-                z-index:110;
-              }
-
-              &:after{
-                content: '';
-                .pos(a);
-                top: 50%;
-                right:-36px;
-                transform:translateY(-50%);
-                overflow: hidden;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-
-  &.m-table-blue-small{
-
-         .ant-table {
-
-          font-family: @all-family;
-
-            .ant-table-thead{
-              tr{
-                th{
-                  padding: 0.833rem 3rem;
-                }
-              }
-            }
-
-            .ant-table-tbody>tr{
-
-                border:1px solid #d8dcdf;
-                white-space: nowrap;
-
-            }
-            .ant-table-tbody>tr>td {
-
-                border-top:1px solid #d8dcdf;
-                border-bottom:1px solid #d8dcdf;
-                white-space: nowrap;
-                padding: 0.833rem 3rem;
-                height: 3.166rem;
-
-                &:first-child{
-                  border-left:1px solid #d8dcdf;
-                }
-                &:last-child{
-                  border-right:1px solid #d8dcdf;
-                }
-            }
-
-          }
-  }
-
 }
 
 .m-table-blue-footer{
@@ -197,7 +45,7 @@
         > th{
           background: #fff;
           .font-s16();
-          // .font-wb();
+          .font-wb();
           color:@title-color;
           border-bottom: 1px solid @border-color;
           white-space: nowrap;
@@ -356,6 +204,10 @@
 
 }
 
+
+
+
+
 //m-table-white
 .m-table-white{
 
@@ -424,6 +276,7 @@
     z-index: 10;
     cursor: pointer;
 }
+
 
 //m-table-product
 .m-table-product{
@@ -527,11 +380,9 @@
                 }
 
                 .m-table-icon{
+
                   margin: 0;
                   margin-bottom: 0.666rem;
-                  &:last-child{
-                    margin-right: 0;
-                  }
 
                 }
               }
@@ -594,13 +445,13 @@
                 padding:1rem 0.333rem;
                 .font-s16();
                 .tr();
-                color:#95a2aa;
+                color:@ax-lgray;
             }
             td{
                 padding:1rem 0.333rem;
                 .font-s16();
                 .tl();
-                color:#333333;
+                color:@title-color;
                 &.blue{
                   color:@blue;
                 }
@@ -631,11 +482,12 @@
 
     .dis-fx();
     .alc();
-    margin-bottom: 0.833rem;
+    margin-bottom: 1.666rem;
 
     .m-basic-label{
+
       width: 9.16rem;
-      line-height: 1.44;
+      line-height: 1.2;
       overflow: hidden;
       white-space: normal;
       padding-right: 0.833rem;
@@ -651,8 +503,6 @@
       span {
           color:@label-color;
           .font-s14();
-          line-height: 1.44;
-          .dib();
       }
 
       .label {
@@ -663,6 +513,22 @@
     }
 
     .m-basic-control-wrapper{
+      .ant-input{
+        border-color: @form-input-border;
+        .border-radius(1px);
+        height: 42px;
+        color: @font-color;
+        &::-moz-placeholder, {
+            color: @ax-lgray;
+            opacity: 1;
+        }
+        &:-ms-input-placeholder {
+            color: @ax-lgray;
+        }
+        &::-webkit-input-placeholder {
+            color: @ax-lgray;
+        }
+      }
 
         .flex();
 
@@ -670,55 +536,19 @@
             color: @font-color;
             .font-s14();
             line-height: 1.5;
+            display: inherit;
+
             i{
                 .font-s18();
                 margin-left: 0.333rem;
                 line-height: 1;
-
-            }
-            i.icon-down-line-arrow{
-              .dib();
-              cursor: pointer;
-              transition: all 0.6s linear;
-            }
-            &.m-basic-text-hide{
-              i{
-                .dib();
-                transform: rotate(-90deg);
-                transition: all 0.6s linear;
-              }
-            }
-            &.m-span{
-              overflow: hidden;
-              text-overflow: ellipsis;
-              white-space: nowrap;
-              // margin-right: 1rem;
-            }
-
-            .ant-rate{
-              .font-s0();
-              top: -0.333rem;
-              position: relative;
-              i{
-                .font-s13();
-              }
             }
         }
 
     }
 
   &.m-basic-small{
-      margin-bottom: .5rem;
-  }
-  //薪酬-新增
-  &.m-basic-pay{
-    margin: .333rem 0;
-    .m-basic-label{
-      label {
-          color:@title-color;
-      }
-    }
-
+      margin-bottom: .75rem;
   }
 
 }
@@ -1337,183 +1167,47 @@
 	}
 }
 
-// m-table-customer
+
 .m-table-customer{
-  .ant-table-fixed-left .ant-table-body-inner{
-    margin-right: 0px !important;
-    padding-right: 0px !important;
-  }
-  .ant-table-scroll{
-    .display{
-      .dn();
-    }
-  }
-  .ant-table-fixed-left{
-      .ant-table-fixed{
-        border-right:0 !important;
-        tr{
-          th{
-            &:last-child{
-              border-right:0 !important;
-            }
-          }
-          td{
-            &:last-child{
-              border-right:0 !important;
-            }
-          }
-        }
-    }
-  }
-  .ant-table-fixed-right{
-    .ant-table-fixed{
-      border-left:0 !important;
-      tr{
-        th{
-          &:last-child{
-            border-right:0 !important;
-          }
-        }
-        td{
-          &:last-child{
-            border-right:0 !important;
-          }
-        }
-      }
-  }
-}
   .ant-table {
-    table{
-      border: 1px solid @table-border;
-      border-right: none;
-      border-bottom: none;
-    }
     font-family: @all-family;
+    p{
+      margin: 0;
+    }
     .ant-table-thead>tr>th {
+      background: @ax-table-th2;
+      text-align: left;
       color: @title-color;
-      padding: 0.5rem 1.416rem 0.5rem 1.416rem !important;
-      line-height: 1.75rem;
+      padding: 10px !important;
+      line-height: 22px;
+      height: 60px;
       .font-s14();
       white-space: nowrap;
-      border-color: @table-border;
-      border-right: 1px solid @table-border;
-      height:3.666rem;
-      .border-radius(0);
-      .tl();
+      border-color: @border-color;
       &.small-ptb{
         padding-top: .333rem !important;
         padding-bottom: .333rem !important;
       }
       //数字营销-20190411
-      .iconfont{
+      .szyx-icon{
         .font-s16();
         color: @view-color;
-      }
-      &:first-child{
-        padding: 0.5rem 1.416rem !important;
-      }
-      .ant-table-header-column{
-        .db();
-      }
-      .react-resizable-handle{
-        .dis-fx();
-        .alc-start();
-        cursor: col-resize !important;
-        &::after{
-          display: inline-block;
-          content: '';
-          height: 1.5rem;
-          width: 0.28rem;
-          border-left: 1px solid #e1e1e1;
-          border-right: 1px solid #e1e1e1;
-          cursor: col-resize !important;
-        }
       }
     }
     .ant-table-tbody>tr{
       //新数字营销
       >td {
-        line-height: 1.75rem;
-        padding: 0.5rem  1.416rem !important;
+        line-height: 22px;
+        height: 60px;
+        padding: 10px !important;
         .font-s14();
         .pos(r);
-        height:3.666rem;
         text-align: left;
-        color: @table-font;
-        border-color: @table-border;
-        border-right: 1px solid @table-border;
-        .border-radius(0);
+        color: @view-color;
+        border-color: @border-color;
         &.small-ptb{
           padding-top: .333rem !important;
           padding-bottom: .333rem !important;
-        }
-
-        &:first-child{
-          padding: 0.5rem  1.416rem !important
-        }
-        &.link{
-          max-width: 260px;
-          >div{
-            .inoneline();
-            >div{
-              .dis-fx();
-              .alc-start();
-              .inoneline();
-              width:100%;
-              a{flex:1;.inoneline();}
-            }
-            width:100%;
-            a{flex:0.8;}
-          }
-        }
-        .m-btn-tag{
-          margin-right: 0.333rem;
-        }
-        .m-table-spot{
-          width:0.666rem;
-          height: 0.666rem;
-          .border-radius(1rem);
-          .dib();
-          background: #bbb;
-          margin-right: 0.333rem;
-          .pos(r);
-          top: -0.083rem;
-
-          &.pink{
-            background:@tag-red-color;
-          }
-          &.blue{
-            background:@tag-blue-color;
-          }
-          &.yellow{
-            background:@tag-yellow-color;
-          }
-          &.violet{
-            background:@tag-violet-color;
-          }
-          &.darkgray{
-            background: #999999;
-          }
-        }
-        a{
-          &.disable{
-            color:#bbb !important;
-            cursor: default;
-          }
-        }
-        .ant-table-row-indent{
-          .fl();
-          height: 1px;
-          padding-left: 2rem;
-        }
-        .ant-table-row-expand-icon{
-          .fl();
-          margin-right:0.5rem;
-          margin-top: 0.25rem;
-          color:#666;
-        }
-        .ant-table-row-spaced{
-          .dn();
         }
       }
       &.current{
@@ -1522,22 +1216,12 @@
             background: #fffbf5 !important;
         }
       }
-
-      &:nth-child(even) td {
-        background: #f8f8f8;
-      }
-
     }
-    .table-row-gray{
-      background-color: #fafafb;
-    }
-
   }
   .ant-table-empty .ant-table-body{
     overflow-x: scroll\0\9 !important;
   }
 }
-
 
 .m-table-mot{
   .ant-table {
@@ -1570,391 +1254,236 @@
       }
     }
   }
-}
-
-// 合作详情表格
-.m-table-cooperation{
-  width: 100%;
-  margin: 0;
-  background: #fff;
-  overflow: inherit;
-  border: 1px solid #e9eef7;
-  tr {
-    display: table-row;
-    vertical-align: inherit;
-    border-color: inherit;
-    white-space: nowrap;
-    border: 1px solid #e9eef7;
-    th {
-      padding: 1rem 1.5rem;
-      border: 1px solid #e9eef7;
-      color: #fff;
-      font-size: 1.5rem;
-      text-align: center;
-      text-align: center !important;
-      line-height: 1;
-      height: 5.5rem;
-      vertical-align:middle;
-    }
-    td {
-      border: 1px solid #e9eef7;
-      word-break: break-all;
-      color: #2b343d;
-      border-bottom: none;
-      padding: 1rem 1.5rem;
-      background: #fff;
-      font-size: 1.5rem;
-      position: relative;
-      text-align: left !important;
-      height: 5.166rem;
-      vertical-align: middle;
-      .violet-table{
-        background: @violet;
-      }
-      .pink-table{
-        background: @pink;
-      }
-      a{
-        font-size: 1.166rem;
-      }
-      // .bgColor
-    }
+  //产品销售情况
+  .ant-table-thead>tr:not(:last-child)>th[colspan] {
+    border-bottom: 1px solid @border-color;
   }
 }
-
-// 任务中心-任务详情
-.m-title-h{
-  padding: 2.5rem 1.5rem 0.333rem 0;
-  font-size: 1.666rem;
-  color: #3f3e3e;
-}
-
-
-// m-table-customer-noBorder
-.m-table-customer-noBorder{
-  .ant-table-fixed-left .ant-table-body-inner{
-    margin-right: 0px !important;
-    padding-right: 0px !important;
-  }
-  .ant-table-scroll{
-    .display{
-      .dn();
-    }
-  }
-  .ant-table-fixed-left{
-      .ant-table-fixed{
-        border-right:0 !important;
-        tr{
-          th{
-            &:last-child{
-              border-right:0 !important;
-            }
-          }
-          td{
-            &:last-child{
-              border-right:0 !important;
-            }
-          }
-        }
-    }
-  }
-  .ant-table-fixed-right{
-    .ant-table-fixed{
-      border-left:0 !important;
-      tr{
-        th{
-          &:last-child{
-            border-right:0 !important;
-          }
-        }
-        td{
-          &:last-child{
-            border-right:0 !important;
-          }
-        }
-      }
-  }
-}
+.m-table-small{
   .ant-table {
-    table{
-      border: 1px solid @table-border;
-    }
     font-family: @all-family;
     .ant-table-thead>tr>th {
-      background: @table-th;
-      text-align: left;
-      color: @title-color;
-      padding: 0.5rem 1.416rem !important;
+      background: #fafafb;
+      text-align: center;
+      color: @view-color;
+      padding: .916rem 0.3rem !important;
       line-height: 1.75rem;
       .font-s14();
       white-space: nowrap;
-      border-color: @table-border;
-      border: none;
-      height:3.666rem;
-      .border-radius(0);
-      &.small-ptb{
-        padding-top: .333rem !important;
-        padding-bottom: .333rem !important;
-      }
-      //数字营销-20190411
-      .iconfont{
-        .font-s16();
-        color: @view-color;
-      }
-      &:first-child{
-        padding: 0.5rem 1.416rem !important;
-      }
-      .ant-table-header-column{
-        .db();
-      }
+      border-color: @border-color;
     }
-    .ant-table-tbody>tr{
-      //新数字营销
-      >td {
-        line-height: 1.75rem;
-        padding: 0.5rem  1.416rem !important;
-        .font-s14();
-        .pos(r);
-        height:3.333rem;
-        text-align: left;
-        color: @table-font;
-        border-color: @table-border;
-        border: none;
-        .border-radius(0);
-        &.small-ptb{
-          padding-top: .333rem !important;
-          padding-bottom: .333rem !important;
-        }
-
-        &:first-child{
-          padding: 0.5rem  1.416rem !important
-        }
-
-        &.link{
-          max-width: 260px;
-          >div{
-            .inoneline();
-            >div{
-              .dis-fx();
-              .alc-start();
-              .inoneline();
-              width:100%;
-              a{flex:1;.inoneline();}
-            }
-            width:100%;
-            a{flex:0.8;}
-          }
-        }
-        .m-btn-tag{
-          margin-right: 0.333rem;
-        }
-        .ant-table-row-indent{
-          .fl();
-          height: 1px;
-        }
-        .ant-table-row-expand-icon{
-          .fl();
-          margin-right:0.5rem;
-          margin-top: 0.25rem;
-          color:#666;
-        }
-        .ant-table-row-spaced{
-          .dn();
-        }
-      }
-      &.current{
-        background: #fffbf5 !important;
-        td{
-            background: #fffbf5 !important;
-        }
-      }
-
-      &:nth-child(even) td {
-        background: #f8f8f8;
-      }
+    .ant-table-tbody>tr>td {
+      line-height: 1.75rem;
+      padding: .916rem 0.3rem !important;
+      .font-s14();
+      .pos(r);
+      text-align: center;
+      color: @title-color;
+      border-color: @border-color;
     }
-    .table-row-gray{
-      background-color: #fafafb;
-    }
-
   }
   .ant-table-empty .ant-table-body{
     overflow-x: scroll\0\9 !important;
   }
 }
 
-// m-table-email
-.m-table-email{
-  border: 1px solid @table-border;
-  width: 100%;
-  tr{
-    th{
-      font-weight: 600;
-      padding: 0.833rem 1.416rem !important;
-      .font-s14();
-      .tl();
-      border-bottom: 1px solid @table-border;
-      border-right: 1px solid @table-border;
-    }
-    td{
-      padding: 0.833rem 1.416rem !important;
-      .font-s14();
-      .tl();
-      color: @table-font;
-      border-bottom: 1px solid @table-border;
-      border-right: 1px solid @table-border;
+//m-table-blue
+.m-table-blue{
 
-    }
-    &:nth-child(even) td {
-      background: #f8f8f8;
+  padding: .166rem 1.667rem 0;
+  margin-bottom: .5rem;
+  .ant-radio-wrapper,.ant-checkbox-wrapper{
+        border-collapse: collapse;
+        border-collapse: separate\0\9;
+  }
+
+  //table中 form表单的重置
+  .ant-form-item-control{
+    &:before,&:after{
+        display: block;
     }
   }
-}
-// 日历
-.m-monthDate {
-  background: transparent;
 
-  .m-head-calendar {
-    margin-bottom: 6px;
+  .ant-table {
+    overflow: inherit;
+    font-family: @all-family;
+    table{
+        border-collapse: separate;
+        border-spacing:0 0.833rem;
+        overflow: inherit;
+    }
 
-    .ant-picker {
-      border: none !important;
-      background: transparent;
+    .ant-table-thead>tr>th {
+        background: transparent;
+        text-align: left;
+        border-bottom: none;
+        color:@title-color;
+        padding: 1rem !important;
+        .font-s16();
+        white-space: nowrap;
 
-      .ant-picker-suffix {
-        display: none;
-      }
+        .ant-table-column-sorter{
+          display: inline;
+        }
 
-      .ant-picker-input {
-        >input {
-          .font-s16();
-          font-weight: 600;
-          color: @title-color;
-          .tc();
+        i.icon-diwn-solid-arrow{
+          .font-s14();
+        }
+
+        i.icon-mark{
+          display: inline;
+          color: @blue;
+          .font-s20();
+        }
+
+    }
+    .ant-table-tbody>tr{
+
+        border:2px solid #d8dcdf;
+        white-space: nowrap;
+        background: #fff;
+
+    }
+    .ant-table-tbody>tr>td {
+
+        border-top:2px solid #d8dcdf;
+        border-bottom:2px solid #d8dcdf;
+        white-space: nowrap;
+
+        &:first-child{
+          border-left:2px solid #d8dcdf;
+        }
+        &:last-child{
+          border-right:2px solid #d8dcdf;
+        }
+
+        padding:1rem;
+        // background:#fff;
+        .font-s14();
+        color: @title-color;
+        height:64px;
+        text-align: left;
+        a{
+          display:inline-block;
+        }
+        >td{
+          color:@view-color;
+        }
+    }
+
+  }
+  &.index{
+
+    .ant-table{
+
+      font-family: @all-family;
+
+      .ant-table-tbody>tr{
+
+        &.active{
+
+          td:last-child{
+
+            div{
+
+              .pos(r);
+              &:before{
+                .triangle(left,@w:5px 9px 5px 9px,@color:#fff);
+                content: '';
+                .pos(a);
+                top: 50%;
+                right:-29px;
+                transform:translateY(-50%);
+                overflow: hidden;
+                z-index:110;
+              }
+
+              &:after{
+                content: '';
+                .pos(a);
+                top: 50%;
+                right:-36px;
+                transform:translateY(-50%);
+                overflow: hidden;
+              }
+            }
+          }
         }
       }
     }
+  }
 
-    .ant-picker-focused {
-      box-shadow: 0 0 0 2px rgba(24, 144, 255, 0);
+  &.m-table-blue-small{
+
+         .ant-table {
+
+          font-family: @all-family;
+
+            .ant-table-thead{
+              tr{
+                th{
+                  padding: 0.833rem 3rem;
+                }
+              }
+            }
+
+            .ant-table-tbody>tr{
+
+                border:1px solid #d8dcdf;
+                white-space: nowrap;
+
+            }
+            .ant-table-tbody>tr>td {
+
+                border-top:1px solid #d8dcdf;
+                border-bottom:1px solid #d8dcdf;
+                white-space: nowrap;
+                padding: 0.833rem 3rem;
+                height: 3.166rem;
+
+                &:first-child{
+                  border-left:1px solid #d8dcdf;
+                }
+                &:last-child{
+                  border-right:1px solid #d8dcdf;
+                }
+            }
+
+          }
+  }
+
+}
+
+.ant-table-footer{
+  .ant-select{
+    .ant-select-selection__rendered{
+      line-height: 30px;
     }
-  }
-
-  .ant-picker-panel {
-    background: transparent;
-    border-top: none;
-  }
-
-  .m-head-calendar-icon {
-    width: 42px;
-    text-align: center;
-    cursor: pointer;
-
-    i {
-      color: #aaaaaa;
-      .font-s11();
-      width: 24px;
-      height: 24px;
-      line-height: 24px;
-      .tc();
-      .dib();
-      .border-radius(0.166rem);
-    }
-  }
-
-  .ant-picker-cell:hover:not(.ant-picker-cell-in-view) .ant-picker-cell-inner,
-  .ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) .ant-picker-cell-inner {
-    background: #77D2FF;
-    color: #fff;
-  }
-
-  &.ant-picker-calendar-mini .ant-picker-content th {
-    padding: 6px 0;
-    color: rgba(0,0,0,0.4);
-  }
-
-  .ant-picker-calendar .ant-picker-panel .ant-picker-body {
-    padding: 10px 0;
-  }
-
-  .ant-picker-cell-in-view {
-    color: @table-td  !important;
-  }
-
-  .ant-picker-cell {
-    padding: 10px 0;
-    color: rgba(0,0,0,0.4);
-
-    .ant-picker-cell-inner {
-      min-width: 32px;
+    .ant-select-selection--single{
       height: 32px;
-      line-height: 32px;
-      border-radius: 32px;
-    }
-
-    .ant-picker-calendar-date-today {
-      &::before {
-        border-radius: 32px !important;
-      }
     }
   }
-
-  .ant-picker-calendar-date-content {
-    bottom: -20px;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    margin-left: 4px;
+  .ant-input{
+    vertical-align: top;
+    height: 32px !important;
   }
+}
 
-  .m-even-num {
-    .tc();
-    color: #fff;
-    height: 1.5rem;
-    padding: 0.166rem;
-    line-height: 1.333rem;
-    .font-s12();
-    min-width: 1.5rem;
-    .border-radius(1.75rem);
-    .border-bottom-left-radius(0);
-    .dib();
-    margin-right: 6px;
-
-    &.m-even-samll {
-      min-width: 0.2rem !important;
-      width: 0.2rem !important;
-      height: 0.2rem !important;
-      .border-radius(1.75rem) !important;
-      border: 0.05rem solid rgba(255, 255, 255, 0.9);
-    }
+.ant-table{
+  .ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner .ant-table-column-sorter-up.on, 
+  .ant-table-thead > tr > th .ant-table-column-sorter .ant-table-column-sorter-inner .ant-table-column-sorter-down.on{
+    color: @blue;
   }
-
-  &.m-monthDate-full {
-    background: #fff;
-    .ant-picker-cell {
-      .ant-picker-cell-inner {
-        height: 72px;
-        .border-radius(0);
-        line-height: 1;
-      }
-
-    }
-
-    .ant-picker-content th {
-      color: rgba(0,0,0,0.4);
-    }
-
-    .ant-picker-calendar-date-content {
-      bottom: 0;
-      left: 0;
-      transform: translateX(0);
-      position: static;
-    }
+  .ant-table-thead > tr > th .anticon-filter, 
+  .ant-table-thead > tr > th .ant-table-filter-icon{
+    color: #b0b5cc;
   }
-
-  .ant-picker-panel {
-    .ant-picker-calendar-date {
-      border-top: 2px solid rgba(237,237,237,0.7);
-    }
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .anticon-filter.ant-table-filter-open, .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters .ant-table-filter-icon.ant-table-filter-open,
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .anticon-filter:hover,
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .ant-table-filter-icon:hover,
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .anticon-filter:active,
+  .ant-table-thead > tr > th .ant-table-filter-selected.anticon,
+  .ant-table-thead > tr > th.ant-table-column-has-actions.ant-table-column-has-filters:hover .ant-table-filter-icon:active{
+    color: #ff6e30;
   }
 }

@@ -5,7 +5,6 @@
 		font-family: @all-family;
 		.font-s14();
 		li{
-			overflow: hidden;
 			.ant-tree-node-content-wrapper{
 				color: @title-color;
 				height: 2rem;
@@ -29,10 +28,7 @@
 			&:not(:last-child):before{
 				border-left:0;
 			}
-			.ant-tree-switcher-noop{
-				display: none;
-			}
-		}
+		}    
 	}
 }
 //m-tree style
@@ -42,22 +38,45 @@
 		.font-s14();
 		li{
 			padding: .25rem 0;
-			overflow: hidden;
 			.ant-tree-node-content-wrapper{
 				color: @tag-color;
 			}
 		}
 	}
-
 }
 
-.ant-select-tree li .ant-select-tree-node-content-wrapper.ant-select-tree-node-selected {
-    background-color: @hover-bg !important;
-	color: @hover !important;
+.m-tree-livebos{
+	&.ant-tree{
+		font-family: @all-family;
+		.font-s14();
+		li{
+			padding: .25rem 0;
+			.ant-tree-node-content-wrapper{
+				color: #000;
+				height: 2.166rem;
+				line-height: 2.166rem;
+			}
+		}
+	}
 }
-.ant-select-tree li .ant-select-tree-node-content-wrapper:hover {
-    background-color: @hover-bg !important;
-	color: @hover !important;
+
+.ant-select-tree-dropdown{
+	.ant-select-dropdown-search{
+		input.ant-select-search__field{
+			border-color: @form-input-border;
+			.border-radius(1px);
+			color: @font-color;
+		}
+	}
+	.ant-select-tree li .ant-select-tree-node-content-wrapper{
+		color: @view-color;
+		&:hover{
+			background-color: @ax-hover;
+		}
+		&.ant-select-tree-node-selected{
+			background-color: @ax-hover2;
+		}
+	}
 }
 
 

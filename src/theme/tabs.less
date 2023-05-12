@@ -141,22 +141,38 @@
     // .db();
     display: flex;
     width: 100%;
-    padding:0 1.666;
 
     .ant-tabs-tab {
+      // 滑动样式调整
+      //.fl();
+      //.db();
       .tc();
-      .dib();
       height: 100%;
       padding: 0;
-      margin-right: 3rem;
-      line-height: 3em;
-      color: @tab-font;
-      .font-s16();
+      margin-right: 2.833rem;
+      line-height: 4.666rem;
+      //line-height: 5.833rem;
+      color: @title-color;
+      .font-s20();
       font-weight: normal;
+
+      p{
+        margin-bottom: 0;
+      }
 
       .m-spot {
         .pos(r);
         padding-left: 1.25rem;
+
+        &:before {
+          content: "";
+          .pos(a);
+          left: 0;
+          top: 50%;
+          margin-top: -.25rem;
+          width: .5rem;
+          height: .5rem;
+        }
       }
     }
 
@@ -164,6 +180,11 @@
       .dn();
       height: 0;
     }
+  }
+
+  .ant-tabs-nav-container {
+    // overflow: inherit;
+    // margin: 0;
   }
 
   .ant-tabs-nav-wrap {
@@ -191,34 +212,18 @@
   &.m-tabs-underline-small {
     .ant-tabs-nav {
 
-      border-bottom: 1px solid @tab-border;
-      padding: 0 .666rem;
+      border-bottom: 1px solid @border-color;
+      padding: 0 2.083rem;
 
       .ant-tabs-tab {
 
-        margin-right: 3rem;
-        line-height: 3.333rem;
-        .font-s14();
-
-        &::after{
-          content:'';
-          height: 1rem;
-          width:0.083rem;
-          background: @btn-tag-border;
-          position: absolute;
-          top: 50%;
-          margin-top: -0.416rem;
-          right: -1.666rem;
-        }
-
-        &:last-child{
-          &::after{
-            .dn();
-          }
-        }
+        margin-right: 4rem;
+        line-height: 4.5rem;
+        margin-bottom: -1px;
+        .font-s18();
 
         a {
-          color: @tab-font;
+          color: @title-color;
         }
 
         &.ant-tabs-tab-active {
@@ -232,12 +237,6 @@
           }
         }
       }
-    }
-  }
-
-  &.m-nopading{
-    .ant-tabs-nav {
-      padding: 0 !important;
     }
   }
 
@@ -776,48 +775,52 @@
     .font-s0();
 
     .ant-radio-button-wrapper {
+      color: @view-color;
       min-width: 3rem;
-      height: 2.666rem;
-      line-height: 2.5rem;
+      height: 42px;
+      line-height: 40px;
       text-align: center;
       background: #fff;
-      border: 1px solid #e4e7ea;
+      border: 1px solid @form-input-border;
       border-left: 0;
       .font-s14();
       .fl();
       padding: 0 1.166rem;
       font-family: @all-family;
+      outline: none;
 
       &:first-child {
-        .border-radius(@radius:3px 0 0 3px);
-        border-left: 1px solid #e4e7ea;
+        .border-radius(@radius:1px 0 0 1px);
+        border-left: 1px solid @form-input-border;
       }
 
       &:last-child {
-        .border-radius(@radius:0 3px 3px 0);
+        .border-radius(@radius:0 1px 1px 0);
       }
 
-      &:hover {
-        +.ant-radio-button-wrapper {
-          &:before {
-            .dn();
-          }
+      &:not(:first-child)::before{
+        .dn();
+
+      }
+    }
+
+    .ant-radio-button-wrapper-checked {
+      
+      &:not(.ant-radio-button-wrapper-disabled){
+        background: @ax-hover;
+        box-shadow: -1px 0 0 0 @form-input-border;
+        &:hover{
+          border-color: @form-input-border;;
+        }
+        &:focus-within{
+          outline: none;
+        }
+        &:first-child{
+          border-color: @form-input-border;
         }
       }
 
     }
-
-    .ant-radio-button-wrapper-checked {
-      background: #fff;
-      z-index: 1;
-
-      &:first-child {
-        -webkit-box-shadow: none !important;
-        box-shadow: none !important;
-      }
-
-    }
-
   }
 }
 
@@ -848,6 +851,11 @@
       .font-s16();
       padding: 1.333rem 0;
       margin-bottom: -1px;
+
+      p{
+        margin-bottom: 0;
+      }
+
     }
 
     .ant-tabs-ink-bar {
@@ -937,12 +945,28 @@
     background-color: #FFF;
     position: relative;
     // top: 52px;
-    height: 3px !important;
+    height: 4px !important;
   }
 
   .ant-tabs-nav {
     .dib();
     padding: .416rem 0 .916rem;
+    .pos(r);
+
+    &:before,&:after{
+      content: "";
+      top:3rem;
+      .pos(a);
+      height: 1px;
+      width: 31rem;
+      background-color: #fff;
+    }
+    &:before{
+      left: -35rem;
+    }
+    &:after{
+      right: -35rem;
+    }
 
     .ant-tabs-tab {
       .dib();
@@ -1018,11 +1042,7 @@
       color: #fff;
       margin-right: 0;
       padding: .833rem 1.666rem;
-      &:hover{
-        color: @blue;
-      }
       &.ant-tabs-tab-active{
-        background-color: @blue;
         color: #fff;
       }
     }
@@ -1071,25 +1091,62 @@
   }
 }
 
-//竖直方向
-.m-tabs-ver{
+.m-tabs-sec2{
   &.ant-tabs{
+    .ant-tabs-bar{
+      margin: .666rem 0;
+      border-bottom: 0;
+    }
+    .ant-tabs-nav-container{
+      margin-bottom: 0;
+      .ant-tabs-nav-wrap{
+        margin-top: 1rem;
+      }
+    }
     .ant-tabs-tab{
-      width: 3.333rem;
-      .font-s14();
-      color: @title-color;
-      white-space: normal;
-      padding: .833rem;
-      line-height: 1.2;
-      .tc();
-      margin-bottom: .5rem;
-      .border-left-radius(.5rem);
+      .font-s15();
+      line-height: 1.833rem;
+      color: @view-color;
+      margin: 0;
+      padding: 0 2rem;
+      border-left: 1px solid @border-btn-color;
+      &:first-child{
+        border-left: 0;
+        padding-left: 0;
+      }
       &:hover{
         color: @blue;
       }
       &.ant-tabs-tab-active{
-        background-color: #c3c3c3;
-        color: #fff;
+        .font-wb();
+        color:  @blue;
+      }
+    }
+    .ant-tabs-ink-bar {
+      visibility: hidden;
+    }
+  }
+}
+
+
+//竖直方向
+.m-tabs-ver{
+  &.ant-tabs{
+    .ant-tabs-left-bar{
+      .ant-tabs-tab{
+        width: 3.333rem;
+        .font-s14();
+        color: @title-color;
+        white-space: normal;
+        padding: .833rem;
+        line-height: 1.2;
+        .tc();
+        margin-bottom: .5rem;
+        .border-left-radius(.5rem);
+        &.ant-tabs-tab-active{
+          background-color: #c3c3c3;
+          color: #fff !important;
+        }
       }
     }
     .ant-tabs-ink-bar{
@@ -1102,8 +1159,8 @@
     margin-bottom: .833rem;
     .ant-tabs-left-bar{
       .pos(a);
-      left: -4.166rem;
-      top:0;
+      left: 0;
+      top: 0;
     }
     .ant-tabs-left-content{
       min-height: 25rem;
@@ -1117,10 +1174,24 @@
   &.ant-tabs {
     margin-bottom: 0;
     font-family: @all-family;
+    .ant-tabs-nav {
+      .ant-tabs-tab {
+        .font-s16();
+        color: rgba(255,255,255,0.6);
+        margin: 0 3rem 0 0;
+        padding: 1rem 0;
+        &:hover{
+          color: rgba(255,255,255,1);
+        }
+        &.ant-tabs-tab-active{
+          .font-wb();
+          color: rgba(255,255,255,1);
+        }
+      }
+    }
   }
-
   .ant-tabs-bar{
-    margin: .333rem 0 .833rem 0;
+    margin: 0 0 .833rem 0;
     border-bottom: 0;
   }
   .ant-tabs-nav-container{
@@ -1133,21 +1204,6 @@
     background-color: #FFF;
     position: relative;
     height: 4px !important;
-  }
-  .ant-tabs-nav {
-    .ant-tabs-tab {
-      .font-s16();
-      color: rgba(255,255,255,0.6);
-      margin: 0 3rem 0 0;
-      padding: 1rem 0;
-      &:hover{
-        color: rgba(255,255,255,1);
-      }
-      &.ant-tabs-tab-active{
-        .font-wb();
-        color: rgba(255,255,255,1);
-      }
-    }
   }
 }
 
@@ -1184,11 +1240,13 @@
 //多菜单tabs切换
 .m-tabs-nav{
   &.ant-tabs{
+    height: 43px;
+    padding-top: 8px;
+    background-color: #F2F3F7;
     .ant-tabs-extra-content{
-      width: 3.666rem;
-      border-left:1px solid @textarea2;
+      width: 38px;
+      height: 36px;
       .tc();
-      height: 3.5rem;
       .m-tabs-nav-link{
         .db();
         color: @tag-color;
@@ -1202,6 +1260,12 @@
         }
       }
     }
+    .ant-tabs-nav-container{
+      background-color: #F3F4F7;
+    }
+    .ant-tabs-nav-scroll{
+      height: 35px;
+    }
     .ant-tabs-tab-prev.ant-tabs-tab-arrow-show{
       border-right:1px solid @textarea2;
     }
@@ -1210,7 +1274,7 @@
       right: 0;
     }
     .ant-tabs-tab-prev.ant-tabs-tab-arrow-show,.ant-tabs-tab-next.ant-tabs-tab-arrow-show{
-      width: 3.666rem;
+      width: 40px;
       .font-s17();
       color: @tag-color;
       &:hover{
@@ -1234,32 +1298,53 @@
       }
     }
     .ant-tabs-nav-wrap{
+      height: 35px;
       margin-bottom: 0;
+      margin-left: 12px;
     }
     .ant-tabs-nav{
+      // 对比 ant-check-tabs-tab
       .ant-tabs-tab{
+        position: relative;
         margin: 0;
-        padding: 0 1.25rem;
-        height: 3.5rem;
-        line-height: 3.5rem;
-        border-right:1px solid @textarea2;
+        padding: 5px 9px 5px 10px;
+        width: 142px;
+        height: 30px;
+        // line-height: 3.5rem;
+        // border-right:1px solid @textarea2;
+        background-color: #F3F4F7;
         .iconfont{
           .font-s16();
         }
-        .anticon-close{
-          margin: 0 0 0 .5rem;
-          color: @lightGray;
+        >a{
+          color: @tag-color;
           &:hover{
             color: @title-color;
           }
         }
+        .icon-close-small{
+          margin: 0 0 0 .5rem;
+          color: @lightGray;
+          .font-s14();
+          // visibility: hidden;
+        }
         &:hover{
-          color: @blue;
+          .icon-close-small{
+            // visibility: visible;
+            &:hover{
+              color: @red;
+            }
+          }
         }
       }
       .ant-tabs-tab-active{
-        background-color: #f6f6f6;
-        color: @blue;
+        background-color: #ffffff;
+        >a{
+          color: @title-color;
+        }
+      }
+      &.ant-tabs-nav-animated {
+        margin-top: 5px;
       }
     }
     .ant-tabs-ink-bar{
@@ -1267,6 +1352,13 @@
     }
   }
 }
+
+.m-jrcp-tabs{
+  .ant-tabs-bar{
+    margin-bottom: 0;
+  }
+}
+
 //新数字营销
 .m-zxr-tabs{
   &.ant-tabs{
@@ -1295,116 +1387,12 @@
     .ant-tabs-tab-active{
       .font-wb();
       color: #fff !important;
+      >a{
+        color: #fff !important;
+      }
     }
     .ant-tabs-ink-bar {
       visibility: hidden;
-    }
-  }
-}
-
-// m-tab-box
-.m-tab-box{
-  border-bottom: 1px solid #e8e8e8;
-  background:#fff;
-  padding: 0 1.25rem;
-
-  .m-tab-box-item{
-    float: left;
-    display: inline;
-    text-align: center !important;
-    display: block !important;
-    height: 100%;
-    padding: 0;
-    margin-right: 1.666rem;
-    height: 4rem;
-    line-height: 4rem;
-    color: @font-color;
-    .font-s14();
-    font-weight: normal;
-    &.line{
-      color:#ccc;
-      .font-s12();
-    }
-  }
-  .clear{
-    clear:both
-  }
-}
-
-// m-tabs-vertical
-.m-tabs-vertical{
-  &.ant-tabs{
-    .ant-tabs-left-bar {
-      .ant-tabs-tab{
-        margin: 0 0 0.833rem 0;
-        padding: 0 2.666rem 0 0.833rem;
-        height: 3.333rem;
-        line-height: 3.166rem;
-        .font-s14();
-        color:@font-color;
-        &:first-child{
-          margin-top:5px;
-        }
-      }
-    }
-    .ant-tabs-right-bar {
-      .ant-tabs-tab{
-        margin: 0 0 0.833rem 0;
-        padding: 0 2.666rem 0 0.833rem;
-        height: 3.333rem;
-        line-height: 3.166rem;
-        .font-s14();
-        color:@font-color;
-      }
-    }
-  }
-}
-
-// m-tabs-img
-.m-tabs-img{
-  &.ant-tabs{
-    .ant-tabs-ink-bar{
-      .dn();
-    }
-    .ant-tabs-bar{
-      border-bottom: none;
-      .ant-tabs-nav{
-        >div:first-child{
-          .dis-fx();
-          .alc-start();
-        }
-      }
-      .ant-tabs-tab{
-        margin-right: 0;
-        padding:0;
-        min-width: 6.333rem;
-        .tc();
-        .m-fund-img{
-          width: 4rem;
-          height: 4rem;
-          .border-radius(5.333rem);
-        }
-        .m-fund-name{
-          .db();
-          .tc();
-          .font-s14();
-          padding-top: 0.5rem;
-          color: @table-td;
-        }
-        &.ant-tabs-tab-active{
-          .m-fund-img{
-            width: 5rem;
-            height: 5rem;
-            .border-radius(5.333rem);
-          }
-          .m-fund-name{
-            .db();
-            .tc();
-            .font-s16();
-            font-weight: bold;
-          }
-        }
-      }
     }
   }
 }

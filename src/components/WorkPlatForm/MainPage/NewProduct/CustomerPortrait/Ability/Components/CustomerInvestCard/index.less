@@ -1,0 +1,146 @@
+.card {
+  background-color: #fff;
+  margin-top: 10px;
+
+  .cardHeader {
+    display: flex;
+    align-items: center;
+    padding: 25px 0 24px 22px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #1a2243;
+    line-height: 20px;
+
+    img {
+      width: 24px;
+      height: 24px;
+      margin-right: 6px;
+    }
+  }
+
+  .cardScoreContainer {
+    position: relative;
+    width: calc(100% - 48px);
+    margin: 0 auto;
+    box-shadow: 0px 2px 11px 0px rgba(153, 153, 153, 0.25);
+    border-radius: 6px;
+
+    img {
+      z-index: 0;
+      position: absolute;
+      top: -12px;
+      left: -12px;
+      width: 173px;
+      height: 70px;
+    }
+    #createLine{
+      position: relative;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right:0;
+        background: rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 1px;
+        -webkit-transform: scaleY(0.5);
+        transform: scaleY(0.5);
+        -webkit-transform-origin: 0 0;
+        transform-origin: 0 0;
+      }
+    }
+    .cardScoreRow {
+      display: flex;
+      align-items: center;
+      min-height: 58px;
+
+      .cardScoreNum {
+        font-size: 26px;
+        font-weight: 500;
+        color: #fff;
+        // line-height: 48px;
+        z-index: 2;
+        padding-left: 20px;
+        position: relative;
+        top: -10px;
+
+        .cardScoreSub {
+          font-size: 16px;
+          margin-right: 55px;
+        }
+      }
+
+      .cardScoreContext {
+        font-size: 14px;
+        font-weight: 400;
+        color: #959cba;
+        line-height: 14px;
+      }
+    }
+    .cardScoreContainerDialog {
+      padding: 19px;
+      position: relative;
+
+      img {
+        width: 16px;
+        height: 12px;
+        position: absolute;
+      }
+
+      .left_quote {
+        left: 16px;
+        top: 19px;
+      }
+
+      .right_quote {
+        top: auto;
+        left: auto;
+        right: 16px;
+        bottom: 20px;
+      }
+
+      .dialog_container {
+        text-align: left;
+        width: 100%;
+        padding: 12px 16px;
+        background-color: rgba(#f7f7fa, 0.87);
+        border-radius: 6px;
+        font-size: 14px;
+        font-weight: 400;
+        color: #61698C;
+        line-height: 20px;
+      }
+    }
+  }
+
+  .bottomDescription {
+    font-size: 14px;
+    font-weight: 400;
+    color: #959CBA;
+    line-height: 20px;
+    text-align: left;
+    padding: 16px 30px 26px 30px;
+
+    img {
+      position: relative;
+      // top: 3px;
+      width: 15px;
+      height: 15px;
+      margin-right: 3px;
+    }
+  }
+}
+
+.bottomDate {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .date {
+    font-size: 24px;
+    // font-family: SFUIDisplay-Regular, SFUIDisplay;
+    font-weight: 400;
+    color: #61698C;
+    line-height: 29px;
+  }
+}

@@ -1,5 +1,14 @@
 @charset "utf-8";
 
+//安信-上传按钮
+.ant-upload{
+    .ant-btn{
+        height: 42px;
+        color: @font-color;
+        border-color: @form-input-border;
+        .border-radius(1px);
+    }
+}
 //m-btn
 .m-btn {
 
@@ -9,7 +18,7 @@
         padding: 0 1.25rem;
         .border-radius(@radius:4.333rem);
         height: 3rem;
-        color: @font-color;
+        color: @view-color;
         background-color: #fff;
         border-color: @border-btn-color;
         .font-s16();
@@ -64,13 +73,18 @@
         color:#fff;
         background:@blue;
         border:1px solid @blue;
+        box-shadow: 0px 2px 6px 0px rgba(58,97,255,0.35); 
 
         &.ant-btn:focus,
         &.ant-btn:hover{
             color:#fff;
-            background:@blue;
-            border:1px solid @blue;
-            opacity: 0.75;
+            background: @ax-blue2;
+            border:1px solid @ax-blue2;
+        }
+        &.ant-btn:active{
+            color:#fff;
+            background: @ax-blue3;
+            border:1px solid @ax-blue3;
         }
 
     }
@@ -91,22 +105,36 @@
 
 }
 
+
+
+
 //m-btn-border
 .m-btn-border {
 
     &.ant-btn{
-        border: 1px solid @border-btn-color;
+        border: 1px solid @ax-hover;
+        background: @ax-hover;
         white-space: nowrap;
-        //数字营销
-        //padding: 0 1.333rem;
-        padding: 0 1rem;
+        padding: 0 15px;
         //新数字营销
-        height: 2.666rem;
+        height: 42px;
         color: @font-color;
         .font-s14();
-        .border-radius(@radius:0.166rem);
+        .border-radius(1px);
         overflow: hidden;
         z-index: 0;
+        min-width: 116px;
+    }
+
+    &.m-btn-upload{
+        height: 30px;
+        background: none !important;
+        min-width: 0;
+        color: @blue;
+        &.ant-btn:focus,
+        &.ant-btn:hover{
+            color: @blue;
+        }
     }
 
     &.m-btn-small{
@@ -150,18 +178,6 @@
         .font-s14();
     }
 
-    //跟踪评价
-    &.m-btn-icon{
-        width: 2.166rem;
-        height: 2.166rem;
-        padding: 0;
-        .tc();
-        .font-s16();
-        &.m-text{
-            .font-s14();
-        }
-    }
-
     //新数字营销
     &.m-btn-circle{
         .border-radius(1.5rem);
@@ -201,12 +217,13 @@
     }
     &.m-btn-border-blue{
         color:@blue;
-        border:1px solid @blue;
+        // border:1px solid @blue;
 
         &.ant-btn:focus,
         &.ant-btn:hover{
-            color:@blue;
+            color: #fff;
             border:1px solid @blue;
+            background: @blue;
         }
 
     }
@@ -303,6 +320,16 @@
 
             &:hover{
                    color:#fff;
+
+                &:after{
+
+                    color:#fff;
+                    width: 100%;
+                }
+
+            }
+            &:focus{
+                color:#fff;
 
                 &:after{
 
@@ -431,28 +458,25 @@
 //m-btn-radius
 .m-btn-radius {
 
-    i{
-        .font-s16();
-    }
-
     &.ant-btn{
         border: 1px solid transparent;
         white-space: nowrap;
-        padding: 0 1.25rem;
-        height: 2.666rem;
-        color: @font-color;
+        padding: 0 15px;
+        height: 42px;
+        color: @view-color;
         background-color: #fff;
-        border-color:@border-btn-color;
+        border-color: @border-btn-color;
         .font-s14();
-        .border-radius(@radius:0.166rem);
-        margin-right:0.666rem;
+        .border-radius(1px);
+        margin-right: 14px;
         overflow: hidden;
-        font-family: @all-family;
+        font-family: @all-family;    
+        min-width: 116px;
 
         &:hover, &:focus{
-            opacity: 0.8;
-            color:@font-color;
+            color: @view-color;
             border-color: @border-btn-color;
+            background: @ax-hover;
         }
 
         &:last-child{
@@ -460,6 +484,20 @@
         }
 
     }
+    &.ax-btn-small{
+        min-width: 70px;
+    }
+    &.ax-back-btn{
+        border-color: @border-btn-color;
+        color: @view-color;
+        padding: 0 12px;
+        min-width: 60px;
+        .iconfont{
+            .font-s16();
+            padding-right: 5px;
+        }
+    }
+
     &.m-hollow-pink{
         color:@pink;
         border:1px solid @pink;
@@ -479,7 +517,7 @@
     }
     &.m-btn-full{
         width: 100%;
-        .font-s16();
+        .font-s14();
     }
 
     &.m-btn-radius-small{
@@ -489,8 +527,6 @@
 
     &.m-btn-radius-big{
         .font-s16();
-        height: 3.333rem;
-
     }
 
     //数字营销-20190411
@@ -502,7 +538,7 @@
 
     &.m-btn-radius-search{
         .font-s18();
-        height: 4.25rem;
+        height: 4rem;
         width: 100%;
     }
 
@@ -527,31 +563,22 @@
         }
 
     }
-    &.m-btn-red{
-        background:@red;
-        color:#fff;
-        border:1px solid @red;
-
-        &.ant-btn:focus,
-        &.ant-btn:hover{
-            background:@lightred;
-            color:#fff;
-            border:1px solid @lightred;
-            opacity: 1;
-        }
-
-    }
     &.m-btn-blue{
         color:#fff;
         background:@blue;
         border:1px solid @blue;
+        box-shadow: 0px 2px 6px 0px rgba(58,97,255,0.35);
 
         &.ant-btn:focus,
         &.ant-btn:hover{
             color:#fff;
-            background:@blue;
-            border:1px solid @blue;
-            opacity: 0.75;
+            background: @ax-blue2;
+            border:1px solid @ax-blue2;
+        }
+        &.ant-btn:active{
+            color:#fff;
+            background: @ax-blue3;
+            border:1px solid @ax-blue3;
         }
 
     }
@@ -580,32 +607,31 @@
           color:#fff;
           border:1px solid #ff76f7;
           opacity: 0.75;
-        }
-    }
+      }
+
+  }
 
     &.m-btn-gray{
-        background:@form-input-bg;
         color:@font-color;
-        border:1px solid @border-btn-color;
+        border:1px solid @ax-lgray;
 
         &.ant-btn:hover{
-            color: @red;
-            border:1px solid @red;
-            opacity: 1;
-
+            background: @ax-hover;
+            border:1px solid @ax-lgray;
         }
 
     }
+    
     //工作台-新增
     &.m-btn-gcyan{
         background: -webkit-linear-gradient(right,#2ef8cf,#65cdf8);
         background: -o-linear-gradient(right, #2ef8cf,#65cdf8);
         background: -moz-linear-gradient(right,#2ef8cf,#65cdf8);
         background: -mos-linear-gradient(right,#2ef8cf,#65cdf8);
-        background: linear-gradient(to left,#2ef8cf,#65cdf8);
+        background: linear-gradient( to left,#2ef8cf,#65cdf8);
         color:#2f84ff;
         border:0;
-
+  
         &.ant-btn:focus,
         &.ant-btn:hover{
             color:#2f84ff;
@@ -723,97 +749,67 @@
 .m-btn-tag {
 
     &.ant-btn{
-        border: 1px solid @btn-tag-border;
+        border: 1px solid @btn-tag;
         white-space: nowrap;
-        padding: 0 0.833rem;
-        height: 2.166rem;
-        color:@tag-color;
+        padding: 0 1rem;
+        height: 2rem;
+        color:#fff;
         background-color: @btn-tag;
-        .font-s13();
-        .border-radius(@radius:2.333rem);
+        .font-s14();
+        .border-radius(@radius:4.333rem);
         cursor: inherit;
-        background-clip: padding-box;
 
         &:focus,
         &:hover{
-            color:@tag-color;
+            color:#fff;
             background-color: @btn-tag;
-            border: 1px solid @btn-tag-border;
-            background-clip: padding-box;
+            border:1px solid @btn-tag;
         }
     }
 
     &.m-btn-radius-small{
+
+       .border-radius(@radius:.333rem);
        padding: 0 0.5rem;
-       height: 1.666rem;
-       line-height: 1.416rem;
-       .font-s11();
+
     }
 
-    &.m-btn-tag-red{
-        color:@tag-red-color;
-        background-color: @btn-tag-red;
-        border:1px solid @tag-red-color;
+    &.m-btn-tag-pink{
+        color:#fff;
+        background-color: @pink;
+        border:1px solid @pink;
 
         &.ant-btn:focus,
         &.ant-btn:hover{
-            color:@tag-red-color;
-            background-color: @btn-tag-red;
-            border:1px solid @tag-red-color;
+            color:#fff;
+            background-color: @pink;
+            border:1px solid @pink;
         }
 
     }
     &.m-btn-tag-blue{
-        color:@tag-blue-color;
-        background-color: @btn-tag-blue;
-        border:1px solid @tag-blue-color;
+        color:#fff;
+        background-color: @blue;
+        border:1px solid @blue;
 
         &.ant-btn:focus,
         &.ant-btn:hover{
-            color:@tag-blue-color;
-            background-color: @btn-tag-blue;
-            border:1px solid @tag-blue-color;
+            color:#fff;
+            background-color: @blue;
+            border:1px solid @blue;
         }
 
     }
     &.m-btn-tag-orange{
-        color:@tag-orange-color;
-        background-color: @btn-tag-orange;
-        border:1px solid @tag-orange-color;
+        color:#fff;
+        background-color: @orange;
+        border:1px solid @orange;
 
         &.ant-btn:focus,
         &.ant-btn:hover{
-            color:@tag-orange-color;
-            background-color: @btn-tag-orange;
-            border:1px solid @tag-orange-color;
-        }
-
-    }
-
-    &.m-btn-tag-violet{
-        color:@tag-violet-color;
-        background-color: @btn-tag-violet;
-        border:1px solid @tag-violet-color;
-
-        &.ant-btn:focus,
-        &.ant-btn:hover{
-            color:@tag-violet-color;
-            background-color: @btn-tag-violet;
-            border:1px solid @tag-violet-color;
-        }
-
-    }
-
-    &.m-btn-tag-yellow{
-        color:@tag-yellow-color;
-        background-color: @btn-tag-yellow;
-        border:1px solid @tag-yellow-color;
-
-        &.ant-btn:focus,
-        &.ant-btn:hover{
-            color:@tag-yellow-color;
-            background-color: @btn-tag-yellow;
-            border:1px solid @tag-yellow-color;
+            color:#fff;
+            background-color: @orange;
+            border:1px solid @orange;
         }
 
     }
@@ -858,6 +854,20 @@
 
     }
 
+    &.m-btn-tag-violet{
+        color:#fff;
+        background-color: @violet;
+        border:1px solid @violet;
+
+        &.ant-btn:focus,
+        &.ant-btn:hover{
+            color:#fff;
+            background-color: @violet;
+            border:1px solid @violet;
+        }
+
+    }
+
     &.m-btn-tag-gray{
         color:#fff;
         background-color: @btn-gray;
@@ -876,7 +886,7 @@
 
 .m-top-btn-list{
     padding: 0 2.083rem 1rem;
-    border-bottom: 1px solid @border-color;
+    border-bottom: 1px solid @border-color; 
 }
 
 //数字营销
@@ -895,6 +905,28 @@
         border-color: #b0e1fc;
     }
 }
+
+.m-btn-service{
+    &.ant-btn{
+        height: 40px;
+        .font-s14();
+        color: #fff;
+        .tc();
+        border:0;
+        background: @orange;
+        padding: 0 1.25rem;
+        .border-radius(0);
+        &:hover, &:focus{
+            background: @orange;
+            color: #fff;
+            opacity: 0.8;
+        }
+    }
+    &.m-btn-full{
+        width:100%;
+    }
+}
+
 //新数字营销
 .m-zxr-scroll-btn{
     .pos(a);
@@ -909,7 +941,7 @@
     -webkit-transition: all .3s cubic-bezier(.645, .045, .355, 1);
     transition: all .3s cubic-bezier(.645, .045, .355, 1);
     &:hover{
-        background-color: rgba(0,0,0,0.2);
+        background-color: rgba(0,0,0,0.2);    
     }
     >.iconfont{
         .font-s36();
@@ -923,4 +955,38 @@
     }
 }
 
+.ant-modal-footer{
+    .m-btn-radius.ant-btn{
+        min-width: 70px;
+        padding: 0 15px;
+        margin-left: 15px;
+        margin-right: 0;
+    }
+}
 
+
+//弹出框的btn
+.ant-modal-confirm-btns{
+    .ant-btn{
+        height: 42px;
+        color: @view-color;
+        border-color: @border-btn-color;
+        .border-radius(1px);
+        min-width: 70px;
+        &:hover, &:focus {
+            color: @view-color;
+            border-color: @border-btn-color;
+            background: @ax-hover;
+        }
+    }
+    .ant-btn-primary{
+        color: #fff;
+        border-color: @blue;
+        background-color: @blue;
+        &:hover, &:focus {
+            color: #fff;
+            border-color: @blue;
+            background-color: @blue;
+        }
+    }
+}

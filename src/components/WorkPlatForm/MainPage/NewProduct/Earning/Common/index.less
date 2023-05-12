@@ -1,0 +1,35 @@
+.overlay {
+  :global(.ant-popover-arrow) {
+    box-shadow: -1px -1px 0 0 #7EB1FF !important;
+    border-color: #E8F0FF !important;
+    top: 7px !important;
+  }
+  :global(.ant-popover-inner) {
+    background: #E8F0FF;
+    border-radius: 4px;
+    border: 1px solid #7EB1FF;
+  }
+  letter-spacing: 1px;
+}
+
+.day {
+  flex: 1;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.iconHover {
+  color: #959CBA;
+  cursor: pointer;
+  &:hover {
+    color: #262626;
+    font-weight: bold;
+  }
+}
+
+.iconDisabled {
+  cursor: not-allowed;
+  color: #dddddf;
+}

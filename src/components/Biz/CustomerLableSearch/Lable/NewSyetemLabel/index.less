@@ -1,0 +1,35 @@
+.m_tree{
+    ul {
+        width: 100%;
+        white-space: break-spaces;
+    }
+}
+
+.treeNode{
+    width: max-content;
+    display: inline-block;
+    // background-color: red;
+    :global(.ant-tree-node-content-wrapper){
+        // background-color: rgb(157, 226, 235);
+        border: 1px solid #d7d3d3;
+        border-radius: 12px !important;
+    }
+}
+.fxlxTab{
+    :global(.ant-tabs-bar){
+      margin-bottom: 5px !important;
+      :global(.ant-tabs-tab){
+        margin: 0;
+      }
+      :global(.ant-tabs-tab-active){
+        background-color: #fff !important;
+        }
+        :global(.ant-tabs-tab-active::before){
+          content:" " !important;
+          display: none !important;
+      }
+      :global(.ant-tabs-ink-bar){
+        background-color:#1890ff !important;
+      }
+    }
+  }

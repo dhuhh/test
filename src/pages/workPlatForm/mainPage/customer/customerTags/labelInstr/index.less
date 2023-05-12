@@ -1,0 +1,63 @@
+.m-search {
+    :global{
+        .ant-input-suffix {
+          display: none;
+        }
+        .ant-input {
+          color: #61698C;
+          border-radius: 2px;
+          border: 1px solid #D1D5E6;
+    
+          &:focus {
+            border-color: #244FFF !important;
+          }
+    
+          &:hover {
+            border-color: #244FFF !important;
+          }
+        }
+    }
+}
+.tabs-content {
+  // padding: 0 24px;
+  margin: 3px;
+  background-color: #fff;
+}
+//安信tabs样式
+.ax-tabs {
+  :global {
+    .ant-tabs-nav-wrap {
+      padding-left: 4px;
+    }
+    .ant-tabs-tab {
+      color: #1A2243 ;
+      font-size: 18px;
+      padding: 20px;
+      margin: 0;
+      &:hover {
+        color: #244FFF;
+      }
+    }
+    .ant-tabs-tab-active {
+      position: relative;
+      color: #244FFF;
+      font-weight: bold;
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-left: -25%;
+        width: 50%; 
+        height: 2px;
+        background-color: #244FFF;
+      }
+    }
+    .ant-tabs-bar {
+      margin: 0;
+    }
+    .ant-tabs-ink-bar {
+      display: none !important;
+    }
+  }
+}

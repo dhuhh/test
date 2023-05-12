@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon/tongyong/_rili</title>
+    <g id="通用组件" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="时间选择器" transform="translate(-984.000000, -462.000000)">
+            <g id="日期选择器/输入框样式/激活" transform="translate(760.000000, 454.000000)">
+                <g id="icon/tongyong/_rili" transform="translate(224.000000, 8.000000)">
+                    <rect id="矩形" x="0" y="0" width="16" height="16"></rect>
+                    <g id="编组-2" transform="translate(3.000000, 1.000000)">
+                        <path d="M10.3949242,1.49497526 L10.5050247,12.3949242 L-0.394924247,12.5050247 L-0.505024742,1.60507575 L10.3949242,1.49497526 Z" id="矩形" stroke="#61698C"></path>
+                        <line x1="0" y1="4.5" x2="10" y2="4.5" id="路径-3" stroke="#61698C"></line>
+                        <line x1="2.5" y1="0" x2="2.5" y2="3" id="路径-4" stroke="#61698C"></line>
+                        <line x1="7.5" y1="0" x2="7.5" y2="3" id="路径-4备份" stroke="#61698C"></line>
+                        <polygon id="矩形" fill="#61698C" points="1 7 3 7 3 8 1 8"></polygon>
+                        <polygon id="矩形备份-8" fill="#61698C" points="1 9 3 9 3 10 1 10"></polygon>
+                        <polygon id="矩形备份-5" fill="#61698C" points="4 7 6 7 6 8 4 8"></polygon>
+                        <polygon id="矩形备份-9" fill="#61698C" points="4 9 6 9 6 10 4 10"></polygon>
+                        <polygon id="矩形备份-7" fill="#61698C" points="7 7 9 7 9 8 7 8"></polygon>
+                        <polygon id="矩形备份-10" fill="#61698C" points="7 9 9 9 9 10 7 10"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -5,6 +5,7 @@ import _array from 'lodash/array';
 import { DeletMessageFile } from '../../../../services/basicservices/message';
 // import htmlToDraft from 'html-to-draftjs';
 import config from '../../../../utils/config';
+import { getVersion } from '../../../../utils/request';
 
 const { api } = config;
 const { basicservices: {
@@ -13,6 +14,7 @@ const { basicservices: {
   getMessageFile,
 } } = api;
 
+const sendMessageFileversion = getVersion(sendMessageFile); // 因为走蚂蚁的组件，需要在这边设置请求头
 
 class FileUploadButton extends React.Component {
   constructor(props) {
@@ -132,10 +134,9 @@ class FileUploadButton extends React.Component {
       }
     } else {
       // 校验大小
-      const { objects = {} } = this.props;
-      const { tSYSPARAM = [] } = objects;
-      const tempIndex = tSYSPARAM.findIndex((item) => { return item.PARAMNAME === 'CRMII_MAIL_ATTACHMENT_MAXSIZE'; });
-      const size = tempIndex >= 0 ? parseInt(tSYSPARAM[tempIndex].PARAMVALUE || 32, 10) : 32;
+      const { sysParam = [] } = this.props;
+      const tempIndex = sysParam.findIndex((item) => { return item.csmc === 'CRMII_MAIL_ATTACHMENT_MAXSIZE'; });
+      const size = tempIndex >= 0 ? parseInt(sysParam[tempIndex].csz || 32, 10) : 32;
       const isLt32M = file.size / 1024 / 1024 < size;
       if (!isLt32M) {
         const { uid = '' } = file;
@@ -177,6 +178,9 @@ class FileUploadButton extends React.Component {
       // beforeUpload: this.beforeUpload,
       fileList: tempFileList,
       action: sendMessageFile,
+      headers: {
+        apiVersion: sendMessageFileversion,
+      },
       onChange: this.handleChange,
       onRemove: this.onRemove,
     };
@@ -197,5 +201,5 @@ class FileUploadButton extends React.Component {
   }
 }
 export default connect(({ global }) => ({
-  objects: global.objects,
+  sysParam: global.sysParam,
 }))(FileUploadButton);

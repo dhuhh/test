@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_fwxx_selected</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360icon更新" transform="translate(-249.000000, -442.000000)">
+            <g id="编组-137备份-5" transform="translate(212.000000, 28.000000)">
+                <g id="icon_fwxx_selected" transform="translate(37.000000, 414.000000)">
+                    <g id="编组-13备份-12" opacity="0">
+                        <g id="编组">
+                            <rect id="矩形" fill="#D8D8D8" x="0" y="0" width="22" height="22"></rect>
+                            <path d="M18.75,3.25 L18.75,18.75 L3.25,18.75 L3.25,3.25 L18.75,3.25 Z" id="矩形" stroke="#979797" stroke-width="0.5"></path>
+                        </g>
+                    </g>
+                    <g id="编组-3" transform="translate(3.000000, 3.000000)">
+                        <rect id="矩形备份-8" fill="#1A2243" x="0" y="0" width="16" height="16" rx="2"></rect>
+                        <path d="M15.8155849,3.89250483 C16.0722583,3.79065517 16.3628987,3.91616464 16.4647484,4.17283809 C16.5552814,4.40099227 16.4661727,4.65598453 16.2649831,4.78136503 L16.1844151,4.8220016 L8.18441512,7.99645258 C8.0955768,8.03170419 7.99915769,8.04051709 7.90652898,8.02289129 L7.81558488,7.99645258 L-0.184415121,4.8220016 C-0.441088568,4.72015194 -0.566598046,4.42951154 -0.464748387,4.17283809 C-0.374215356,3.94468392 -0.134514331,3.82016547 0.0979048365,3.86684369 L0.184415121,3.89250483 L8,6.993 L15.8155849,3.89250483 Z" id="路径-7" fill="#FFFFFF" fill-rule="nonzero"></path>
+                        <rect id="矩形" fill="#FFFFFF" x="0" y="10.9854458" width="16" height="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

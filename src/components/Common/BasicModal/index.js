@@ -65,12 +65,12 @@ class BasicModal extends React.PureComponent {
   }
   allWindow = (e) => {
     const { onAllWindowChange } = this.props;
-    const tempClass = e.currentTarget.className || '';
-    let changeStyle = '';
+    // const tempClass = e.currentTarget.className || '';
+    let { changeStyle = '' } = this.state;
     let height = 0;
     let width = 0;
     let top = 0;
-    if (tempClass.indexOf('fangda') !== -1) {
+    if (changeStyle === 'min') {
       changeStyle = 'max';
       height = document.body.offsetHeight;
       width = document.body.scrollWidth;
@@ -88,41 +88,28 @@ class BasicModal extends React.PureComponent {
   }
 
   renderFooter() {
-    const { confirmDisabled = false, confirmLoading = false, onOk, onCancel } = this.props; // eslint-disable-line
+    const { confirmDisabled = false, confirmLoading = false, onOk, onCancel, okText, cancelText } = this.props; // eslint-disable-line
     return (
       <div>
-        {onCancel && <Button className="m-btn-radius m-btn-gray" onClick={this.onCancelBtn}>取 消</Button>}
-        {onOk && <Button type="primary" className="m-btn-radius m-btn-theme" onClick={this.onOkBtn} loading={confirmLoading} disabled={confirmDisabled}>确 定</Button>}
+        { onOk && <Button type="primary" className="m-btn-radius m-btn-headColor" onClick={this.onOkBtn} loading={confirmLoading} disabled={confirmDisabled} style={{ fontSize: 'unset' }}>{okText || '确 定'}</Button>}
+        { onCancel && <Button className="m-btn-radius m-btn-white" onClick={this.onCancelBtn} disabled={confirmLoading} style={{ fontSize: 'unset' }}>{cancelText || '取 消'}</Button>}
       </div>
     );
   }
 
   render() {
     // isAllWindow 是否支持最大化 1:支持|0:不支持
+    // title-icon className={`iconfont icon-${changeStyle === 'max' ? 'suoxiao' : 'fangda'}`}
     const { className, maskClosable = false, title, isAllWindow = 0, style = {}, onCancel, destroyOnClose = true, ...otherProps } = this.props;
     const { changeStyle, width, height, top = '2rem' } = this.state;
     return (
       <Modal
         ref={(c) => { this.modal = c; }}
-        style={Object.assign(style, { height, top })}
+        style={{ ...style, height, top }}
         destroyOnClose={destroyOnClose}
         getContainer={this.getContainer}
         footer={this.renderFooter()}
-        title={
-          isAllWindow === 1 ?
-            [title, <i
-              key={Math.random()}
-              className={`iconfont icon-${changeStyle === 'max' ? 'suoxiao' : 'fangda'}`}
-              style={{
-                fontSize: '1.583rem',
-                position: 'absolute',
-                right: '3.5rem',
-                cursor: 'pointer',
-                height: '1.8rem',
-                lineHeight: '1.7rem'
-              }}
-              onClick={this.allWindow} />] : title
-        }
+        title={isAllWindow === 1 ? [title, <i key={Math.random(1000)} className='iconfont icon-zdh' style={{ fontSize: '1.583rem', position: 'absolute', right: '3.5rem', cursor: 'pointer', height: '1.8rem', lineHeight: '1.7rem', paddingRight: '1rem', color: '#61698C' }} onClick={this.allWindow.bind(this)} />] : title}
         maskClosable={maskClosable}
         className={classnames('m-modal-wrap', className)}
         onCancel={this.onCancelEvent}

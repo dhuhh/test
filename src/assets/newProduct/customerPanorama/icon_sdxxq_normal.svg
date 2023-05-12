@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_sdxxq_normal</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360icon更新" transform="translate(-61.000000, -542.000000)">
+            <g id="编组-137备份-6" transform="translate(24.000000, 28.000000)">
+                <g id="icon_sdxxq_normal" transform="translate(37.000000, 514.000000)">
+                    <g id="编组-13备份-11" opacity="0">
+                        <g id="编组">
+                            <rect id="矩形" fill="#D8D8D8" x="0" y="0" width="22" height="22"></rect>
+                            <rect id="矩形" stroke="#979797" stroke-width="0.5" x="3.25" y="3.25" width="15.5" height="15.5"></rect>
+                        </g>
+                    </g>
+                    <g id="编组-3" transform="translate(2.500000, 2.500000)" fill="#61698C">
+                        <path d="M8.5,0 C13.1944204,0 17,3.80557963 17,8.5 C17,13.1944204 13.1944204,17 8.5,17 C3.80557963,17 0,13.1944204 0,8.5 C0,3.80557963 3.80557963,0 8.5,0 Z M8.5,1 C4.35786438,1 1,4.35786438 1,8.5 C1,12.6421356 4.35786438,16 8.5,16 C12.6421356,16 16,12.6421356 16,8.5 C16,4.35786438 12.6421356,1 8.5,1 Z" id="椭圆形备份" fill-rule="nonzero"></path>
+                        <rect id="矩形" x="3.49746042" y="4.53483561" width="2.00253958" height="1"></rect>
+                        <rect id="矩形备份-4" x="3.49035332" y="7.53483561" width="2.00253958" height="1"></rect>
+                        <rect id="矩形备份-6" x="3.49035332" y="10.5348356" width="2.00253958" height="1"></rect>
+                        <rect id="矩形备份-2" x="7.5" y="4.53483561" width="6.01675378" height="1"></rect>
+                        <rect id="矩形备份-5" x="7.4928929" y="7.53483561" width="6.01675378" height="1"></rect>
+                        <rect id="矩形备份-7" x="7.4928929" y="10.5348356" width="6.01675378" height="1"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

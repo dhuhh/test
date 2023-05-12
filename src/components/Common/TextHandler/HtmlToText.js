@@ -79,7 +79,7 @@ const complexHighLight = (text, keyword, color) => {
 
 // 去除html标签和转义符
 export function HtmlToText(html) {
-  if (!html || html === '--') {
+  if (!html || html === '' || html === '--') {
     return '--';
   }
   let rhtml = html2Text(html);
@@ -89,7 +89,7 @@ export function HtmlToText(html) {
 
 // 截取字符串
 export function SubText(text = '', textLength = 0, handleKeyword = false, keyword = '', handleCase = false) {
-  if (!text || text === '--') {
+  if (!text || text === '' || text === '--') {
     return '--';
   }
   if (!handleKeyword) {
@@ -107,7 +107,7 @@ export function SubText(text = '', textLength = 0, handleKeyword = false, keywor
 
 // 高亮关键字
 export function HighLightKeyword(text = '', keyword = '', handleCase = false, color = '#ff3300') {
-  if (!text || text === '--') {
+  if (!text || text === '' || text === '--') {
     return '--';
   }
   if (keyword === '') {

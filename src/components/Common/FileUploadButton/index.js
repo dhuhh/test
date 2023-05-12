@@ -52,7 +52,7 @@ class FileUploadButton extends React.Component {
       message.error('最多只能上传一个文件');
     }
     fileList.forEach((file, index) => {
-      if (index <= fileList.length - 1) {
+      if (index <= 2) {
         const { response: tempResponse = {} } = file;
         const { data = {} } = tempResponse;
         const { md5 = '' } = data || {};
@@ -72,9 +72,6 @@ class FileUploadButton extends React.Component {
       }
     });
     tempFileList = tempFileList.length > 0 ? tempFileList : fileList;
-    if (tempFileList.length > 3) {
-      tempFileList.splice(0, 1);
-    }
     this.setState({
       fileList: tempFileList,
     });
@@ -155,7 +152,7 @@ class FileUploadButton extends React.Component {
             <Icon type="upload" style={{ fontSize: 16, color: '#08c' }} />
           </div>
         </div> */}
-        <Button className="ant-btn  fcbtn m-btn-border m-btn-border-headColor ant-btn btn-1c">
+        <Button>
           <Icon type="upload" /> 点击上传附件
         </Button>
       </Upload>

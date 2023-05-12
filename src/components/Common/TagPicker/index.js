@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
-import { Tag } from 'antd';
+import { Tag, Popover } from 'antd';
 import styles from './index.less';
 
 const { CheckableTag } = Tag;
 
 class TagPicker extends Component {
   state = {
+    expand: this.props.expand || false,
     isMulti: this.props.isMulti || false,
     allTagData: { show: true, key: '', showText: '全部', ...(this.props.allTagData || {}) },
     value: this.props.initialValue || [],
-    displayTag: this.props.displayTag,
   }
-
-  handleListSearch = () => {
-    const { handleListSearch } = this.props;
-    if (handleListSearch && typeof handleListSearch === 'function') {
-      handleListSearch.call(111);
-    }
-  };
-
   // 选中全选tag
   handleSelectAll = (checked, allKeyValue) => {
     const { value } = this.state;
@@ -28,9 +20,7 @@ class TagPicker extends Component {
     value.push(allKeyValue);
     this.setState({ value });
     this.triggerChange(value);
-    this.handleListSearch();
   }
-
   // 选中其它tag
   handleSelect = (checked, tag, allKeyValue) => {
     const { isMulti, value: valueInstate } = this.state;
@@ -63,9 +53,7 @@ class TagPicker extends Component {
     }
     this.setState({ value: tempValue });
     this.triggerChange(tempValue);
-    this.handleListSearch();
   }
-
   // 向外层的form表单暴露的triggerChange函数(antd的form控件需求)
   triggerChange = (changedValue) => {
     const { onChange } = this.props;
@@ -73,19 +61,21 @@ class TagPicker extends Component {
       onChange([...changedValue]);
     }
   }
-
-  // 切换显示隐藏
-  handleTag = () => {
-    this.setState((prevState) => {
-      return { displayTag: !prevState.displayTag };
-    });
+  // 判断某元素是否在数组中
+  isInArray = (arr, value) => {
+    for (let i = 0; i < arr.length; i++) {
+      if (value === arr[i]) {
+        return true;
+      }
+    }
+    return false;
   }
-
   render() {
-    const { value: valueInstate, allTagData: allTagDataInstate, displayTag } = this.state;
-    const { className, style, tagClassName = `${styles.tagSelect} m-tag-small`, allTagData = {}, rowKey = 'id', titleKey = 'name', label = '', dataSource = [], value = valueInstate, tagType } = this.props;
+    const { value: valueInstate, expand: expandInstate, allTagData: allTagDataInstate } = this.state;
+    const { className, style, tagClassName = 'm-tag-small', allTagData = {}, rowKey = 'id', titleKey = 'name', label = '', dataSource = [], value = valueInstate, expand = expandInstate, disableIds = [], disableResText = '', assign } = this.props;
     // 处理样式
-    const cls = classnames('m-tagbox', styles.tagSelect, className);
+    let cls = classnames('m-tagbox', styles.tagSelect, className);
+    if (assign) cls = classnames('m-tagbox-nojustify', styles.tagSelect, className);
     // 处理全选的相关数据
     const atd = {
       ...allTagDataInstate,
@@ -98,15 +88,18 @@ class TagPicker extends Component {
         value.push(atd.key);
       }
     }
-
+    let atdDisabled = false; // 全部按钮是否禁用
+    if (disableIds.indexOf('') > -1) {
+      atdDisabled = true;
+    }
     return (
       <div className={cls} style={style}>
-        {label && <div className="m-tagbox-left">{label}</div>}
-        <div className="m-tagbox-right">
-          <div className={`${displayTag ? 'm-tagbox-rightMain  isHidden' : 'm-tagbox-rightMain'}`}>
-            { tagType === '1' ? <div className="list-arrow" onClick={this.handleTag}><i className={`${displayTag ? 'iconfont icon-left-line-arrow' : 'iconfont icon-down-line-arrow'}`} /></div> : '' }
+        {label && !assign && <div className="m-tagbox-left">{label}</div>}
+        {label && assign && <div className="m-tagbox-left-nojustify">{label}</div>}
+        <div className={`m-tagbox-right ${styles.Tag}`}>
+          <div className={expand ? 'm-tagbox-rightMain' : 'm-tagbox-rightMain'}>
             {
-              !atd.show ? '' : (
+              atd.show && !atdDisabled ? (
                 <CheckableTag
                   className={tagClassName}
                   key={atd.key}
@@ -115,18 +108,65 @@ class TagPicker extends Component {
                 >
                   {atd.showText}
                 </CheckableTag>
-              )
+              ) : ''
             }
-            {dataSource.map(tag => (
-              <CheckableTag
-                className={tagClassName}
-                key={tag[rowKey]}
-                checked={value.includes(tag[rowKey])}
-                onChange={checked => this.handleSelect(checked, tag, atd.key)}
-              >
-                {tag[titleKey]}
-              </CheckableTag>
-            ))}
+            {
+              atd.show && atdDisabled ? (
+                <CheckableTag
+                  className={`${tagClassName} disable-tag`}
+                  key={atd.key}
+                  // checked={value.includes(atd.key)}
+                  // onChange={checked => this.handleSelectAll(checked, atd.key)}
+                >
+                  {atd.showText}
+                </CheckableTag>
+              ) : ''
+            }
+            {
+              dataSource.map((tag) => {
+                if (this.isInArray(disableIds, tag[rowKey])) {
+                  if (disableResText !== '') {
+                    return (
+                      <Popover placement="top" content={disableResText} trigger="hover" className="disable-tag-popover">
+                        <CheckableTag
+                          className={`${tagClassName} disable-tag`}
+                          key={tag[rowKey]}
+                        >
+                          {tag[titleKey]}
+                        </CheckableTag>
+                      </Popover>
+                    );
+                  } else if (disableResText === '' && disableIds.length !== 0) {
+                    return (
+                      <CheckableTag
+                        className={`${tagClassName} disable-tag`}
+                        key={tag[rowKey]}
+                      >
+                        {tag[titleKey]}
+                      </CheckableTag>
+                    );
+                  }
+                  return (
+                    <CheckableTag
+                      className={tagClassName}
+                      key={tag[rowKey]}
+                    >
+                      {tag[titleKey]}
+                    </CheckableTag>
+                  );
+                }
+                return (
+                  <CheckableTag
+                    className={tagClassName}
+                    key={tag[rowKey]}
+                    checked={value.includes(tag[rowKey])}
+                    onChange={checked => this.handleSelect(checked, tag, atd.key)}
+                  >
+                    {tag[titleKey]}
+                  </CheckableTag>
+                );
+              })
+            }
           </div>
         </div>
       </div>

@@ -1,0 +1,60 @@
+.eTableSmall {
+  :global(.ant-table) {
+    border: 1px solid #eaecf2;
+  }
+  :global(.ant-table-header) {
+    background: #f7f8fc;
+  }
+
+  :global(.ant-table-thead > tr > th) {
+    height: 48px !important;
+    padding: 2px 20px;
+    position: relative;
+    background: #f7f8fc !important;
+    font-size: 14px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    font-weight: 400;
+    color: #1a2243 !important;
+    border-bottom: none;
+
+    &::after {
+      display: block;
+      content: "";
+      width: 1px;
+      height: calc(100% - 25px);
+      background: #eaecf2;
+      position: absolute;
+      right: 0;
+      top: 13px;
+    }
+    &:last-of-type::after {
+      display: none;
+    }
+  }
+
+  :global(.ant-table-tbody > tr > td) {
+    height: 48px !important;
+    padding: 2px 20px;
+    color: #61698c;
+    border-bottom-color: #eaecf2;
+    background: #ffffff;
+  }
+
+  :global(.ant-table-body) {
+    &::-webkit-scrollbar {
+      width: 6px !important;
+      height: 6px !important;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: rgba(26, 34, 67, 0.5);
+      border-radius: 3px;
+    }
+  }
+  :global(.ant-table-tbody > tr:hover:not(.ant-table-expanded-row) > td) {
+    background: #eef1ff !important;
+  }
+  :global(.ant-table-fixed .ant-table-row-hover > td) {
+    background: #eef1ff !important;
+  }
+}

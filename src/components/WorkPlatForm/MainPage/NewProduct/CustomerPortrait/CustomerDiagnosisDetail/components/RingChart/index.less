@@ -1,0 +1,83 @@
+.layout {
+  position: relative;
+  width: 479px;
+  height: 160px;
+  background:rgba(242,242,245,0.44);
+
+  .innerChart {
+    @size: 130px;
+
+    height: @size;
+    width: @size;
+    position: relative;
+    left: 34px;
+  }
+
+  .ringLegends {
+    min-width: 260px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .ringLegendRow {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 9px;
+      margin-right: 82px;
+
+      .ringLegend {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+
+        .ringBlock {
+          width: 6px;
+          height: 6px;
+          margin-right: 6px;
+        }
+
+        .ringLabel {
+          font-size: 12px;
+          font-weight: 400;
+          color: #61698C;
+        }
+      }
+
+      .ringLegendValue {
+        text-align: right;
+        font-size: 12px;
+        font-weight: 400;
+        color: #1A2243;
+      }
+    }
+  }
+}
+
+.pieRoundOuter.roundOuterBorder {
+  background: #fff;
+}
+.roundOuterBorder{
+  margin-top: 10px;
+}
+.pieRoundOuter {
+  position: relative;
+}
+
+.pieRoundInner {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translate(360%, -60%);
+  font-size: 10px;
+  // font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #666;
+}
+.pagination{
+  :global(.swiper-pagination-bullet){
+    width: 4px !important;
+    height: 4px !important;
+  }
+}

@@ -28,20 +28,24 @@ class BetweenInput extends React.Component {
     });
   }
   handleLeft=(value) => {
-    if (value && value > 0) {
+    if (!isNaN(value)) {
+      let mvalue = value;
+      if(value === null) mvalue = '';
       this.setState({
-        leftValue: value,
+        leftValue: mvalue,
       });
+      this.triggerChange({ leftValue: mvalue });
     }
-    this.triggerChange({ leftValue: value });
   }
   handleRight=(value) => {
-    if (value && value > 0) {
+    if (!isNaN(value)) {
+      let mvalue = value;
+      if(value === null) mvalue = ''; // null转换成'',便于翻译
       this.setState({
-        rightValue: value,
+        rightValue: mvalue,
       });
+      this.triggerChange({ rightValue: mvalue });
     }
-    this.triggerChange({ rightValue: value });
   }
   triggerChange = (changedValue) => {
     // 将值改变传递给form组件.
@@ -51,16 +55,16 @@ class BetweenInput extends React.Component {
     }
   }
   render() {
-    const { className, labelName = '' } = this.props;
+    const { className, labelName = '', style = {} } = this.props;
     return (
-      <Input.Group className={classnames('m-input-group', styles.betweenInput, className)} compact>
+      <Input.Group style={{ ...style }} className={classnames('m-input-group', styles.betweenInput, className)} compact>
         <span className="ant-input-group-addon" style={{ display: labelName ? '' : 'none' }}>{labelName}</span>
         <div className="m-right-input m-right-input-section">
           <InputNumber
             className={styles.m_inputNum}
-            style={{ float: 'left', height: '100%', width: '45%', textAlign: 'center' }}
+            style={{ float: 'left', height: '100%', width: '45%', textAlign: 'center', border: 'none' }}
             onChange={this.handleLeft}
-            value={this.state.leftValue}
+            value={!isNaN(this.state.leftValue) ? this.state.leftValue : null}
             max={this.state.leftMax}
             min={this.state.leftMin}
             precision={this.state.precision}
@@ -76,8 +80,8 @@ class BetweenInput extends React.Component {
             max={this.state.rightMax}
             min={this.state.rightMin}
             onChange={this.handleRight}
-            value={this.state.rightValue}
-            style={{ width: '45%', height: '100%', textAlign: 'center' }}
+            value={!isNaN(this.state.rightValue) ? this.state.rightValue : null}
+            style={{ width: '45%', height: '100%', textAlign: 'center', border: 'none' }}
           />
         </div>
       </Input.Group>

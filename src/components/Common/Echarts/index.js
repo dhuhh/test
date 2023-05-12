@@ -344,7 +344,7 @@ function EchartsHelper(props) {
         // 判断当前图形类型在 图形数组中的位置 如果为第一位则用左侧Y轴 否则用右侧Y轴
         const i = chartType.indexOf(arrSeries.TYPE[j]);
         let yIndex = 0;
-        if (i != '0') { // eslint-disable-line
+        if (i !== '0') {
           yIndex = 1;
         }
         ser = { name: arrSeries.NAME[j], type: arrSeries.TYPE[j] || 'line', data: data[j], yAxisIndex: yIndex, smooth: true };
@@ -371,7 +371,7 @@ function EchartsHelper(props) {
     return opt;
   };
   // ---------------------------------画图分割线-------------------------------------------------------
-  const { height, width, type } = props || {}; // height/width:图形大小 type:图类型(line、bar等)
+  const { height, width, type } = props; // height/width:图形大小 type:图类型(line、bar等)
   const datas = (props && props.datas) ? props.datas : []; // 获取数据
   let option = (props && props.options) ? props.options : []; // 自定义覆盖型的ECHARTS参数，API请参考ECHARTS官网
   if (type === 'line') { // 线图

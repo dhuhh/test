@@ -1,0 +1,187 @@
+.diagnosisCard {
+  text-align: left;
+  position: relative;
+  width: 520px;
+  margin: 19px auto 28px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0px 2px 11px 0px rgba(153, 153, 153, 0.25);
+  border-radius: 6px;
+
+  .header {
+    position: absolute;
+    left: -13px;
+    top: -15px;
+    width: 136px;
+    height: 84px;
+  }
+
+  .title {
+    text-align: left;
+    margin-left: 70px;
+    font-size: 18px;
+    color: #1A2243;
+    position: relative;
+    &:after{
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      right:-20px;
+      background: rgba(0, 0, 0, 0.1);
+      width: 520px;
+      height: 1px;
+      -webkit-transform: scaleY(0.5);
+      transform: scaleY(0.5);
+      -webkit-transform-origin: 0 0;
+      transform-origin: 0 0;
+    }
+  }
+  /* .line{
+    width: 520px;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.1);
+    opacity: 0.8;
+    margin-left: -20px;
+    margin-top: 20px;
+  } */
+
+  .abstract {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 35px;
+    margin-bottom: 14px;
+    line-height: 14px ;
+    align-items: center;
+
+    .left {
+      font-size: 14px;
+      font-weight: 400;
+      color: #1A2243;
+
+      .stockName {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1A2243;
+        margin-bottom: 14px;
+
+        .essLinkArrow {
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          transform: rotate(45deg);
+          border-top: 2px solid #999;
+          border-right: 2px solid #999;
+        }
+      }
+
+      .stockDate {
+        font-size: 14px;
+        // font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #61698C;
+        line-height: 28px;
+      }
+    }
+
+    .right {
+      .titleRight {
+        position: absolute;
+        top: 0;
+        right: 0;
+        div {
+          display: flex;
+          margin-bottom: 10px;
+          align-items: center;
+          img {
+            width: 18px;
+            height: 18px;
+            margin-right: 10px;
+          }
+          div {
+            flex: 1;
+            font-size: 14px;
+            margin-bottom: 0;
+            // font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #61698C;
+          }
+        }
+      }
+    }
+  }
+
+  .detail {
+    font-size: 14px;
+    font-weight: 400;
+    color: #61698C;
+    line-height: 22px;
+    display: inline-block;
+    margin-top: 5px;
+  }
+
+  .description {
+    font-weight: 400;
+    color: #959CBA;
+  }
+
+  .descriptionLayout {
+    position: relative;
+    z-index: 200;
+
+    .descriptionExpand {
+      position: absolute;
+      left: -20px;
+      padding: 10px 20px;
+      background: #E8F0FF;
+      box-shadow: 0px 15px 11px 0px rgba(17, 30, 61, 0.04);
+      border: 1px solid #7EB1FF;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #1A2243;
+      line-height: 24px;
+    }
+
+    .descriptionExpandArror {
+      content: '';
+      width: 6px;
+      height: 6px;
+      transform: rotate(45deg);
+      position: absolute;
+      left: 24px;
+      top: -3px;
+      background-color: #E8F0FF;
+      border-top: 1px solid #7EB1FF;
+      border-left: 1px solid #7EB1FF;
+    }
+  }
+}
+
+.subTitle {
+  font-size: 14px;
+  // font-family: PingFangSC-Regular, PingFang SC;
+  font-weight: 400;
+  color: #1A2243;
+  line-height: 28px;
+}
+.descriptionTag{
+  :global(.ant-tooltip-inner){
+    font-size: 14px;
+    color:#1A2243;
+    line-height: 20px;
+    background-color:#E8F0FF !important;
+    box-shadow: 0px 15px 11px 0px rgba(17, 30, 61, 0.04);
+    border: 1px solid #7EB1FF;
+    padding: 25px 7px 27px 24px;
+  }
+  :global(.ant-tooltip-arrow::before){
+    // display: none;
+    width: 6px;
+    height: 6px;
+    border: 1px solid #7EB1FF;
+    background: #E8F0FF ;
+  }
+}

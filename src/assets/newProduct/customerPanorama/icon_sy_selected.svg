@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon_sy_selected</title>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="客户360icon更新" transform="translate(-249.000000, -142.000000)">
+            <g id="编组-137备份-5" transform="translate(212.000000, 28.000000)">
+                <g id="icon_sy_selected" transform="translate(37.000000, 114.000000)">
+                    <g opacity="0" id="编组-2">
+                        <g id="编组">
+                            <rect id="矩形" fill="#D8D8D8" x="0" y="0" width="22" height="22"></rect>
+                            <rect id="矩形" stroke="#979797" stroke-width="0.5" x="3.25" y="3.25" width="15.5" height="15.5"></rect>
+                        </g>
+                    </g>
+                    <g transform="translate(2.500000, 2.500000)">
+                        <circle id="椭圆形" fill="#1A2243" cx="8.5" cy="8.5" r="8.5"></circle>
+                        <path d="M9.20710678,4.79398288 L12.2060171,7.79289322 C12.5965414,8.18341751 12.5965414,8.81658249 12.2060171,9.20710678 L9.20710678,12.2060171 C8.81658249,12.5965414 8.18341751,12.5965414 7.79289322,12.2060171 L4.79398288,9.20710678 C4.40345859,8.81658249 4.40345859,8.18341751 4.79398288,7.79289322 L7.79289322,4.79398288 C8.18341751,4.40345859 8.81658249,4.40345859 9.20710678,4.79398288 Z M11.4989103,8.5 L8.5,5.50108966 L5.50108966,8.5 L8.5,11.4989103 L11.4989103,8.5 Z" id="矩形" fill="#FFFFFF" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

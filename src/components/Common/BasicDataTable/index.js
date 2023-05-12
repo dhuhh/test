@@ -1,18 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
-import { Table, Checkbox, Affix, Button, ConfigProvider } from 'antd';
+import { Table, Checkbox, Affix, Button } from 'antd';
 import styles from './index.less';
-import nodata from '../../../assets/no-data.svg';
-
-const customizeRenderEmpty = () => (
-  // 这里面就是我们自己定义的空状态
-  <div className="m-card">
-    <div className="tc no-data-card" style={{ height: '9rem', background: '#fff', padding: '2rem 0' }}>
-      <div><img src={nodata} alt="" /></div>
-      <div className="no-data-text">暂无内容</div>
-    </div>
-  </div>
-);
 
 export default class BasicDataTable extends React.Component {
   state = {
@@ -32,10 +21,16 @@ export default class BasicDataTable extends React.Component {
     this.addHorizontalScroll();
   }
   componentWillReceiveProps(nextProps) {
-    const { dataSource } = nextProps;
-    if (dataSource !== this.props.dataSource) { // 新的dataSource数组引用会变
-      this.setState({ checkboxCache: { selectAll: false, selectedRowKeys: [] } });
+    const { columns: nextColumns } = nextProps;
+    const { columns } = this.props;
+    if (columns.length !== nextColumns.length) {
       this.addHorizontalScroll();
+    }
+  }
+  componentDidUpdate() {
+    if (this.props.specialTotal && this.props.rowSelection.selectedRowKeys.length) {
+      this.checkboxRef.childNodes[0].childNodes[0].className = 'ant-checkbox ant-checkbox-indeterminate';
+      // this.checkboxRef.childNodes[0].childNodes[0].setAttribute('class', 'ant-checkbox ant-checkbox-indeterminate');
     }
   }
   componentWillUnmount() {
@@ -57,8 +52,8 @@ export default class BasicDataTable extends React.Component {
     }
   }
   addHorizontalScroll = () => {
-    const { isAffixed = false, dataSource = [] } = this.props;
-    if (isAffixed && window.addEventListener && dataSource.length > 0) {
+    const { isAffixed = false } = this.props;
+    if (isAffixed && window.addEventListener) {
       // 给dom节点绑定事件,监听dom节点的滚动事件
       const [mainTable = ''] = document.getElementsByClassName(`${styles.mainTable}-${this.hashCode}`) || [];
       const [affixedTable = ''] = document.getElementsByClassName(`${styles.affixedTable}-${this.hashCode}`) || [];
@@ -135,7 +130,7 @@ export default class BasicDataTable extends React.Component {
   handleSelect = (event, value) => {
     event.stopPropagation();// 阻止事件冒泡
     const { checked: selected } = event.target;// 选中/取消选中 的状态\
-    const { dataSource,
+    let { dataSource,
       rowSelection: {
         onSelect,
         selectAll = this.state.checkboxCache.selectAll,
@@ -143,8 +138,8 @@ export default class BasicDataTable extends React.Component {
       },
     } = this.props;
     let record = false;// 当前 选中/取消选中 的记录
-    const currentSelectedRowKeys = [];// 当前所有的 选中/取消选中 的key值
-    const selectedRows = [];// 当前所有的 选中/取消选中 的记录
+    let currentSelectedRowKeys = [];// 当前所有的 选中/取消选中 的key值
+    let selectedRows = [];// 当前所有的 选中/取消选中 的记录
     if ((selectAll && selected) || (!selectAll && !selected)) {
       // 如果勾选了全选, 选中该项后需要将selectedRowKeys中的该项去掉; 如果未勾选全选, 取消勾选该项后,也需要将selectedRowKeys中的该项去掉
       currentSelectedRowKeys.push(...selectedRowKeys);
@@ -168,6 +163,12 @@ export default class BasicDataTable extends React.Component {
         selectedRows.push(item);
       }
     });
+    // checkbox样式问题处理
+    if (this.props.specialTotal && this.props.specialTotal === currentSelectedRowKeys.length) {
+      currentSelectedRowKeys = [];
+      selectedRows = [];
+      selectAll = !selectAll;
+    }
     if (onSelect) {
       onSelect(record, selected, selectedRows);
     }
@@ -205,13 +206,10 @@ export default class BasicDataTable extends React.Component {
     this.handleSelectChange(currentSelectedRowKeys, selectedRows, selected);
   }
   handleSelectChange(currentSelectedRowKeys, selectedRows, selectAll) {
-    const { rowSelection: { onChange, selectedRowKeys: sr, selectAll: sa } } = this.props;
+    this.setState({ checkboxCache: { selectedRowKeys: currentSelectedRowKeys, selectAll, selectedRows } });
+    const { rowSelection: { onChange } } = this.props;
     if (onChange) {
       onChange(currentSelectedRowKeys, selectedRows, selectAll);
-    }
-    if (sr === undefined || sa === undefined) {
-      // 避免在没有传入selectedRowKeys和selectAll,选中效果异常,因此将selectedRowKeys和selectAll存在state中
-      this.setState({ checkboxCache: { selectedRowKeys: currentSelectedRowKeys, selectAll } });
     }
   }
 
@@ -224,8 +222,8 @@ export default class BasicDataTable extends React.Component {
   }
 
   render() {
-    const { affixed, emptyText } = this.state;
-    const { isPagination = true, className, rowSelection, pagination: paginationInprops, rowKey = 'id', columns, dataSource, isAffixed = false, affixOffsetTop = 0, showBackTop = false, backTopClassName, ...restProps } = this.props;
+    const { affixed } = this.state;
+    const { potentialCustomer = '', className, rowSelection, pagination: paginationInprops, rowKey = 'id', columns, dataSource, isAffixed = false, affixOffsetTop = 0, showBackTop = false, backTopClassName, ...restProps } = this.props;
     const finalColumns = [];
     // 如果是checkbox且需要支持"跨页全选"",那么就禁用默认的选择器,自定义checkbox选择器
     let confirmCrossPageSelect = false;// 判断是否是跨页全选
@@ -240,23 +238,25 @@ export default class BasicDataTable extends React.Component {
         width,
         fixed,
         className: 'ant-table-selection-column',
-        title: <Checkbox
-          indeterminate={selectedRowKeys.length > 0}
-          checked={selectAll}
-          onChange={_this.handleSelectAll}
-        />,
+        title: <div className='m-bss-select-checkbox'><div ref={el => this.checkboxRef = el} className={`m-bss-select-dropdown-title`} style={{ borderBottom: 'none', padding: '3px 6px', display: 'flex', justifyContent: 'center' }}>
+          <Checkbox
+            indeterminate={selectedRowKeys.length > 0}
+            checked={selectAll}
+            onChange={_this.handleSelectAll}
+          /></div></div>,
         colSpan: dataSource.length > 0 ? 1 : 0,
         dataIndex: 'checkbox',
         key: 'checkbox',
         render(val, record) {
           const value = _this.rowKeyValue(record);
           return (
-            <a onClick={(e) => { e.stopPropagation(); /** 阻止事件冒泡,防止onRowClick先于checkbox的change事件执行 * */ }}>
-              <Checkbox
-                value={value}
-                checked={(selectAll && !selectedRowKeys.includes(value)) || (!selectAll && selectedRowKeys.includes(value))}
-                onChange={event => _this.handleSelect(event, value)}
-              />
+            <a onClick={(e) => { e.stopPropagation();  /** 阻止事件冒泡,防止onRowClick先于checkbox的change事件执行 * */ }}>
+              <div className='m-bss-select-checkbox'><div className={`m-bss-select-dropdown-title`} style={{ borderBottom: 'none', padding: '3px 6px', display: 'flex', justifyContent: 'center' }}>
+                <Checkbox
+                  value={value}
+                  checked={(selectAll && !selectedRowKeys.includes(value)) || (!selectAll && selectedRowKeys.includes(value))}
+                  onChange={event => _this.handleSelect(event, value)}
+                /></div></div>
             </a>
           );
         },
@@ -264,46 +264,44 @@ export default class BasicDataTable extends React.Component {
     }
     // 将其它列放到finalColumns中
     finalColumns.push(...columns);
-
-
     // 当总条数小于pageSize的时候不显示分页
     const { autoHide = true, showSinglePager = true, pageSize = '', total = '' } = paginationInprops || {};
     let pagination = paginationInprops;
     if (autoHide && !showSinglePager && pageSize !== '' && total !== '' && total <= pageSize) {
       pagination = false;
     }
-    if (!isPagination) {
-      pagination = false;
-    }
-    if (!isAffixed || dataSource.length === 0) {
+    if (!isAffixed) {
       return (
-        <ConfigProvider renderEmpty={customizeRenderEmpty}><Table
+        <Table
           {...restProps}
-          className={`${classnames(styles.table, className)} m-table-customer`}
+          className={`${classnames(styles.table, className)} m-table-customer m-table-szyx ${potentialCustomer ? styles.customerDevelop : ''}`}
           rowKey={rowKey}
           columns={finalColumns}
           dataSource={dataSource}
           pagination={pagination}
-          locale={emptyText}
           rowSelection={confirmCrossPageSelect || dataSource.length === 0 ? null : rowSelection}
         />
-        </ConfigProvider>
       );
     }
     // 固定表头
     return (
       <div>
-        <Affix className="m-affix" style={{ zIndex: '9999999' }} offsetTop={affixOffsetTop} onChange={this.handleAffixChange} target={() => this.props.affixContainer || window}>
-          <ConfigProvider renderEmpty={customizeRenderEmpty}><Table
-            {...restProps}
-            className={`${classnames(styles.table, styles.affixedTable, `${styles.affixedTable}-${this.hashCode}`, affixed && 'affixed', className)} m-table-customer`}
-            rowKey={rowKey}
-            columns={finalColumns}
-            dataSource={dataSource.length > 0 ? [dataSource[0]] : []}
-            pagination={false}
-            rowSelection={confirmCrossPageSelect || rowSelection}
-          />
-          </ConfigProvider>
+        <Affix offsetTop={50} target={() => this.props.affixContainer || window}>
+          <div id="scrollTable"></div>
+        </Affix>
+        <Affix offsetTop={affixOffsetTop} onChange={this.handleAffixChange} target={() => this.props.affixContainer || window}>
+          <div id="freezTable">
+            <Table
+              {...restProps}
+              getPopupContainer={() => affixed ? document.getElementById('scrollTable') : document.getElementById('freezTable')}
+              className={`${classnames(styles.table, styles.affixedTable, `${styles.affixedTable}-${this.hashCode}`, affixed && 'affixed', className)} m-table-customer m-table-szyx ${potentialCustomer ? styles.customerDevelop : ''}`}
+              rowKey={rowKey}
+              columns={finalColumns}
+              dataSource={dataSource.length > 0 ? [dataSource[0]] : []}
+              pagination={false}
+              rowSelection={confirmCrossPageSelect || dataSource.length === 0 ? null : rowSelection}
+            />
+          </div>
           {showBackTop && (
             <div
               className={classnames(backTopClassName)}
@@ -319,17 +317,19 @@ export default class BasicDataTable extends React.Component {
             </div>
           )}
         </Affix>
-        <ConfigProvider renderEmpty={customizeRenderEmpty}><Table
-          {...restProps}
-          className={`${classnames(styles.table, styles.mainTable, `${styles.mainTable}-${this.hashCode}`, affixed && 'affixed', className)} m-table-customer`}
-          rowKey={rowKey}
-          columns={finalColumns}
-          dataSource={dataSource}
-          pagination={pagination}
-          locale={emptyText}
-          rowSelection={confirmCrossPageSelect || dataSource.length === 0 ? null : rowSelection}
-        />
-        </ConfigProvider>
+        <div id="">
+          <Table
+            {...restProps}
+            // getPopupContainer={() => affixed ? document.getElementById('scrollTable') : document.getElementById('freezTable')}
+            getPopupContainer={() => document.getElementById('scrollTable')}
+            className={`${classnames(styles.table, styles.mainTable, `${styles.mainTable}-${this.hashCode}`, affixed && 'affixed', className)} m-table-customer m-table-szyx ${potentialCustomer ? styles.customerDevelop : ''}`}
+            rowKey={rowKey}
+            columns={finalColumns}
+            dataSource={dataSource}
+            pagination={pagination}
+            rowSelection={confirmCrossPageSelect || dataSource.length === 0 ? null : rowSelection}
+          />
+        </div>
       </div>
     );
   }

@@ -4,12 +4,12 @@
 .notice {
     background: #fff;
     color: @title-color;
-    padding: 0 1.166rem;
-    margin: 0.5rem 0;
+    padding: 0 0.5rem;
+    margin: 1rem 0;
     .notice-left {
         .fl();
         padding: 0 2rem 0 0;
-        line-height: 2.166rem;
+        line-height: 3rem;
         i {
             .fl();
             color:@orange;
@@ -25,7 +25,7 @@
     }
     .notice-right {
         .fl();
-        line-height: 2.166rem;
+        line-height: 3rem;
         padding-left: 2rem;
         .pos(r);
         border-left: 1px solid #2daae4;
@@ -34,8 +34,7 @@
             height: 0;
             content: "";
             .pos(a);
-            top: 50%;
-            transform: translateY(-50%);
+            top: 1rem;
             left: -0.0833rem;
             overflow:inherit;
         }
@@ -52,6 +51,11 @@
             .font-s16();
             .font-w400;
         }
+        .ant-carousel{
+            .slick-vertical .slick-slide{
+                border:0;
+            }
+        } 
     }
 }
 
@@ -100,8 +104,8 @@
 //m-ul-fixed 2018.3.14
 .m-ul-fixed {
   .pos(f);
-    top: 5rem;
-    right: 0.833rem;
+    top: 6.5rem;
+    right: 1rem;
     li {
         .pos(r);
         .tr();
@@ -110,15 +114,15 @@
         &:first-child{
             .m-ul-icon{
                 border-top:1px solid #dcdcdc;
-                border-top-left-radius: 0px;
-                border-top-right-radius: 0px;
+                border-top-left-radius: 1px;
+                border-top-right-radius: 1px;
             }
         }
         &:last-child{
             .m-ul-icon{
                 border-bottom:1px solid #dcdcdc;
-                border-bottom-left-radius: 0px;
-                border-bottom-right-radius: 0px;
+                border-bottom-left-radius: 1px;
+                border-bottom-right-radius: 1px;
             }
         }
         &:hover{
@@ -137,7 +141,7 @@
         }
         .m-ul-icon{
             background: #fff;
-            color: #97999e;
+            color: @ax-lgray;
             width: 4rem;
             height: 4rem;
             line-height: 4rem;
@@ -198,3 +202,30 @@
     .font-s15();
     padding: .916rem 2.083rem !important;
 }
+
+.m-more-box{
+    .set-box{
+
+        &.ant-btn{
+            width:3rem;
+            height:3rem;
+            line-height: 0;
+            background: none;
+            border: none;
+          
+            i{
+                color:#fff;
+                .font-s20();
+                .dib();
+                .font-wn();
+            }
+
+        }
+
+    }
+}
+
+
+
+
+

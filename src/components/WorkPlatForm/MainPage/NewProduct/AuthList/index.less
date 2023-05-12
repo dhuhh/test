@@ -1,0 +1,70 @@
+.table{
+  :global{
+    .ant-table-hide-scrollbar::-webkit-scrollbar{
+      width: 15px;
+    }
+    .ant-table-fixed{
+      .ant-table-thead{
+        .ant-table-row-cell-break-word{
+          text-align: center !important;
+          display: table-cell;
+        }
+      }
+      .ant-table-row-cell-break-word{
+        text-align: left !important;
+        display: flex;
+        align-items: center;
+      }
+    }
+    .ant-table-row-expand-icon{
+      margin-left: 16px;
+      border: 0;
+    }
+    .ant-table-row-hover .ant-table-row-expand-icon{
+      background: #F0F1F5;
+    }
+    .ant-table-row-collapsed::after{
+      content:'';
+      display: inline-block;
+      background: url('../../../../../assets/newProduct/icon／tongyong／_arrow_shense_left@2x.png');
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+    }
+    .ant-table-row-expanded::after{
+      content:'';
+      display: inline-block;
+      background: url('../../../../../assets/newProduct/icon／tongyong／_arrow_shense_down@2x.png');
+      width: 16px;
+      height: 16px;
+      background-size: cover;
+    }
+    .ant-table-row-spaced{
+      visibility: visible;
+      &::after{
+        content:'';
+        display: inline-block;
+        background: url('../../../../../assets/newProduct/icon_point@2x.png');
+        width: 16px;
+        height: 16px;
+        background-size: cover;
+      }
+    }
+    .ant-table-row-expanded +span{
+      color: #244FFF; 
+    }
+    .ant-table-hide-scrollbar{
+      // margin-right: -18px !important;
+    }
+  }
+  td{
+    color: #61698C;
+    // cursor:auto !important;
+    height: 48px !important;
+    padding: 0 !important;
+  }
+  th{
+    // padding: 0 !important;
+    // height: auto !important;
+  }
+}

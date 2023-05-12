@@ -1,0 +1,119 @@
+@font-face {
+  font-family: EssenceSansStd-Regular;
+  src: url(../../../../../../assets/fonts/EssenceSansStd-Regular.ttf);
+}
+.propriety{
+  // height: 686px;
+  background-color: #fff;
+  margin-top: 12px;
+  overflow: hidden;
+  .line{
+    height: 1px;
+    width: 100%;
+    background-color: #EAEEF2;
+  }
+  .content{
+    // height: 613px;
+    .chart{
+      display: flex;
+      height: 388px;
+      align-items: center;
+      text-align: center;
+      .chart_left,.chart_right{
+        flex: 1;
+        // width: 0;
+      }
+      .chart_left{
+        display: flex;
+        justify-content: center;
+      }
+      .chart_line{
+        width: 1px;
+        height: 300px;
+        background: #EAEEF2;
+      }
+      .chart_right{
+        div:nth-child(1){
+          font-size: 42px;
+          font-weight: 400;
+          color: #244FFF;
+          span{
+            font-size: 20px;
+          }
+        }
+        div:nth-child(2){
+          font-size: 14px;
+          font-weight: 400;
+          color: #1A2243;
+          margin-top: 8px;
+        }
+      }
+    }
+    table{
+      width: calc(100% - 48px);
+      border: 1px solid #EAECF2;
+      margin:  0 24px;
+      margin-bottom: 24px;
+      tr:first-child{
+        background: #F9FAFC;
+      }
+      td{
+        width: 547px;
+        padding: 19px 17px;
+        padding-right: 195px;
+        vertical-align: top;
+        div{
+          color: #61698C;
+          font-size: 13px;
+          // span{
+          //   font-size: 13px;
+          //   display: inline-block;
+          //   margin: 2px 20px 0 0;
+          // }
+        }
+        div:first-of-type{
+          color: #1A2243;
+          font-size: 15px;
+        }
+      }
+    }
+    .table{
+      width: calc(100% - 32px);
+      margin: 16px;
+      display: flex;
+      flex-direction: column;
+      .top ,.bottom{
+        flex: 1;
+        display: flex;
+        font-size: 13px;
+        font-family: PingFangSC-Regular, PingFang SC;
+        font-weight: 400;
+        color: #61698C;
+        line-height: 18px;
+        .title{
+          font-size: 15px;
+          color: #1A2243;
+          line-height: 21px;
+        }
+        &>div{
+          flex: 1;
+          width: 0;
+          padding: 19px 17px;
+          padding-right: 195px;
+          vertical-align: top;
+          background-color: #F9FAFC;
+          border: 1px solid #EAECF2;
+          &:last-of-type{
+            border-left: 0;
+          }
+        }
+      }
+      .bottom{
+        &>div{
+          background-color: #fff;
+          border-top:0 ;
+        }
+      }
+    }
+  }
+}
